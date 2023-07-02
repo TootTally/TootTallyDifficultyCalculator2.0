@@ -1,0 +1,89 @@
+{
+	"UNK1": 0,
+	"author": "Nyht",
+	"description": "Trombone adaptation of Telepurte's Noot Noot",
+	"difficulty": 1,
+	"endpoint": 10.1,
+	"genre": "Meme",
+	"lyrics": [],
+	"name": "Toot Toot",
+	"note_color_end": [
+		0,
+		0,
+		0
+	],
+	"note_color_start": [
+		0,
+		0,
+		0
+	],
+	"notes": [
+		[
+			1.25,
+			0.269,
+			96.25,
+			0,
+			96.25
+		],
+		[
+			1.719,
+			0.531,
+			82.5,
+			0,
+			82.5
+		],
+		[
+			4.594,
+			1.935,
+			-41.25,
+			0,
+			-41.25
+		],
+		[
+			6.729,
+			0.29,
+			68.75,
+			0,
+			68.75
+		],
+		[
+			7.219,
+			0.331,
+			27.5,
+			0,
+			27.5
+		],
+		[
+			7.75,
+			1.25,
+			27.5,
+			0,
+			27.5
+		],
+		[
+			9.25,
+			0.75,
+			13.75,
+			0,
+			13.75
+		]
+	],
+	"savednotespacing": 150,
+	"shortName": "Toot Toot",
+	"tempo": 65,
+	"timesig": 4,
+	"trackRef": "toottoot",
+	"year": 2022,
+	"bgdata": [
+		[
+			2.8,
+			1,
+			0
+		],
+		[
+			4.0,
+			2,
+			0
+		]
+	]
+}
