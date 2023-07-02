@@ -29,10 +29,10 @@ namespace TootTallyDifficultyCalculator2._0
         public string difficulty;
         public string year;
         public List<Lyrics> lyrics;
-        public List<float> aimPerformanceList;
-        public List<float> tapPerformanceList;
-        public List<float> comboPerformanceList;
-        public List<float> accPerformanceList;
+        public List<DataVector> aimPerformanceList;
+        public List<DataVector> tapPerformanceList;
+        public List<DataVector> comboPerformanceList;
+        public List<DataVector> accPerformanceList;
         public TimeSpan calculationTime;
 
         public void OnDeserialize()
@@ -52,10 +52,10 @@ namespace TootTallyDifficultyCalculator2._0
                 if (n.count < notesList.Count)
                     n.SetIsSlider(CheckIfIsSlider(n.count - 1));
 
-            aimPerformanceList = new List<float>();
-            tapPerformanceList = new List<float>();
-            comboPerformanceList = new List<float>();
-            accPerformanceList = new List<float>();
+            aimPerformanceList = new List<DataVector>();
+            tapPerformanceList = new List<DataVector>();
+            comboPerformanceList = new List<DataVector>();
+            accPerformanceList = new List<DataVector>();
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -114,9 +114,9 @@ namespace TootTallyDifficultyCalculator2._0
                     previousNote = nextNote;
 
                 }
-                aimPerformanceList.Add((float)speedStrain);
-                tapPerformanceList.Add((float)tapStrain);
-                accPerformanceList.Add((float)accStrain);
+                aimPerformanceList.Add(new DataVector((float)currentNote.position, (float)speedStrain));
+                tapPerformanceList.Add(new DataVector((float)currentNote.position, (float)tapStrain));
+                accPerformanceList.Add(new DataVector((float)currentNote.position, (float)accStrain));
             }
         }
 
@@ -260,8 +260,9 @@ namespace TootTallyDifficultyCalculator2._0
                 lyricsString += "No Lyrics found";
             data.Add(lyricsString);
 
-            data.Add("Aim Rating: " + aimPerformanceList.Average());
-            data.Add("Tap Rating: " + tapPerformanceList.Average());
+            data.Add("Aim Rating: " + aimPerformanceList.Average(x => x.performance));
+            data.Add("Tap Rating: " + tapPerformanceList.Average(x => x.performance));
+            data.Add("Acc Rating: " + accPerformanceList.Average(x => x.performance));
 
             foreach (Note n in notesList)
             {
@@ -284,6 +285,19 @@ namespace TootTallyDifficultyCalculator2._0
         }
 
         public double beatToSeconds2(double beat, float bpm) => (60f / bpm) * beat;
+
+        public class DataVector
+        {
+            public float performance;
+            public float time;
+            public DataVector(float time, float performance)
+            {
+                this.time = time;
+                this.performance = performance;
+            }
+            
+           
+        }
 
     }
 }
