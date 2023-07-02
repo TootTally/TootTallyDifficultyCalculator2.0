@@ -62,6 +62,13 @@ namespace TootTallyDifficultyCalculator2._0
             CalcAllDiff();
             stopwatch.Stop();
             calculationTime = stopwatch.Elapsed;
+            //prevent crash from A
+            if (aimPerformanceList.Count <= 0)
+                aimPerformanceList.Add(new DataVector(0, 0));
+            if (tapPerformanceList.Count <= 0)
+                tapPerformanceList.Add(new DataVector(0, 0));
+            if (accPerformanceList.Count <= 0)
+                accPerformanceList.Add(new DataVector(0, 0));
 
         }
 
@@ -99,7 +106,7 @@ namespace TootTallyDifficultyCalculator2._0
                 for (int j = i + 1; j < notesList.Count && j < i + 26 && notesList[j].position - (currentNote.position + currentNote.length) <= 4; j++)
                 {
                     Note nextNote = notesList[j];
-                    var weight = weights[j - i];
+                    var weight = weights[j - i - 1];
 
                     //Aim Calc
                     speedStrain += CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, comboMultiplier, ref directionMultiplier, MAX_TIME);
@@ -264,15 +271,17 @@ namespace TootTallyDifficultyCalculator2._0
             data.Add("Tap Rating: " + tapPerformanceList.Average(x => x.performance));
             data.Add("Acc Rating: " + accPerformanceList.Average(x => x.performance));
 
-            foreach (Note n in notesList)
+            for (int i = 0; i < notesList.Count; i++)
             {
+                var n = notesList[i];
                 data.Add("nu: " + n.count.ToString("0.00") + " | " +
                     "po: " + n.position.ToString("0.00") + " | " +
                     "le: " + n.length.ToString("0.00") + " | " +
                     "ps: " + n.pitchStart.ToString("0.00") + " | " +
                     "pd: " + n.pitchDelta.ToString("0.00") + " | " +
                     "pe: " + n.pitchEnd.ToString("0.00") +
-                    (n.isSlider ? " | Slider" : ""));
+                    (n.isSlider ? " | Slider" : "") + " | " + 
+                    (i < aimPerformanceList.Count?$"a: {aimPerformanceList[i].performance} t: {tapPerformanceList[i].performance} a: {accPerformanceList[i].performance}" : ""));
             }
 
             return data;
