@@ -73,7 +73,7 @@
             ListboxMapData.Location = new Point(12, 43);
             ListboxMapData.Name = "ListboxMapData";
             ListboxMapData.ScrollAlwaysVisible = true;
-            ListboxMapData.Size = new Size(638, 393);
+            ListboxMapData.Size = new Size(1077, 597);
             ListboxMapData.TabIndex = 2;
             ListboxMapData.Visible = false;
             // 
@@ -82,7 +82,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
-            ClientSize = new Size(656, 447);
+            ClientSize = new Size(1101, 664);
             Controls.Add(ListboxMapData);
             Controls.Add(ButtonLoadChart);
             Controls.Add(ComboBoxSongName);
