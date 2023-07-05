@@ -31,6 +31,8 @@
             ComboBoxSongName = new ComboBox();
             ButtonLoadChart = new Button();
             ListboxMapData = new ListBox();
+            ComboBoxReplay = new ComboBox();
+            ButtonLoadReplay = new Button();
             SuspendLayout();
             // 
             // ComboBoxSongName
@@ -77,6 +79,35 @@
             ListboxMapData.TabIndex = 2;
             ListboxMapData.Visible = false;
             // 
+            // ComboBoxReplay
+            // 
+            ComboBoxReplay.BackColor = Color.DarkRed;
+            ComboBoxReplay.DropDownStyle = ComboBoxStyle.DropDownList;
+            ComboBoxReplay.FlatStyle = FlatStyle.Popup;
+            ComboBoxReplay.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            ComboBoxReplay.ForeColor = SystemColors.Window;
+            ComboBoxReplay.FormattingEnabled = true;
+            ComboBoxReplay.Location = new Point(417, 12);
+            ComboBoxReplay.Name = "ComboBoxReplay";
+            ComboBoxReplay.Size = new Size(281, 25);
+            ComboBoxReplay.TabIndex = 0;
+            ComboBoxReplay.SelectedValueChanged += OnDropDownReplayValueChange;
+            // 
+            // ButtonLoadReplay
+            // 
+            ButtonLoadReplay.BackColor = Color.Crimson;
+            ButtonLoadReplay.FlatStyle = FlatStyle.Popup;
+            ButtonLoadReplay.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            ButtonLoadReplay.ForeColor = Color.White;
+            ButtonLoadReplay.Location = new Point(704, 12);
+            ButtonLoadReplay.Name = "ButtonLoadReplay";
+            ButtonLoadReplay.Size = new Size(112, 25);
+            ButtonLoadReplay.TabIndex = 1;
+            ButtonLoadReplay.Text = "LOAD REPLAY";
+            ButtonLoadReplay.UseVisualStyleBackColor = false;
+            ButtonLoadReplay.Visible = false;
+            ButtonLoadReplay.Click += OnLoadReplayButtonClick;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -84,7 +115,9 @@
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(1101, 664);
             Controls.Add(ListboxMapData);
+            Controls.Add(ButtonLoadReplay);
             Controls.Add(ButtonLoadChart);
+            Controls.Add(ComboBoxReplay);
             Controls.Add(ComboBoxSongName);
             Name = "MainForm";
             Text = "Main";
@@ -96,5 +129,7 @@
         private ComboBox ComboBoxSongName;
         private Button ButtonLoadChart;
         private ListBox ListboxMapData;
+        private ComboBox ComboBoxReplay;
+        private Button ButtonLoadReplay;
     }
 }

@@ -3,9 +3,9 @@ namespace TootTallyDifficultyCalculator2._0
     internal static class Program
     {
         public const string MAIN_DIRECTORY = "testSubject/";
-        public const string RATED_DIRECTORY = "RatedCharts/";
-        public const string RATED_TMBS_DIRECTORY = "RatedTmbs/";
         public const string REPLAY_DIRECTORY = "replays/";
+        public const string DOWNLOAD_DIRECTORY = "downloads/";
+
         [STAThread]
         static void Main()
         {

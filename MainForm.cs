@@ -5,16 +5,22 @@ namespace TootTallyDifficultyCalculator2._0
     public partial class MainForm : Form
     {
         private List<string> _fileNameLists;
+        private List<string> _replayNameLists;
         private Chart _currentChart;
+        private ReplayData _currentReplay;
 
         public MainForm()
         {
             InitializeComponent();
             _fileNameLists = new List<string>();
+            _replayNameLists = new List<string>();
             if (!Directory.Exists(Program.MAIN_DIRECTORY))
                 Directory.CreateDirectory(Program.MAIN_DIRECTORY);
+            if (!Directory.Exists(Program.REPLAY_DIRECTORY))
+                Directory.CreateDirectory(Program.REPLAY_DIRECTORY);
 
             FillComboBoxSongName();
+            FillComboBoxReplay();
         }
 
         public void FillComboBoxSongName()
@@ -23,6 +29,15 @@ namespace TootTallyDifficultyCalculator2._0
             {
                 ComboBoxSongName.Items.Add(fileNames.Remove(0, Program.MAIN_DIRECTORY.Length));
                 _fileNameLists.Add(fileNames.Remove(0, Program.MAIN_DIRECTORY.Length));
+            }
+        }
+
+        public void FillComboBoxReplay()
+        {
+            foreach (string replayNames in Directory.GetFiles(Program.REPLAY_DIRECTORY))
+            {
+                ComboBoxReplay.Items.Add(replayNames.Remove(0, Program.REPLAY_DIRECTORY.Length));
+                _replayNameLists.Add(replayNames.Remove(0, Program.REPLAY_DIRECTORY.Length));
             }
         }
 
@@ -41,9 +56,29 @@ namespace TootTallyDifficultyCalculator2._0
             accData.Show();
         }
 
+        private void OnLoadReplayButtonClick(object sender, EventArgs e)
+        {
+            _currentReplay = ChartReader.LoadReplay(Program.REPLAY_DIRECTORY + ComboBoxReplay.Text);
+            TootTallyAPIServices.GetChartData(_currentReplay.songhash, (chart) =>
+            {
+                _currentChart = chart;
+                ListboxMapData.Items.Clear();
+                ListboxMapData.Items.Add("Replay Loaded: " + _currentReplay.username);
+                ListboxMapData.Visible = true;
+            });
+
+        }
+
         private void OnDropDownSongNameValueChange(object sender, EventArgs e)
         {
             ButtonLoadChart.Visible = true;
         }
+
+        private void OnDropDownReplayValueChange(object sender, EventArgs e)
+        {
+            ButtonLoadReplay.Visible = true;
+        }
+
+
     }
 }

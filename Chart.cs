@@ -41,11 +41,11 @@ namespace TootTallyDifficultyCalculator2._0
             int count = 1;
             foreach (string[] n in notes)
             {
-                notesList.Add(new Note(count, beatToSeconds(double.Parse(n[0]), float.Parse(tempo)), double.Parse(n[1]), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
+                notesList.Add(new Note(count, BeatToSeconds(double.Parse(n[0]), float.Parse(tempo)), double.Parse(n[1]), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
                 if (notesList.Last().length == 0)
-                    notesList.Last().length = beatToSeconds(0.01, float.Parse(tempo));
+                    notesList.Last().length = BeatToSeconds(0.01, float.Parse(tempo));
                 else
-                    notesList.Last().length = beatToSeconds(notesList.Last().length, float.Parse(tempo));
+                    notesList.Last().length = BeatToSeconds(notesList.Last().length, float.Parse(tempo));
                 count++;
             }
             foreach (Note n in notesList)
@@ -74,7 +74,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void CalcAllDiff()
         {
-            var MAX_TIME = beatToSeconds2(0.05, float.Parse(tempo));
+            var MAX_TIME = BeatToSeconds2(0.05, float.Parse(tempo));
             var MIN_TIMEDELTA = 1d / 120d;
 
             List<float> weights = new List<float>();//Pre calc weights
@@ -287,13 +287,13 @@ namespace TootTallyDifficultyCalculator2._0
             return data;
         }
 
-        public float GetTempoMultiplier() => (float.Parse(tempo) / 100);
-        public double beatToSeconds(double time, float bpm)
+        public float GetTempoMultiplier() => (float.Parse(tempo) / 100f);
+        public static double BeatToSeconds(double time, float bpm)
         {
             return time / bpm * 60f;
         }
 
-        public double beatToSeconds2(double beat, float bpm) => (60f / bpm) * beat;
+        public static double BeatToSeconds2(double beat, float bpm) => (60f / bpm) * beat;
 
         public class DataVector
         {
