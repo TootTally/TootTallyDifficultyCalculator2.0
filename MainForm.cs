@@ -8,12 +8,15 @@ namespace TootTallyDifficultyCalculator2._0
         private List<string> _replayNameLists;
         private Chart _currentChart;
         private ReplayData _currentReplay;
+        public List<Chart> chartList;
 
         public MainForm()
         {
             InitializeComponent();
             _fileNameLists = new List<string>();
             _replayNameLists = new List<string>();
+            chartList = new List<Chart>();
+
             if (!Directory.Exists(Program.MAIN_DIRECTORY))
                 Directory.CreateDirectory(Program.MAIN_DIRECTORY);
             if (!Directory.Exists(Program.REPLAY_DIRECTORY))
@@ -25,10 +28,11 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void FillComboBoxSongName()
         {
-            foreach (string fileNames in Directory.GetFiles(Program.MAIN_DIRECTORY))
+            foreach (string name in Directory.GetFiles(Program.MAIN_DIRECTORY))
             {
-                ComboBoxSongName.Items.Add(fileNames.Remove(0, Program.MAIN_DIRECTORY.Length));
-                _fileNameLists.Add(fileNames.Remove(0, Program.MAIN_DIRECTORY.Length));
+                chartList.Add(ChartReader.LoadChart(name));
+                ComboBoxSongName.Items.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
+                _fileNameLists.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
             }
         }
 
@@ -61,9 +65,11 @@ namespace TootTallyDifficultyCalculator2._0
             _currentReplay = ChartReader.LoadReplay(Program.REPLAY_DIRECTORY + ComboBoxReplay.Text);
             TootTallyAPIServices.GetChartData(_currentReplay.songhash, (chart) =>
             {
-                _currentChart = chart;
+                _currentChart = chartList.Find(c => c.name == chart.name);
+                _currentReplay.SetChart(_currentChart);
                 ListboxMapData.Items.Clear();
                 ListboxMapData.Items.Add("Replay Loaded: " + _currentReplay.username);
+                _currentReplay.ToDisplayData().ForEach(x => ListboxMapData.Items.Add(x));
                 ListboxMapData.Visible = true;
             });
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,30 +29,40 @@ namespace TootTallyDifficultyCalculator2._0
 
         public static void GetChartData(string songHash, Action<Chart> callback)
         {
-            int chartID = int.Parse(GetRequest($"hashcheck/custom/?songHash={songHash}").Result);
+            int chartID = int.Parse(GetStringRequest($"hashcheck/custom/?songHash={songHash}").Result);
             Chart chart = null;
 
             if (chartID != 0)
-                 chart = JsonConvert.DeserializeObject<Chart>(GetRequest($"songs/{chartID}").Result);
+            {
+                var charts = JsonConvert.DeserializeObject<APIChartRequest>(GetStringRequest($"songs/{chartID}").Result);
+                chart = charts.results.First();
+            }
 
             if (chart != null)
                 callback(chart);
         }
 
 
-        private static async Task<HttpResponseMessage> PostUploadRequest(string query, dynamic data, string contentType = "application/json")
+        private static Task<HttpResponseMessage> PostUploadRequest(string query, dynamic data)
         {
 
-            var response = await webRequest.PostAsync(query, data);
+            var response = webRequest.PostAsync(query, data);
             return response;
         }
 
-        private static async Task<string> GetRequest(string query)
+        private static Task<string> GetStringRequest(string query)
         {
             Trace.WriteLine(APIURL + query);
-            var response = await webRequest.GetStringAsync(query);
+            var response = webRequest.GetStringAsync(query);
             return response;
         }
 
+        private class APIChartRequest
+        {
+            public int count;
+            public string next;
+            public string previous;
+            public List<Chart> results;
+        }
     }
 }

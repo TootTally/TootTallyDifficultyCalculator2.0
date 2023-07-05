@@ -10,6 +10,11 @@ namespace TootTallyDifficultyCalculator2._0
 {
     public static class ChartReader
     {
+        private static List<Chart> _allChartList = new List<Chart>();
+
+        public static void AddChartToList(string path) =>
+            _allChartList.Add(LoadChart(path));
+
         public static Chart LoadChart(string path)
         {
             StreamReader reader = new StreamReader(path);
