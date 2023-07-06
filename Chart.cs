@@ -9,11 +9,11 @@ namespace TootTallyDifficultyCalculator2._0
     public class Chart
     {
         public const float SLIDER_BREAK_CONST = 34.375f;
-
+        public readonly float[] GAME_SPEED = { .5f, .75f, 1f, 1.25f, 1.5f, 1.75f, 2f };
 
         public string[][] notes;
         public string[][] bgdata;
-        public List<Note> notesList;
+        public Dictionary<float, List<Note>> notesDict;
         public List<string> note_color_start;
         public List<string> note_color_end;
         public string endpoint;
@@ -29,72 +29,107 @@ namespace TootTallyDifficultyCalculator2._0
         public string difficulty;
         public string year;
         public List<Lyrics> lyrics;
-        public List<DataVector> aimPerformanceList;
-        public List<DataVector> tapPerformanceList;
-        public List<DataVector> comboPerformanceList;
-        public List<DataVector> accPerformanceList;
+        public Dictionary<float, List<DataVector>> aimPerformanceDict;
+        public Dictionary<float, DataVectorAnalytics> aimAnalyticsDict;
+        public Dictionary<float, List<DataVector>> tapPerformanceDict;
+        public Dictionary<float, DataVectorAnalytics> tapAnalyticsDict;
+        public Dictionary<float, List<DataVector>> accPerformanceDict;
+        public Dictionary<float, DataVectorAnalytics> accAnalyticsDict;
         public TimeSpan calculationTime;
 
         public void OnDeserialize()
         {
-            notesList = new List<Note>();
-            int count = 1;
-            foreach (string[] n in notes)
+            notesDict = new Dictionary<float, List<Note>>();
+            for (int i = 0; i < GAME_SPEED.Length; i++)
             {
-                notesList.Add(new Note(count, BeatToSeconds(double.Parse(n[0]), float.Parse(tempo)), double.Parse(n[1]), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
-                if (notesList.Last().length == 0)
-                    notesList.Last().length = BeatToSeconds(0.01, float.Parse(tempo));
-                else
-                    notesList.Last().length = BeatToSeconds(notesList.Last().length, float.Parse(tempo));
-                count++;
+                var gamespeed = GAME_SPEED[i];
+                int count = 1;
+                if (!notesDict.ContainsKey(gamespeed))
+                    notesDict[gamespeed] = new List<Note>();
+                foreach (string[] n in notes)
+                {
+                    notesDict[gamespeed].Add(new Note(count, BeatToSeconds(double.Parse(n[0]), float.Parse(tempo) * gamespeed), double.Parse(n[1]), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
+                    if (notesDict[gamespeed].Last().length == 0)
+                        notesDict[gamespeed].Last().length = BeatToSeconds(0.01, float.Parse(tempo) * gamespeed);
+                    else
+                        notesDict[gamespeed].Last().length = BeatToSeconds(notesDict[gamespeed].Last().length, float.Parse(tempo) * gamespeed);
+                    count++;
+                }
             }
-            foreach (Note n in notesList)
-                if (n.count < notesList.Count)
-                    n.SetIsSlider(CheckIfIsSlider(n.count - 1));
 
-            aimPerformanceList = new List<DataVector>();
-            tapPerformanceList = new List<DataVector>();
-            comboPerformanceList = new List<DataVector>();
-            accPerformanceList = new List<DataVector>();
+            for (int i = 0; i < GAME_SPEED.Length; i++)
+            {
+                foreach (Note n in notesDict[GAME_SPEED[i]])
+                    if (n.count < notesDict[GAME_SPEED[i]].Count)
+                        n.SetIsSlider(CheckIfIsSlider(GAME_SPEED[i], n.count - 1));
+            }
+
+
+            aimPerformanceDict = new Dictionary<float, List<DataVector>>();
+            tapPerformanceDict = new Dictionary<float, List<DataVector>>();
+            accPerformanceDict = new Dictionary<float, List<DataVector>>();
+            aimAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
+            tapAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
+            accAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
+
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            CalcAllDiff();
+            for (int i = 0; i < GAME_SPEED.Length; i++)
+                CalcAllDiff(GAME_SPEED[i]);
+
+
+            for (int i = 0; i < GAME_SPEED.Length; i++)
+            {
+                var gamespeed = GAME_SPEED[i];
+                //prevent crash from A
+                if (!aimPerformanceDict.ContainsKey(gamespeed))
+                    aimPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
+                if (!tapPerformanceDict.ContainsKey(gamespeed))
+                    tapPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
+                if (!accPerformanceDict.ContainsKey(gamespeed))
+                    accPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
+
+                if (!aimAnalyticsDict.ContainsKey(gamespeed))
+                    aimAnalyticsDict[gamespeed] = new DataVectorAnalytics(aimPerformanceDict[gamespeed]);
+                if (!tapAnalyticsDict.ContainsKey(gamespeed))
+                    tapAnalyticsDict[gamespeed] = new DataVectorAnalytics(tapPerformanceDict[gamespeed]);
+                if (!accAnalyticsDict.ContainsKey(gamespeed))
+                    accAnalyticsDict[gamespeed] = new DataVectorAnalytics(accPerformanceDict[gamespeed]);
+
+
+
+            }
             stopwatch.Stop();
             calculationTime = stopwatch.Elapsed;
-            //prevent crash from A
-            if (aimPerformanceList.Count <= 0)
-                aimPerformanceList.Add(new DataVector(0, 0));
-            if (tapPerformanceList.Count <= 0)
-                tapPerformanceList.Add(new DataVector(0, 0));
-            if (accPerformanceList.Count <= 0)
-                accPerformanceList.Add(new DataVector(0, 0));
 
+            
         }
 
-        public void CalcAllDiff()
+        public void CalcAllDiff(float gamespeed)
         {
-            var MAX_TIME = BeatToSeconds2(0.05, float.Parse(tempo));
+            var MAX_TIME = BeatToSeconds2(0.05, float.Parse(tempo) * gamespeed);
             var MIN_TIMEDELTA = 1d / 120d;
+            var AVERAGE_NOTE_LENGTH = notesDict[gamespeed].Average(n => n.length);
 
             List<float> weights = new List<float>();//Pre calc weights
             for (int i = 0; i < 26; i++)
                 weights.Add(MathF.Pow(0.945f, i));
 
 
-            for (int i = 0; i < notesList.Count - 1; i++) //Main Forward Loop
+            for (int i = 0; i < notesDict[gamespeed].Count - 1; i++) //Main Forward Loop
             {
-                Note currentNote = notesList[i];
+                Note currentNote = notesDict[gamespeed][i];
                 Note previousNote = currentNote;
                 var comboMultiplier = 1f;
                 var directionMultiplier = 1f;
                 var lengthSum = 0d;
                 Direction currentDirection = Direction.Null, previousDirection = Direction.Null;
 
-                for (int j = i + 1; j < notesList.Count && j < i + 10; j++)
+                for (int j = i + 1; j < notesDict[gamespeed].Count && j < i + 10; j++)
                 {
                     //Combo Calc
-                    lengthSum += notesList[j].length;
+                    lengthSum += notesDict[gamespeed][j].length;
                 }
 
 
@@ -103,9 +138,9 @@ namespace TootTallyDifficultyCalculator2._0
                 var tapStrain = 0d;
                 var accStrain = 0d;
 
-                for (int j = i + 1; j < notesList.Count && j < i + 26 && notesList[j].position - (currentNote.position + currentNote.length) <= 4; j++)
+                for (int j = i + 1; j < notesDict[gamespeed].Count && j < i + 26 && notesDict[gamespeed][j].position - (currentNote.position + currentNote.length) <= 4; j++)
                 {
-                    Note nextNote = notesList[j];
+                    Note nextNote = notesDict[gamespeed][j];
                     var weight = weights[j - i - 1];
 
                     //Aim Calc
@@ -115,15 +150,22 @@ namespace TootTallyDifficultyCalculator2._0
                     tapStrain += CalcTapStrain(nextNote, previousNote, weight, comboMultiplier, MIN_TIMEDELTA);
 
                     //Acc Calc
-                    accStrain += CalcAccStrain(nextNote, previousNote);
+                    accStrain += CalcAccStrain(nextNote, previousNote, weight, comboMultiplier, AVERAGE_NOTE_LENGTH);
 
 
                     previousNote = nextNote;
 
                 }
-                aimPerformanceList.Add(new DataVector((float)currentNote.position, (float)speedStrain));
-                tapPerformanceList.Add(new DataVector((float)currentNote.position, (float)tapStrain));
-                accPerformanceList.Add(new DataVector((float)currentNote.position, (float)accStrain));
+                if (!aimPerformanceDict.ContainsKey(gamespeed))
+                {
+                    aimPerformanceDict[gamespeed] = new List<DataVector>();
+                    tapPerformanceDict[gamespeed] = new List<DataVector>();
+                    accPerformanceDict[gamespeed] = new List<DataVector>();
+                }
+
+                aimPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)speedStrain));
+                tapPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)tapStrain));
+                accPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)accStrain));
             }
         }
 
@@ -168,16 +210,31 @@ namespace TootTallyDifficultyCalculator2._0
             var tapStrain = 0d;
             if (!nextNote.isSlider)
             {
-                var timeDelta = Math.Max(nextNote.position - (previousNote.position + previousNote.length), MIN_TIMEDELTA);
+                var timeDelta = Math.Max(nextNote.position - previousNote.position, MIN_TIMEDELTA);
                 var strain = 25f / Math.Pow(timeDelta, 1.2f);
                 tapStrain = strain * weight * comboMultiplier;
             }
             return tapStrain;
         }
 
-        public static double CalcAccStrain(Note nextNote, Note previousNote)
+        public static double CalcAccStrain(Note nextNote, Note previousNote, float weight, float comboMultiplier, double AVERAGE_NOTE_LENGTH)
         {
             var accStrain = 0d;
+
+            if (nextNote.position - (previousNote.position + previousNote.length) > 0)
+            {
+                var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd);
+                var accFactor = distance / (nextNote.position - (previousNote.position + previousNote.length));
+                var strain = accFactor / AVERAGE_NOTE_LENGTH;
+                accStrain = strain * weight * comboMultiplier;
+            }
+            else if (nextNote.pitchDelta != 0)
+            {
+                var sliderSpeed = Math.Abs(nextNote.pitchDelta) / nextNote.length;
+                var strain = sliderSpeed / AVERAGE_NOTE_LENGTH;
+                accStrain = strain * weight * comboMultiplier;
+            }
+
 
             return accStrain;
         }
@@ -219,27 +276,7 @@ namespace TootTallyDifficultyCalculator2._0
             public string text;
         }
 
-        public string CheckIfSamePosition()
-        {
-            string message = "no duplicate found";
-            bool foundDupe = false;
-            for (int i = 1; i < notesList.Count - 1; i++)
-            {
-                if (notesList[i - 1].position == notesList[i].position || notesList[i + 1].position == notesList[i].position || notesList[i - 1].position == notesList[i + 1].position)
-                {
-                    if (!foundDupe)
-                    {
-                        message = "found duplicate(s) at ";
-                        foundDupe = true;
-                    }
-                    message += notesList[i].count + ", ";
-                }
-            }
-
-            return message;
-        }
-
-        public bool CheckIfIsSlider(int index) => (notesList[index].position + notesList[index].length >= notesList[index + 1].position) || (notesList[index].pitchDelta != 0);
+        public bool CheckIfIsSlider(float gamespeed, int index) => (notesDict[gamespeed][index].position + notesDict[gamespeed][index].length >= notesDict[gamespeed][index + 1].position) || (notesDict[gamespeed][index].pitchDelta != 0);
 
         public List<string> ToDisplayData()
         {
@@ -267,21 +304,21 @@ namespace TootTallyDifficultyCalculator2._0
                 lyricsString += "No Lyrics found";
             data.Add(lyricsString);
 
-            data.Add("Aim Rating: " + aimPerformanceList.Average(x => x.performance));
-            data.Add("Tap Rating: " + tapPerformanceList.Average(x => x.performance));
-            data.Add("Acc Rating: " + accPerformanceList.Average(x => x.performance));
+            data.Add("Aim Rating: " + aimPerformanceDict[1].Average(x => x.performance));
+            data.Add("Tap Rating: " + tapPerformanceDict[1].Average(x => x.performance));
+            data.Add("Acc Rating: " + accPerformanceDict[1].Average(x => x.performance));
 
-            for (int i = 0; i < notesList.Count; i++)
+            for (int i = 0; i < notesDict[1].Count; i++)
             {
-                var n = notesList[i];
+                var n = notesDict[1][i];
                 data.Add("nu: " + n.count.ToString("0.00") + " | " +
                     "po: " + n.position.ToString("0.00") + " | " +
                     "le: " + n.length.ToString("0.00") + " | " +
                     "ps: " + n.pitchStart.ToString("0.00") + " | " +
                     "pd: " + n.pitchDelta.ToString("0.00") + " | " +
                     "pe: " + n.pitchEnd.ToString("0.00") +
-                    (n.isSlider ? " | Slider" : "") + " | " + 
-                    (i < aimPerformanceList.Count?$"a: {aimPerformanceList[i].performance} t: {tapPerformanceList[i].performance} a: {accPerformanceList[i].performance}" : ""));
+                    (n.isSlider ? " | Slider" : "") + " | " +
+                    (i < aimPerformanceDict.Count ? $"a: {aimPerformanceDict[1][i].performance} t: {tapPerformanceDict[1][i].performance} a: {accPerformanceDict[1][i].performance}" : ""));
             }
 
             return data;
@@ -299,14 +336,26 @@ namespace TootTallyDifficultyCalculator2._0
         {
             public float performance;
             public float time;
+
             public DataVector(float time, float performance)
             {
                 this.time = time;
                 this.performance = performance;
             }
-            
-           
+
         }
 
+        public class DataVectorAnalytics
+        {
+            public float perfAverage, perfMax, perfMin, perfSum;
+
+            public DataVectorAnalytics(List<DataVector> dataVectorList)
+            {
+                perfAverage = dataVectorList.Average(x => x.performance);
+                perfMax = dataVectorList.Max(x => x.performance);
+                perfMin = dataVectorList.Min(x => x.performance);
+                perfSum = dataVectorList.Sum(x => x.performance);
+            }
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
 namespace TootTallyDifficultyCalculator2._0
@@ -9,6 +10,7 @@ namespace TootTallyDifficultyCalculator2._0
         private Chart _currentChart;
         private ReplayData _currentReplay;
         public List<Chart> chartList;
+        private TimeSpan _calculationTime;
 
         public MainForm()
         {
@@ -28,12 +30,18 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void FillComboBoxSongName()
         {
+            ComboBoxSongName.Items.Add("ALL");
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             foreach (string name in Directory.GetFiles(Program.MAIN_DIRECTORY))
             {
+
                 chartList.Add(ChartReader.LoadChart(name));
                 ComboBoxSongName.Items.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
                 _fileNameLists.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
             }
+            stopwatch.Stop();
+            _calculationTime = stopwatch.Elapsed;
         }
 
         public void FillComboBoxReplay()
@@ -47,17 +55,42 @@ namespace TootTallyDifficultyCalculator2._0
 
         private void OnLoadChartButtonClick(object sender, EventArgs e)
         {
-            _currentChart = ChartReader.LoadChart(Program.MAIN_DIRECTORY + ComboBoxSongName.Text);
             ListboxMapData.Items.Clear();
-            ListboxMapData.Items.Add("HasSamePosition: " + _currentChart.CheckIfSamePosition());
-            _currentChart.ToDisplayData().ForEach(x => ListboxMapData.Items.Add(x));
+
+            if (ComboBoxSongName.Text == "ALL")
+            {
+                ListboxMapData.Items.Add($"Calculation time took {_calculationTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
+                foreach (Chart chart in chartList)
+                {
+                    ListboxMapData.Items.Add(chart.name);
+                    for (int i = 0; i < chart.GAME_SPEED.Length; i++)
+                    {
+                        Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[chart.GAME_SPEED[i]];
+                        Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[chart.GAME_SPEED[i]];
+                        Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[chart.GAME_SPEED[i]];
+                        ListboxMapData.Items.Add($"SPEED: {chart.GAME_SPEED[i]:0.00}x");
+                        ListboxMapData.Items.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
+                        ListboxMapData.Items.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
+                        ListboxMapData.Items.Add($"  acc: " + accAnalytics.perfAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
+                        ListboxMapData.Items.Add("--------------------------------------------");
+                    }
+                    ListboxMapData.Items.Add("=============================================");
+                }
+            }
+            else
+            {
+                _currentChart = ChartReader.LoadChart(Program.MAIN_DIRECTORY + ComboBoxSongName.Text);
+                _currentChart.ToDisplayData().ForEach(x => ListboxMapData.Items.Add(x));
+                /*
+                var aimData = new Graph("Aim Data", _currentChart.aimPerformanceDict);
+                aimData.Show();
+                var tapData = new Graph("Tap Data", _currentChart.tapPerformanceDict);
+                tapData.Show();
+                var accData = new Graph("Acc Data", _currentChart.accPerformanceDict);
+                accData.Show();
+                */
+            }
             ListboxMapData.Visible = true;
-            var aimData = new Graph("Aim Data", _currentChart.aimPerformanceList);
-            aimData.Show();
-            var tapData = new Graph("Tap Data", _currentChart.tapPerformanceList);
-            tapData.Show();
-            var accData = new Graph("Acc Data", _currentChart.accPerformanceList);
-            accData.Show();
         }
 
         private void OnLoadReplayButtonClick(object sender, EventArgs e)
