@@ -103,7 +103,34 @@ namespace TootTallyDifficultyCalculator2._0
             stopwatch.Stop();
             calculationTime = stopwatch.Elapsed;
 
-            
+            var breakDistThreshold = 3.5f / (float.Parse(tempo) / 120f);
+
+            List<NoteCluster> clusters = new List<NoteCluster>();
+            List<Note> currentNoteList = new List<Note>();
+
+            Stopwatch stopwatch1 = new Stopwatch();
+            stopwatch1.Start();
+            for (int i = 1; i < notesDict[1].Count; i++)
+            {
+                Note previousNote = notesDict[1][i - 1];
+                Note nextNote = notesDict[1][i];
+                currentNoteList.Add(previousNote);
+                if (nextNote.position - (previousNote.position + previousNote.length) > breakDistThreshold || i == notesDict[1].Count - 1)
+                {
+                    if (i == notesDict[1].Count - 1)
+                        currentNoteList.Add(nextNote);
+                    NoteCluster cluster = new NoteCluster();
+                    cluster.noteList.AddRange(currentNoteList);
+                    clusters.Add(cluster);
+                    currentNoteList.Clear();
+                }
+            }
+            stopwatch1.Stop();
+            Trace.WriteLine($"{shortName} process time was {stopwatch1.Elapsed.TotalMilliseconds}ms");
+            Trace.WriteLine($"{shortName} cluster count: {clusters.Count} with {breakDistThreshold} distance threshold");
+            for (int i = 0; i < clusters.Count; i++)
+                Trace.WriteLine($"cluster #{i} has {clusters[i].noteList.Count} notes and last {clusters[i].GetClusterSize()}s.");
+            Trace.WriteLine($"-----------------------------------------------------");
         }
 
         public void CalcAllDiff(float gamespeed)
@@ -208,7 +235,7 @@ namespace TootTallyDifficultyCalculator2._0
         public static double CalcTapStrain(Note nextNote, Note previousNote, float weight, float comboMultiplier, double MIN_TIMEDELTA)
         {
             var tapStrain = 0d;
-            if (!nextNote.isSlider)
+            if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var timeDelta = Math.Max(nextNote.position - previousNote.position, MIN_TIMEDELTA);
                 var strain = 25f / Math.Pow(timeDelta, 1.2f);

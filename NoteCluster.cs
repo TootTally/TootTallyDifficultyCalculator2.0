@@ -33,6 +33,6 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void AddNote(Note note) => noteList.Add(note);
 
-        public double GetClusterSize() => noteList.Max(x  => x.position) - noteList.Min(x => x.position);
+        public double GetClusterSize() => noteList.Max(x  => x.position + x.length) - noteList.Min(x => x.position);
     }
 }
