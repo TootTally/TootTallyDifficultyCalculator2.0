@@ -196,7 +196,7 @@ namespace TootTallyDifficultyCalculator2._0
             }
         }
 
-        public static double CalcAimStrain(Note nextNote, Note previousNote, ref Direction currentDirection, ref Direction previousDirection, float weight, float comboMultiplier, ref float directionMultiplier, double MAX_TIME)
+        public static double CalcAimStrain(Note nextNote, Note previousNote, ref Direction currentDirection, ref Direction previousDirection, float weight, ref float directionMultiplier, double MAX_TIME)
         {
             double speed;
             //Calc the space between two notes
@@ -229,17 +229,17 @@ namespace TootTallyDifficultyCalculator2._0
                 previousDirection = currentDirection; //update direction from slider
             }
 
-            return speed * weight * comboMultiplier * directionMultiplier;
+            return speed * weight * directionMultiplier;
         }
 
-        public static double CalcTapStrain(Note nextNote, Note previousNote, float weight, float comboMultiplier, double MIN_TIMEDELTA)
+        public static double CalcTapStrain(Note nextNote, Note previousNote, float weight, double MIN_TIMEDELTA)
         {
             var tapStrain = 0d;
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var timeDelta = Math.Max(nextNote.position - previousNote.position, MIN_TIMEDELTA);
                 var strain = 25f / Math.Pow(timeDelta, 1.2f);
-                tapStrain = strain * weight * comboMultiplier;
+                tapStrain = strain * weight;
             }
             return tapStrain;
         }
