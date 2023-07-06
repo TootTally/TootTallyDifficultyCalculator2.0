@@ -171,10 +171,10 @@ namespace TootTallyDifficultyCalculator2._0
                     var weight = weights[j - i - 1];
 
                     //Aim Calc
-                    speedStrain += CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, comboMultiplier, ref directionMultiplier, MAX_TIME);
+                    speedStrain += CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, MAX_TIME);
 
                     //Tap Calc
-                    tapStrain += CalcTapStrain(nextNote, previousNote, weight, comboMultiplier, MIN_TIMEDELTA);
+                    tapStrain += CalcTapStrain(nextNote, previousNote, weight, MIN_TIMEDELTA);
 
                     //Acc Calc
                     accStrain += CalcAccStrain(nextNote, previousNote, weight, comboMultiplier, AVERAGE_NOTE_LENGTH);
