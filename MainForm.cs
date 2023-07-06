@@ -62,7 +62,7 @@ namespace TootTallyDifficultyCalculator2._0
                 ListboxMapData.Items.Add($"Calculation time took {_calculationTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
                 foreach (Chart chart in chartList)
                 {
-                    ListboxMapData.Items.Add(chart.name);
+                    ListboxMapData.Items.Add($"{chart.name} processed in {chart.calculationTime.TotalSeconds}s");
                     for (int i = 0; i < chart.GAME_SPEED.Length; i++)
                     {
                         Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[chart.GAME_SPEED[i]];
