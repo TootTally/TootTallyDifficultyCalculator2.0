@@ -65,10 +65,11 @@ namespace TootTallyDifficultyCalculator2._0
                     ListboxMapData.Items.Add($"{chart.name} processed in {chart.calculationTime.TotalSeconds}s");
                     for (int i = 0; i < chart.GAME_SPEED.Length; i++)
                     {
-                        Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[chart.GAME_SPEED[i]];
-                        Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[chart.GAME_SPEED[i]];
-                        Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[chart.GAME_SPEED[i]];
-                        ListboxMapData.Items.Add($"SPEED: {chart.GAME_SPEED[i]:0.00}x");
+                        var gamespeed = chart.GAME_SPEED[i];
+                        Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[gamespeed];
+                        Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[gamespeed];
+                        Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[gamespeed];
+                        ListboxMapData.Items.Add($"SPEED: {gamespeed:0.00}x rated {chart.starRatingDict[gamespeed]}");
                         ListboxMapData.Items.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
                         ListboxMapData.Items.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
                         ListboxMapData.Items.Add($"  acc: " + accAnalytics.perfAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);

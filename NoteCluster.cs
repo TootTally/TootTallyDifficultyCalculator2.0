@@ -31,8 +31,14 @@ namespace TootTallyDifficultyCalculator2._0
 
         }
 
-        public void AddNote(Note note) => noteList.Add(note);
+        public void AddNotes(params Note[] note) => noteList.AddRange(note);
 
-        public double GetClusterSize() => noteList.Max(x  => x.position + x.length) - noteList.Min(x => x.position);
+        public double GetClusterSize() => GetClusterEnd() - GetClusterStart();
+
+        public double GetClusterEnd() => noteList.Max(x => x.position + x.length);
+
+        public double GetClusterStart() => noteList.Min(x => x.position);
+
+        public double GetDistanceFromCluster(NoteCluster noteCluster) => noteCluster.GetClusterStart() - GetClusterEnd();
     }
 }
