@@ -25,6 +25,8 @@ namespace TootTallyDifficultyCalculator2._0
                 Directory.CreateDirectory(Program.MAIN_DIRECTORY);
             if (!Directory.Exists(Program.REPLAY_DIRECTORY))
                 Directory.CreateDirectory(Program.REPLAY_DIRECTORY);
+            if (!Directory.Exists(Program.EXPORT_DIRECTORY))
+                Directory.CreateDirectory(Program.EXPORT_DIRECTORY);
 
             FillComboBoxSongName();
             FillComboBoxReplay();
@@ -40,8 +42,8 @@ namespace TootTallyDifficultyCalculator2._0
             {
 
                 chartList.Add(ChartReader.LoadChart(name));
-                if (!File.Exists(name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json"))
-                    ExportChartToJson(name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json", chartList.Last());
+                if (!File.Exists(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json"))
+                    ExportChartToJson(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json", chartList.Last());
 
                 ComboBoxSongName.Items.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
                 _fileNameLists.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
@@ -83,6 +85,7 @@ namespace TootTallyDifficultyCalculator2._0
 
             if (ComboBoxSongName.Text == "ALL")
             {
+                chartList.Sort((x, y) => String.Compare(x.name,y.name)); 
                 ListboxMapData.Items.Add($"Calculation time took {_calculationTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
                 foreach (Chart chart in chartList)
                 {
