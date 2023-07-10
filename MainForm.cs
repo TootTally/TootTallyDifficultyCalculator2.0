@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
+using System.Xml.Linq;
 
 namespace TootTallyDifficultyCalculator2._0
 {
@@ -40,21 +41,8 @@ namespace TootTallyDifficultyCalculator2._0
 
                 chartList.Add(ChartReader.LoadChart(name));
                 if (!File.Exists(name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json"))
-                {
-                    Chart.SerializableDiffData chartdata = new Chart.SerializableDiffData()
-                    {
-                        speed050 = new Chart.SerializableDataVector() { aim = chartList.Last().aimPerformanceDict[0.5f], tap = chartList.Last().aimPerformanceDict[0.5f], acc = chartList.Last().aimPerformanceDict[0.5f] },
-                        speed075 = new Chart.SerializableDataVector() { aim = chartList.Last().aimPerformanceDict[0.75f], tap = chartList.Last().aimPerformanceDict[0.75f], acc = chartList.Last().aimPerformanceDict[0.75f] },
-                        speed100 = new Chart.SerializableDataVector() { aim = chartList.Last().aimPerformanceDict[1f], tap = chartList.Last().aimPerformanceDict[1f], acc = chartList.Last().aimPerformanceDict[1f] },
-                        speed125 = new Chart.SerializableDataVector() { aim = chartList.Last().aimPerformanceDict[1.25f], tap = chartList.Last().aimPerformanceDict[1.25f], acc = chartList.Last().aimPerformanceDict[1.25f] },
-                        speed150 = new Chart.SerializableDataVector() { aim = chartList.Last().aimPerformanceDict[1.5f], tap = chartList.Last().aimPerformanceDict[1.5f], acc = chartList.Last().aimPerformanceDict[1.5f] },
-                        speed175 = new Chart.SerializableDataVector() { aim = chartList.Last().aimPerformanceDict[1.75f], tap = chartList.Last().aimPerformanceDict[1.75f], acc = chartList.Last().aimPerformanceDict[1.75f] },
-                        speed200 = new Chart.SerializableDataVector() { aim = chartList.Last().aimPerformanceDict[2f], tap = chartList.Last().aimPerformanceDict[2f], acc = chartList.Last().aimPerformanceDict[2f] },
+                    ExportChartToJson(name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json", chartList.Last());
 
-                    };
-                    var json = JsonConvert.SerializeObject(chartdata, Formatting.Indented);
-                    ChartReader.SaveChartData(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json", json);
-                }
                 ComboBoxSongName.Items.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
                 _fileNameLists.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
             }
@@ -70,6 +58,24 @@ namespace TootTallyDifficultyCalculator2._0
                 _replayNameLists.Add(replayNames.Remove(0, Program.REPLAY_DIRECTORY.Length));
             }
         }
+
+        public void ExportChartToJson(string path, Chart chart)
+        {
+            Chart.SerializableDiffData chartdata = new Chart.SerializableDiffData()
+            {
+                speed050 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.5f],   tap = chart.aimPerformanceDict[0.5f],   acc = chart.aimPerformanceDict[0.5f] },
+                speed075 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.75f],  tap = chart.aimPerformanceDict[0.75f],  acc = chart.aimPerformanceDict[0.75f] },
+                speed100 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1f],     tap = chart.aimPerformanceDict[1f],     acc = chart.aimPerformanceDict[1f] },
+                speed125 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.25f],  tap = chart.aimPerformanceDict[1.25f],  acc = chart.aimPerformanceDict[1.25f] },
+                speed150 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.5f],   tap = chart.aimPerformanceDict[1.5f],   acc = chart.aimPerformanceDict[1.5f] },
+                speed175 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.75f],  tap = chart.aimPerformanceDict[1.75f],  acc = chart.aimPerformanceDict[1.75f] },
+                speed200 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[2f],     tap = chart.aimPerformanceDict[2f],     acc = chart.aimPerformanceDict[2f] },
+
+            };
+            var json = JsonConvert.SerializeObject(chartdata, Formatting.Indented);
+            ChartReader.SaveChartData(path, json);
+        }
+
 
         private void OnLoadChartButtonClick(object sender, EventArgs e)
         {
