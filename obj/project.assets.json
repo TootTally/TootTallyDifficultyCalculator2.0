@@ -411,19 +411,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sabz\\.nuget\\packages\\": {}
+    "C:\\Users\\Fanfo\\.nuget\\packages\\": {},
+    "C:\\Users\\Fanfo\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Visual Studio Projects\\Beat Saber Project\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0.csproj",
+      "projectUniqueName": "D:\\GitHub\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0.csproj",
       "projectName": "TootTallyDifficultyCalculator2.0",
-      "projectPath": "E:\\Visual Studio Projects\\Beat Saber Project\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0.csproj",
-      "packagesPath": "C:\\Users\\Sabz\\.nuget\\packages\\",
-      "outputPath": "E:\\Visual Studio Projects\\Beat Saber Project\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0\\obj\\",
+      "projectPath": "D:\\GitHub\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0.csproj",
+      "packagesPath": "C:\\Users\\Fanfo\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\TootTallyDifficultyCalculator2.0\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Users\\Fanfo\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Sabz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Fanfo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Fanfo\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -481,7 +488,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

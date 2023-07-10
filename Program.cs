@@ -3,6 +3,7 @@ namespace TootTallyDifficultyCalculator2._0
     internal static class Program
     {
         public const string MAIN_DIRECTORY = "testSubject/";
+        public const string EXPORT_DIRECTORY = "export/";
         public const string REPLAY_DIRECTORY = "replays/";
         public const string DOWNLOAD_DIRECTORY = "downloads/";
 

@@ -1,0 +1,8122 @@
+{
+  "speed050": {
+    "aim": [
+      {
+        "performance": 2.146335,
+        "time": 1.6666666
+      },
+      {
+        "performance": 1.6642165,
+        "time": 2.5
+      },
+      {
+        "performance": 1.2868488,
+        "time": 3.3387535
+      },
+      {
+        "performance": 0.91731477,
+        "time": 3.9583333
+      },
+      {
+        "performance": 0.5581972,
+        "time": 4.375
+      },
+      {
+        "performance": 1.4086167,
+        "time": 5.0
+      },
+      {
+        "performance": 1.9701797,
+        "time": 8.333333
+      },
+      {
+        "performance": 1.477017,
+        "time": 9.126436
+      },
+      {
+        "performance": 1.4237081,
+        "time": 9.816092
+      },
+      {
+        "performance": 1.4945172,
+        "time": 10.363985
+      },
+      {
+        "performance": 1.8160728,
+        "time": 11.003831
+      },
+      {
+        "performance": 2.7143462,
+        "time": 11.597701
+      },
+      {
+        "performance": 2.3946733,
+        "time": 13.75
+      },
+      {
+        "performance": 3.1496902,
+        "time": 14.18
+      },
+      {
+        "performance": 2.9152253,
+        "time": 14.624445
+      },
+      {
+        "performance": 2.9649158,
+        "time": 14.966331
+      },
+      {
+        "performance": 2.3961906,
+        "time": 15.627947
+      },
+      {
+        "performance": 2.765907,
+        "time": 16.707071
+      },
+      {
+        "performance": 2.868544,
+        "time": 17.777779
+      },
+      {
+        "performance": 2.2293928,
+        "time": 17.997778
+      },
+      {
+        "performance": 2.0109937,
+        "time": 18.333334
+      },
+      {
+        "performance": 1.7084764,
+        "time": 19.166666
+      },
+      {
+        "performance": 2.214376,
+        "time": 20.391111
+      },
+      {
+        "performance": 1.9811977,
+        "time": 20.826668
+      },
+      {
+        "performance": 1.5203608,
+        "time": 21.27441
+      },
+      {
+        "performance": 1.2645392,
+        "time": 21.666666
+      },
+      {
+        "performance": 1.3008176,
+        "time": 21.946667
+      },
+      {
+        "performance": 1.1608442,
+        "time": 22.5
+      },
+      {
+        "performance": 0.9494106,
+        "time": 23.333334
+      },
+      {
+        "performance": 0.840222,
+        "time": 24.166666
+      },
+      {
+        "performance": 0.5184349,
+        "time": 24.497778
+      },
+      {
+        "performance": 0.64507174,
+        "time": 25.0
+      },
+      {
+        "performance": 0.5373475,
+        "time": 26.661905
+      },
+      {
+        "performance": 0.53807604,
+        "time": 28.333334
+      },
+      {
+        "performance": 0.55351293,
+        "time": 28.43016
+      },
+      {
+        "performance": 0.27940252,
+        "time": 29.06984
+      },
+      {
+        "performance": 0.2874183,
+        "time": 29.166666
+      },
+      {
+        "performance": 0.25928235,
+        "time": 30.476192
+      },
+      {
+        "performance": 0.30889806,
+        "time": 31.280952
+      },
+      {
+        "performance": 0.24909124,
+        "time": 32.203175
+      },
+      {
+        "performance": 0.49473378,
+        "time": 34.93492
+      },
+      {
+        "performance": 0.35960108,
+        "time": 35.631744
+      },
+      {
+        "performance": 0.36991766,
+        "time": 35.731747
+      },
+      {
+        "performance": 0.43586054,
+        "time": 36.938095
+      },
+      {
+        "performance": 0.89663064,
+        "time": 37.784126
+      },
+      {
+        "performance": 1.1420193,
+        "time": 38.72381
+      },
+      {
+        "performance": 1.5141113,
+        "time": 39.242855
+      },
+      {
+        "performance": 1.5061516,
+        "time": 40.003178
+      },
+      {
+        "performance": 1.9382641,
+        "time": 40.38889
+      },
+      {
+        "performance": 1.9186018,
+        "time": 40.753967
+      },
+      {
+        "performance": 2.0387287,
+        "time": 41.631943
+      },
+      {
+        "performance": 1.5956163,
+        "time": 42.48611
+      },
+      {
+        "performance": 1.5070872,
+        "time": 43.29398
+      },
+      {
+        "performance": 1.3004128,
+        "time": 44.113426
+      },
+      {
+        "performance": 1.1039352,
+        "time": 44.958336
+      },
+      {
+        "performance": 1.0232018,
+        "time": 45.780094
+      },
+      {
+        "performance": 0.86602384,
+        "time": 47.43333
+      },
+      {
+        "performance": 1.0500182,
+        "time": 48.33175
+      },
+      {
+        "performance": 0.62235636,
+        "time": 49.674603
+      },
+      {
+        "performance": 0.64021116,
+        "time": 49.80476
+      },
+      {
+        "performance": 0.6585782,
+        "time": 49.925392
+      },
+      {
+        "performance": 0.4848909,
+        "time": 51.671295
+      },
+      {
+        "performance": 0.59335613,
+        "time": 52.050926
+      },
+      {
+        "performance": 2.2809265,
+        "time": 55.043983
+      },
+      {
+        "performance": 1.7819477,
+        "time": 55.833332
+      },
+      {
+        "performance": 1.342791,
+        "time": 56.758728
+      },
+      {
+        "performance": 1.1236312,
+        "time": 57.325394
+      },
+      {
+        "performance": 0.7900476,
+        "time": 57.89524
+      },
+      {
+        "performance": 1.2037035,
+        "time": 58.332146
+      },
+      {
+        "performance": 1.720961,
+        "time": 61.61111
+      },
+      {
+        "performance": 1.2104313,
+        "time": 62.446033
+      },
+      {
+        "performance": 1.1490278,
+        "time": 63.141663
+      },
+      {
+        "performance": 1.6037569,
+        "time": 63.33373
+      },
+      {
+        "performance": 1.0996314,
+        "time": 63.78889
+      },
+      {
+        "performance": 1.1002345,
+        "time": 64.21111
+      },
+      {
+        "performance": 1.6939324,
+        "time": 64.79365
+      },
+      {
+        "performance": 2.617118,
+        "time": 67.488884
+      },
+      {
+        "performance": 2.3315558,
+        "time": 67.96349
+      },
+      {
+        "performance": 2.5362942,
+        "time": 68.447624
+      },
+      {
+        "performance": 2.609058,
+        "time": 69.24127
+      },
+      {
+        "performance": 2.5669262,
+        "time": 70.00635
+      },
+      {
+        "performance": 3.0470543,
+        "time": 70.417465
+      },
+      {
+        "performance": 3.071295,
+        "time": 71.17824
+      },
+      {
+        "performance": 2.4784145,
+        "time": 71.40047
+      },
+      {
+        "performance": 2.086728,
+        "time": 71.63657
+      },
+      {
+        "performance": 1.4827095,
+        "time": 72.503174
+      },
+      {
+        "performance": 1.6914843,
+        "time": 73.80324
+      },
+      {
+        "performance": 1.2622689,
+        "time": 74.21297
+      },
+      {
+        "performance": 0.91902477,
+        "time": 74.62269
+      },
+      {
+        "performance": 0.63097656,
+        "time": 75.011116
+      },
+      {
+        "performance": 0.4289551,
+        "time": 75.849205
+      },
+      {
+        "performance": 0.44126138,
+        "time": 76.54921
+      },
+      {
+        "performance": 0.45392075,
+        "time": 76.933334
+      },
+      {
+        "performance": 0.13365853,
+        "time": 77.77143
+      },
+      {
+        "performance": 0.0,
+        "time": 78.75714
+      },
+      {
+        "performance": 0.0,
+        "time": 79.30476
+      }
+    ],
+    "tap": [
+      {
+        "performance": 2.146335,
+        "time": 1.6666666
+      },
+      {
+        "performance": 1.6642165,
+        "time": 2.5
+      },
+      {
+        "performance": 1.2868488,
+        "time": 3.3387535
+      },
+      {
+        "performance": 0.91731477,
+        "time": 3.9583333
+      },
+      {
+        "performance": 0.5581972,
+        "time": 4.375
+      },
+      {
+        "performance": 1.4086167,
+        "time": 5.0
+      },
+      {
+        "performance": 1.9701797,
+        "time": 8.333333
+      },
+      {
+        "performance": 1.477017,
+        "time": 9.126436
+      },
+      {
+        "performance": 1.4237081,
+        "time": 9.816092
+      },
+      {
+        "performance": 1.4945172,
+        "time": 10.363985
+      },
+      {
+        "performance": 1.8160728,
+        "time": 11.003831
+      },
+      {
+        "performance": 2.7143462,
+        "time": 11.597701
+      },
+      {
+        "performance": 2.3946733,
+        "time": 13.75
+      },
+      {
+        "performance": 3.1496902,
+        "time": 14.18
+      },
+      {
+        "performance": 2.9152253,
+        "time": 14.624445
+      },
+      {
+        "performance": 2.9649158,
+        "time": 14.966331
+      },
+      {
+        "performance": 2.3961906,
+        "time": 15.627947
+      },
+      {
+        "performance": 2.765907,
+        "time": 16.707071
+      },
+      {
+        "performance": 2.868544,
+        "time": 17.777779
+      },
+      {
+        "performance": 2.2293928,
+        "time": 17.997778
+      },
+      {
+        "performance": 2.0109937,
+        "time": 18.333334
+      },
+      {
+        "performance": 1.7084764,
+        "time": 19.166666
+      },
+      {
+        "performance": 2.214376,
+        "time": 20.391111
+      },
+      {
+        "performance": 1.9811977,
+        "time": 20.826668
+      },
+      {
+        "performance": 1.5203608,
+        "time": 21.27441
+      },
+      {
+        "performance": 1.2645392,
+        "time": 21.666666
+      },
+      {
+        "performance": 1.3008176,
+        "time": 21.946667
+      },
+      {
+        "performance": 1.1608442,
+        "time": 22.5
+      },
+      {
+        "performance": 0.9494106,
+        "time": 23.333334
+      },
+      {
+        "performance": 0.840222,
+        "time": 24.166666
+      },
+      {
+        "performance": 0.5184349,
+        "time": 24.497778
+      },
+      {
+        "performance": 0.64507174,
+        "time": 25.0
+      },
+      {
+        "performance": 0.5373475,
+        "time": 26.661905
+      },
+      {
+        "performance": 0.53807604,
+        "time": 28.333334
+      },
+      {
+        "performance": 0.55351293,
+        "time": 28.43016
+      },
+      {
+        "performance": 0.27940252,
+        "time": 29.06984
+      },
+      {
+        "performance": 0.2874183,
+        "time": 29.166666
+      },
+      {
+        "performance": 0.25928235,
+        "time": 30.476192
+      },
+      {
+        "performance": 0.30889806,
+        "time": 31.280952
+      },
+      {
+        "performance": 0.24909124,
+        "time": 32.203175
+      },
+      {
+        "performance": 0.49473378,
+        "time": 34.93492
+      },
+      {
+        "performance": 0.35960108,
+        "time": 35.631744
+      },
+      {
+        "performance": 0.36991766,
+        "time": 35.731747
+      },
+      {
+        "performance": 0.43586054,
+        "time": 36.938095
+      },
+      {
+        "performance": 0.89663064,
+        "time": 37.784126
+      },
+      {
+        "performance": 1.1420193,
+        "time": 38.72381
+      },
+      {
+        "performance": 1.5141113,
+        "time": 39.242855
+      },
+      {
+        "performance": 1.5061516,
+        "time": 40.003178
+      },
+      {
+        "performance": 1.9382641,
+        "time": 40.38889
+      },
+      {
+        "performance": 1.9186018,
+        "time": 40.753967
+      },
+      {
+        "performance": 2.0387287,
+        "time": 41.631943
+      },
+      {
+        "performance": 1.5956163,
+        "time": 42.48611
+      },
+      {
+        "performance": 1.5070872,
+        "time": 43.29398
+      },
+      {
+        "performance": 1.3004128,
+        "time": 44.113426
+      },
+      {
+        "performance": 1.1039352,
+        "time": 44.958336
+      },
+      {
+        "performance": 1.0232018,
+        "time": 45.780094
+      },
+      {
+        "performance": 0.86602384,
+        "time": 47.43333
+      },
+      {
+        "performance": 1.0500182,
+        "time": 48.33175
+      },
+      {
+        "performance": 0.62235636,
+        "time": 49.674603
+      },
+      {
+        "performance": 0.64021116,
+        "time": 49.80476
+      },
+      {
+        "performance": 0.6585782,
+        "time": 49.925392
+      },
+      {
+        "performance": 0.4848909,
+        "time": 51.671295
+      },
+      {
+        "performance": 0.59335613,
+        "time": 52.050926
+      },
+      {
+        "performance": 2.2809265,
+        "time": 55.043983
+      },
+      {
+        "performance": 1.7819477,
+        "time": 55.833332
+      },
+      {
+        "performance": 1.342791,
+        "time": 56.758728
+      },
+      {
+        "performance": 1.1236312,
+        "time": 57.325394
+      },
+      {
+        "performance": 0.7900476,
+        "time": 57.89524
+      },
+      {
+        "performance": 1.2037035,
+        "time": 58.332146
+      },
+      {
+        "performance": 1.720961,
+        "time": 61.61111
+      },
+      {
+        "performance": 1.2104313,
+        "time": 62.446033
+      },
+      {
+        "performance": 1.1490278,
+        "time": 63.141663
+      },
+      {
+        "performance": 1.6037569,
+        "time": 63.33373
+      },
+      {
+        "performance": 1.0996314,
+        "time": 63.78889
+      },
+      {
+        "performance": 1.1002345,
+        "time": 64.21111
+      },
+      {
+        "performance": 1.6939324,
+        "time": 64.79365
+      },
+      {
+        "performance": 2.617118,
+        "time": 67.488884
+      },
+      {
+        "performance": 2.3315558,
+        "time": 67.96349
+      },
+      {
+        "performance": 2.5362942,
+        "time": 68.447624
+      },
+      {
+        "performance": 2.609058,
+        "time": 69.24127
+      },
+      {
+        "performance": 2.5669262,
+        "time": 70.00635
+      },
+      {
+        "performance": 3.0470543,
+        "time": 70.417465
+      },
+      {
+        "performance": 3.071295,
+        "time": 71.17824
+      },
+      {
+        "performance": 2.4784145,
+        "time": 71.40047
+      },
+      {
+        "performance": 2.086728,
+        "time": 71.63657
+      },
+      {
+        "performance": 1.4827095,
+        "time": 72.503174
+      },
+      {
+        "performance": 1.6914843,
+        "time": 73.80324
+      },
+      {
+        "performance": 1.2622689,
+        "time": 74.21297
+      },
+      {
+        "performance": 0.91902477,
+        "time": 74.62269
+      },
+      {
+        "performance": 0.63097656,
+        "time": 75.011116
+      },
+      {
+        "performance": 0.4289551,
+        "time": 75.849205
+      },
+      {
+        "performance": 0.44126138,
+        "time": 76.54921
+      },
+      {
+        "performance": 0.45392075,
+        "time": 76.933334
+      },
+      {
+        "performance": 0.13365853,
+        "time": 77.77143
+      },
+      {
+        "performance": 0.0,
+        "time": 78.75714
+      },
+      {
+        "performance": 0.0,
+        "time": 79.30476
+      }
+    ],
+    "acc": [
+      {
+        "performance": 2.146335,
+        "time": 1.6666666
+      },
+      {
+        "performance": 1.6642165,
+        "time": 2.5
+      },
+      {
+        "performance": 1.2868488,
+        "time": 3.3387535
+      },
+      {
+        "performance": 0.91731477,
+        "time": 3.9583333
+      },
+      {
+        "performance": 0.5581972,
+        "time": 4.375
+      },
+      {
+        "performance": 1.4086167,
+        "time": 5.0
+      },
+      {
+        "performance": 1.9701797,
+        "time": 8.333333
+      },
+      {
+        "performance": 1.477017,
+        "time": 9.126436
+      },
+      {
+        "performance": 1.4237081,
+        "time": 9.816092
+      },
+      {
+        "performance": 1.4945172,
+        "time": 10.363985
+      },
+      {
+        "performance": 1.8160728,
+        "time": 11.003831
+      },
+      {
+        "performance": 2.7143462,
+        "time": 11.597701
+      },
+      {
+        "performance": 2.3946733,
+        "time": 13.75
+      },
+      {
+        "performance": 3.1496902,
+        "time": 14.18
+      },
+      {
+        "performance": 2.9152253,
+        "time": 14.624445
+      },
+      {
+        "performance": 2.9649158,
+        "time": 14.966331
+      },
+      {
+        "performance": 2.3961906,
+        "time": 15.627947
+      },
+      {
+        "performance": 2.765907,
+        "time": 16.707071
+      },
+      {
+        "performance": 2.868544,
+        "time": 17.777779
+      },
+      {
+        "performance": 2.2293928,
+        "time": 17.997778
+      },
+      {
+        "performance": 2.0109937,
+        "time": 18.333334
+      },
+      {
+        "performance": 1.7084764,
+        "time": 19.166666
+      },
+      {
+        "performance": 2.214376,
+        "time": 20.391111
+      },
+      {
+        "performance": 1.9811977,
+        "time": 20.826668
+      },
+      {
+        "performance": 1.5203608,
+        "time": 21.27441
+      },
+      {
+        "performance": 1.2645392,
+        "time": 21.666666
+      },
+      {
+        "performance": 1.3008176,
+        "time": 21.946667
+      },
+      {
+        "performance": 1.1608442,
+        "time": 22.5
+      },
+      {
+        "performance": 0.9494106,
+        "time": 23.333334
+      },
+      {
+        "performance": 0.840222,
+        "time": 24.166666
+      },
+      {
+        "performance": 0.5184349,
+        "time": 24.497778
+      },
+      {
+        "performance": 0.64507174,
+        "time": 25.0
+      },
+      {
+        "performance": 0.5373475,
+        "time": 26.661905
+      },
+      {
+        "performance": 0.53807604,
+        "time": 28.333334
+      },
+      {
+        "performance": 0.55351293,
+        "time": 28.43016
+      },
+      {
+        "performance": 0.27940252,
+        "time": 29.06984
+      },
+      {
+        "performance": 0.2874183,
+        "time": 29.166666
+      },
+      {
+        "performance": 0.25928235,
+        "time": 30.476192
+      },
+      {
+        "performance": 0.30889806,
+        "time": 31.280952
+      },
+      {
+        "performance": 0.24909124,
+        "time": 32.203175
+      },
+      {
+        "performance": 0.49473378,
+        "time": 34.93492
+      },
+      {
+        "performance": 0.35960108,
+        "time": 35.631744
+      },
+      {
+        "performance": 0.36991766,
+        "time": 35.731747
+      },
+      {
+        "performance": 0.43586054,
+        "time": 36.938095
+      },
+      {
+        "performance": 0.89663064,
+        "time": 37.784126
+      },
+      {
+        "performance": 1.1420193,
+        "time": 38.72381
+      },
+      {
+        "performance": 1.5141113,
+        "time": 39.242855
+      },
+      {
+        "performance": 1.5061516,
+        "time": 40.003178
+      },
+      {
+        "performance": 1.9382641,
+        "time": 40.38889
+      },
+      {
+        "performance": 1.9186018,
+        "time": 40.753967
+      },
+      {
+        "performance": 2.0387287,
+        "time": 41.631943
+      },
+      {
+        "performance": 1.5956163,
+        "time": 42.48611
+      },
+      {
+        "performance": 1.5070872,
+        "time": 43.29398
+      },
+      {
+        "performance": 1.3004128,
+        "time": 44.113426
+      },
+      {
+        "performance": 1.1039352,
+        "time": 44.958336
+      },
+      {
+        "performance": 1.0232018,
+        "time": 45.780094
+      },
+      {
+        "performance": 0.86602384,
+        "time": 47.43333
+      },
+      {
+        "performance": 1.0500182,
+        "time": 48.33175
+      },
+      {
+        "performance": 0.62235636,
+        "time": 49.674603
+      },
+      {
+        "performance": 0.64021116,
+        "time": 49.80476
+      },
+      {
+        "performance": 0.6585782,
+        "time": 49.925392
+      },
+      {
+        "performance": 0.4848909,
+        "time": 51.671295
+      },
+      {
+        "performance": 0.59335613,
+        "time": 52.050926
+      },
+      {
+        "performance": 2.2809265,
+        "time": 55.043983
+      },
+      {
+        "performance": 1.7819477,
+        "time": 55.833332
+      },
+      {
+        "performance": 1.342791,
+        "time": 56.758728
+      },
+      {
+        "performance": 1.1236312,
+        "time": 57.325394
+      },
+      {
+        "performance": 0.7900476,
+        "time": 57.89524
+      },
+      {
+        "performance": 1.2037035,
+        "time": 58.332146
+      },
+      {
+        "performance": 1.720961,
+        "time": 61.61111
+      },
+      {
+        "performance": 1.2104313,
+        "time": 62.446033
+      },
+      {
+        "performance": 1.1490278,
+        "time": 63.141663
+      },
+      {
+        "performance": 1.6037569,
+        "time": 63.33373
+      },
+      {
+        "performance": 1.0996314,
+        "time": 63.78889
+      },
+      {
+        "performance": 1.1002345,
+        "time": 64.21111
+      },
+      {
+        "performance": 1.6939324,
+        "time": 64.79365
+      },
+      {
+        "performance": 2.617118,
+        "time": 67.488884
+      },
+      {
+        "performance": 2.3315558,
+        "time": 67.96349
+      },
+      {
+        "performance": 2.5362942,
+        "time": 68.447624
+      },
+      {
+        "performance": 2.609058,
+        "time": 69.24127
+      },
+      {
+        "performance": 2.5669262,
+        "time": 70.00635
+      },
+      {
+        "performance": 3.0470543,
+        "time": 70.417465
+      },
+      {
+        "performance": 3.071295,
+        "time": 71.17824
+      },
+      {
+        "performance": 2.4784145,
+        "time": 71.40047
+      },
+      {
+        "performance": 2.086728,
+        "time": 71.63657
+      },
+      {
+        "performance": 1.4827095,
+        "time": 72.503174
+      },
+      {
+        "performance": 1.6914843,
+        "time": 73.80324
+      },
+      {
+        "performance": 1.2622689,
+        "time": 74.21297
+      },
+      {
+        "performance": 0.91902477,
+        "time": 74.62269
+      },
+      {
+        "performance": 0.63097656,
+        "time": 75.011116
+      },
+      {
+        "performance": 0.4289551,
+        "time": 75.849205
+      },
+      {
+        "performance": 0.44126138,
+        "time": 76.54921
+      },
+      {
+        "performance": 0.45392075,
+        "time": 76.933334
+      },
+      {
+        "performance": 0.13365853,
+        "time": 77.77143
+      },
+      {
+        "performance": 0.0,
+        "time": 78.75714
+      },
+      {
+        "performance": 0.0,
+        "time": 79.30476
+      }
+    ]
+  },
+  "speed075": {
+    "aim": [
+      {
+        "performance": 2.4217358,
+        "time": 1.1111112
+      },
+      {
+        "performance": 1.948121,
+        "time": 1.6666666
+      },
+      {
+        "performance": 2.039265,
+        "time": 2.2258356
+      },
+      {
+        "performance": 2.2289684,
+        "time": 2.6388888
+      },
+      {
+        "performance": 2.1018922,
+        "time": 2.9166667
+      },
+      {
+        "performance": 2.2135518,
+        "time": 3.3333333
+      },
+      {
+        "performance": 3.0505538,
+        "time": 5.5555553
+      },
+      {
+        "performance": 3.2619379,
+        "time": 6.084291
+      },
+      {
+        "performance": 3.243898,
+        "time": 6.544061
+      },
+      {
+        "performance": 2.9989,
+        "time": 6.909323
+      },
+      {
+        "performance": 3.0957658,
+        "time": 7.3358874
+      },
+      {
+        "performance": 4.262861,
+        "time": 7.7318006
+      },
+      {
+        "performance": 4.2961116,
+        "time": 9.166667
+      },
+      {
+        "performance": 4.014828,
+        "time": 9.453334
+      },
+      {
+        "performance": 3.86882,
+        "time": 9.74963
+      },
+      {
+        "performance": 3.8098361,
+        "time": 9.977553
+      },
+      {
+        "performance": 3.9053853,
+        "time": 10.418632
+      },
+      {
+        "performance": 3.6471922,
+        "time": 11.138047
+      },
+      {
+        "performance": 3.7351787,
+        "time": 11.851852
+      },
+      {
+        "performance": 3.0414672,
+        "time": 11.998519
+      },
+      {
+        "performance": 2.6232512,
+        "time": 12.222222
+      },
+      {
+        "performance": 2.6858923,
+        "time": 12.777778
+      },
+      {
+        "performance": 2.637649,
+        "time": 13.594074
+      },
+      {
+        "performance": 2.3712404,
+        "time": 13.884445
+      },
+      {
+        "performance": 1.8631494,
+        "time": 14.1829405
+      },
+      {
+        "performance": 1.5904912,
+        "time": 14.444445
+      },
+      {
+        "performance": 1.6361208,
+        "time": 14.631111
+      },
+      {
+        "performance": 1.5250281,
+        "time": 15.0
+      },
+      {
+        "performance": 1.57438,
+        "time": 15.555555
+      },
+      {
+        "performance": 1.4638401,
+        "time": 16.11111
+      },
+      {
+        "performance": 0.8794842,
+        "time": 16.331852
+      },
+      {
+        "performance": 0.730396,
+        "time": 16.666666
+      },
+      {
+        "performance": 0.8721154,
+        "time": 17.774603
+      },
+      {
+        "performance": 0.646958,
+        "time": 18.88889
+      },
+      {
+        "performance": 0.6655186,
+        "time": 18.95344
+      },
+      {
+        "performance": 0.38389114,
+        "time": 19.379894
+      },
+      {
+        "performance": 0.39490458,
+        "time": 19.444445
+      },
+      {
+        "performance": 0.5954199,
+        "time": 20.317461
+      },
+      {
+        "performance": 0.66924274,
+        "time": 20.85397
+      },
+      {
+        "performance": 0.420844,
+        "time": 21.468784
+      },
+      {
+        "performance": 0.77932763,
+        "time": 23.289948
+      },
+      {
+        "performance": 1.1071498,
+        "time": 23.754498
+      },
+      {
+        "performance": 1.1389129,
+        "time": 23.821165
+      },
+      {
+        "performance": 1.5486774,
+        "time": 24.625397
+      },
+      {
+        "performance": 1.9536002,
+        "time": 25.189419
+      },
+      {
+        "performance": 2.1498914,
+        "time": 25.815872
+      },
+      {
+        "performance": 2.3142614,
+        "time": 26.161903
+      },
+      {
+        "performance": 2.763096,
+        "time": 26.668783
+      },
+      {
+        "performance": 2.8423667,
+        "time": 26.925926
+      },
+      {
+        "performance": 2.8355863,
+        "time": 27.169312
+      },
+      {
+        "performance": 2.5290344,
+        "time": 27.75463
+      },
+      {
+        "performance": 2.2394488,
+        "time": 28.324074
+      },
+      {
+        "performance": 1.760033,
+        "time": 28.862654
+      },
+      {
+        "performance": 1.7230487,
+        "time": 29.40895
+      },
+      {
+        "performance": 1.5286871,
+        "time": 29.972223
+      },
+      {
+        "performance": 1.6397146,
+        "time": 30.520061
+      },
+      {
+        "performance": 1.2802193,
+        "time": 31.622221
+      },
+      {
+        "performance": 1.0886518,
+        "time": 32.221165
+      },
+      {
+        "performance": 0.7418123,
+        "time": 33.1164
+      },
+      {
+        "performance": 1.2868006,
+        "time": 33.203175
+      },
+      {
+        "performance": 1.3237176,
+        "time": 33.283596
+      },
+      {
+        "performance": 1.8508666,
+        "time": 34.44753
+      },
+      {
+        "performance": 2.524603,
+        "time": 34.70062
+      },
+      {
+        "performance": 2.5234487,
+        "time": 36.695988
+      },
+      {
+        "performance": 2.0932322,
+        "time": 37.22222
+      },
+      {
+        "performance": 2.1434965,
+        "time": 37.839153
+      },
+      {
+        "performance": 1.999185,
+        "time": 38.21693
+      },
+      {
+        "performance": 2.0409112,
+        "time": 38.59683
+      },
+      {
+        "performance": 1.9680796,
+        "time": 38.888096
+      },
+      {
+        "performance": 2.3084395,
+        "time": 41.074074
+      },
+      {
+        "performance": 2.4646997,
+        "time": 41.63069
+      },
+      {
+        "performance": 2.4330695,
+        "time": 42.094444
+      },
+      {
+        "performance": 2.5028718,
+        "time": 42.222485
+      },
+      {
+        "performance": 1.9540175,
+        "time": 42.52593
+      },
+      {
+        "performance": 2.1996865,
+        "time": 42.80741
+      },
+      {
+        "performance": 3.3195205,
+        "time": 43.195766
+      },
+      {
+        "performance": 3.4799566,
+        "time": 44.99259
+      },
+      {
+        "performance": 3.270348,
+        "time": 45.308994
+      },
+      {
+        "performance": 3.7231472,
+        "time": 45.63175
+      },
+      {
+        "performance": 4.087538,
+        "time": 46.160847
+      },
+      {
+        "performance": 3.6828337,
+        "time": 46.670902
+      },
+      {
+        "performance": 3.7884905,
+        "time": 46.944973
+      },
+      {
+        "performance": 3.5683024,
+        "time": 47.45216
+      },
+      {
+        "performance": 2.9136004,
+        "time": 47.60031
+      },
+      {
+        "performance": 2.545707,
+        "time": 47.757717
+      },
+      {
+        "performance": 2.0280766,
+        "time": 48.33545
+      },
+      {
+        "performance": 1.9636245,
+        "time": 49.20216
+      },
+      {
+        "performance": 1.4955887,
+        "time": 49.47531
+      },
+      {
+        "performance": 0.9946469,
+        "time": 49.74846
+      },
+      {
+        "performance": 0.6814006,
+        "time": 50.00741
+      },
+      {
+        "performance": 0.46714237,
+        "time": 50.56614
+      },
+      {
+        "performance": 0.4805442,
+        "time": 51.032803
+      },
+      {
+        "performance": 0.49433056,
+        "time": 51.288887
+      },
+      {
+        "performance": 0.1531388,
+        "time": 51.84762
+      },
+      {
+        "performance": 0.0,
+        "time": 52.50476
+      },
+      {
+        "performance": 0.0,
+        "time": 52.869843
+      }
+    ],
+    "tap": [
+      {
+        "performance": 2.4217358,
+        "time": 1.1111112
+      },
+      {
+        "performance": 1.948121,
+        "time": 1.6666666
+      },
+      {
+        "performance": 2.039265,
+        "time": 2.2258356
+      },
+      {
+        "performance": 2.2289684,
+        "time": 2.6388888
+      },
+      {
+        "performance": 2.1018922,
+        "time": 2.9166667
+      },
+      {
+        "performance": 2.2135518,
+        "time": 3.3333333
+      },
+      {
+        "performance": 3.0505538,
+        "time": 5.5555553
+      },
+      {
+        "performance": 3.2619379,
+        "time": 6.084291
+      },
+      {
+        "performance": 3.243898,
+        "time": 6.544061
+      },
+      {
+        "performance": 2.9989,
+        "time": 6.909323
+      },
+      {
+        "performance": 3.0957658,
+        "time": 7.3358874
+      },
+      {
+        "performance": 4.262861,
+        "time": 7.7318006
+      },
+      {
+        "performance": 4.2961116,
+        "time": 9.166667
+      },
+      {
+        "performance": 4.014828,
+        "time": 9.453334
+      },
+      {
+        "performance": 3.86882,
+        "time": 9.74963
+      },
+      {
+        "performance": 3.8098361,
+        "time": 9.977553
+      },
+      {
+        "performance": 3.9053853,
+        "time": 10.418632
+      },
+      {
+        "performance": 3.6471922,
+        "time": 11.138047
+      },
+      {
+        "performance": 3.7351787,
+        "time": 11.851852
+      },
+      {
+        "performance": 3.0414672,
+        "time": 11.998519
+      },
+      {
+        "performance": 2.6232512,
+        "time": 12.222222
+      },
+      {
+        "performance": 2.6858923,
+        "time": 12.777778
+      },
+      {
+        "performance": 2.637649,
+        "time": 13.594074
+      },
+      {
+        "performance": 2.3712404,
+        "time": 13.884445
+      },
+      {
+        "performance": 1.8631494,
+        "time": 14.1829405
+      },
+      {
+        "performance": 1.5904912,
+        "time": 14.444445
+      },
+      {
+        "performance": 1.6361208,
+        "time": 14.631111
+      },
+      {
+        "performance": 1.5250281,
+        "time": 15.0
+      },
+      {
+        "performance": 1.57438,
+        "time": 15.555555
+      },
+      {
+        "performance": 1.4638401,
+        "time": 16.11111
+      },
+      {
+        "performance": 0.8794842,
+        "time": 16.331852
+      },
+      {
+        "performance": 0.730396,
+        "time": 16.666666
+      },
+      {
+        "performance": 0.8721154,
+        "time": 17.774603
+      },
+      {
+        "performance": 0.646958,
+        "time": 18.88889
+      },
+      {
+        "performance": 0.6655186,
+        "time": 18.95344
+      },
+      {
+        "performance": 0.38389114,
+        "time": 19.379894
+      },
+      {
+        "performance": 0.39490458,
+        "time": 19.444445
+      },
+      {
+        "performance": 0.5954199,
+        "time": 20.317461
+      },
+      {
+        "performance": 0.66924274,
+        "time": 20.85397
+      },
+      {
+        "performance": 0.420844,
+        "time": 21.468784
+      },
+      {
+        "performance": 0.77932763,
+        "time": 23.289948
+      },
+      {
+        "performance": 1.1071498,
+        "time": 23.754498
+      },
+      {
+        "performance": 1.1389129,
+        "time": 23.821165
+      },
+      {
+        "performance": 1.5486774,
+        "time": 24.625397
+      },
+      {
+        "performance": 1.9536002,
+        "time": 25.189419
+      },
+      {
+        "performance": 2.1498914,
+        "time": 25.815872
+      },
+      {
+        "performance": 2.3142614,
+        "time": 26.161903
+      },
+      {
+        "performance": 2.763096,
+        "time": 26.668783
+      },
+      {
+        "performance": 2.8423667,
+        "time": 26.925926
+      },
+      {
+        "performance": 2.8355863,
+        "time": 27.169312
+      },
+      {
+        "performance": 2.5290344,
+        "time": 27.75463
+      },
+      {
+        "performance": 2.2394488,
+        "time": 28.324074
+      },
+      {
+        "performance": 1.760033,
+        "time": 28.862654
+      },
+      {
+        "performance": 1.7230487,
+        "time": 29.40895
+      },
+      {
+        "performance": 1.5286871,
+        "time": 29.972223
+      },
+      {
+        "performance": 1.6397146,
+        "time": 30.520061
+      },
+      {
+        "performance": 1.2802193,
+        "time": 31.622221
+      },
+      {
+        "performance": 1.0886518,
+        "time": 32.221165
+      },
+      {
+        "performance": 0.7418123,
+        "time": 33.1164
+      },
+      {
+        "performance": 1.2868006,
+        "time": 33.203175
+      },
+      {
+        "performance": 1.3237176,
+        "time": 33.283596
+      },
+      {
+        "performance": 1.8508666,
+        "time": 34.44753
+      },
+      {
+        "performance": 2.524603,
+        "time": 34.70062
+      },
+      {
+        "performance": 2.5234487,
+        "time": 36.695988
+      },
+      {
+        "performance": 2.0932322,
+        "time": 37.22222
+      },
+      {
+        "performance": 2.1434965,
+        "time": 37.839153
+      },
+      {
+        "performance": 1.999185,
+        "time": 38.21693
+      },
+      {
+        "performance": 2.0409112,
+        "time": 38.59683
+      },
+      {
+        "performance": 1.9680796,
+        "time": 38.888096
+      },
+      {
+        "performance": 2.3084395,
+        "time": 41.074074
+      },
+      {
+        "performance": 2.4646997,
+        "time": 41.63069
+      },
+      {
+        "performance": 2.4330695,
+        "time": 42.094444
+      },
+      {
+        "performance": 2.5028718,
+        "time": 42.222485
+      },
+      {
+        "performance": 1.9540175,
+        "time": 42.52593
+      },
+      {
+        "performance": 2.1996865,
+        "time": 42.80741
+      },
+      {
+        "performance": 3.3195205,
+        "time": 43.195766
+      },
+      {
+        "performance": 3.4799566,
+        "time": 44.99259
+      },
+      {
+        "performance": 3.270348,
+        "time": 45.308994
+      },
+      {
+        "performance": 3.7231472,
+        "time": 45.63175
+      },
+      {
+        "performance": 4.087538,
+        "time": 46.160847
+      },
+      {
+        "performance": 3.6828337,
+        "time": 46.670902
+      },
+      {
+        "performance": 3.7884905,
+        "time": 46.944973
+      },
+      {
+        "performance": 3.5683024,
+        "time": 47.45216
+      },
+      {
+        "performance": 2.9136004,
+        "time": 47.60031
+      },
+      {
+        "performance": 2.545707,
+        "time": 47.757717
+      },
+      {
+        "performance": 2.0280766,
+        "time": 48.33545
+      },
+      {
+        "performance": 1.9636245,
+        "time": 49.20216
+      },
+      {
+        "performance": 1.4955887,
+        "time": 49.47531
+      },
+      {
+        "performance": 0.9946469,
+        "time": 49.74846
+      },
+      {
+        "performance": 0.6814006,
+        "time": 50.00741
+      },
+      {
+        "performance": 0.46714237,
+        "time": 50.56614
+      },
+      {
+        "performance": 0.4805442,
+        "time": 51.032803
+      },
+      {
+        "performance": 0.49433056,
+        "time": 51.288887
+      },
+      {
+        "performance": 0.1531388,
+        "time": 51.84762
+      },
+      {
+        "performance": 0.0,
+        "time": 52.50476
+      },
+      {
+        "performance": 0.0,
+        "time": 52.869843
+      }
+    ],
+    "acc": [
+      {
+        "performance": 2.4217358,
+        "time": 1.1111112
+      },
+      {
+        "performance": 1.948121,
+        "time": 1.6666666
+      },
+      {
+        "performance": 2.039265,
+        "time": 2.2258356
+      },
+      {
+        "performance": 2.2289684,
+        "time": 2.6388888
+      },
+      {
+        "performance": 2.1018922,
+        "time": 2.9166667
+      },
+      {
+        "performance": 2.2135518,
+        "time": 3.3333333
+      },
+      {
+        "performance": 3.0505538,
+        "time": 5.5555553
+      },
+      {
+        "performance": 3.2619379,
+        "time": 6.084291
+      },
+      {
+        "performance": 3.243898,
+        "time": 6.544061
+      },
+      {
+        "performance": 2.9989,
+        "time": 6.909323
+      },
+      {
+        "performance": 3.0957658,
+        "time": 7.3358874
+      },
+      {
+        "performance": 4.262861,
+        "time": 7.7318006
+      },
+      {
+        "performance": 4.2961116,
+        "time": 9.166667
+      },
+      {
+        "performance": 4.014828,
+        "time": 9.453334
+      },
+      {
+        "performance": 3.86882,
+        "time": 9.74963
+      },
+      {
+        "performance": 3.8098361,
+        "time": 9.977553
+      },
+      {
+        "performance": 3.9053853,
+        "time": 10.418632
+      },
+      {
+        "performance": 3.6471922,
+        "time": 11.138047
+      },
+      {
+        "performance": 3.7351787,
+        "time": 11.851852
+      },
+      {
+        "performance": 3.0414672,
+        "time": 11.998519
+      },
+      {
+        "performance": 2.6232512,
+        "time": 12.222222
+      },
+      {
+        "performance": 2.6858923,
+        "time": 12.777778
+      },
+      {
+        "performance": 2.637649,
+        "time": 13.594074
+      },
+      {
+        "performance": 2.3712404,
+        "time": 13.884445
+      },
+      {
+        "performance": 1.8631494,
+        "time": 14.1829405
+      },
+      {
+        "performance": 1.5904912,
+        "time": 14.444445
+      },
+      {
+        "performance": 1.6361208,
+        "time": 14.631111
+      },
+      {
+        "performance": 1.5250281,
+        "time": 15.0
+      },
+      {
+        "performance": 1.57438,
+        "time": 15.555555
+      },
+      {
+        "performance": 1.4638401,
+        "time": 16.11111
+      },
+      {
+        "performance": 0.8794842,
+        "time": 16.331852
+      },
+      {
+        "performance": 0.730396,
+        "time": 16.666666
+      },
+      {
+        "performance": 0.8721154,
+        "time": 17.774603
+      },
+      {
+        "performance": 0.646958,
+        "time": 18.88889
+      },
+      {
+        "performance": 0.6655186,
+        "time": 18.95344
+      },
+      {
+        "performance": 0.38389114,
+        "time": 19.379894
+      },
+      {
+        "performance": 0.39490458,
+        "time": 19.444445
+      },
+      {
+        "performance": 0.5954199,
+        "time": 20.317461
+      },
+      {
+        "performance": 0.66924274,
+        "time": 20.85397
+      },
+      {
+        "performance": 0.420844,
+        "time": 21.468784
+      },
+      {
+        "performance": 0.77932763,
+        "time": 23.289948
+      },
+      {
+        "performance": 1.1071498,
+        "time": 23.754498
+      },
+      {
+        "performance": 1.1389129,
+        "time": 23.821165
+      },
+      {
+        "performance": 1.5486774,
+        "time": 24.625397
+      },
+      {
+        "performance": 1.9536002,
+        "time": 25.189419
+      },
+      {
+        "performance": 2.1498914,
+        "time": 25.815872
+      },
+      {
+        "performance": 2.3142614,
+        "time": 26.161903
+      },
+      {
+        "performance": 2.763096,
+        "time": 26.668783
+      },
+      {
+        "performance": 2.8423667,
+        "time": 26.925926
+      },
+      {
+        "performance": 2.8355863,
+        "time": 27.169312
+      },
+      {
+        "performance": 2.5290344,
+        "time": 27.75463
+      },
+      {
+        "performance": 2.2394488,
+        "time": 28.324074
+      },
+      {
+        "performance": 1.760033,
+        "time": 28.862654
+      },
+      {
+        "performance": 1.7230487,
+        "time": 29.40895
+      },
+      {
+        "performance": 1.5286871,
+        "time": 29.972223
+      },
+      {
+        "performance": 1.6397146,
+        "time": 30.520061
+      },
+      {
+        "performance": 1.2802193,
+        "time": 31.622221
+      },
+      {
+        "performance": 1.0886518,
+        "time": 32.221165
+      },
+      {
+        "performance": 0.7418123,
+        "time": 33.1164
+      },
+      {
+        "performance": 1.2868006,
+        "time": 33.203175
+      },
+      {
+        "performance": 1.3237176,
+        "time": 33.283596
+      },
+      {
+        "performance": 1.8508666,
+        "time": 34.44753
+      },
+      {
+        "performance": 2.524603,
+        "time": 34.70062
+      },
+      {
+        "performance": 2.5234487,
+        "time": 36.695988
+      },
+      {
+        "performance": 2.0932322,
+        "time": 37.22222
+      },
+      {
+        "performance": 2.1434965,
+        "time": 37.839153
+      },
+      {
+        "performance": 1.999185,
+        "time": 38.21693
+      },
+      {
+        "performance": 2.0409112,
+        "time": 38.59683
+      },
+      {
+        "performance": 1.9680796,
+        "time": 38.888096
+      },
+      {
+        "performance": 2.3084395,
+        "time": 41.074074
+      },
+      {
+        "performance": 2.4646997,
+        "time": 41.63069
+      },
+      {
+        "performance": 2.4330695,
+        "time": 42.094444
+      },
+      {
+        "performance": 2.5028718,
+        "time": 42.222485
+      },
+      {
+        "performance": 1.9540175,
+        "time": 42.52593
+      },
+      {
+        "performance": 2.1996865,
+        "time": 42.80741
+      },
+      {
+        "performance": 3.3195205,
+        "time": 43.195766
+      },
+      {
+        "performance": 3.4799566,
+        "time": 44.99259
+      },
+      {
+        "performance": 3.270348,
+        "time": 45.308994
+      },
+      {
+        "performance": 3.7231472,
+        "time": 45.63175
+      },
+      {
+        "performance": 4.087538,
+        "time": 46.160847
+      },
+      {
+        "performance": 3.6828337,
+        "time": 46.670902
+      },
+      {
+        "performance": 3.7884905,
+        "time": 46.944973
+      },
+      {
+        "performance": 3.5683024,
+        "time": 47.45216
+      },
+      {
+        "performance": 2.9136004,
+        "time": 47.60031
+      },
+      {
+        "performance": 2.545707,
+        "time": 47.757717
+      },
+      {
+        "performance": 2.0280766,
+        "time": 48.33545
+      },
+      {
+        "performance": 1.9636245,
+        "time": 49.20216
+      },
+      {
+        "performance": 1.4955887,
+        "time": 49.47531
+      },
+      {
+        "performance": 0.9946469,
+        "time": 49.74846
+      },
+      {
+        "performance": 0.6814006,
+        "time": 50.00741
+      },
+      {
+        "performance": 0.46714237,
+        "time": 50.56614
+      },
+      {
+        "performance": 0.4805442,
+        "time": 51.032803
+      },
+      {
+        "performance": 0.49433056,
+        "time": 51.288887
+      },
+      {
+        "performance": 0.1531388,
+        "time": 51.84762
+      },
+      {
+        "performance": 0.0,
+        "time": 52.50476
+      },
+      {
+        "performance": 0.0,
+        "time": 52.869843
+      }
+    ]
+  },
+  "speed100": {
+    "aim": [
+      {
+        "performance": 3.9084795,
+        "time": 0.8333333
+      },
+      {
+        "performance": 3.6619737,
+        "time": 1.25
+      },
+      {
+        "performance": 3.6907384,
+        "time": 1.6693767
+      },
+      {
+        "performance": 3.4783652,
+        "time": 1.9791666
+      },
+      {
+        "performance": 3.0438025,
+        "time": 2.1875
+      },
+      {
+        "performance": 2.4606116,
+        "time": 2.5
+      },
+      {
+        "performance": 4.7476034,
+        "time": 4.1666665
+      },
+      {
+        "performance": 4.770257,
+        "time": 4.563218
+      },
+      {
+        "performance": 4.3253736,
+        "time": 4.908046
+      },
+      {
+        "performance": 5.2557626,
+        "time": 5.1819925
+      },
+      {
+        "performance": 4.8211317,
+        "time": 5.5019155
+      },
+      {
+        "performance": 5.259709,
+        "time": 5.7988505
+      },
+      {
+        "performance": 5.9453354,
+        "time": 6.875
+      },
+      {
+        "performance": 5.6689105,
+        "time": 7.09
+      },
+      {
+        "performance": 5.7211537,
+        "time": 7.3122225
+      },
+      {
+        "performance": 5.3025045,
+        "time": 7.4831653
+      },
+      {
+        "performance": 4.8737593,
+        "time": 7.8139734
+      },
+      {
+        "performance": 5.062646,
+        "time": 8.353536
+      },
+      {
+        "performance": 4.963523,
+        "time": 8.888889
+      },
+      {
+        "performance": 4.2198462,
+        "time": 8.998889
+      },
+      {
+        "performance": 3.6359835,
+        "time": 9.166667
+      },
+      {
+        "performance": 3.1130574,
+        "time": 9.583333
+      },
+      {
+        "performance": 3.259825,
+        "time": 10.195556
+      },
+      {
+        "performance": 2.845807,
+        "time": 10.413334
+      },
+      {
+        "performance": 2.580076,
+        "time": 10.637205
+      },
+      {
+        "performance": 2.2958157,
+        "time": 10.833333
+      },
+      {
+        "performance": 2.3616803,
+        "time": 10.973333
+      },
+      {
+        "performance": 2.0496545,
+        "time": 11.25
+      },
+      {
+        "performance": 1.7960331,
+        "time": 11.666667
+      },
+      {
+        "performance": 1.9593725,
+        "time": 12.083333
+      },
+      {
+        "performance": 1.270043,
+        "time": 12.248889
+      },
+      {
+        "performance": 1.1083912,
+        "time": 12.5
+      },
+      {
+        "performance": 1.0299159,
+        "time": 13.330953
+      },
+      {
+        "performance": 1.0289676,
+        "time": 14.166667
+      },
+      {
+        "performance": 1.0584877,
+        "time": 14.21508
+      },
+      {
+        "performance": 0.75191855,
+        "time": 14.53492
+      },
+      {
+        "performance": 0.7734903,
+        "time": 14.583333
+      },
+      {
+        "performance": 0.81232387,
+        "time": 15.238096
+      },
+      {
+        "performance": 1.1354246,
+        "time": 15.640476
+      },
+      {
+        "performance": 0.8434228,
+        "time": 16.101587
+      },
+      {
+        "performance": 1.9639997,
+        "time": 17.46746
+      },
+      {
+        "performance": 2.1604626,
+        "time": 17.815872
+      },
+      {
+        "performance": 2.222444,
+        "time": 17.865873
+      },
+      {
+        "performance": 2.7900686,
+        "time": 18.469048
+      },
+      {
+        "performance": 3.2287214,
+        "time": 18.892063
+      },
+      {
+        "performance": 3.0565188,
+        "time": 19.361904
+      },
+      {
+        "performance": 3.0407138,
+        "time": 19.621428
+      },
+      {
+        "performance": 3.3965886,
+        "time": 20.001589
+      },
+      {
+        "performance": 3.6848676,
+        "time": 20.194445
+      },
+      {
+        "performance": 3.6906228,
+        "time": 20.376984
+      },
+      {
+        "performance": 3.3321092,
+        "time": 20.815971
+      },
+      {
+        "performance": 2.8147128,
+        "time": 21.243055
+      },
+      {
+        "performance": 2.2965114,
+        "time": 21.64699
+      },
+      {
+        "performance": 2.500296,
+        "time": 22.056713
+      },
+      {
+        "performance": 2.3080814,
+        "time": 22.479168
+      },
+      {
+        "performance": 1.7728167,
+        "time": 22.890047
+      },
+      {
+        "performance": 1.4572073,
+        "time": 23.716665
+      },
+      {
+        "performance": 2.26377,
+        "time": 24.165874
+      },
+      {
+        "performance": 2.1237986,
+        "time": 24.837301
+      },
+      {
+        "performance": 2.1847284,
+        "time": 24.90238
+      },
+      {
+        "performance": 3.4314044,
+        "time": 24.962696
+      },
+      {
+        "performance": 3.268804,
+        "time": 25.835648
+      },
+      {
+        "performance": 2.7934735,
+        "time": 26.025463
+      },
+      {
+        "performance": 3.5301538,
+        "time": 27.521992
+      },
+      {
+        "performance": 3.50867,
+        "time": 27.916666
+      },
+      {
+        "performance": 3.6822364,
+        "time": 28.379364
+      },
+      {
+        "performance": 3.4580615,
+        "time": 28.662697
+      },
+      {
+        "performance": 2.9533584,
+        "time": 28.94762
+      },
+      {
+        "performance": 2.174675,
+        "time": 29.166073
+      },
+      {
+        "performance": 3.295848,
+        "time": 30.805555
+      },
+      {
+        "performance": 3.318772,
+        "time": 31.223017
+      },
+      {
+        "performance": 3.5618262,
+        "time": 31.570831
+      },
+      {
+        "performance": 4.2780027,
+        "time": 31.666864
+      },
+      {
+        "performance": 4.301203,
+        "time": 31.894445
+      },
+      {
+        "performance": 3.9835477,
+        "time": 32.105556
+      },
+      {
+        "performance": 4.258789,
+        "time": 32.396824
+      },
+      {
+        "performance": 5.0682735,
+        "time": 33.744442
+      },
+      {
+        "performance": 4.9406466,
+        "time": 33.981747
+      },
+      {
+        "performance": 4.5738187,
+        "time": 34.223812
+      },
+      {
+        "performance": 4.705037,
+        "time": 34.620636
+      },
+      {
+        "performance": 4.3207207,
+        "time": 35.003174
+      },
+      {
+        "performance": 4.444678,
+        "time": 35.208733
+      },
+      {
+        "performance": 4.3438087,
+        "time": 35.58912
+      },
+      {
+        "performance": 3.6303444,
+        "time": 35.700233
+      },
+      {
+        "performance": 2.92717,
+        "time": 35.818287
+      },
+      {
+        "performance": 2.2319474,
+        "time": 36.251587
+      },
+      {
+        "performance": 2.1586714,
+        "time": 36.90162
+      },
+      {
+        "performance": 1.6428751,
+        "time": 37.106483
+      },
+      {
+        "performance": 1.0908206,
+        "time": 37.311344
+      },
+      {
+        "performance": 0.74686694,
+        "time": 37.505558
+      },
+      {
+        "performance": 0.51363677,
+        "time": 37.924603
+      },
+      {
+        "performance": 0.5283725,
+        "time": 38.274605
+      },
+      {
+        "performance": 0.543531,
+        "time": 38.466667
+      },
+      {
+        "performance": 0.1715561,
+        "time": 38.885715
+      },
+      {
+        "performance": 0.0,
+        "time": 39.37857
+      },
+      {
+        "performance": 0.0,
+        "time": 39.65238
+      }
+    ],
+    "tap": [
+      {
+        "performance": 3.9084795,
+        "time": 0.8333333
+      },
+      {
+        "performance": 3.6619737,
+        "time": 1.25
+      },
+      {
+        "performance": 3.6907384,
+        "time": 1.6693767
+      },
+      {
+        "performance": 3.4783652,
+        "time": 1.9791666
+      },
+      {
+        "performance": 3.0438025,
+        "time": 2.1875
+      },
+      {
+        "performance": 2.4606116,
+        "time": 2.5
+      },
+      {
+        "performance": 4.7476034,
+        "time": 4.1666665
+      },
+      {
+        "performance": 4.770257,
+        "time": 4.563218
+      },
+      {
+        "performance": 4.3253736,
+        "time": 4.908046
+      },
+      {
+        "performance": 5.2557626,
+        "time": 5.1819925
+      },
+      {
+        "performance": 4.8211317,
+        "time": 5.5019155
+      },
+      {
+        "performance": 5.259709,
+        "time": 5.7988505
+      },
+      {
+        "performance": 5.9453354,
+        "time": 6.875
+      },
+      {
+        "performance": 5.6689105,
+        "time": 7.09
+      },
+      {
+        "performance": 5.7211537,
+        "time": 7.3122225
+      },
+      {
+        "performance": 5.3025045,
+        "time": 7.4831653
+      },
+      {
+        "performance": 4.8737593,
+        "time": 7.8139734
+      },
+      {
+        "performance": 5.062646,
+        "time": 8.353536
+      },
+      {
+        "performance": 4.963523,
+        "time": 8.888889
+      },
+      {
+        "performance": 4.2198462,
+        "time": 8.998889
+      },
+      {
+        "performance": 3.6359835,
+        "time": 9.166667
+      },
+      {
+        "performance": 3.1130574,
+        "time": 9.583333
+      },
+      {
+        "performance": 3.259825,
+        "time": 10.195556
+      },
+      {
+        "performance": 2.845807,
+        "time": 10.413334
+      },
+      {
+        "performance": 2.580076,
+        "time": 10.637205
+      },
+      {
+        "performance": 2.2958157,
+        "time": 10.833333
+      },
+      {
+        "performance": 2.3616803,
+        "time": 10.973333
+      },
+      {
+        "performance": 2.0496545,
+        "time": 11.25
+      },
+      {
+        "performance": 1.7960331,
+        "time": 11.666667
+      },
+      {
+        "performance": 1.9593725,
+        "time": 12.083333
+      },
+      {
+        "performance": 1.270043,
+        "time": 12.248889
+      },
+      {
+        "performance": 1.1083912,
+        "time": 12.5
+      },
+      {
+        "performance": 1.0299159,
+        "time": 13.330953
+      },
+      {
+        "performance": 1.0289676,
+        "time": 14.166667
+      },
+      {
+        "performance": 1.0584877,
+        "time": 14.21508
+      },
+      {
+        "performance": 0.75191855,
+        "time": 14.53492
+      },
+      {
+        "performance": 0.7734903,
+        "time": 14.583333
+      },
+      {
+        "performance": 0.81232387,
+        "time": 15.238096
+      },
+      {
+        "performance": 1.1354246,
+        "time": 15.640476
+      },
+      {
+        "performance": 0.8434228,
+        "time": 16.101587
+      },
+      {
+        "performance": 1.9639997,
+        "time": 17.46746
+      },
+      {
+        "performance": 2.1604626,
+        "time": 17.815872
+      },
+      {
+        "performance": 2.222444,
+        "time": 17.865873
+      },
+      {
+        "performance": 2.7900686,
+        "time": 18.469048
+      },
+      {
+        "performance": 3.2287214,
+        "time": 18.892063
+      },
+      {
+        "performance": 3.0565188,
+        "time": 19.361904
+      },
+      {
+        "performance": 3.0407138,
+        "time": 19.621428
+      },
+      {
+        "performance": 3.3965886,
+        "time": 20.001589
+      },
+      {
+        "performance": 3.6848676,
+        "time": 20.194445
+      },
+      {
+        "performance": 3.6906228,
+        "time": 20.376984
+      },
+      {
+        "performance": 3.3321092,
+        "time": 20.815971
+      },
+      {
+        "performance": 2.8147128,
+        "time": 21.243055
+      },
+      {
+        "performance": 2.2965114,
+        "time": 21.64699
+      },
+      {
+        "performance": 2.500296,
+        "time": 22.056713
+      },
+      {
+        "performance": 2.3080814,
+        "time": 22.479168
+      },
+      {
+        "performance": 1.7728167,
+        "time": 22.890047
+      },
+      {
+        "performance": 1.4572073,
+        "time": 23.716665
+      },
+      {
+        "performance": 2.26377,
+        "time": 24.165874
+      },
+      {
+        "performance": 2.1237986,
+        "time": 24.837301
+      },
+      {
+        "performance": 2.1847284,
+        "time": 24.90238
+      },
+      {
+        "performance": 3.4314044,
+        "time": 24.962696
+      },
+      {
+        "performance": 3.268804,
+        "time": 25.835648
+      },
+      {
+        "performance": 2.7934735,
+        "time": 26.025463
+      },
+      {
+        "performance": 3.5301538,
+        "time": 27.521992
+      },
+      {
+        "performance": 3.50867,
+        "time": 27.916666
+      },
+      {
+        "performance": 3.6822364,
+        "time": 28.379364
+      },
+      {
+        "performance": 3.4580615,
+        "time": 28.662697
+      },
+      {
+        "performance": 2.9533584,
+        "time": 28.94762
+      },
+      {
+        "performance": 2.174675,
+        "time": 29.166073
+      },
+      {
+        "performance": 3.295848,
+        "time": 30.805555
+      },
+      {
+        "performance": 3.318772,
+        "time": 31.223017
+      },
+      {
+        "performance": 3.5618262,
+        "time": 31.570831
+      },
+      {
+        "performance": 4.2780027,
+        "time": 31.666864
+      },
+      {
+        "performance": 4.301203,
+        "time": 31.894445
+      },
+      {
+        "performance": 3.9835477,
+        "time": 32.105556
+      },
+      {
+        "performance": 4.258789,
+        "time": 32.396824
+      },
+      {
+        "performance": 5.0682735,
+        "time": 33.744442
+      },
+      {
+        "performance": 4.9406466,
+        "time": 33.981747
+      },
+      {
+        "performance": 4.5738187,
+        "time": 34.223812
+      },
+      {
+        "performance": 4.705037,
+        "time": 34.620636
+      },
+      {
+        "performance": 4.3207207,
+        "time": 35.003174
+      },
+      {
+        "performance": 4.444678,
+        "time": 35.208733
+      },
+      {
+        "performance": 4.3438087,
+        "time": 35.58912
+      },
+      {
+        "performance": 3.6303444,
+        "time": 35.700233
+      },
+      {
+        "performance": 2.92717,
+        "time": 35.818287
+      },
+      {
+        "performance": 2.2319474,
+        "time": 36.251587
+      },
+      {
+        "performance": 2.1586714,
+        "time": 36.90162
+      },
+      {
+        "performance": 1.6428751,
+        "time": 37.106483
+      },
+      {
+        "performance": 1.0908206,
+        "time": 37.311344
+      },
+      {
+        "performance": 0.74686694,
+        "time": 37.505558
+      },
+      {
+        "performance": 0.51363677,
+        "time": 37.924603
+      },
+      {
+        "performance": 0.5283725,
+        "time": 38.274605
+      },
+      {
+        "performance": 0.543531,
+        "time": 38.466667
+      },
+      {
+        "performance": 0.1715561,
+        "time": 38.885715
+      },
+      {
+        "performance": 0.0,
+        "time": 39.37857
+      },
+      {
+        "performance": 0.0,
+        "time": 39.65238
+      }
+    ],
+    "acc": [
+      {
+        "performance": 3.9084795,
+        "time": 0.8333333
+      },
+      {
+        "performance": 3.6619737,
+        "time": 1.25
+      },
+      {
+        "performance": 3.6907384,
+        "time": 1.6693767
+      },
+      {
+        "performance": 3.4783652,
+        "time": 1.9791666
+      },
+      {
+        "performance": 3.0438025,
+        "time": 2.1875
+      },
+      {
+        "performance": 2.4606116,
+        "time": 2.5
+      },
+      {
+        "performance": 4.7476034,
+        "time": 4.1666665
+      },
+      {
+        "performance": 4.770257,
+        "time": 4.563218
+      },
+      {
+        "performance": 4.3253736,
+        "time": 4.908046
+      },
+      {
+        "performance": 5.2557626,
+        "time": 5.1819925
+      },
+      {
+        "performance": 4.8211317,
+        "time": 5.5019155
+      },
+      {
+        "performance": 5.259709,
+        "time": 5.7988505
+      },
+      {
+        "performance": 5.9453354,
+        "time": 6.875
+      },
+      {
+        "performance": 5.6689105,
+        "time": 7.09
+      },
+      {
+        "performance": 5.7211537,
+        "time": 7.3122225
+      },
+      {
+        "performance": 5.3025045,
+        "time": 7.4831653
+      },
+      {
+        "performance": 4.8737593,
+        "time": 7.8139734
+      },
+      {
+        "performance": 5.062646,
+        "time": 8.353536
+      },
+      {
+        "performance": 4.963523,
+        "time": 8.888889
+      },
+      {
+        "performance": 4.2198462,
+        "time": 8.998889
+      },
+      {
+        "performance": 3.6359835,
+        "time": 9.166667
+      },
+      {
+        "performance": 3.1130574,
+        "time": 9.583333
+      },
+      {
+        "performance": 3.259825,
+        "time": 10.195556
+      },
+      {
+        "performance": 2.845807,
+        "time": 10.413334
+      },
+      {
+        "performance": 2.580076,
+        "time": 10.637205
+      },
+      {
+        "performance": 2.2958157,
+        "time": 10.833333
+      },
+      {
+        "performance": 2.3616803,
+        "time": 10.973333
+      },
+      {
+        "performance": 2.0496545,
+        "time": 11.25
+      },
+      {
+        "performance": 1.7960331,
+        "time": 11.666667
+      },
+      {
+        "performance": 1.9593725,
+        "time": 12.083333
+      },
+      {
+        "performance": 1.270043,
+        "time": 12.248889
+      },
+      {
+        "performance": 1.1083912,
+        "time": 12.5
+      },
+      {
+        "performance": 1.0299159,
+        "time": 13.330953
+      },
+      {
+        "performance": 1.0289676,
+        "time": 14.166667
+      },
+      {
+        "performance": 1.0584877,
+        "time": 14.21508
+      },
+      {
+        "performance": 0.75191855,
+        "time": 14.53492
+      },
+      {
+        "performance": 0.7734903,
+        "time": 14.583333
+      },
+      {
+        "performance": 0.81232387,
+        "time": 15.238096
+      },
+      {
+        "performance": 1.1354246,
+        "time": 15.640476
+      },
+      {
+        "performance": 0.8434228,
+        "time": 16.101587
+      },
+      {
+        "performance": 1.9639997,
+        "time": 17.46746
+      },
+      {
+        "performance": 2.1604626,
+        "time": 17.815872
+      },
+      {
+        "performance": 2.222444,
+        "time": 17.865873
+      },
+      {
+        "performance": 2.7900686,
+        "time": 18.469048
+      },
+      {
+        "performance": 3.2287214,
+        "time": 18.892063
+      },
+      {
+        "performance": 3.0565188,
+        "time": 19.361904
+      },
+      {
+        "performance": 3.0407138,
+        "time": 19.621428
+      },
+      {
+        "performance": 3.3965886,
+        "time": 20.001589
+      },
+      {
+        "performance": 3.6848676,
+        "time": 20.194445
+      },
+      {
+        "performance": 3.6906228,
+        "time": 20.376984
+      },
+      {
+        "performance": 3.3321092,
+        "time": 20.815971
+      },
+      {
+        "performance": 2.8147128,
+        "time": 21.243055
+      },
+      {
+        "performance": 2.2965114,
+        "time": 21.64699
+      },
+      {
+        "performance": 2.500296,
+        "time": 22.056713
+      },
+      {
+        "performance": 2.3080814,
+        "time": 22.479168
+      },
+      {
+        "performance": 1.7728167,
+        "time": 22.890047
+      },
+      {
+        "performance": 1.4572073,
+        "time": 23.716665
+      },
+      {
+        "performance": 2.26377,
+        "time": 24.165874
+      },
+      {
+        "performance": 2.1237986,
+        "time": 24.837301
+      },
+      {
+        "performance": 2.1847284,
+        "time": 24.90238
+      },
+      {
+        "performance": 3.4314044,
+        "time": 24.962696
+      },
+      {
+        "performance": 3.268804,
+        "time": 25.835648
+      },
+      {
+        "performance": 2.7934735,
+        "time": 26.025463
+      },
+      {
+        "performance": 3.5301538,
+        "time": 27.521992
+      },
+      {
+        "performance": 3.50867,
+        "time": 27.916666
+      },
+      {
+        "performance": 3.6822364,
+        "time": 28.379364
+      },
+      {
+        "performance": 3.4580615,
+        "time": 28.662697
+      },
+      {
+        "performance": 2.9533584,
+        "time": 28.94762
+      },
+      {
+        "performance": 2.174675,
+        "time": 29.166073
+      },
+      {
+        "performance": 3.295848,
+        "time": 30.805555
+      },
+      {
+        "performance": 3.318772,
+        "time": 31.223017
+      },
+      {
+        "performance": 3.5618262,
+        "time": 31.570831
+      },
+      {
+        "performance": 4.2780027,
+        "time": 31.666864
+      },
+      {
+        "performance": 4.301203,
+        "time": 31.894445
+      },
+      {
+        "performance": 3.9835477,
+        "time": 32.105556
+      },
+      {
+        "performance": 4.258789,
+        "time": 32.396824
+      },
+      {
+        "performance": 5.0682735,
+        "time": 33.744442
+      },
+      {
+        "performance": 4.9406466,
+        "time": 33.981747
+      },
+      {
+        "performance": 4.5738187,
+        "time": 34.223812
+      },
+      {
+        "performance": 4.705037,
+        "time": 34.620636
+      },
+      {
+        "performance": 4.3207207,
+        "time": 35.003174
+      },
+      {
+        "performance": 4.444678,
+        "time": 35.208733
+      },
+      {
+        "performance": 4.3438087,
+        "time": 35.58912
+      },
+      {
+        "performance": 3.6303444,
+        "time": 35.700233
+      },
+      {
+        "performance": 2.92717,
+        "time": 35.818287
+      },
+      {
+        "performance": 2.2319474,
+        "time": 36.251587
+      },
+      {
+        "performance": 2.1586714,
+        "time": 36.90162
+      },
+      {
+        "performance": 1.6428751,
+        "time": 37.106483
+      },
+      {
+        "performance": 1.0908206,
+        "time": 37.311344
+      },
+      {
+        "performance": 0.74686694,
+        "time": 37.505558
+      },
+      {
+        "performance": 0.51363677,
+        "time": 37.924603
+      },
+      {
+        "performance": 0.5283725,
+        "time": 38.274605
+      },
+      {
+        "performance": 0.543531,
+        "time": 38.466667
+      },
+      {
+        "performance": 0.1715561,
+        "time": 38.885715
+      },
+      {
+        "performance": 0.0,
+        "time": 39.37857
+      },
+      {
+        "performance": 0.0,
+        "time": 39.65238
+      }
+    ]
+  },
+  "speed125": {
+    "aim": [
+      {
+        "performance": 5.292476,
+        "time": 0.6666667
+      },
+      {
+        "performance": 4.725072,
+        "time": 1.0
+      },
+      {
+        "performance": 4.2642226,
+        "time": 1.3355013
+      },
+      {
+        "performance": 4.3458705,
+        "time": 1.5833334
+      },
+      {
+        "performance": 4.266241,
+        "time": 1.75
+      },
+      {
+        "performance": 4.464345,
+        "time": 2.0
+      },
+      {
+        "performance": 7.1386223,
+        "time": 3.3333333
+      },
+      {
+        "performance": 7.1790214,
+        "time": 3.6505747
+      },
+      {
+        "performance": 6.5479393,
+        "time": 3.9264367
+      },
+      {
+        "performance": 6.426652,
+        "time": 4.145594
+      },
+      {
+        "performance": 6.350213,
+        "time": 4.4015326
+      },
+      {
+        "performance": 6.9907746,
+        "time": 4.6390805
+      },
+      {
+        "performance": 7.017844,
+        "time": 5.5
+      },
+      {
+        "performance": 6.8532143,
+        "time": 5.6720004
+      },
+      {
+        "performance": 7.1356626,
+        "time": 5.8497777
+      },
+      {
+        "performance": 6.8494477,
+        "time": 5.986532
+      },
+      {
+        "performance": 6.168986,
+        "time": 6.2511787
+      },
+      {
+        "performance": 5.6622815,
+        "time": 6.6828284
+      },
+      {
+        "performance": 5.5617385,
+        "time": 7.111111
+      },
+      {
+        "performance": 4.7541223,
+        "time": 7.1991115
+      },
+      {
+        "performance": 4.313878,
+        "time": 7.3333335
+      },
+      {
+        "performance": 3.9124045,
+        "time": 7.6666665
+      },
+      {
+        "performance": 3.8720555,
+        "time": 8.156445
+      },
+      {
+        "performance": 3.46732,
+        "time": 8.330667
+      },
+      {
+        "performance": 2.8700228,
+        "time": 8.509765
+      },
+      {
+        "performance": 2.5627117,
+        "time": 8.666667
+      },
+      {
+        "performance": 2.6362333,
+        "time": 8.7786665
+      },
+      {
+        "performance": 2.5507145,
+        "time": 9.0
+      },
+      {
+        "performance": 2.2808857,
+        "time": 9.333333
+      },
+      {
+        "performance": 2.1551166,
+        "time": 9.666667
+      },
+      {
+        "performance": 1.3957006,
+        "time": 9.799111
+      },
+      {
+        "performance": 1.2692969,
+        "time": 10.0
+      },
+      {
+        "performance": 1.4543537,
+        "time": 10.664762
+      },
+      {
+        "performance": 1.273261,
+        "time": 11.333333
+      },
+      {
+        "performance": 1.3097895,
+        "time": 11.372064
+      },
+      {
+        "performance": 1.1264057,
+        "time": 11.627936
+      },
+      {
+        "performance": 1.1587212,
+        "time": 11.666667
+      },
+      {
+        "performance": 1.2813896,
+        "time": 12.190476
+      },
+      {
+        "performance": 1.3990767,
+        "time": 12.512382
+      },
+      {
+        "performance": 1.6997243,
+        "time": 12.88127
+      },
+      {
+        "performance": 3.2091663,
+        "time": 13.9739685
+      },
+      {
+        "performance": 2.9692364,
+        "time": 14.252698
+      },
+      {
+        "performance": 3.0544207,
+        "time": 14.292699
+      },
+      {
+        "performance": 3.5209787,
+        "time": 14.775238
+      },
+      {
+        "performance": 3.8646066,
+        "time": 15.113651
+      },
+      {
+        "performance": 3.8727355,
+        "time": 15.489524
+      },
+      {
+        "performance": 3.8696742,
+        "time": 15.697143
+      },
+      {
+        "performance": 4.2707334,
+        "time": 16.00127
+      },
+      {
+        "performance": 4.393256,
+        "time": 16.155556
+      },
+      {
+        "performance": 4.4088335,
+        "time": 16.301588
+      },
+      {
+        "performance": 3.8077927,
+        "time": 16.652777
+      },
+      {
+        "performance": 3.7073243,
+        "time": 16.994444
+      },
+      {
+        "performance": 3.1613579,
+        "time": 17.317593
+      },
+      {
+        "performance": 2.6991265,
+        "time": 17.64537
+      },
+      {
+        "performance": 2.563776,
+        "time": 17.983334
+      },
+      {
+        "performance": 2.5413303,
+        "time": 18.312037
+      },
+      {
+        "performance": 2.9179335,
+        "time": 18.973333
+      },
+      {
+        "performance": 3.9266758,
+        "time": 19.332699
+      },
+      {
+        "performance": 3.53948,
+        "time": 19.86984
+      },
+      {
+        "performance": 3.641024,
+        "time": 19.921904
+      },
+      {
+        "performance": 3.7454815,
+        "time": 19.970158
+      },
+      {
+        "performance": 3.6813939,
+        "time": 20.668518
+      },
+      {
+        "performance": 3.1606085,
+        "time": 20.820372
+      },
+      {
+        "performance": 5.1036816,
+        "time": 22.017593
+      },
+      {
+        "performance": 4.5363812,
+        "time": 22.333334
+      },
+      {
+        "performance": 4.0240283,
+        "time": 22.703491
+      },
+      {
+        "performance": 3.777224,
+        "time": 22.930159
+      },
+      {
+        "performance": 4.032092,
+        "time": 23.158096
+      },
+      {
+        "performance": 3.6249728,
+        "time": 23.332857
+      },
+      {
+        "performance": 5.687731,
+        "time": 24.644445
+      },
+      {
+        "performance": 5.681153,
+        "time": 24.978415
+      },
+      {
+        "performance": 5.723305,
+        "time": 25.256666
+      },
+      {
+        "performance": 5.8875012,
+        "time": 25.33349
+      },
+      {
+        "performance": 5.4040985,
+        "time": 25.515556
+      },
+      {
+        "performance": 5.513937,
+        "time": 25.684446
+      },
+      {
+        "performance": 5.9300423,
+        "time": 25.91746
+      },
+      {
+        "performance": 5.718861,
+        "time": 26.995554
+      },
+      {
+        "performance": 5.658512,
+        "time": 27.185396
+      },
+      {
+        "performance": 5.26428,
+        "time": 27.37905
+      },
+      {
+        "performance": 5.5421777,
+        "time": 27.696508
+      },
+      {
+        "performance": 4.832376,
+        "time": 28.00254
+      },
+      {
+        "performance": 4.971012,
+        "time": 28.166985
+      },
+      {
+        "performance": 4.7324314,
+        "time": 28.471296
+      },
+      {
+        "performance": 3.9531405,
+        "time": 28.560186
+      },
+      {
+        "performance": 3.183602,
+        "time": 28.65463
+      },
+      {
+        "performance": 2.4296732,
+        "time": 29.001268
+      },
+      {
+        "performance": 2.3485446,
+        "time": 29.521296
+      },
+      {
+        "performance": 1.7866974,
+        "time": 29.685186
+      },
+      {
+        "performance": 1.1853578,
+        "time": 29.849075
+      },
+      {
+        "performance": 0.8114012,
+        "time": 30.004446
+      },
+      {
+        "performance": 0.55893993,
+        "time": 30.339684
+      },
+      {
+        "performance": 0.5749754,
+        "time": 30.619682
+      },
+      {
+        "performance": 0.59147084,
+        "time": 30.773333
+      },
+      {
+        "performance": 0.18851158,
+        "time": 31.108572
+      },
+      {
+        "performance": 0.0,
+        "time": 31.502855
+      },
+      {
+        "performance": 0.0,
+        "time": 31.721907
+      }
+    ],
+    "tap": [
+      {
+        "performance": 5.292476,
+        "time": 0.6666667
+      },
+      {
+        "performance": 4.725072,
+        "time": 1.0
+      },
+      {
+        "performance": 4.2642226,
+        "time": 1.3355013
+      },
+      {
+        "performance": 4.3458705,
+        "time": 1.5833334
+      },
+      {
+        "performance": 4.266241,
+        "time": 1.75
+      },
+      {
+        "performance": 4.464345,
+        "time": 2.0
+      },
+      {
+        "performance": 7.1386223,
+        "time": 3.3333333
+      },
+      {
+        "performance": 7.1790214,
+        "time": 3.6505747
+      },
+      {
+        "performance": 6.5479393,
+        "time": 3.9264367
+      },
+      {
+        "performance": 6.426652,
+        "time": 4.145594
+      },
+      {
+        "performance": 6.350213,
+        "time": 4.4015326
+      },
+      {
+        "performance": 6.9907746,
+        "time": 4.6390805
+      },
+      {
+        "performance": 7.017844,
+        "time": 5.5
+      },
+      {
+        "performance": 6.8532143,
+        "time": 5.6720004
+      },
+      {
+        "performance": 7.1356626,
+        "time": 5.8497777
+      },
+      {
+        "performance": 6.8494477,
+        "time": 5.986532
+      },
+      {
+        "performance": 6.168986,
+        "time": 6.2511787
+      },
+      {
+        "performance": 5.6622815,
+        "time": 6.6828284
+      },
+      {
+        "performance": 5.5617385,
+        "time": 7.111111
+      },
+      {
+        "performance": 4.7541223,
+        "time": 7.1991115
+      },
+      {
+        "performance": 4.313878,
+        "time": 7.3333335
+      },
+      {
+        "performance": 3.9124045,
+        "time": 7.6666665
+      },
+      {
+        "performance": 3.8720555,
+        "time": 8.156445
+      },
+      {
+        "performance": 3.46732,
+        "time": 8.330667
+      },
+      {
+        "performance": 2.8700228,
+        "time": 8.509765
+      },
+      {
+        "performance": 2.5627117,
+        "time": 8.666667
+      },
+      {
+        "performance": 2.6362333,
+        "time": 8.7786665
+      },
+      {
+        "performance": 2.5507145,
+        "time": 9.0
+      },
+      {
+        "performance": 2.2808857,
+        "time": 9.333333
+      },
+      {
+        "performance": 2.1551166,
+        "time": 9.666667
+      },
+      {
+        "performance": 1.3957006,
+        "time": 9.799111
+      },
+      {
+        "performance": 1.2692969,
+        "time": 10.0
+      },
+      {
+        "performance": 1.4543537,
+        "time": 10.664762
+      },
+      {
+        "performance": 1.273261,
+        "time": 11.333333
+      },
+      {
+        "performance": 1.3097895,
+        "time": 11.372064
+      },
+      {
+        "performance": 1.1264057,
+        "time": 11.627936
+      },
+      {
+        "performance": 1.1587212,
+        "time": 11.666667
+      },
+      {
+        "performance": 1.2813896,
+        "time": 12.190476
+      },
+      {
+        "performance": 1.3990767,
+        "time": 12.512382
+      },
+      {
+        "performance": 1.6997243,
+        "time": 12.88127
+      },
+      {
+        "performance": 3.2091663,
+        "time": 13.9739685
+      },
+      {
+        "performance": 2.9692364,
+        "time": 14.252698
+      },
+      {
+        "performance": 3.0544207,
+        "time": 14.292699
+      },
+      {
+        "performance": 3.5209787,
+        "time": 14.775238
+      },
+      {
+        "performance": 3.8646066,
+        "time": 15.113651
+      },
+      {
+        "performance": 3.8727355,
+        "time": 15.489524
+      },
+      {
+        "performance": 3.8696742,
+        "time": 15.697143
+      },
+      {
+        "performance": 4.2707334,
+        "time": 16.00127
+      },
+      {
+        "performance": 4.393256,
+        "time": 16.155556
+      },
+      {
+        "performance": 4.4088335,
+        "time": 16.301588
+      },
+      {
+        "performance": 3.8077927,
+        "time": 16.652777
+      },
+      {
+        "performance": 3.7073243,
+        "time": 16.994444
+      },
+      {
+        "performance": 3.1613579,
+        "time": 17.317593
+      },
+      {
+        "performance": 2.6991265,
+        "time": 17.64537
+      },
+      {
+        "performance": 2.563776,
+        "time": 17.983334
+      },
+      {
+        "performance": 2.5413303,
+        "time": 18.312037
+      },
+      {
+        "performance": 2.9179335,
+        "time": 18.973333
+      },
+      {
+        "performance": 3.9266758,
+        "time": 19.332699
+      },
+      {
+        "performance": 3.53948,
+        "time": 19.86984
+      },
+      {
+        "performance": 3.641024,
+        "time": 19.921904
+      },
+      {
+        "performance": 3.7454815,
+        "time": 19.970158
+      },
+      {
+        "performance": 3.6813939,
+        "time": 20.668518
+      },
+      {
+        "performance": 3.1606085,
+        "time": 20.820372
+      },
+      {
+        "performance": 5.1036816,
+        "time": 22.017593
+      },
+      {
+        "performance": 4.5363812,
+        "time": 22.333334
+      },
+      {
+        "performance": 4.0240283,
+        "time": 22.703491
+      },
+      {
+        "performance": 3.777224,
+        "time": 22.930159
+      },
+      {
+        "performance": 4.032092,
+        "time": 23.158096
+      },
+      {
+        "performance": 3.6249728,
+        "time": 23.332857
+      },
+      {
+        "performance": 5.687731,
+        "time": 24.644445
+      },
+      {
+        "performance": 5.681153,
+        "time": 24.978415
+      },
+      {
+        "performance": 5.723305,
+        "time": 25.256666
+      },
+      {
+        "performance": 5.8875012,
+        "time": 25.33349
+      },
+      {
+        "performance": 5.4040985,
+        "time": 25.515556
+      },
+      {
+        "performance": 5.513937,
+        "time": 25.684446
+      },
+      {
+        "performance": 5.9300423,
+        "time": 25.91746
+      },
+      {
+        "performance": 5.718861,
+        "time": 26.995554
+      },
+      {
+        "performance": 5.658512,
+        "time": 27.185396
+      },
+      {
+        "performance": 5.26428,
+        "time": 27.37905
+      },
+      {
+        "performance": 5.5421777,
+        "time": 27.696508
+      },
+      {
+        "performance": 4.832376,
+        "time": 28.00254
+      },
+      {
+        "performance": 4.971012,
+        "time": 28.166985
+      },
+      {
+        "performance": 4.7324314,
+        "time": 28.471296
+      },
+      {
+        "performance": 3.9531405,
+        "time": 28.560186
+      },
+      {
+        "performance": 3.183602,
+        "time": 28.65463
+      },
+      {
+        "performance": 2.4296732,
+        "time": 29.001268
+      },
+      {
+        "performance": 2.3485446,
+        "time": 29.521296
+      },
+      {
+        "performance": 1.7866974,
+        "time": 29.685186
+      },
+      {
+        "performance": 1.1853578,
+        "time": 29.849075
+      },
+      {
+        "performance": 0.8114012,
+        "time": 30.004446
+      },
+      {
+        "performance": 0.55893993,
+        "time": 30.339684
+      },
+      {
+        "performance": 0.5749754,
+        "time": 30.619682
+      },
+      {
+        "performance": 0.59147084,
+        "time": 30.773333
+      },
+      {
+        "performance": 0.18851158,
+        "time": 31.108572
+      },
+      {
+        "performance": 0.0,
+        "time": 31.502855
+      },
+      {
+        "performance": 0.0,
+        "time": 31.721907
+      }
+    ],
+    "acc": [
+      {
+        "performance": 5.292476,
+        "time": 0.6666667
+      },
+      {
+        "performance": 4.725072,
+        "time": 1.0
+      },
+      {
+        "performance": 4.2642226,
+        "time": 1.3355013
+      },
+      {
+        "performance": 4.3458705,
+        "time": 1.5833334
+      },
+      {
+        "performance": 4.266241,
+        "time": 1.75
+      },
+      {
+        "performance": 4.464345,
+        "time": 2.0
+      },
+      {
+        "performance": 7.1386223,
+        "time": 3.3333333
+      },
+      {
+        "performance": 7.1790214,
+        "time": 3.6505747
+      },
+      {
+        "performance": 6.5479393,
+        "time": 3.9264367
+      },
+      {
+        "performance": 6.426652,
+        "time": 4.145594
+      },
+      {
+        "performance": 6.350213,
+        "time": 4.4015326
+      },
+      {
+        "performance": 6.9907746,
+        "time": 4.6390805
+      },
+      {
+        "performance": 7.017844,
+        "time": 5.5
+      },
+      {
+        "performance": 6.8532143,
+        "time": 5.6720004
+      },
+      {
+        "performance": 7.1356626,
+        "time": 5.8497777
+      },
+      {
+        "performance": 6.8494477,
+        "time": 5.986532
+      },
+      {
+        "performance": 6.168986,
+        "time": 6.2511787
+      },
+      {
+        "performance": 5.6622815,
+        "time": 6.6828284
+      },
+      {
+        "performance": 5.5617385,
+        "time": 7.111111
+      },
+      {
+        "performance": 4.7541223,
+        "time": 7.1991115
+      },
+      {
+        "performance": 4.313878,
+        "time": 7.3333335
+      },
+      {
+        "performance": 3.9124045,
+        "time": 7.6666665
+      },
+      {
+        "performance": 3.8720555,
+        "time": 8.156445
+      },
+      {
+        "performance": 3.46732,
+        "time": 8.330667
+      },
+      {
+        "performance": 2.8700228,
+        "time": 8.509765
+      },
+      {
+        "performance": 2.5627117,
+        "time": 8.666667
+      },
+      {
+        "performance": 2.6362333,
+        "time": 8.7786665
+      },
+      {
+        "performance": 2.5507145,
+        "time": 9.0
+      },
+      {
+        "performance": 2.2808857,
+        "time": 9.333333
+      },
+      {
+        "performance": 2.1551166,
+        "time": 9.666667
+      },
+      {
+        "performance": 1.3957006,
+        "time": 9.799111
+      },
+      {
+        "performance": 1.2692969,
+        "time": 10.0
+      },
+      {
+        "performance": 1.4543537,
+        "time": 10.664762
+      },
+      {
+        "performance": 1.273261,
+        "time": 11.333333
+      },
+      {
+        "performance": 1.3097895,
+        "time": 11.372064
+      },
+      {
+        "performance": 1.1264057,
+        "time": 11.627936
+      },
+      {
+        "performance": 1.1587212,
+        "time": 11.666667
+      },
+      {
+        "performance": 1.2813896,
+        "time": 12.190476
+      },
+      {
+        "performance": 1.3990767,
+        "time": 12.512382
+      },
+      {
+        "performance": 1.6997243,
+        "time": 12.88127
+      },
+      {
+        "performance": 3.2091663,
+        "time": 13.9739685
+      },
+      {
+        "performance": 2.9692364,
+        "time": 14.252698
+      },
+      {
+        "performance": 3.0544207,
+        "time": 14.292699
+      },
+      {
+        "performance": 3.5209787,
+        "time": 14.775238
+      },
+      {
+        "performance": 3.8646066,
+        "time": 15.113651
+      },
+      {
+        "performance": 3.8727355,
+        "time": 15.489524
+      },
+      {
+        "performance": 3.8696742,
+        "time": 15.697143
+      },
+      {
+        "performance": 4.2707334,
+        "time": 16.00127
+      },
+      {
+        "performance": 4.393256,
+        "time": 16.155556
+      },
+      {
+        "performance": 4.4088335,
+        "time": 16.301588
+      },
+      {
+        "performance": 3.8077927,
+        "time": 16.652777
+      },
+      {
+        "performance": 3.7073243,
+        "time": 16.994444
+      },
+      {
+        "performance": 3.1613579,
+        "time": 17.317593
+      },
+      {
+        "performance": 2.6991265,
+        "time": 17.64537
+      },
+      {
+        "performance": 2.563776,
+        "time": 17.983334
+      },
+      {
+        "performance": 2.5413303,
+        "time": 18.312037
+      },
+      {
+        "performance": 2.9179335,
+        "time": 18.973333
+      },
+      {
+        "performance": 3.9266758,
+        "time": 19.332699
+      },
+      {
+        "performance": 3.53948,
+        "time": 19.86984
+      },
+      {
+        "performance": 3.641024,
+        "time": 19.921904
+      },
+      {
+        "performance": 3.7454815,
+        "time": 19.970158
+      },
+      {
+        "performance": 3.6813939,
+        "time": 20.668518
+      },
+      {
+        "performance": 3.1606085,
+        "time": 20.820372
+      },
+      {
+        "performance": 5.1036816,
+        "time": 22.017593
+      },
+      {
+        "performance": 4.5363812,
+        "time": 22.333334
+      },
+      {
+        "performance": 4.0240283,
+        "time": 22.703491
+      },
+      {
+        "performance": 3.777224,
+        "time": 22.930159
+      },
+      {
+        "performance": 4.032092,
+        "time": 23.158096
+      },
+      {
+        "performance": 3.6249728,
+        "time": 23.332857
+      },
+      {
+        "performance": 5.687731,
+        "time": 24.644445
+      },
+      {
+        "performance": 5.681153,
+        "time": 24.978415
+      },
+      {
+        "performance": 5.723305,
+        "time": 25.256666
+      },
+      {
+        "performance": 5.8875012,
+        "time": 25.33349
+      },
+      {
+        "performance": 5.4040985,
+        "time": 25.515556
+      },
+      {
+        "performance": 5.513937,
+        "time": 25.684446
+      },
+      {
+        "performance": 5.9300423,
+        "time": 25.91746
+      },
+      {
+        "performance": 5.718861,
+        "time": 26.995554
+      },
+      {
+        "performance": 5.658512,
+        "time": 27.185396
+      },
+      {
+        "performance": 5.26428,
+        "time": 27.37905
+      },
+      {
+        "performance": 5.5421777,
+        "time": 27.696508
+      },
+      {
+        "performance": 4.832376,
+        "time": 28.00254
+      },
+      {
+        "performance": 4.971012,
+        "time": 28.166985
+      },
+      {
+        "performance": 4.7324314,
+        "time": 28.471296
+      },
+      {
+        "performance": 3.9531405,
+        "time": 28.560186
+      },
+      {
+        "performance": 3.183602,
+        "time": 28.65463
+      },
+      {
+        "performance": 2.4296732,
+        "time": 29.001268
+      },
+      {
+        "performance": 2.3485446,
+        "time": 29.521296
+      },
+      {
+        "performance": 1.7866974,
+        "time": 29.685186
+      },
+      {
+        "performance": 1.1853578,
+        "time": 29.849075
+      },
+      {
+        "performance": 0.8114012,
+        "time": 30.004446
+      },
+      {
+        "performance": 0.55893993,
+        "time": 30.339684
+      },
+      {
+        "performance": 0.5749754,
+        "time": 30.619682
+      },
+      {
+        "performance": 0.59147084,
+        "time": 30.773333
+      },
+      {
+        "performance": 0.18851158,
+        "time": 31.108572
+      },
+      {
+        "performance": 0.0,
+        "time": 31.502855
+      },
+      {
+        "performance": 0.0,
+        "time": 31.721907
+      }
+    ]
+  },
+  "speed150": {
+    "aim": [
+      {
+        "performance": 6.2491293,
+        "time": 0.5555556
+      },
+      {
+        "performance": 6.0277534,
+        "time": 0.8333333
+      },
+      {
+        "performance": 6.3586216,
+        "time": 1.1129178
+      },
+      {
+        "performance": 6.568725,
+        "time": 1.3194444
+      },
+      {
+        "performance": 6.1296725,
+        "time": 1.4583334
+      },
+      {
+        "performance": 6.1182294,
+        "time": 1.6666666
+      },
+      {
+        "performance": 8.390302,
+        "time": 2.7777777
+      },
+      {
+        "performance": 8.238449,
+        "time": 3.0421455
+      },
+      {
+        "performance": 8.308639,
+        "time": 3.2720306
+      },
+      {
+        "performance": 8.09803,
+        "time": 3.4546616
+      },
+      {
+        "performance": 7.9423904,
+        "time": 3.6679437
+      },
+      {
+        "performance": 8.089677,
+        "time": 3.8659003
+      },
+      {
+        "performance": 8.382513,
+        "time": 4.5833335
+      },
+      {
+        "performance": 8.097263,
+        "time": 4.726667
+      },
+      {
+        "performance": 7.9673223,
+        "time": 4.874815
+      },
+      {
+        "performance": 7.519471,
+        "time": 4.9887767
+      },
+      {
+        "performance": 6.789148,
+        "time": 5.209316
+      },
+      {
+        "performance": 6.320196,
+        "time": 5.5690236
+      },
+      {
+        "performance": 6.5174723,
+        "time": 5.925926
+      },
+      {
+        "performance": 5.6611314,
+        "time": 5.9992595
+      },
+      {
+        "performance": 4.980804,
+        "time": 6.111111
+      },
+      {
+        "performance": 4.269661,
+        "time": 6.388889
+      },
+      {
+        "performance": 4.512512,
+        "time": 6.797037
+      },
+      {
+        "performance": 4.0446515,
+        "time": 6.9422226
+      },
+      {
+        "performance": 3.4088287,
+        "time": 7.0914702
+      },
+      {
+        "performance": 3.0872376,
+        "time": 7.2222223
+      },
+      {
+        "performance": 3.1758072,
+        "time": 7.3155556
+      },
+      {
+        "performance": 2.7646196,
+        "time": 7.5
+      },
+      {
+        "performance": 2.5256922,
+        "time": 7.7777777
+      },
+      {
+        "performance": 2.649162,
+        "time": 8.055555
+      },
+      {
+        "performance": 1.834192,
+        "time": 8.165926
+      },
+      {
+        "performance": 1.7129153,
+        "time": 8.333333
+      },
+      {
+        "performance": 1.869915,
+        "time": 8.887301
+      },
+      {
+        "performance": 1.7562497,
+        "time": 9.444445
+      },
+      {
+        "performance": 1.8066347,
+        "time": 9.47672
+      },
+      {
+        "performance": 1.4585071,
+        "time": 9.689947
+      },
+      {
+        "performance": 1.5003501,
+        "time": 9.722222
+      },
+      {
+        "performance": 2.67167,
+        "time": 10.1587305
+      },
+      {
+        "performance": 3.2212596,
+        "time": 10.426985
+      },
+      {
+        "performance": 3.2513576,
+        "time": 10.734392
+      },
+      {
+        "performance": 3.930752,
+        "time": 11.644974
+      },
+      {
+        "performance": 4.007875,
+        "time": 11.877249
+      },
+      {
+        "performance": 4.122857,
+        "time": 11.910583
+      },
+      {
+        "performance": 4.340945,
+        "time": 12.312698
+      },
+      {
+        "performance": 4.72588,
+        "time": 12.594709
+      },
+      {
+        "performance": 4.5451465,
+        "time": 12.907936
+      },
+      {
+        "performance": 4.5515695,
+        "time": 13.080952
+      },
+      {
+        "performance": 4.7996807,
+        "time": 13.334392
+      },
+      {
+        "performance": 5.3945184,
+        "time": 13.462963
+      },
+      {
+        "performance": 5.4291983,
+        "time": 13.584656
+      },
+      {
+        "performance": 4.5669103,
+        "time": 13.877315
+      },
+      {
+        "performance": 3.9769886,
+        "time": 14.162037
+      },
+      {
+        "performance": 3.4626908,
+        "time": 14.431327
+      },
+      {
+        "performance": 3.530715,
+        "time": 14.704475
+      },
+      {
+        "performance": 3.833559,
+        "time": 14.986112
+      },
+      {
+        "performance": 4.046833,
+        "time": 15.260031
+      },
+      {
+        "performance": 4.387451,
+        "time": 15.8111105
+      },
+      {
+        "performance": 4.2294683,
+        "time": 16.110582
+      },
+      {
+        "performance": 3.9245455,
+        "time": 16.5582
+      },
+      {
+        "performance": 4.0371366,
+        "time": 16.601587
+      },
+      {
+        "performance": 4.1529584,
+        "time": 16.641798
+      },
+      {
+        "performance": 4.6748595,
+        "time": 17.223764
+      },
+      {
+        "performance": 4.728998,
+        "time": 17.35031
+      },
+      {
+        "performance": 5.504324,
+        "time": 18.347994
+      },
+      {
+        "performance": 5.6953287,
+        "time": 18.61111
+      },
+      {
+        "performance": 5.5831633,
+        "time": 18.919577
+      },
+      {
+        "performance": 5.3510537,
+        "time": 19.108465
+      },
+      {
+        "performance": 4.7861376,
+        "time": 19.298414
+      },
+      {
+        "performance": 4.579024,
+        "time": 19.444048
+      },
+      {
+        "performance": 6.714045,
+        "time": 20.537037
+      },
+      {
+        "performance": 6.6521716,
+        "time": 20.815346
+      },
+      {
+        "performance": 7.411779,
+        "time": 21.047222
+      },
+      {
+        "performance": 7.6244154,
+        "time": 21.111242
+      },
+      {
+        "performance": 7.0251684,
+        "time": 21.262964
+      },
+      {
+        "performance": 6.8966827,
+        "time": 21.403706
+      },
+      {
+        "performance": 6.5870667,
+        "time": 21.597883
+      },
+      {
+        "performance": 6.574229,
+        "time": 22.496296
+      },
+      {
+        "performance": 6.2319655,
+        "time": 22.654497
+      },
+      {
+        "performance": 5.809398,
+        "time": 22.815874
+      },
+      {
+        "performance": 5.9760637,
+        "time": 23.080423
+      },
+      {
+        "performance": 5.2041116,
+        "time": 23.335451
+      },
+      {
+        "performance": 5.353412,
+        "time": 23.472486
+      },
+      {
+        "performance": 5.0991874,
+        "time": 23.72608
+      },
+      {
+        "performance": 4.2582,
+        "time": 23.800156
+      },
+      {
+        "performance": 3.4267447,
+        "time": 23.878859
+      },
+      {
+        "performance": 2.6166873,
+        "time": 24.167725
+      },
+      {
+        "performance": 2.528403,
+        "time": 24.60108
+      },
+      {
+        "performance": 1.9230909,
+        "time": 24.737656
+      },
+      {
+        "performance": 1.2752334,
+        "time": 24.87423
+      },
+      {
+        "performance": 0.87281066,
+        "time": 25.003704
+      },
+      {
+        "performance": 0.60185397,
+        "time": 25.28307
+      },
+      {
+        "performance": 0.6191206,
+        "time": 25.516401
+      },
+      {
+        "performance": 0.63688254,
+        "time": 25.644444
+      },
+      {
+        "performance": 0.2041993,
+        "time": 25.92381
+      },
+      {
+        "performance": 0.0,
+        "time": 26.25238
+      },
+      {
+        "performance": 0.0,
+        "time": 26.434921
+      }
+    ],
+    "tap": [
+      {
+        "performance": 6.2491293,
+        "time": 0.5555556
+      },
+      {
+        "performance": 6.0277534,
+        "time": 0.8333333
+      },
+      {
+        "performance": 6.3586216,
+        "time": 1.1129178
+      },
+      {
+        "performance": 6.568725,
+        "time": 1.3194444
+      },
+      {
+        "performance": 6.1296725,
+        "time": 1.4583334
+      },
+      {
+        "performance": 6.1182294,
+        "time": 1.6666666
+      },
+      {
+        "performance": 8.390302,
+        "time": 2.7777777
+      },
+      {
+        "performance": 8.238449,
+        "time": 3.0421455
+      },
+      {
+        "performance": 8.308639,
+        "time": 3.2720306
+      },
+      {
+        "performance": 8.09803,
+        "time": 3.4546616
+      },
+      {
+        "performance": 7.9423904,
+        "time": 3.6679437
+      },
+      {
+        "performance": 8.089677,
+        "time": 3.8659003
+      },
+      {
+        "performance": 8.382513,
+        "time": 4.5833335
+      },
+      {
+        "performance": 8.097263,
+        "time": 4.726667
+      },
+      {
+        "performance": 7.9673223,
+        "time": 4.874815
+      },
+      {
+        "performance": 7.519471,
+        "time": 4.9887767
+      },
+      {
+        "performance": 6.789148,
+        "time": 5.209316
+      },
+      {
+        "performance": 6.320196,
+        "time": 5.5690236
+      },
+      {
+        "performance": 6.5174723,
+        "time": 5.925926
+      },
+      {
+        "performance": 5.6611314,
+        "time": 5.9992595
+      },
+      {
+        "performance": 4.980804,
+        "time": 6.111111
+      },
+      {
+        "performance": 4.269661,
+        "time": 6.388889
+      },
+      {
+        "performance": 4.512512,
+        "time": 6.797037
+      },
+      {
+        "performance": 4.0446515,
+        "time": 6.9422226
+      },
+      {
+        "performance": 3.4088287,
+        "time": 7.0914702
+      },
+      {
+        "performance": 3.0872376,
+        "time": 7.2222223
+      },
+      {
+        "performance": 3.1758072,
+        "time": 7.3155556
+      },
+      {
+        "performance": 2.7646196,
+        "time": 7.5
+      },
+      {
+        "performance": 2.5256922,
+        "time": 7.7777777
+      },
+      {
+        "performance": 2.649162,
+        "time": 8.055555
+      },
+      {
+        "performance": 1.834192,
+        "time": 8.165926
+      },
+      {
+        "performance": 1.7129153,
+        "time": 8.333333
+      },
+      {
+        "performance": 1.869915,
+        "time": 8.887301
+      },
+      {
+        "performance": 1.7562497,
+        "time": 9.444445
+      },
+      {
+        "performance": 1.8066347,
+        "time": 9.47672
+      },
+      {
+        "performance": 1.4585071,
+        "time": 9.689947
+      },
+      {
+        "performance": 1.5003501,
+        "time": 9.722222
+      },
+      {
+        "performance": 2.67167,
+        "time": 10.1587305
+      },
+      {
+        "performance": 3.2212596,
+        "time": 10.426985
+      },
+      {
+        "performance": 3.2513576,
+        "time": 10.734392
+      },
+      {
+        "performance": 3.930752,
+        "time": 11.644974
+      },
+      {
+        "performance": 4.007875,
+        "time": 11.877249
+      },
+      {
+        "performance": 4.122857,
+        "time": 11.910583
+      },
+      {
+        "performance": 4.340945,
+        "time": 12.312698
+      },
+      {
+        "performance": 4.72588,
+        "time": 12.594709
+      },
+      {
+        "performance": 4.5451465,
+        "time": 12.907936
+      },
+      {
+        "performance": 4.5515695,
+        "time": 13.080952
+      },
+      {
+        "performance": 4.7996807,
+        "time": 13.334392
+      },
+      {
+        "performance": 5.3945184,
+        "time": 13.462963
+      },
+      {
+        "performance": 5.4291983,
+        "time": 13.584656
+      },
+      {
+        "performance": 4.5669103,
+        "time": 13.877315
+      },
+      {
+        "performance": 3.9769886,
+        "time": 14.162037
+      },
+      {
+        "performance": 3.4626908,
+        "time": 14.431327
+      },
+      {
+        "performance": 3.530715,
+        "time": 14.704475
+      },
+      {
+        "performance": 3.833559,
+        "time": 14.986112
+      },
+      {
+        "performance": 4.046833,
+        "time": 15.260031
+      },
+      {
+        "performance": 4.387451,
+        "time": 15.8111105
+      },
+      {
+        "performance": 4.2294683,
+        "time": 16.110582
+      },
+      {
+        "performance": 3.9245455,
+        "time": 16.5582
+      },
+      {
+        "performance": 4.0371366,
+        "time": 16.601587
+      },
+      {
+        "performance": 4.1529584,
+        "time": 16.641798
+      },
+      {
+        "performance": 4.6748595,
+        "time": 17.223764
+      },
+      {
+        "performance": 4.728998,
+        "time": 17.35031
+      },
+      {
+        "performance": 5.504324,
+        "time": 18.347994
+      },
+      {
+        "performance": 5.6953287,
+        "time": 18.61111
+      },
+      {
+        "performance": 5.5831633,
+        "time": 18.919577
+      },
+      {
+        "performance": 5.3510537,
+        "time": 19.108465
+      },
+      {
+        "performance": 4.7861376,
+        "time": 19.298414
+      },
+      {
+        "performance": 4.579024,
+        "time": 19.444048
+      },
+      {
+        "performance": 6.714045,
+        "time": 20.537037
+      },
+      {
+        "performance": 6.6521716,
+        "time": 20.815346
+      },
+      {
+        "performance": 7.411779,
+        "time": 21.047222
+      },
+      {
+        "performance": 7.6244154,
+        "time": 21.111242
+      },
+      {
+        "performance": 7.0251684,
+        "time": 21.262964
+      },
+      {
+        "performance": 6.8966827,
+        "time": 21.403706
+      },
+      {
+        "performance": 6.5870667,
+        "time": 21.597883
+      },
+      {
+        "performance": 6.574229,
+        "time": 22.496296
+      },
+      {
+        "performance": 6.2319655,
+        "time": 22.654497
+      },
+      {
+        "performance": 5.809398,
+        "time": 22.815874
+      },
+      {
+        "performance": 5.9760637,
+        "time": 23.080423
+      },
+      {
+        "performance": 5.2041116,
+        "time": 23.335451
+      },
+      {
+        "performance": 5.353412,
+        "time": 23.472486
+      },
+      {
+        "performance": 5.0991874,
+        "time": 23.72608
+      },
+      {
+        "performance": 4.2582,
+        "time": 23.800156
+      },
+      {
+        "performance": 3.4267447,
+        "time": 23.878859
+      },
+      {
+        "performance": 2.6166873,
+        "time": 24.167725
+      },
+      {
+        "performance": 2.528403,
+        "time": 24.60108
+      },
+      {
+        "performance": 1.9230909,
+        "time": 24.737656
+      },
+      {
+        "performance": 1.2752334,
+        "time": 24.87423
+      },
+      {
+        "performance": 0.87281066,
+        "time": 25.003704
+      },
+      {
+        "performance": 0.60185397,
+        "time": 25.28307
+      },
+      {
+        "performance": 0.6191206,
+        "time": 25.516401
+      },
+      {
+        "performance": 0.63688254,
+        "time": 25.644444
+      },
+      {
+        "performance": 0.2041993,
+        "time": 25.92381
+      },
+      {
+        "performance": 0.0,
+        "time": 26.25238
+      },
+      {
+        "performance": 0.0,
+        "time": 26.434921
+      }
+    ],
+    "acc": [
+      {
+        "performance": 6.2491293,
+        "time": 0.5555556
+      },
+      {
+        "performance": 6.0277534,
+        "time": 0.8333333
+      },
+      {
+        "performance": 6.3586216,
+        "time": 1.1129178
+      },
+      {
+        "performance": 6.568725,
+        "time": 1.3194444
+      },
+      {
+        "performance": 6.1296725,
+        "time": 1.4583334
+      },
+      {
+        "performance": 6.1182294,
+        "time": 1.6666666
+      },
+      {
+        "performance": 8.390302,
+        "time": 2.7777777
+      },
+      {
+        "performance": 8.238449,
+        "time": 3.0421455
+      },
+      {
+        "performance": 8.308639,
+        "time": 3.2720306
+      },
+      {
+        "performance": 8.09803,
+        "time": 3.4546616
+      },
+      {
+        "performance": 7.9423904,
+        "time": 3.6679437
+      },
+      {
+        "performance": 8.089677,
+        "time": 3.8659003
+      },
+      {
+        "performance": 8.382513,
+        "time": 4.5833335
+      },
+      {
+        "performance": 8.097263,
+        "time": 4.726667
+      },
+      {
+        "performance": 7.9673223,
+        "time": 4.874815
+      },
+      {
+        "performance": 7.519471,
+        "time": 4.9887767
+      },
+      {
+        "performance": 6.789148,
+        "time": 5.209316
+      },
+      {
+        "performance": 6.320196,
+        "time": 5.5690236
+      },
+      {
+        "performance": 6.5174723,
+        "time": 5.925926
+      },
+      {
+        "performance": 5.6611314,
+        "time": 5.9992595
+      },
+      {
+        "performance": 4.980804,
+        "time": 6.111111
+      },
+      {
+        "performance": 4.269661,
+        "time": 6.388889
+      },
+      {
+        "performance": 4.512512,
+        "time": 6.797037
+      },
+      {
+        "performance": 4.0446515,
+        "time": 6.9422226
+      },
+      {
+        "performance": 3.4088287,
+        "time": 7.0914702
+      },
+      {
+        "performance": 3.0872376,
+        "time": 7.2222223
+      },
+      {
+        "performance": 3.1758072,
+        "time": 7.3155556
+      },
+      {
+        "performance": 2.7646196,
+        "time": 7.5
+      },
+      {
+        "performance": 2.5256922,
+        "time": 7.7777777
+      },
+      {
+        "performance": 2.649162,
+        "time": 8.055555
+      },
+      {
+        "performance": 1.834192,
+        "time": 8.165926
+      },
+      {
+        "performance": 1.7129153,
+        "time": 8.333333
+      },
+      {
+        "performance": 1.869915,
+        "time": 8.887301
+      },
+      {
+        "performance": 1.7562497,
+        "time": 9.444445
+      },
+      {
+        "performance": 1.8066347,
+        "time": 9.47672
+      },
+      {
+        "performance": 1.4585071,
+        "time": 9.689947
+      },
+      {
+        "performance": 1.5003501,
+        "time": 9.722222
+      },
+      {
+        "performance": 2.67167,
+        "time": 10.1587305
+      },
+      {
+        "performance": 3.2212596,
+        "time": 10.426985
+      },
+      {
+        "performance": 3.2513576,
+        "time": 10.734392
+      },
+      {
+        "performance": 3.930752,
+        "time": 11.644974
+      },
+      {
+        "performance": 4.007875,
+        "time": 11.877249
+      },
+      {
+        "performance": 4.122857,
+        "time": 11.910583
+      },
+      {
+        "performance": 4.340945,
+        "time": 12.312698
+      },
+      {
+        "performance": 4.72588,
+        "time": 12.594709
+      },
+      {
+        "performance": 4.5451465,
+        "time": 12.907936
+      },
+      {
+        "performance": 4.5515695,
+        "time": 13.080952
+      },
+      {
+        "performance": 4.7996807,
+        "time": 13.334392
+      },
+      {
+        "performance": 5.3945184,
+        "time": 13.462963
+      },
+      {
+        "performance": 5.4291983,
+        "time": 13.584656
+      },
+      {
+        "performance": 4.5669103,
+        "time": 13.877315
+      },
+      {
+        "performance": 3.9769886,
+        "time": 14.162037
+      },
+      {
+        "performance": 3.4626908,
+        "time": 14.431327
+      },
+      {
+        "performance": 3.530715,
+        "time": 14.704475
+      },
+      {
+        "performance": 3.833559,
+        "time": 14.986112
+      },
+      {
+        "performance": 4.046833,
+        "time": 15.260031
+      },
+      {
+        "performance": 4.387451,
+        "time": 15.8111105
+      },
+      {
+        "performance": 4.2294683,
+        "time": 16.110582
+      },
+      {
+        "performance": 3.9245455,
+        "time": 16.5582
+      },
+      {
+        "performance": 4.0371366,
+        "time": 16.601587
+      },
+      {
+        "performance": 4.1529584,
+        "time": 16.641798
+      },
+      {
+        "performance": 4.6748595,
+        "time": 17.223764
+      },
+      {
+        "performance": 4.728998,
+        "time": 17.35031
+      },
+      {
+        "performance": 5.504324,
+        "time": 18.347994
+      },
+      {
+        "performance": 5.6953287,
+        "time": 18.61111
+      },
+      {
+        "performance": 5.5831633,
+        "time": 18.919577
+      },
+      {
+        "performance": 5.3510537,
+        "time": 19.108465
+      },
+      {
+        "performance": 4.7861376,
+        "time": 19.298414
+      },
+      {
+        "performance": 4.579024,
+        "time": 19.444048
+      },
+      {
+        "performance": 6.714045,
+        "time": 20.537037
+      },
+      {
+        "performance": 6.6521716,
+        "time": 20.815346
+      },
+      {
+        "performance": 7.411779,
+        "time": 21.047222
+      },
+      {
+        "performance": 7.6244154,
+        "time": 21.111242
+      },
+      {
+        "performance": 7.0251684,
+        "time": 21.262964
+      },
+      {
+        "performance": 6.8966827,
+        "time": 21.403706
+      },
+      {
+        "performance": 6.5870667,
+        "time": 21.597883
+      },
+      {
+        "performance": 6.574229,
+        "time": 22.496296
+      },
+      {
+        "performance": 6.2319655,
+        "time": 22.654497
+      },
+      {
+        "performance": 5.809398,
+        "time": 22.815874
+      },
+      {
+        "performance": 5.9760637,
+        "time": 23.080423
+      },
+      {
+        "performance": 5.2041116,
+        "time": 23.335451
+      },
+      {
+        "performance": 5.353412,
+        "time": 23.472486
+      },
+      {
+        "performance": 5.0991874,
+        "time": 23.72608
+      },
+      {
+        "performance": 4.2582,
+        "time": 23.800156
+      },
+      {
+        "performance": 3.4267447,
+        "time": 23.878859
+      },
+      {
+        "performance": 2.6166873,
+        "time": 24.167725
+      },
+      {
+        "performance": 2.528403,
+        "time": 24.60108
+      },
+      {
+        "performance": 1.9230909,
+        "time": 24.737656
+      },
+      {
+        "performance": 1.2752334,
+        "time": 24.87423
+      },
+      {
+        "performance": 0.87281066,
+        "time": 25.003704
+      },
+      {
+        "performance": 0.60185397,
+        "time": 25.28307
+      },
+      {
+        "performance": 0.6191206,
+        "time": 25.516401
+      },
+      {
+        "performance": 0.63688254,
+        "time": 25.644444
+      },
+      {
+        "performance": 0.2041993,
+        "time": 25.92381
+      },
+      {
+        "performance": 0.0,
+        "time": 26.25238
+      },
+      {
+        "performance": 0.0,
+        "time": 26.434921
+      }
+    ]
+  },
+  "speed175": {
+    "aim": [
+      {
+        "performance": 8.524935,
+        "time": 0.47619048
+      },
+      {
+        "performance": 7.94181,
+        "time": 0.71428573
+      },
+      {
+        "performance": 8.080563,
+        "time": 0.95392954
+      },
+      {
+        "performance": 8.544398,
+        "time": 1.1309524
+      },
+      {
+        "performance": 8.694484,
+        "time": 1.25
+      },
+      {
+        "performance": 8.6964655,
+        "time": 1.4285715
+      },
+      {
+        "performance": 10.109016,
+        "time": 2.3809524
+      },
+      {
+        "performance": 9.881208,
+        "time": 2.6075532
+      },
+      {
+        "performance": 9.424483,
+        "time": 2.8045976
+      },
+      {
+        "performance": 9.339904,
+        "time": 2.9611385
+      },
+      {
+        "performance": 9.543512,
+        "time": 3.143952
+      },
+      {
+        "performance": 9.484845,
+        "time": 3.313629
+      },
+      {
+        "performance": 9.076921,
+        "time": 3.9285715
+      },
+      {
+        "performance": 8.775675,
+        "time": 4.051429
+      },
+      {
+        "performance": 8.715857,
+        "time": 4.178413
+      },
+      {
+        "performance": 8.245689,
+        "time": 4.2760944
+      },
+      {
+        "performance": 7.773745,
+        "time": 4.4651275
+      },
+      {
+        "performance": 7.113348,
+        "time": 4.773449
+      },
+      {
+        "performance": 7.0185375,
+        "time": 5.0793653
+      },
+      {
+        "performance": 6.104973,
+        "time": 5.1422224
+      },
+      {
+        "performance": 5.6665044,
+        "time": 5.2380953
+      },
+      {
+        "performance": 4.869483,
+        "time": 5.4761906
+      },
+      {
+        "performance": 4.8327503,
+        "time": 5.8260317
+      },
+      {
+        "performance": 4.333165,
+        "time": 5.950476
+      },
+      {
+        "performance": 3.7049537,
+        "time": 6.078403
+      },
+      {
+        "performance": 3.6119506,
+        "time": 6.1904764
+      },
+      {
+        "performance": 3.7155738,
+        "time": 6.2704763
+      },
+      {
+        "performance": 3.2824826,
+        "time": 6.428571
+      },
+      {
+        "performance": 3.0431912,
+        "time": 6.6666665
+      },
+      {
+        "performance": 2.9773808,
+        "time": 6.904762
+      },
+      {
+        "performance": 2.1069548,
+        "time": 6.999365
+      },
+      {
+        "performance": 2.2259293,
+        "time": 7.142857
+      },
+      {
+        "performance": 2.2363296,
+        "time": 7.617687
+      },
+      {
+        "performance": 2.6507401,
+        "time": 8.095238
+      },
+      {
+        "performance": 2.726787,
+        "time": 8.122903
+      },
+      {
+        "performance": 2.7771018,
+        "time": 8.305669
+      },
+      {
+        "performance": 2.856774,
+        "time": 8.333333
+      },
+      {
+        "performance": 3.7644145,
+        "time": 8.707483
+      },
+      {
+        "performance": 4.0790052,
+        "time": 8.937415
+      },
+      {
+        "performance": 4.1694307,
+        "time": 9.200907
+      },
+      {
+        "performance": 4.732362,
+        "time": 9.981406
+      },
+      {
+        "performance": 4.4778786,
+        "time": 10.180499
+      },
+      {
+        "performance": 4.9650445,
+        "time": 10.209071
+      },
+      {
+        "performance": 5.009128,
+        "time": 10.553741
+      },
+      {
+        "performance": 5.2430964,
+        "time": 10.795465
+      },
+      {
+        "performance": 5.5045905,
+        "time": 11.063946
+      },
+      {
+        "performance": 5.529428,
+        "time": 11.212244
+      },
+      {
+        "performance": 5.598984,
+        "time": 11.429479
+      },
+      {
+        "performance": 5.759613,
+        "time": 11.539682
+      },
+      {
+        "performance": 5.795842,
+        "time": 11.643991
+      },
+      {
+        "performance": 4.940471,
+        "time": 11.894841
+      },
+      {
+        "performance": 4.877585,
+        "time": 12.138889
+      },
+      {
+        "performance": 5.061424,
+        "time": 12.369709
+      },
+      {
+        "performance": 5.093547,
+        "time": 12.603836
+      },
+      {
+        "performance": 5.6456957,
+        "time": 12.845239
+      },
+      {
+        "performance": 5.0674944,
+        "time": 13.080027
+      },
+      {
+        "performance": 4.682833,
+        "time": 13.552381
+      },
+      {
+        "performance": 5.199172,
+        "time": 13.809071
+      },
+      {
+        "performance": 4.8800206,
+        "time": 14.192743
+      },
+      {
+        "performance": 5.6091366,
+        "time": 14.229932
+      },
+      {
+        "performance": 6.142613,
+        "time": 14.264399
+      },
+      {
+        "performance": 6.3691783,
+        "time": 14.763227
+      },
+      {
+        "performance": 5.823455,
+        "time": 14.871694
+      },
+      {
+        "performance": 7.1310453,
+        "time": 15.726852
+      },
+      {
+        "performance": 6.518716,
+        "time": 15.952381
+      },
+      {
+        "performance": 6.6297755,
+        "time": 16.21678
+      },
+      {
+        "performance": 6.6752934,
+        "time": 16.378685
+      },
+      {
+        "performance": 7.398636,
+        "time": 16.541498
+      },
+      {
+        "performance": 7.1235695,
+        "time": 16.666327
+      },
+      {
+        "performance": 8.421729,
+        "time": 17.603174
+      },
+      {
+        "performance": 8.01315,
+        "time": 17.841724
+      },
+      {
+        "performance": 8.104828,
+        "time": 18.040476
+      },
+      {
+        "performance": 8.337348,
+        "time": 18.09535
+      },
+      {
+        "performance": 7.974074,
+        "time": 18.225397
+      },
+      {
+        "performance": 7.6492767,
+        "time": 18.346033
+      },
+      {
+        "performance": 7.4563813,
+        "time": 18.512472
+      },
+      {
+        "performance": 7.025083,
+        "time": 19.28254
+      },
+      {
+        "performance": 6.6588235,
+        "time": 19.41814
+      },
+      {
+        "performance": 6.2065277,
+        "time": 19.556463
+      },
+      {
+        "performance": 6.384587,
+        "time": 19.78322
+      },
+      {
+        "performance": 5.555046,
+        "time": 20.001814
+      },
+      {
+        "performance": 5.7144146,
+        "time": 20.119274
+      },
+      {
+        "performance": 5.44497,
+        "time": 20.33664
+      },
+      {
+        "performance": 4.546022,
+        "time": 20.400133
+      },
+      {
+        "performance": 3.656541,
+        "time": 20.467592
+      },
+      {
+        "performance": 2.793209,
+        "time": 20.715193
+      },
+      {
+        "performance": 2.6983058,
+        "time": 21.08664
+      },
+      {
+        "performance": 2.052009,
+        "time": 21.203705
+      },
+      {
+        "performance": 1.3602877,
+        "time": 21.320768
+      },
+      {
+        "performance": 0.930951,
+        "time": 21.431747
+      },
+      {
+        "performance": 0.6423879,
+        "time": 21.671202
+      },
+      {
+        "performance": 0.6608174,
+        "time": 21.871202
+      },
+      {
+        "performance": 0.6797756,
+        "time": 21.980953
+      },
+      {
+        "performance": 0.21883245,
+        "time": 22.220407
+      },
+      {
+        "performance": 0.0,
+        "time": 22.50204
+      },
+      {
+        "performance": 0.0,
+        "time": 22.658504
+      }
+    ],
+    "tap": [
+      {
+        "performance": 8.524935,
+        "time": 0.47619048
+      },
+      {
+        "performance": 7.94181,
+        "time": 0.71428573
+      },
+      {
+        "performance": 8.080563,
+        "time": 0.95392954
+      },
+      {
+        "performance": 8.544398,
+        "time": 1.1309524
+      },
+      {
+        "performance": 8.694484,
+        "time": 1.25
+      },
+      {
+        "performance": 8.6964655,
+        "time": 1.4285715
+      },
+      {
+        "performance": 10.109016,
+        "time": 2.3809524
+      },
+      {
+        "performance": 9.881208,
+        "time": 2.6075532
+      },
+      {
+        "performance": 9.424483,
+        "time": 2.8045976
+      },
+      {
+        "performance": 9.339904,
+        "time": 2.9611385
+      },
+      {
+        "performance": 9.543512,
+        "time": 3.143952
+      },
+      {
+        "performance": 9.484845,
+        "time": 3.313629
+      },
+      {
+        "performance": 9.076921,
+        "time": 3.9285715
+      },
+      {
+        "performance": 8.775675,
+        "time": 4.051429
+      },
+      {
+        "performance": 8.715857,
+        "time": 4.178413
+      },
+      {
+        "performance": 8.245689,
+        "time": 4.2760944
+      },
+      {
+        "performance": 7.773745,
+        "time": 4.4651275
+      },
+      {
+        "performance": 7.113348,
+        "time": 4.773449
+      },
+      {
+        "performance": 7.0185375,
+        "time": 5.0793653
+      },
+      {
+        "performance": 6.104973,
+        "time": 5.1422224
+      },
+      {
+        "performance": 5.6665044,
+        "time": 5.2380953
+      },
+      {
+        "performance": 4.869483,
+        "time": 5.4761906
+      },
+      {
+        "performance": 4.8327503,
+        "time": 5.8260317
+      },
+      {
+        "performance": 4.333165,
+        "time": 5.950476
+      },
+      {
+        "performance": 3.7049537,
+        "time": 6.078403
+      },
+      {
+        "performance": 3.6119506,
+        "time": 6.1904764
+      },
+      {
+        "performance": 3.7155738,
+        "time": 6.2704763
+      },
+      {
+        "performance": 3.2824826,
+        "time": 6.428571
+      },
+      {
+        "performance": 3.0431912,
+        "time": 6.6666665
+      },
+      {
+        "performance": 2.9773808,
+        "time": 6.904762
+      },
+      {
+        "performance": 2.1069548,
+        "time": 6.999365
+      },
+      {
+        "performance": 2.2259293,
+        "time": 7.142857
+      },
+      {
+        "performance": 2.2363296,
+        "time": 7.617687
+      },
+      {
+        "performance": 2.6507401,
+        "time": 8.095238
+      },
+      {
+        "performance": 2.726787,
+        "time": 8.122903
+      },
+      {
+        "performance": 2.7771018,
+        "time": 8.305669
+      },
+      {
+        "performance": 2.856774,
+        "time": 8.333333
+      },
+      {
+        "performance": 3.7644145,
+        "time": 8.707483
+      },
+      {
+        "performance": 4.0790052,
+        "time": 8.937415
+      },
+      {
+        "performance": 4.1694307,
+        "time": 9.200907
+      },
+      {
+        "performance": 4.732362,
+        "time": 9.981406
+      },
+      {
+        "performance": 4.4778786,
+        "time": 10.180499
+      },
+      {
+        "performance": 4.9650445,
+        "time": 10.209071
+      },
+      {
+        "performance": 5.009128,
+        "time": 10.553741
+      },
+      {
+        "performance": 5.2430964,
+        "time": 10.795465
+      },
+      {
+        "performance": 5.5045905,
+        "time": 11.063946
+      },
+      {
+        "performance": 5.529428,
+        "time": 11.212244
+      },
+      {
+        "performance": 5.598984,
+        "time": 11.429479
+      },
+      {
+        "performance": 5.759613,
+        "time": 11.539682
+      },
+      {
+        "performance": 5.795842,
+        "time": 11.643991
+      },
+      {
+        "performance": 4.940471,
+        "time": 11.894841
+      },
+      {
+        "performance": 4.877585,
+        "time": 12.138889
+      },
+      {
+        "performance": 5.061424,
+        "time": 12.369709
+      },
+      {
+        "performance": 5.093547,
+        "time": 12.603836
+      },
+      {
+        "performance": 5.6456957,
+        "time": 12.845239
+      },
+      {
+        "performance": 5.0674944,
+        "time": 13.080027
+      },
+      {
+        "performance": 4.682833,
+        "time": 13.552381
+      },
+      {
+        "performance": 5.199172,
+        "time": 13.809071
+      },
+      {
+        "performance": 4.8800206,
+        "time": 14.192743
+      },
+      {
+        "performance": 5.6091366,
+        "time": 14.229932
+      },
+      {
+        "performance": 6.142613,
+        "time": 14.264399
+      },
+      {
+        "performance": 6.3691783,
+        "time": 14.763227
+      },
+      {
+        "performance": 5.823455,
+        "time": 14.871694
+      },
+      {
+        "performance": 7.1310453,
+        "time": 15.726852
+      },
+      {
+        "performance": 6.518716,
+        "time": 15.952381
+      },
+      {
+        "performance": 6.6297755,
+        "time": 16.21678
+      },
+      {
+        "performance": 6.6752934,
+        "time": 16.378685
+      },
+      {
+        "performance": 7.398636,
+        "time": 16.541498
+      },
+      {
+        "performance": 7.1235695,
+        "time": 16.666327
+      },
+      {
+        "performance": 8.421729,
+        "time": 17.603174
+      },
+      {
+        "performance": 8.01315,
+        "time": 17.841724
+      },
+      {
+        "performance": 8.104828,
+        "time": 18.040476
+      },
+      {
+        "performance": 8.337348,
+        "time": 18.09535
+      },
+      {
+        "performance": 7.974074,
+        "time": 18.225397
+      },
+      {
+        "performance": 7.6492767,
+        "time": 18.346033
+      },
+      {
+        "performance": 7.4563813,
+        "time": 18.512472
+      },
+      {
+        "performance": 7.025083,
+        "time": 19.28254
+      },
+      {
+        "performance": 6.6588235,
+        "time": 19.41814
+      },
+      {
+        "performance": 6.2065277,
+        "time": 19.556463
+      },
+      {
+        "performance": 6.384587,
+        "time": 19.78322
+      },
+      {
+        "performance": 5.555046,
+        "time": 20.001814
+      },
+      {
+        "performance": 5.7144146,
+        "time": 20.119274
+      },
+      {
+        "performance": 5.44497,
+        "time": 20.33664
+      },
+      {
+        "performance": 4.546022,
+        "time": 20.400133
+      },
+      {
+        "performance": 3.656541,
+        "time": 20.467592
+      },
+      {
+        "performance": 2.793209,
+        "time": 20.715193
+      },
+      {
+        "performance": 2.6983058,
+        "time": 21.08664
+      },
+      {
+        "performance": 2.052009,
+        "time": 21.203705
+      },
+      {
+        "performance": 1.3602877,
+        "time": 21.320768
+      },
+      {
+        "performance": 0.930951,
+        "time": 21.431747
+      },
+      {
+        "performance": 0.6423879,
+        "time": 21.671202
+      },
+      {
+        "performance": 0.6608174,
+        "time": 21.871202
+      },
+      {
+        "performance": 0.6797756,
+        "time": 21.980953
+      },
+      {
+        "performance": 0.21883245,
+        "time": 22.220407
+      },
+      {
+        "performance": 0.0,
+        "time": 22.50204
+      },
+      {
+        "performance": 0.0,
+        "time": 22.658504
+      }
+    ],
+    "acc": [
+      {
+        "performance": 8.524935,
+        "time": 0.47619048
+      },
+      {
+        "performance": 7.94181,
+        "time": 0.71428573
+      },
+      {
+        "performance": 8.080563,
+        "time": 0.95392954
+      },
+      {
+        "performance": 8.544398,
+        "time": 1.1309524
+      },
+      {
+        "performance": 8.694484,
+        "time": 1.25
+      },
+      {
+        "performance": 8.6964655,
+        "time": 1.4285715
+      },
+      {
+        "performance": 10.109016,
+        "time": 2.3809524
+      },
+      {
+        "performance": 9.881208,
+        "time": 2.6075532
+      },
+      {
+        "performance": 9.424483,
+        "time": 2.8045976
+      },
+      {
+        "performance": 9.339904,
+        "time": 2.9611385
+      },
+      {
+        "performance": 9.543512,
+        "time": 3.143952
+      },
+      {
+        "performance": 9.484845,
+        "time": 3.313629
+      },
+      {
+        "performance": 9.076921,
+        "time": 3.9285715
+      },
+      {
+        "performance": 8.775675,
+        "time": 4.051429
+      },
+      {
+        "performance": 8.715857,
+        "time": 4.178413
+      },
+      {
+        "performance": 8.245689,
+        "time": 4.2760944
+      },
+      {
+        "performance": 7.773745,
+        "time": 4.4651275
+      },
+      {
+        "performance": 7.113348,
+        "time": 4.773449
+      },
+      {
+        "performance": 7.0185375,
+        "time": 5.0793653
+      },
+      {
+        "performance": 6.104973,
+        "time": 5.1422224
+      },
+      {
+        "performance": 5.6665044,
+        "time": 5.2380953
+      },
+      {
+        "performance": 4.869483,
+        "time": 5.4761906
+      },
+      {
+        "performance": 4.8327503,
+        "time": 5.8260317
+      },
+      {
+        "performance": 4.333165,
+        "time": 5.950476
+      },
+      {
+        "performance": 3.7049537,
+        "time": 6.078403
+      },
+      {
+        "performance": 3.6119506,
+        "time": 6.1904764
+      },
+      {
+        "performance": 3.7155738,
+        "time": 6.2704763
+      },
+      {
+        "performance": 3.2824826,
+        "time": 6.428571
+      },
+      {
+        "performance": 3.0431912,
+        "time": 6.6666665
+      },
+      {
+        "performance": 2.9773808,
+        "time": 6.904762
+      },
+      {
+        "performance": 2.1069548,
+        "time": 6.999365
+      },
+      {
+        "performance": 2.2259293,
+        "time": 7.142857
+      },
+      {
+        "performance": 2.2363296,
+        "time": 7.617687
+      },
+      {
+        "performance": 2.6507401,
+        "time": 8.095238
+      },
+      {
+        "performance": 2.726787,
+        "time": 8.122903
+      },
+      {
+        "performance": 2.7771018,
+        "time": 8.305669
+      },
+      {
+        "performance": 2.856774,
+        "time": 8.333333
+      },
+      {
+        "performance": 3.7644145,
+        "time": 8.707483
+      },
+      {
+        "performance": 4.0790052,
+        "time": 8.937415
+      },
+      {
+        "performance": 4.1694307,
+        "time": 9.200907
+      },
+      {
+        "performance": 4.732362,
+        "time": 9.981406
+      },
+      {
+        "performance": 4.4778786,
+        "time": 10.180499
+      },
+      {
+        "performance": 4.9650445,
+        "time": 10.209071
+      },
+      {
+        "performance": 5.009128,
+        "time": 10.553741
+      },
+      {
+        "performance": 5.2430964,
+        "time": 10.795465
+      },
+      {
+        "performance": 5.5045905,
+        "time": 11.063946
+      },
+      {
+        "performance": 5.529428,
+        "time": 11.212244
+      },
+      {
+        "performance": 5.598984,
+        "time": 11.429479
+      },
+      {
+        "performance": 5.759613,
+        "time": 11.539682
+      },
+      {
+        "performance": 5.795842,
+        "time": 11.643991
+      },
+      {
+        "performance": 4.940471,
+        "time": 11.894841
+      },
+      {
+        "performance": 4.877585,
+        "time": 12.138889
+      },
+      {
+        "performance": 5.061424,
+        "time": 12.369709
+      },
+      {
+        "performance": 5.093547,
+        "time": 12.603836
+      },
+      {
+        "performance": 5.6456957,
+        "time": 12.845239
+      },
+      {
+        "performance": 5.0674944,
+        "time": 13.080027
+      },
+      {
+        "performance": 4.682833,
+        "time": 13.552381
+      },
+      {
+        "performance": 5.199172,
+        "time": 13.809071
+      },
+      {
+        "performance": 4.8800206,
+        "time": 14.192743
+      },
+      {
+        "performance": 5.6091366,
+        "time": 14.229932
+      },
+      {
+        "performance": 6.142613,
+        "time": 14.264399
+      },
+      {
+        "performance": 6.3691783,
+        "time": 14.763227
+      },
+      {
+        "performance": 5.823455,
+        "time": 14.871694
+      },
+      {
+        "performance": 7.1310453,
+        "time": 15.726852
+      },
+      {
+        "performance": 6.518716,
+        "time": 15.952381
+      },
+      {
+        "performance": 6.6297755,
+        "time": 16.21678
+      },
+      {
+        "performance": 6.6752934,
+        "time": 16.378685
+      },
+      {
+        "performance": 7.398636,
+        "time": 16.541498
+      },
+      {
+        "performance": 7.1235695,
+        "time": 16.666327
+      },
+      {
+        "performance": 8.421729,
+        "time": 17.603174
+      },
+      {
+        "performance": 8.01315,
+        "time": 17.841724
+      },
+      {
+        "performance": 8.104828,
+        "time": 18.040476
+      },
+      {
+        "performance": 8.337348,
+        "time": 18.09535
+      },
+      {
+        "performance": 7.974074,
+        "time": 18.225397
+      },
+      {
+        "performance": 7.6492767,
+        "time": 18.346033
+      },
+      {
+        "performance": 7.4563813,
+        "time": 18.512472
+      },
+      {
+        "performance": 7.025083,
+        "time": 19.28254
+      },
+      {
+        "performance": 6.6588235,
+        "time": 19.41814
+      },
+      {
+        "performance": 6.2065277,
+        "time": 19.556463
+      },
+      {
+        "performance": 6.384587,
+        "time": 19.78322
+      },
+      {
+        "performance": 5.555046,
+        "time": 20.001814
+      },
+      {
+        "performance": 5.7144146,
+        "time": 20.119274
+      },
+      {
+        "performance": 5.44497,
+        "time": 20.33664
+      },
+      {
+        "performance": 4.546022,
+        "time": 20.400133
+      },
+      {
+        "performance": 3.656541,
+        "time": 20.467592
+      },
+      {
+        "performance": 2.793209,
+        "time": 20.715193
+      },
+      {
+        "performance": 2.6983058,
+        "time": 21.08664
+      },
+      {
+        "performance": 2.052009,
+        "time": 21.203705
+      },
+      {
+        "performance": 1.3602877,
+        "time": 21.320768
+      },
+      {
+        "performance": 0.930951,
+        "time": 21.431747
+      },
+      {
+        "performance": 0.6423879,
+        "time": 21.671202
+      },
+      {
+        "performance": 0.6608174,
+        "time": 21.871202
+      },
+      {
+        "performance": 0.6797756,
+        "time": 21.980953
+      },
+      {
+        "performance": 0.21883245,
+        "time": 22.220407
+      },
+      {
+        "performance": 0.0,
+        "time": 22.50204
+      },
+      {
+        "performance": 0.0,
+        "time": 22.658504
+      }
+    ]
+  },
+  "speed200": {
+    "aim": [
+      {
+        "performance": 9.649829,
+        "time": 0.41666666
+      },
+      {
+        "performance": 10.517093,
+        "time": 0.625
+      },
+      {
+        "performance": 10.680618,
+        "time": 0.83468837
+      },
+      {
+        "performance": 10.271857,
+        "time": 0.9895833
+      },
+      {
+        "performance": 9.9687195,
+        "time": 1.09375
+      },
+      {
+        "performance": 10.247554,
+        "time": 1.25
+      },
+      {
+        "performance": 11.392173,
+        "time": 2.0833333
+      },
+      {
+        "performance": 11.514823,
+        "time": 2.281609
+      },
+      {
+        "performance": 10.820034,
+        "time": 2.454023
+      },
+      {
+        "performance": 10.619507,
+        "time": 2.5909963
+      },
+      {
+        "performance": 10.235978,
+        "time": 2.7509577
+      },
+      {
+        "performance": 10.1762295,
+        "time": 2.8994253
+      },
+      {
+        "performance": 10.114358,
+        "time": 3.4375
+      },
+      {
+        "performance": 9.808929,
+        "time": 3.545
+      },
+      {
+        "performance": 9.593569,
+        "time": 3.6561112
+      },
+      {
+        "performance": 9.1068945,
+        "time": 3.7415826
+      },
+      {
+        "performance": 8.295814,
+        "time": 3.9069867
+      },
+      {
+        "performance": 7.8400683,
+        "time": 4.176768
+      },
+      {
+        "performance": 7.749266,
+        "time": 4.4444447
+      },
+      {
+        "performance": 6.7890396,
+        "time": 4.4994445
+      },
+      {
+        "performance": 6.021978,
+        "time": 4.5833335
+      },
+      {
+        "performance": 5.223172,
+        "time": 4.7916665
+      },
+      {
+        "performance": 5.428971,
+        "time": 5.097778
+      },
+      {
+        "performance": 4.9078393,
+        "time": 5.206667
+      },
+      {
+        "performance": 4.25749,
+        "time": 5.3186026
+      },
+      {
+        "performance": 3.905515,
+        "time": 5.4166665
+      },
+      {
+        "performance": 4.0846047,
+        "time": 5.4866667
+      },
+      {
+        "performance": 3.6270974,
+        "time": 5.625
+      },
+      {
+        "performance": 3.6166804,
+        "time": 5.8333335
+      },
+      {
+        "performance": 3.5418425,
+        "time": 6.0416665
+      },
+      {
+        "performance": 2.6267464,
+        "time": 6.1244445
+      },
+      {
+        "performance": 2.5109239,
+        "time": 6.25
+      },
+      {
+        "performance": 3.5621858,
+        "time": 6.6654763
+      },
+      {
+        "performance": 4.161605,
+        "time": 7.0833335
+      },
+      {
+        "performance": 4.2809973,
+        "time": 7.10754
+      },
+      {
+        "performance": 4.0522,
+        "time": 7.26746
+      },
+      {
+        "performance": 4.1684537,
+        "time": 7.2916665
+      },
+      {
+        "performance": 4.68725,
+        "time": 7.619048
+      },
+      {
+        "performance": 4.8217225,
+        "time": 7.820238
+      },
+      {
+        "performance": 4.775139,
+        "time": 8.050794
+      },
+      {
+        "performance": 5.380876,
+        "time": 8.73373
+      },
+      {
+        "performance": 5.1189027,
+        "time": 8.907936
+      },
+      {
+        "performance": 5.4602914,
+        "time": 8.932937
+      },
+      {
+        "performance": 5.964522,
+        "time": 9.234524
+      },
+      {
+        "performance": 6.024086,
+        "time": 9.446032
+      },
+      {
+        "performance": 5.836051,
+        "time": 9.680952
+      },
+      {
+        "performance": 5.933848,
+        "time": 9.810714
+      },
+      {
+        "performance": 6.5437875,
+        "time": 10.000794
+      },
+      {
+        "performance": 6.7315226,
+        "time": 10.097222
+      },
+      {
+        "performance": 7.285041,
+        "time": 10.188492
+      },
+      {
+        "performance": 6.6069903,
+        "time": 10.407986
+      },
+      {
+        "performance": 7.2121906,
+        "time": 10.621528
+      },
+      {
+        "performance": 6.6238647,
+        "time": 10.823495
+      },
+      {
+        "performance": 6.1463304,
+        "time": 11.028357
+      },
+      {
+        "performance": 5.979229,
+        "time": 11.239584
+      },
+      {
+        "performance": 5.4777293,
+        "time": 11.445024
+      },
+      {
+        "performance": 5.762148,
+        "time": 11.858333
+      },
+      {
+        "performance": 6.562561,
+        "time": 12.082937
+      },
+      {
+        "performance": 6.51365,
+        "time": 12.418651
+      },
+      {
+        "performance": 6.70052,
+        "time": 12.45119
+      },
+      {
+        "performance": 6.892751,
+        "time": 12.481348
+      },
+      {
+        "performance": 7.203636,
+        "time": 12.917824
+      },
+      {
+        "performance": 7.0299277,
+        "time": 13.012732
+      },
+      {
+        "performance": 8.22823,
+        "time": 13.760996
+      },
+      {
+        "performance": 9.143485,
+        "time": 13.958333
+      },
+      {
+        "performance": 9.205358,
+        "time": 14.189682
+      },
+      {
+        "performance": 9.022784,
+        "time": 14.331348
+      },
+      {
+        "performance": 8.572226,
+        "time": 14.47381
+      },
+      {
+        "performance": 8.566462,
+        "time": 14.583036
+      },
+      {
+        "performance": 9.115518,
+        "time": 15.402778
+      },
+      {
+        "performance": 8.763985,
+        "time": 15.611508
+      },
+      {
+        "performance": 8.993983,
+        "time": 15.785416
+      },
+      {
+        "performance": 9.252012,
+        "time": 15.833432
+      },
+      {
+        "performance": 8.588073,
+        "time": 15.947223
+      },
+      {
+        "performance": 8.247533,
+        "time": 16.052778
+      },
+      {
+        "performance": 7.906081,
+        "time": 16.198412
+      },
+      {
+        "performance": 7.451046,
+        "time": 16.872221
+      },
+      {
+        "performance": 7.062183,
+        "time": 16.990873
+      },
+      {
+        "performance": 6.581896,
+        "time": 17.111906
+      },
+      {
+        "performance": 6.770724,
+        "time": 17.310318
+      },
+      {
+        "performance": 5.8872924,
+        "time": 17.501587
+      },
+      {
+        "performance": 6.056193,
+        "time": 17.604366
+      },
+      {
+        "performance": 5.772087,
+        "time": 17.79456
+      },
+      {
+        "performance": 4.818424,
+        "time": 17.850117
+      },
+      {
+        "performance": 3.8742504,
+        "time": 17.909143
+      },
+      {
+        "performance": 2.9603164,
+        "time": 18.125793
+      },
+      {
+        "performance": 2.8592255,
+        "time": 18.45081
+      },
+      {
+        "performance": 2.1741526,
+        "time": 18.553242
+      },
+      {
+        "performance": 1.4409306,
+        "time": 18.655672
+      },
+      {
+        "performance": 0.98608893,
+        "time": 18.752779
+      },
+      {
+        "performance": 0.68077415,
+        "time": 18.962301
+      },
+      {
+        "performance": 0.7003049,
+        "time": 19.137302
+      },
+      {
+        "performance": 0.720396,
+        "time": 19.233334
+      },
+      {
+        "performance": 0.23258437,
+        "time": 19.442858
+      },
+      {
+        "performance": 0.0,
+        "time": 19.689285
+      },
+      {
+        "performance": 0.0,
+        "time": 19.82619
+      }
+    ],
+    "tap": [
+      {
+        "performance": 9.649829,
+        "time": 0.41666666
+      },
+      {
+        "performance": 10.517093,
+        "time": 0.625
+      },
+      {
+        "performance": 10.680618,
+        "time": 0.83468837
+      },
+      {
+        "performance": 10.271857,
+        "time": 0.9895833
+      },
+      {
+        "performance": 9.9687195,
+        "time": 1.09375
+      },
+      {
+        "performance": 10.247554,
+        "time": 1.25
+      },
+      {
+        "performance": 11.392173,
+        "time": 2.0833333
+      },
+      {
+        "performance": 11.514823,
+        "time": 2.281609
+      },
+      {
+        "performance": 10.820034,
+        "time": 2.454023
+      },
+      {
+        "performance": 10.619507,
+        "time": 2.5909963
+      },
+      {
+        "performance": 10.235978,
+        "time": 2.7509577
+      },
+      {
+        "performance": 10.1762295,
+        "time": 2.8994253
+      },
+      {
+        "performance": 10.114358,
+        "time": 3.4375
+      },
+      {
+        "performance": 9.808929,
+        "time": 3.545
+      },
+      {
+        "performance": 9.593569,
+        "time": 3.6561112
+      },
+      {
+        "performance": 9.1068945,
+        "time": 3.7415826
+      },
+      {
+        "performance": 8.295814,
+        "time": 3.9069867
+      },
+      {
+        "performance": 7.8400683,
+        "time": 4.176768
+      },
+      {
+        "performance": 7.749266,
+        "time": 4.4444447
+      },
+      {
+        "performance": 6.7890396,
+        "time": 4.4994445
+      },
+      {
+        "performance": 6.021978,
+        "time": 4.5833335
+      },
+      {
+        "performance": 5.223172,
+        "time": 4.7916665
+      },
+      {
+        "performance": 5.428971,
+        "time": 5.097778
+      },
+      {
+        "performance": 4.9078393,
+        "time": 5.206667
+      },
+      {
+        "performance": 4.25749,
+        "time": 5.3186026
+      },
+      {
+        "performance": 3.905515,
+        "time": 5.4166665
+      },
+      {
+        "performance": 4.0846047,
+        "time": 5.4866667
+      },
+      {
+        "performance": 3.6270974,
+        "time": 5.625
+      },
+      {
+        "performance": 3.6166804,
+        "time": 5.8333335
+      },
+      {
+        "performance": 3.5418425,
+        "time": 6.0416665
+      },
+      {
+        "performance": 2.6267464,
+        "time": 6.1244445
+      },
+      {
+        "performance": 2.5109239,
+        "time": 6.25
+      },
+      {
+        "performance": 3.5621858,
+        "time": 6.6654763
+      },
+      {
+        "performance": 4.161605,
+        "time": 7.0833335
+      },
+      {
+        "performance": 4.2809973,
+        "time": 7.10754
+      },
+      {
+        "performance": 4.0522,
+        "time": 7.26746
+      },
+      {
+        "performance": 4.1684537,
+        "time": 7.2916665
+      },
+      {
+        "performance": 4.68725,
+        "time": 7.619048
+      },
+      {
+        "performance": 4.8217225,
+        "time": 7.820238
+      },
+      {
+        "performance": 4.775139,
+        "time": 8.050794
+      },
+      {
+        "performance": 5.380876,
+        "time": 8.73373
+      },
+      {
+        "performance": 5.1189027,
+        "time": 8.907936
+      },
+      {
+        "performance": 5.4602914,
+        "time": 8.932937
+      },
+      {
+        "performance": 5.964522,
+        "time": 9.234524
+      },
+      {
+        "performance": 6.024086,
+        "time": 9.446032
+      },
+      {
+        "performance": 5.836051,
+        "time": 9.680952
+      },
+      {
+        "performance": 5.933848,
+        "time": 9.810714
+      },
+      {
+        "performance": 6.5437875,
+        "time": 10.000794
+      },
+      {
+        "performance": 6.7315226,
+        "time": 10.097222
+      },
+      {
+        "performance": 7.285041,
+        "time": 10.188492
+      },
+      {
+        "performance": 6.6069903,
+        "time": 10.407986
+      },
+      {
+        "performance": 7.2121906,
+        "time": 10.621528
+      },
+      {
+        "performance": 6.6238647,
+        "time": 10.823495
+      },
+      {
+        "performance": 6.1463304,
+        "time": 11.028357
+      },
+      {
+        "performance": 5.979229,
+        "time": 11.239584
+      },
+      {
+        "performance": 5.4777293,
+        "time": 11.445024
+      },
+      {
+        "performance": 5.762148,
+        "time": 11.858333
+      },
+      {
+        "performance": 6.562561,
+        "time": 12.082937
+      },
+      {
+        "performance": 6.51365,
+        "time": 12.418651
+      },
+      {
+        "performance": 6.70052,
+        "time": 12.45119
+      },
+      {
+        "performance": 6.892751,
+        "time": 12.481348
+      },
+      {
+        "performance": 7.203636,
+        "time": 12.917824
+      },
+      {
+        "performance": 7.0299277,
+        "time": 13.012732
+      },
+      {
+        "performance": 8.22823,
+        "time": 13.760996
+      },
+      {
+        "performance": 9.143485,
+        "time": 13.958333
+      },
+      {
+        "performance": 9.205358,
+        "time": 14.189682
+      },
+      {
+        "performance": 9.022784,
+        "time": 14.331348
+      },
+      {
+        "performance": 8.572226,
+        "time": 14.47381
+      },
+      {
+        "performance": 8.566462,
+        "time": 14.583036
+      },
+      {
+        "performance": 9.115518,
+        "time": 15.402778
+      },
+      {
+        "performance": 8.763985,
+        "time": 15.611508
+      },
+      {
+        "performance": 8.993983,
+        "time": 15.785416
+      },
+      {
+        "performance": 9.252012,
+        "time": 15.833432
+      },
+      {
+        "performance": 8.588073,
+        "time": 15.947223
+      },
+      {
+        "performance": 8.247533,
+        "time": 16.052778
+      },
+      {
+        "performance": 7.906081,
+        "time": 16.198412
+      },
+      {
+        "performance": 7.451046,
+        "time": 16.872221
+      },
+      {
+        "performance": 7.062183,
+        "time": 16.990873
+      },
+      {
+        "performance": 6.581896,
+        "time": 17.111906
+      },
+      {
+        "performance": 6.770724,
+        "time": 17.310318
+      },
+      {
+        "performance": 5.8872924,
+        "time": 17.501587
+      },
+      {
+        "performance": 6.056193,
+        "time": 17.604366
+      },
+      {
+        "performance": 5.772087,
+        "time": 17.79456
+      },
+      {
+        "performance": 4.818424,
+        "time": 17.850117
+      },
+      {
+        "performance": 3.8742504,
+        "time": 17.909143
+      },
+      {
+        "performance": 2.9603164,
+        "time": 18.125793
+      },
+      {
+        "performance": 2.8592255,
+        "time": 18.45081
+      },
+      {
+        "performance": 2.1741526,
+        "time": 18.553242
+      },
+      {
+        "performance": 1.4409306,
+        "time": 18.655672
+      },
+      {
+        "performance": 0.98608893,
+        "time": 18.752779
+      },
+      {
+        "performance": 0.68077415,
+        "time": 18.962301
+      },
+      {
+        "performance": 0.7003049,
+        "time": 19.137302
+      },
+      {
+        "performance": 0.720396,
+        "time": 19.233334
+      },
+      {
+        "performance": 0.23258437,
+        "time": 19.442858
+      },
+      {
+        "performance": 0.0,
+        "time": 19.689285
+      },
+      {
+        "performance": 0.0,
+        "time": 19.82619
+      }
+    ],
+    "acc": [
+      {
+        "performance": 9.649829,
+        "time": 0.41666666
+      },
+      {
+        "performance": 10.517093,
+        "time": 0.625
+      },
+      {
+        "performance": 10.680618,
+        "time": 0.83468837
+      },
+      {
+        "performance": 10.271857,
+        "time": 0.9895833
+      },
+      {
+        "performance": 9.9687195,
+        "time": 1.09375
+      },
+      {
+        "performance": 10.247554,
+        "time": 1.25
+      },
+      {
+        "performance": 11.392173,
+        "time": 2.0833333
+      },
+      {
+        "performance": 11.514823,
+        "time": 2.281609
+      },
+      {
+        "performance": 10.820034,
+        "time": 2.454023
+      },
+      {
+        "performance": 10.619507,
+        "time": 2.5909963
+      },
+      {
+        "performance": 10.235978,
+        "time": 2.7509577
+      },
+      {
+        "performance": 10.1762295,
+        "time": 2.8994253
+      },
+      {
+        "performance": 10.114358,
+        "time": 3.4375
+      },
+      {
+        "performance": 9.808929,
+        "time": 3.545
+      },
+      {
+        "performance": 9.593569,
+        "time": 3.6561112
+      },
+      {
+        "performance": 9.1068945,
+        "time": 3.7415826
+      },
+      {
+        "performance": 8.295814,
+        "time": 3.9069867
+      },
+      {
+        "performance": 7.8400683,
+        "time": 4.176768
+      },
+      {
+        "performance": 7.749266,
+        "time": 4.4444447
+      },
+      {
+        "performance": 6.7890396,
+        "time": 4.4994445
+      },
+      {
+        "performance": 6.021978,
+        "time": 4.5833335
+      },
+      {
+        "performance": 5.223172,
+        "time": 4.7916665
+      },
+      {
+        "performance": 5.428971,
+        "time": 5.097778
+      },
+      {
+        "performance": 4.9078393,
+        "time": 5.206667
+      },
+      {
+        "performance": 4.25749,
+        "time": 5.3186026
+      },
+      {
+        "performance": 3.905515,
+        "time": 5.4166665
+      },
+      {
+        "performance": 4.0846047,
+        "time": 5.4866667
+      },
+      {
+        "performance": 3.6270974,
+        "time": 5.625
+      },
+      {
+        "performance": 3.6166804,
+        "time": 5.8333335
+      },
+      {
+        "performance": 3.5418425,
+        "time": 6.0416665
+      },
+      {
+        "performance": 2.6267464,
+        "time": 6.1244445
+      },
+      {
+        "performance": 2.5109239,
+        "time": 6.25
+      },
+      {
+        "performance": 3.5621858,
+        "time": 6.6654763
+      },
+      {
+        "performance": 4.161605,
+        "time": 7.0833335
+      },
+      {
+        "performance": 4.2809973,
+        "time": 7.10754
+      },
+      {
+        "performance": 4.0522,
+        "time": 7.26746
+      },
+      {
+        "performance": 4.1684537,
+        "time": 7.2916665
+      },
+      {
+        "performance": 4.68725,
+        "time": 7.619048
+      },
+      {
+        "performance": 4.8217225,
+        "time": 7.820238
+      },
+      {
+        "performance": 4.775139,
+        "time": 8.050794
+      },
+      {
+        "performance": 5.380876,
+        "time": 8.73373
+      },
+      {
+        "performance": 5.1189027,
+        "time": 8.907936
+      },
+      {
+        "performance": 5.4602914,
+        "time": 8.932937
+      },
+      {
+        "performance": 5.964522,
+        "time": 9.234524
+      },
+      {
+        "performance": 6.024086,
+        "time": 9.446032
+      },
+      {
+        "performance": 5.836051,
+        "time": 9.680952
+      },
+      {
+        "performance": 5.933848,
+        "time": 9.810714
+      },
+      {
+        "performance": 6.5437875,
+        "time": 10.000794
+      },
+      {
+        "performance": 6.7315226,
+        "time": 10.097222
+      },
+      {
+        "performance": 7.285041,
+        "time": 10.188492
+      },
+      {
+        "performance": 6.6069903,
+        "time": 10.407986
+      },
+      {
+        "performance": 7.2121906,
+        "time": 10.621528
+      },
+      {
+        "performance": 6.6238647,
+        "time": 10.823495
+      },
+      {
+        "performance": 6.1463304,
+        "time": 11.028357
+      },
+      {
+        "performance": 5.979229,
+        "time": 11.239584
+      },
+      {
+        "performance": 5.4777293,
+        "time": 11.445024
+      },
+      {
+        "performance": 5.762148,
+        "time": 11.858333
+      },
+      {
+        "performance": 6.562561,
+        "time": 12.082937
+      },
+      {
+        "performance": 6.51365,
+        "time": 12.418651
+      },
+      {
+        "performance": 6.70052,
+        "time": 12.45119
+      },
+      {
+        "performance": 6.892751,
+        "time": 12.481348
+      },
+      {
+        "performance": 7.203636,
+        "time": 12.917824
+      },
+      {
+        "performance": 7.0299277,
+        "time": 13.012732
+      },
+      {
+        "performance": 8.22823,
+        "time": 13.760996
+      },
+      {
+        "performance": 9.143485,
+        "time": 13.958333
+      },
+      {
+        "performance": 9.205358,
+        "time": 14.189682
+      },
+      {
+        "performance": 9.022784,
+        "time": 14.331348
+      },
+      {
+        "performance": 8.572226,
+        "time": 14.47381
+      },
+      {
+        "performance": 8.566462,
+        "time": 14.583036
+      },
+      {
+        "performance": 9.115518,
+        "time": 15.402778
+      },
+      {
+        "performance": 8.763985,
+        "time": 15.611508
+      },
+      {
+        "performance": 8.993983,
+        "time": 15.785416
+      },
+      {
+        "performance": 9.252012,
+        "time": 15.833432
+      },
+      {
+        "performance": 8.588073,
+        "time": 15.947223
+      },
+      {
+        "performance": 8.247533,
+        "time": 16.052778
+      },
+      {
+        "performance": 7.906081,
+        "time": 16.198412
+      },
+      {
+        "performance": 7.451046,
+        "time": 16.872221
+      },
+      {
+        "performance": 7.062183,
+        "time": 16.990873
+      },
+      {
+        "performance": 6.581896,
+        "time": 17.111906
+      },
+      {
+        "performance": 6.770724,
+        "time": 17.310318
+      },
+      {
+        "performance": 5.8872924,
+        "time": 17.501587
+      },
+      {
+        "performance": 6.056193,
+        "time": 17.604366
+      },
+      {
+        "performance": 5.772087,
+        "time": 17.79456
+      },
+      {
+        "performance": 4.818424,
+        "time": 17.850117
+      },
+      {
+        "performance": 3.8742504,
+        "time": 17.909143
+      },
+      {
+        "performance": 2.9603164,
+        "time": 18.125793
+      },
+      {
+        "performance": 2.8592255,
+        "time": 18.45081
+      },
+      {
+        "performance": 2.1741526,
+        "time": 18.553242
+      },
+      {
+        "performance": 1.4409306,
+        "time": 18.655672
+      },
+      {
+        "performance": 0.98608893,
+        "time": 18.752779
+      },
+      {
+        "performance": 0.68077415,
+        "time": 18.962301
+      },
+      {
+        "performance": 0.7003049,
+        "time": 19.137302
+      },
+      {
+        "performance": 0.720396,
+        "time": 19.233334
+      },
+      {
+        "performance": 0.23258437,
+        "time": 19.442858
+      },
+      {
+        "performance": 0.0,
+        "time": 19.689285
+      },
+      {
+        "performance": 0.0,
+        "time": 19.82619
+      }
+    ]
+  }
+}

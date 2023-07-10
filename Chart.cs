@@ -364,7 +364,7 @@ namespace TootTallyDifficultyCalculator2._0
                     "pd: " + n.pitchDelta.ToString("0.00") + " | " +
                     "pe: " + n.pitchEnd.ToString("0.00") +
                     (n.isSlider ? " | Slider" : "") + " | " +
-                    (i < aimPerformanceDict.Count ? $"a: {aimPerformanceDict[1][i].performance} t: {tapPerformanceDict[1][i].performance} a: {accPerformanceDict[1][i].performance}" : ""));
+                    (i < aimPerformanceDict[1].Count ? $"a: {aimPerformanceDict[1][i].performance} t: {tapPerformanceDict[1][i].performance} a: {accPerformanceDict[1][i].performance}" : ""));
             }
 
             return data;
@@ -402,6 +402,25 @@ namespace TootTallyDifficultyCalculator2._0
                 perfMin = dataVectorList.Min(x => x.performance);
                 perfSum = dataVectorList.Sum(x => x.performance);
             }
+        }
+
+
+        public class SerializableDiffData
+        {
+            public SerializableDataVector speed050;
+            public SerializableDataVector speed075;
+            public SerializableDataVector speed100;
+            public SerializableDataVector speed125;
+            public SerializableDataVector speed150;
+            public SerializableDataVector speed175;
+            public SerializableDataVector speed200;
+        }
+
+        public class SerializableDataVector
+        {
+            public List<DataVector> aim;
+            public List<DataVector> tap;
+            public List<DataVector> acc;
         }
     }
 }
