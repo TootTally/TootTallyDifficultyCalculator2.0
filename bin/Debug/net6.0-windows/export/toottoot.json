@@ -6,23 +6,23 @@
         "time": 2.3076923
       },
       {
-        "performance": 0.13488744,
+        "performance": "NaN",
         "time": 3.1735384
       },
       {
-        "performance": 1.5273632,
+        "performance": "NaN",
         "time": 8.481231
       },
       {
-        "performance": 0.74741316,
+        "performance": "NaN",
         "time": 12.42277
       },
       {
-        "performance": 0.26906085,
+        "performance": "NaN",
         "time": 13.327385
       },
       {
-        "performance": 0.27677995,
+        "performance": "NaN",
         "time": 14.307693
       }
     ],
@@ -32,23 +32,23 @@
         "time": 2.3076923
       },
       {
-        "performance": 0.13488744,
+        "performance": "NaN",
         "time": 3.1735384
       },
       {
-        "performance": 1.5273632,
+        "performance": "NaN",
         "time": 8.481231
       },
       {
-        "performance": 0.74741316,
+        "performance": "NaN",
         "time": 12.42277
       },
       {
-        "performance": 0.26906085,
+        "performance": "NaN",
         "time": 13.327385
       },
       {
-        "performance": 0.27677995,
+        "performance": "NaN",
         "time": 14.307693
       }
     ],
@@ -58,23 +58,23 @@
         "time": 2.3076923
       },
       {
-        "performance": 0.13488744,
+        "performance": "NaN",
         "time": 3.1735384
       },
       {
-        "performance": 1.5273632,
+        "performance": "NaN",
         "time": 8.481231
       },
       {
-        "performance": 0.74741316,
+        "performance": "NaN",
         "time": 12.42277
       },
       {
-        "performance": 0.26906085,
+        "performance": "NaN",
         "time": 13.327385
       },
       {
-        "performance": 0.27677995,
+        "performance": "NaN",
         "time": 14.307693
       }
     ]
@@ -82,79 +82,79 @@
   "speed075": {
     "aim": [
       {
-        "performance": 0.35241607,
+        "performance": 0.35260904,
         "time": 1.5384616
       },
       {
-        "performance": 0.15256928,
+        "performance": 0.15285528,
         "time": 2.1156924
       },
       {
-        "performance": 1.6442674,
+        "performance": "NaN",
         "time": 5.654154
       },
       {
-        "performance": 0.6881454,
+        "performance": "NaN",
         "time": 8.281846
       },
       {
-        "performance": 0.3295309,
+        "performance": "NaN",
         "time": 8.884923
       },
       {
-        "performance": 0.33898482,
+        "performance": "NaN",
         "time": 9.538462
       }
     ],
     "tap": [
       {
-        "performance": 0.35241607,
+        "performance": 0.35260904,
         "time": 1.5384616
       },
       {
-        "performance": 0.15256928,
+        "performance": 0.15285528,
         "time": 2.1156924
       },
       {
-        "performance": 1.6442674,
+        "performance": "NaN",
         "time": 5.654154
       },
       {
-        "performance": 0.6881454,
+        "performance": "NaN",
         "time": 8.281846
       },
       {
-        "performance": 0.3295309,
+        "performance": "NaN",
         "time": 8.884923
       },
       {
-        "performance": 0.33898482,
+        "performance": "NaN",
         "time": 9.538462
       }
     ],
     "acc": [
       {
-        "performance": 0.35241607,
+        "performance": 0.35260904,
         "time": 1.5384616
       },
       {
-        "performance": 0.15256928,
+        "performance": 0.15285528,
         "time": 2.1156924
       },
       {
-        "performance": 1.6442674,
+        "performance": "NaN",
         "time": 5.654154
       },
       {
-        "performance": 0.6881454,
+        "performance": "NaN",
         "time": 8.281846
       },
       {
-        "performance": 0.3295309,
+        "performance": "NaN",
         "time": 8.884923
       },
       {
-        "performance": 0.33898482,
+        "performance": "NaN",
         "time": 9.538462
       }
     ]
@@ -162,79 +162,79 @@
   "speed100": {
     "aim": [
       {
-        "performance": 0.3516002,
+        "performance": 0.35184208,
         "time": 1.1538461
       },
       {
-        "performance": 0.17003006,
+        "performance": 0.17039023,
         "time": 1.5867692
       },
       {
-        "performance": 0.8829176,
+        "performance": 0.8863805,
         "time": 4.2406154
       },
       {
-        "performance": 0.4655818,
+        "performance": 0.46953306,
         "time": 6.211385
       },
       {
-        "performance": 0.14461587,
+        "performance": 0.14641109,
         "time": 6.6636925
       },
       {
-        "performance": 0.14876474,
+        "performance": 0.15072876,
         "time": 7.1538463
       }
     ],
     "tap": [
       {
-        "performance": 0.3516002,
+        "performance": 0.35184208,
         "time": 1.1538461
       },
       {
-        "performance": 0.17003006,
+        "performance": 0.17039023,
         "time": 1.5867692
       },
       {
-        "performance": 0.8829176,
+        "performance": 0.8863805,
         "time": 4.2406154
       },
       {
-        "performance": 0.4655818,
+        "performance": 0.46953306,
         "time": 6.211385
       },
       {
-        "performance": 0.14461587,
+        "performance": 0.14641109,
         "time": 6.6636925
       },
       {
-        "performance": 0.14876474,
+        "performance": 0.15072876,
         "time": 7.1538463
       }
     ],
     "acc": [
       {
-        "performance": 0.3516002,
+        "performance": 0.35184208,
         "time": 1.1538461
       },
       {
-        "performance": 0.17003006,
+        "performance": 0.17039023,
         "time": 1.5867692
       },
       {
-        "performance": 0.8829176,
+        "performance": 0.8863805,
         "time": 4.2406154
       },
       {
-        "performance": 0.4655818,
+        "performance": 0.46953306,
         "time": 6.211385
       },
       {
-        "performance": 0.14461587,
+        "performance": 0.14641109,
         "time": 6.6636925
       },
       {
-        "performance": 0.14876474,
+        "performance": 0.15072876,
         "time": 7.1538463
       }
     ]
@@ -242,79 +242,79 @@
   "speed125": {
     "aim": [
       {
-        "performance": 0.68827355,
+        "performance": 0.6893198,
         "time": 0.9230769
       },
       {
-        "performance": 0.8346307,
+        "performance": 0.8383139,
         "time": 1.2694154
       },
       {
-        "performance": 0.7751193,
+        "performance": 0.7813853,
         "time": 3.3924923
       },
       {
-        "performance": 0.447468,
+        "performance": 0.45320043,
         "time": 4.9691076
       },
       {
-        "performance": 0.12524101,
+        "performance": 0.12739842,
         "time": 5.330954
       },
       {
-        "performance": 0.12883405,
+        "performance": 0.131162,
         "time": 5.723077
       }
     ],
     "tap": [
       {
-        "performance": 0.68827355,
+        "performance": 0.6893198,
         "time": 0.9230769
       },
       {
-        "performance": 0.8346307,
+        "performance": 0.8383139,
         "time": 1.2694154
       },
       {
-        "performance": 0.7751193,
+        "performance": 0.7813853,
         "time": 3.3924923
       },
       {
-        "performance": 0.447468,
+        "performance": 0.45320043,
         "time": 4.9691076
       },
       {
-        "performance": 0.12524101,
+        "performance": 0.12739842,
         "time": 5.330954
       },
       {
-        "performance": 0.12883405,
+        "performance": 0.131162,
         "time": 5.723077
       }
     ],
     "acc": [
       {
-        "performance": 0.68827355,
+        "performance": 0.6893198,
         "time": 0.9230769
       },
       {
-        "performance": 0.8346307,
+        "performance": 0.8383139,
         "time": 1.2694154
       },
       {
-        "performance": 0.7751193,
+        "performance": 0.7813853,
         "time": 3.3924923
       },
       {
-        "performance": 0.447468,
+        "performance": 0.45320043,
         "time": 4.9691076
       },
       {
-        "performance": 0.12524101,
+        "performance": 0.12739842,
         "time": 5.330954
       },
       {
-        "performance": 0.12883405,
+        "performance": 0.131162,
         "time": 5.723077
       }
     ]
@@ -322,79 +322,79 @@
   "speed150": {
     "aim": [
       {
-        "performance": 1.0134399,
+        "performance": 1.0157311,
         "time": 0.7692308
       },
       {
-        "performance": 0.8423382,
+        "performance": 0.8489426,
         "time": 1.0578462
       },
       {
-        "performance": 0.76433516,
+        "performance": 0.7744271,
         "time": 2.827077
       },
       {
-        "performance": 0.45407546,
+        "performance": 0.46235898,
         "time": 4.140923
       },
       {
-        "performance": 0.121900655,
+        "performance": 0.12471398,
         "time": 4.4424615
       },
       {
-        "performance": 0.12539786,
+        "performance": 0.12840585,
         "time": 4.769231
       }
     ],
     "tap": [
       {
-        "performance": 1.0134399,
+        "performance": 1.0157311,
         "time": 0.7692308
       },
       {
-        "performance": 0.8423382,
+        "performance": 0.8489426,
         "time": 1.0578462
       },
       {
-        "performance": 0.76433516,
+        "performance": 0.7744271,
         "time": 2.827077
       },
       {
-        "performance": 0.45407546,
+        "performance": 0.46235898,
         "time": 4.140923
       },
       {
-        "performance": 0.121900655,
+        "performance": 0.12471398,
         "time": 4.4424615
       },
       {
-        "performance": 0.12539786,
+        "performance": 0.12840585,
         "time": 4.769231
       }
     ],
     "acc": [
       {
-        "performance": 1.0134399,
+        "performance": 1.0157311,
         "time": 0.7692308
       },
       {
-        "performance": 0.8423382,
+        "performance": 0.8489426,
         "time": 1.0578462
       },
       {
-        "performance": 0.76433516,
+        "performance": 0.7744271,
         "time": 2.827077
       },
       {
-        "performance": 0.45407546,
+        "performance": 0.46235898,
         "time": 4.140923
       },
       {
-        "performance": 0.121900655,
+        "performance": 0.12471398,
         "time": 4.4424615
       },
       {
-        "performance": 0.12539786,
+        "performance": 0.12840585,
         "time": 4.769231
       }
     ]
@@ -402,79 +402,79 @@
   "speed175": {
     "aim": [
       {
-        "performance": 1.0456822,
+        "performance": 1.0482123,
         "time": 0.6593407
       },
       {
-        "performance": 0.9887654,
+        "performance": 0.9976098,
         "time": 0.9067253
       },
       {
-        "performance": 0.77614665,
+        "performance": 0.78786284,
         "time": 2.4232087
       },
       {
-        "performance": 0.46772847,
+        "performance": 0.4773045,
         "time": 3.5493627
       },
       {
-        "performance": 0.12276075,
+        "performance": 0.12591642,
         "time": 3.8078241
       },
       {
-        "performance": 0.12628263,
+        "performance": 0.129652,
         "time": 4.087912
       }
     ],
     "tap": [
       {
-        "performance": 1.0456822,
+        "performance": 1.0482123,
         "time": 0.6593407
       },
       {
-        "performance": 0.9887654,
+        "performance": 0.9976098,
         "time": 0.9067253
       },
       {
-        "performance": 0.77614665,
+        "performance": 0.78786284,
         "time": 2.4232087
       },
       {
-        "performance": 0.46772847,
+        "performance": 0.4773045,
         "time": 3.5493627
       },
       {
-        "performance": 0.12276075,
+        "performance": 0.12591642,
         "time": 3.8078241
       },
       {
-        "performance": 0.12628263,
+        "performance": 0.129652,
         "time": 4.087912
       }
     ],
     "acc": [
       {
-        "performance": 1.0456822,
+        "performance": 1.0482123,
         "time": 0.6593407
       },
       {
-        "performance": 0.9887654,
+        "performance": 0.9976098,
         "time": 0.9067253
       },
       {
-        "performance": 0.77614665,
+        "performance": 0.78786284,
         "time": 2.4232087
       },
       {
-        "performance": 0.46772847,
+        "performance": 0.4773045,
         "time": 3.5493627
       },
       {
-        "performance": 0.12276075,
+        "performance": 0.12591642,
         "time": 3.8078241
       },
       {
-        "performance": 0.12628263,
+        "performance": 0.129652,
         "time": 4.087912
       }
     ]
@@ -482,79 +482,79 @@
   "speed200": {
     "aim": [
       {
-        "performance": 1.2044444,
+        "performance": 1.2081653,
         "time": 0.5769231
       },
       {
-        "performance": 1.0221679,
+        "performance": 1.0328861,
         "time": 0.7933846
       },
       {
-        "performance": 0.79627854,
+        "performance": 0.8098391,
         "time": 2.1203077
       },
       {
-        "performance": 0.48400033,
+        "performance": 0.49500543,
         "time": 3.1056924
       },
       {
-        "performance": 0.12524101,
+        "performance": 0.12878995,
         "time": 3.3318462
       },
       {
-        "performance": 0.12883405,
+        "performance": 0.13261859,
         "time": 3.5769231
       }
     ],
     "tap": [
       {
-        "performance": 1.2044444,
+        "performance": 1.2081653,
         "time": 0.5769231
       },
       {
-        "performance": 1.0221679,
+        "performance": 1.0328861,
         "time": 0.7933846
       },
       {
-        "performance": 0.79627854,
+        "performance": 0.8098391,
         "time": 2.1203077
       },
       {
-        "performance": 0.48400033,
+        "performance": 0.49500543,
         "time": 3.1056924
       },
       {
-        "performance": 0.12524101,
+        "performance": 0.12878995,
         "time": 3.3318462
       },
       {
-        "performance": 0.12883405,
+        "performance": 0.13261859,
         "time": 3.5769231
       }
     ],
     "acc": [
       {
-        "performance": 1.2044444,
+        "performance": 1.2081653,
         "time": 0.5769231
       },
       {
-        "performance": 1.0221679,
+        "performance": 1.0328861,
         "time": 0.7933846
       },
       {
-        "performance": 0.79627854,
+        "performance": 0.8098391,
         "time": 2.1203077
       },
       {
-        "performance": 0.48400033,
+        "performance": 0.49500543,
         "time": 3.1056924
       },
       {
-        "performance": 0.12524101,
+        "performance": 0.12878995,
         "time": 3.3318462
       },
       {
-        "performance": 0.12883405,
+        "performance": 0.13261859,
         "time": 3.5769231
       }
     ]

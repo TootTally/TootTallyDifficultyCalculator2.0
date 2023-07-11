@@ -65,13 +65,13 @@ namespace TootTallyDifficultyCalculator2._0
         {
             Chart.SerializableDiffData chartdata = new Chart.SerializableDiffData()
             {
-                speed050 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.5f],   tap = chart.aimPerformanceDict[0.5f],   acc = chart.aimPerformanceDict[0.5f] },
-                speed075 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.75f],  tap = chart.aimPerformanceDict[0.75f],  acc = chart.aimPerformanceDict[0.75f] },
-                speed100 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1f],     tap = chart.aimPerformanceDict[1f],     acc = chart.aimPerformanceDict[1f] },
-                speed125 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.25f],  tap = chart.aimPerformanceDict[1.25f],  acc = chart.aimPerformanceDict[1.25f] },
-                speed150 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.5f],   tap = chart.aimPerformanceDict[1.5f],   acc = chart.aimPerformanceDict[1.5f] },
-                speed175 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.75f],  tap = chart.aimPerformanceDict[1.75f],  acc = chart.aimPerformanceDict[1.75f] },
-                speed200 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[2f],     tap = chart.aimPerformanceDict[2f],     acc = chart.aimPerformanceDict[2f] },
+                speed050 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.5f], tap = chart.aimPerformanceDict[0.5f], acc = chart.aimPerformanceDict[0.5f] },
+                speed075 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.75f], tap = chart.aimPerformanceDict[0.75f], acc = chart.aimPerformanceDict[0.75f] },
+                speed100 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1f], tap = chart.aimPerformanceDict[1f], acc = chart.aimPerformanceDict[1f] },
+                speed125 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.25f], tap = chart.aimPerformanceDict[1.25f], acc = chart.aimPerformanceDict[1.25f] },
+                speed150 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.5f], tap = chart.aimPerformanceDict[1.5f], acc = chart.aimPerformanceDict[1.5f] },
+                speed175 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.75f], tap = chart.aimPerformanceDict[1.75f], acc = chart.aimPerformanceDict[1.75f] },
+                speed200 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[2f], tap = chart.aimPerformanceDict[2f], acc = chart.aimPerformanceDict[2f] },
 
             };
             var json = JsonConvert.SerializeObject(chartdata, Formatting.Indented);
@@ -85,23 +85,16 @@ namespace TootTallyDifficultyCalculator2._0
 
             if (ComboBoxSongName.Text == "ALL")
             {
-                chartList.Sort((x, y) => String.Compare(x.name,y.name)); 
+                chartList.Sort((x, y) => String.Compare(x.name, y.name));
                 ListboxMapData.Items.Add($"Calculation time took {_calculationTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
                 foreach (Chart chart in chartList)
                 {
+                    if (!chart.name.ToLower().Contains(textBox1.Text.ToLower())) continue;
                     ListboxMapData.Items.Add($"{chart.name} processed in {chart.calculationTime.TotalSeconds}s");
-                    for (int i = 0; i < chart.GAME_SPEED.Length; i++)
-                    {
-                        var gamespeed = chart.GAME_SPEED[i];
-                        Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[gamespeed];
-                        Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[gamespeed];
-                        Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[gamespeed];
-                        ListboxMapData.Items.Add($"SPEED: {gamespeed:0.00}x rated {chart.starRatingDict[gamespeed]}");
-                        ListboxMapData.Items.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
-                        ListboxMapData.Items.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
-                        ListboxMapData.Items.Add($"  acc: " + accAnalytics.perfAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
-                        ListboxMapData.Items.Add("--------------------------------------------");
-                    }
+                    if (checkboxAllSpeed.Checked)
+                        DisplayAllSpeed(chart);
+                    else
+                        DisplayNormalSpeed(chart);
                     ListboxMapData.Items.Add("=============================================");
                 }
             }
@@ -119,6 +112,40 @@ namespace TootTallyDifficultyCalculator2._0
                 */
             }
             ListboxMapData.Visible = true;
+        }
+
+        public void DisplayAllSpeed(Chart chart)
+        {
+            for (int i = 0; i < chart.GAME_SPEED.Length; i++)
+            {
+                var gamespeed = chart.GAME_SPEED[i];
+                Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[gamespeed];
+                Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[gamespeed];
+                Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[gamespeed];
+                ListboxMapData.Items.Add($"SPEED: {gamespeed:0.00}x rated {chart.starRatingDict[gamespeed]}");
+                ListboxMapData.Items.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
+                ListboxMapData.Items.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
+                ListboxMapData.Items.Add($"  acc: " + accAnalytics.perfAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
+                ListboxMapData.Items.Add("--------------------------------------------");
+            }
+        }
+
+        public void DisplayNormalSpeed(Chart chart)
+        {
+            var gamespeed = 1f;
+            Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[gamespeed];
+            Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[gamespeed];
+            Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[gamespeed];
+            ListboxMapData.Items.Add($"SPEED: {gamespeed:0.00}x rated {chart.starRatingDict[gamespeed]}");
+            ListboxMapData.Items.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
+            ListboxMapData.Items.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
+            ListboxMapData.Items.Add($"  acc: " + accAnalytics.perfAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
+            ListboxMapData.Items.Add("--------------------------------------------");
+        }
+
+        public void DisplayLeaderboard(Chart chart)
+        {
+
         }
 
         private void OnLoadReplayButtonClick(object sender, EventArgs e)
@@ -146,6 +173,10 @@ namespace TootTallyDifficultyCalculator2._0
             ButtonLoadReplay.Visible = true;
         }
 
-
+        private void OnTextBoxTextChanged(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                OnLoadChartButtonClick(sender, e);
+        }
     }
 }
