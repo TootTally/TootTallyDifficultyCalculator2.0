@@ -183,7 +183,8 @@ namespace TootTallyDifficultyCalculator2._0
             var MAX_TIME = BeatToSeconds2(0.05, float.Parse(tempo) * gamespeed);
             var MIN_TIMEDELTA = 1d / 240d;
             var AVERAGE_NOTE_LENGTH = notesDict[gamespeed].Average(n => n.length);
-            var endurance = 0.4d;
+            var aimEndurance = 0.4d;
+            var tapEndurance = 0.4d;
             var endurance_decay = 1.005d;
 
             List<double> weights = new List<double>();//Pre calc weights
@@ -220,19 +221,23 @@ namespace TootTallyDifficultyCalculator2._0
                 {
                     Note nextNote = notesDict[gamespeed][j];
                     var weight = weights[j - i - 1];
-                    if (endurance > 1f)
-                        endurance /= Math.Pow(endurance_decay, weight);
+                    var endDecayMult = Math.Pow(endurance_decay, weight);
+                    if (aimEndurance > 1f)
+                        aimEndurance /= endDecayMult;
+                    if (tapEndurance > 1f)
+                        tapEndurance /= endDecayMult;
 
                     //Aim Calc
-                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, endurance, MAX_TIME) * 15f) / 175f;
+                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME) * 15f) / 175f;
+                    aimEndurance += CalcAimEndurance(nextNote, previousNote, weight, directionMultiplier);
 
                     //Tap Calc
-                    tapStrain += Math.Sqrt(CalcTapStrain(nextNote, previousNote, weight, comboMultiplier, endurance, MIN_TIMEDELTA) * 30f) / 90f;
+                    tapStrain += Math.Sqrt(CalcTapStrain(nextNote, previousNote, weight, comboMultiplier, aimEndurance, MIN_TIMEDELTA) * 30f) / 90f;
+                    tapEndurance += CalcTapEndurance(nextNote, previousNote, weight);
 
                     //Acc Calc
                     accStrain += Math.Sqrt(CalcAccStrain(nextNote, previousNote, weight, comboMultiplier, directionMultiplier, AVERAGE_NOTE_LENGTH) * 9f) / 175f; // I can't figure that out yet
 
-                    endurance += CalcEndurance(nextNote, previousNote, weight, directionMultiplier);
 
                     previousNote = nextNote;
 
@@ -319,7 +324,7 @@ namespace TootTallyDifficultyCalculator2._0
             return accStrain;
         }
 
-        public static double CalcEndurance(Note nextNote, Note previousNote, double weight, float directionalMultiplier)
+        public static double CalcAimEndurance(Note nextNote, Note previousNote, double weight, float directionalMultiplier)
         {
             var endurance = 0d;
 
@@ -330,16 +335,25 @@ namespace TootTallyDifficultyCalculator2._0
             if (nextNote.pitchDelta != 0 && nextNote.position - (previousNote.position + previousNote.length) <= 0) //Calc extra speed if its a slider
                 enduranceAimStrain += (MathF.Abs(nextNote.pitchDelta) / nextNote.length) / 225f; //This is equal to 0 if its not a slider
 
+            endurance += Math.Sqrt(enduranceAimStrain) / 750f;
+
+            return endurance * weight * directionalMultiplier;
+        }
+
+        public static double CalcTapEndurance(Note nextNote, Note previousNote, double weight)
+        {
+            var endurance = 0d;
+
             var enduranceTapStrain = 0d;
             if (nextNote.pitchDelta == 0 && nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var timeDelta = nextNote.position - previousNote.position;
-                enduranceTapStrain = 1f / Math.Pow(timeDelta, 1.05f);
+                enduranceTapStrain = .15f / Math.Pow(timeDelta, 1.05f);
             }
 
-            endurance += Math.Sqrt(enduranceAimStrain + enduranceTapStrain) / 1475f;
+            endurance += Math.Sqrt(enduranceTapStrain) / 750f;
 
-            return endurance * weight * directionalMultiplier;
+            return endurance * weight;
         }
 
         #region Note
