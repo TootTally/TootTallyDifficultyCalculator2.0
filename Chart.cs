@@ -310,14 +310,14 @@ namespace TootTallyDifficultyCalculator2._0
             if (nextNote.pitchDelta == 0 && nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd);
-                var accFactor = distance / Math.Sqrt(0.1f * (nextNote.length / AVERAGE_NOTE_LENGTH));
+                var accFactor = distance / Math.Sqrt(0.15f * nextNote.length);
                 var strain = accFactor;
                 accStrain = strain * weight * directionMultiplier * comboMultiplier;
             }
             else if (nextNote.pitchDelta != 0)
             {
-                var sliderSpeed = Math.Abs(nextNote.pitchDelta * 1.25f) / nextNote.length; //Promote height over speed
-                var strain = sliderSpeed / Math.Sqrt(0.01f * (nextNote.length / AVERAGE_NOTE_LENGTH));
+                var sliderSpeed = Math.Abs(nextNote.pitchDelta * 1.15f) / nextNote.length; //Promote height over speed
+                var strain = sliderSpeed / Math.Sqrt(0.02f * (nextNote.length / AVERAGE_NOTE_LENGTH));
                 accStrain = strain * weight * comboMultiplier;
             }
 
