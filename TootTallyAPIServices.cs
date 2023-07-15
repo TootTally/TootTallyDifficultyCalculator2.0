@@ -27,19 +27,33 @@ namespace TootTallyDifficultyCalculator2._0
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public static void GetChartData(string songHash, Action<Chart> callback)
+        public static void GetChartData(string songHash, Action<Leaderboard> callback)
         {
-            int chartID = int.Parse(GetStringRequest($"hashcheck/custom/?songHash={songHash}").Result);
-            Chart chart = null;
+            int chartID;
+            try
+            {
+                chartID = int.Parse(GetStringRequest($"hashcheck/custom/?songHash={songHash}").Result);
+            }
+            catch (Exception ex)
+            {
+                Trace.WriteLine("Couldn't find songID for " + songHash);
+                return;
+            }
+            Leaderboard leaderboard = null;
 
             if (chartID != 0)
             {
-                var charts = JsonConvert.DeserializeObject<APIChartRequest>(GetStringRequest($"songs/{chartID}").Result);
-                chart = charts.results.First();
+                try
+                {
+                    leaderboard = JsonConvert.DeserializeObject<Leaderboard>(GetStringRequest($"songs/{chartID}/leaderboard").Result);
+                } catch(Exception ex)
+                {
+                    Trace.WriteLine("Couldn't find leaderboard for " + chartID);
+                }
             }
 
-            if (chart != null)
-                callback(chart);
+            if (leaderboard != null)
+                callback(leaderboard);
         }
 
 
@@ -52,7 +66,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         private static Task<string> GetStringRequest(string query)
         {
-            Trace.WriteLine(APIURL + query);
+            //Trace.WriteLine(APIURL + query);
             var response = webRequest.GetStringAsync(query);
             return response;
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Permissions;
 using System.Text;
 
@@ -29,6 +30,9 @@ namespace TootTallyDifficultyCalculator2._0
         public string description;
         public string difficulty;
         public string year;
+        public string songHash;
+        public Leaderboard leaderboard;
+
         public List<Lyrics> lyrics;
         public Dictionary<float, List<DataVector>> aimPerformanceDict;
         public Dictionary<float, DataVectorAnalytics> aimAnalyticsDict;
@@ -41,6 +45,7 @@ namespace TootTallyDifficultyCalculator2._0
         public Dictionary<float, float> accRatingDict;
         public Dictionary<float, float> starRatingDict;
         public TimeSpan calculationTime;
+
 
         public void OnDeserialize()
         {
@@ -165,7 +170,29 @@ namespace TootTallyDifficultyCalculator2._0
             */
         }
 
-        static double FastPow(double num, int exp)
+        public void GetLeaderboardFromAPI()
+        {
+            TootTallyAPIServices.GetChartData(songHash, (leaderboard) => this.leaderboard = leaderboard);
+        }
+
+        public float GetDiffRating(float speed)
+        {
+            if (speed % .25f == 0)
+                return starRatingDict[speed];
+
+            var index = (int)((speed - 0.5f) / .25f);
+            var minSpeed = GAME_SPEED[index];
+            var maxSpeed = GAME_SPEED[index + 1];
+            var by = (speed - minSpeed) / (maxSpeed - minSpeed);
+            return Lerp(starRatingDict[minSpeed], starRatingDict[maxSpeed], by);
+        }
+
+        public static float Lerp(float firstFloat, float secondFloat, float by) //Linear easing
+        {
+            return firstFloat + (secondFloat - firstFloat) * by;
+        }
+
+        public static double FastPow(double num, int exp)
         {
             double result = 1.0;
             while (exp > 0)
@@ -310,7 +337,7 @@ namespace TootTallyDifficultyCalculator2._0
             if (nextNote.pitchDelta == 0 && nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd);
-                var accFactor = distance / Math.Sqrt(0.15f * nextNote.length);
+                var accFactor = distance / Math.Sqrt(0.15f * (nextNote.length / AVERAGE_NOTE_LENGTH));
                 var strain = accFactor;
                 accStrain = strain * weight * directionMultiplier * comboMultiplier;
             }

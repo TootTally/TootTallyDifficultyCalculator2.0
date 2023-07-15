@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Compression;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,9 +21,24 @@ namespace TootTallyDifficultyCalculator2._0
             StreamReader reader = new StreamReader(path);
             string json = reader.ReadToEnd();
             Chart chart = JsonConvert.DeserializeObject<Chart>(json);
+            chart.songHash = CalcSHA256Hash(File.ReadAllBytes(path));
             chart.OnDeserialize();
             reader.Close();
             return chart;
+        }
+
+        public static string CalcSHA256Hash(byte[] data)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                string ret = "";
+                byte[] hashArray = sha256.ComputeHash(data);
+                foreach (byte b in hashArray)
+                {
+                    ret += $"{b:x2}";
+                }
+                return ret;
+            }
         }
 
         public static void SaveChartData(string path, string json)
