@@ -203,6 +203,7 @@ namespace TootTallyDifficultyCalculator2._0
             $"#{count} {score.player} {score.score} ({score.replay_speed:0.00}x) {score.percentage:0.00}% {score.grade} {CalculateScoreTT(chart, score):0.00}tt diff:{chart.GetDiffRating(score.replay_speed):0.00}";
 
         //TT for S rank (60% score)
+        //https://www.desmos.com/calculator/rhwqyp21nr
         public double CalculateBaseTT(float starRating)
         {
 
