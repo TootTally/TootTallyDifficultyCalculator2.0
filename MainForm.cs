@@ -29,10 +29,6 @@ namespace TootTallyDifficultyCalculator2._0
                 Directory.CreateDirectory(Program.REPLAY_DIRECTORY);
             if (!Directory.Exists(Program.EXPORT_DIRECTORY))
                 Directory.CreateDirectory(Program.EXPORT_DIRECTORY);
-
-            LoadAllCharts();
-            LoadAllChartsLeaderboards();
-            FillComboBoxReplay();
         }
 
 
@@ -41,6 +37,10 @@ namespace TootTallyDifficultyCalculator2._0
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             var filesList = Directory.GetFiles(Program.MAIN_DIRECTORY);
+            var maxCount = filesList.Count();
+            var currentCount = 0;
+            ProgressBarLoading.Maximum = maxCount;
+            ProgressBarLoading.Value = 0;
             Parallel.ForEach(filesList, name =>
             {
 
@@ -49,9 +49,21 @@ namespace TootTallyDifficultyCalculator2._0
                     ExportChartToJson(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json", chartList.Last());
 
                 _fileNameLists.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
+                currentCount++;
+                if (!ProgressBarLoading.InvokeRequired)
+                {
+                    UpdateProgressBar(currentCount, maxCount);
+                }
             });
             stopwatch.Stop();
             _calculationTime = stopwatch.Elapsed;
+        }
+
+        public void UpdateProgressBar(int value, int maxValue)
+        {
+            ProgressBarLoading.Value = value;
+            float percent = (value / (float)maxValue) * 100f;
+            LoadingLabel.Text = $"LOADING {percent:0.00}%";
         }
 
         public void FillComboBoxReplay()
@@ -67,7 +79,21 @@ namespace TootTallyDifficultyCalculator2._0
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            Parallel.ForEach(chartList, new ParallelOptions() { MaxDegreeOfParallelism = 8 }, chart => chart.GetLeaderboardFromAPI());
+            var maxCount = chartList.Count;
+            var currentCount = 0;
+            ProgressBarLoading.Maximum = maxCount;
+            ProgressBarLoading.Value = 0;
+            Parallel.ForEach(chartList, new ParallelOptions() { MaxDegreeOfParallelism = 8 }, chart =>
+            {
+                chart.GetLeaderboardFromAPI();
+                currentCount++;
+                if (!ProgressBarLoading.InvokeRequired)
+                {
+                    UpdateProgressBar(currentCount, maxCount);
+                }
+            });
+            ProgressBarLoading.Visible = false;
+            LoadingLabel.Visible = false;
             stopwatch.Stop();
             _leaderboardLoadingTime = stopwatch.Elapsed;
 
@@ -171,7 +197,7 @@ namespace TootTallyDifficultyCalculator2._0
         public double CalculateBaseTT(float starRating)
         {
 
-            return 3f * Chart.FastPow(starRating, 2) + (starRating * 15f);
+            return 2.5f * Chart.FastPow(starRating, 2);
         }
 
         public double CalculateScoreTT(Chart chart, Leaderboard.ScoreDataFromDB score)
@@ -180,7 +206,7 @@ namespace TootTallyDifficultyCalculator2._0
 
             var percentage = score.percentage / 100f;
 
-            var scoreTT = ((0.0080042 * Math.Pow(Math.E, 6.90823  * percentage)) - 0.0080042) * baseTT;
+            var scoreTT = ((0.0080042 * Math.Pow(Math.E, 6.90823 * percentage)) - 0.0080042) * baseTT;
 
             return scoreTT;
         }
@@ -220,6 +246,13 @@ namespace TootTallyDifficultyCalculator2._0
             TextBoxChartData.Visible = !TextBoxChartData.Visible;
             TextBoxLeaderboardData.Visible = !TextBoxLeaderboardData.Visible;
 
+        }
+
+        private void OnFormShown(object sender, EventArgs e)
+        {
+            LoadAllCharts();
+            LoadAllChartsLeaderboards();
+            FillComboBoxReplay();
         }
     }
 }

@@ -37,6 +37,8 @@
             ButtonSwitchBox = new Button();
             TextBoxChartData = new TextBox();
             TextBoxLeaderboardData = new TextBox();
+            ProgressBarLoading = new ProgressBar();
+            LoadingLabel = new Label();
             SuspendLayout();
             // 
             // ButtonLoadChart
@@ -153,12 +155,35 @@
             TextBoxLeaderboardData.TabIndex = 8;
             TextBoxLeaderboardData.Visible = false;
             // 
+            // ProgressBarLoading
+            // 
+            ProgressBarLoading.Location = new Point(300, 141);
+            ProgressBarLoading.Name = "ProgressBarLoading";
+            ProgressBarLoading.Size = new Size(451, 24);
+            ProgressBarLoading.Step = 1;
+            ProgressBarLoading.Style = ProgressBarStyle.Continuous;
+            ProgressBarLoading.TabIndex = 9;
+            // 
+            // LoadingLabel
+            // 
+            LoadingLabel.AutoSize = true;
+            LoadingLabel.BackColor = Color.DarkRed;
+            LoadingLabel.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            LoadingLabel.ForeColor = Color.White;
+            LoadingLabel.Location = new Point(300, 265);
+            LoadingLabel.Name = "LoadingLabel";
+            LoadingLabel.Size = new Size(306, 86);
+            LoadingLabel.TabIndex = 10;
+            LoadingLabel.Text = "LOADING";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(1109, 965);
+            Controls.Add(LoadingLabel);
+            Controls.Add(ProgressBarLoading);
             Controls.Add(TextBoxLeaderboardData);
             Controls.Add(TextBoxChartData);
             Controls.Add(label1);
@@ -170,6 +195,7 @@
             Controls.Add(ComboBoxReplay);
             Name = "MainForm";
             Text = "Main";
+            Shown += OnFormShown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +210,7 @@
         private Button ButtonSwitchBox;
         private TextBox TextBoxChartData;
         private TextBox TextBoxLeaderboardData;
+        private ProgressBar ProgressBarLoading;
+        private Label LoadingLabel;
     }
 }
