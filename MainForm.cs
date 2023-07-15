@@ -41,7 +41,7 @@ namespace TootTallyDifficultyCalculator2._0
             var currentCount = 0;
             ProgressBarLoading.Maximum = maxCount;
             ProgressBarLoading.Value = 0;
-            Parallel.ForEach(filesList, name =>
+            Parallel.ForEach(filesList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, name =>
             {
 
                 chartList.Add(ChartReader.LoadChart(name));
@@ -75,7 +75,7 @@ namespace TootTallyDifficultyCalculator2._0
             }
         }
 
-        public void LoadAllChartsLeaderboards()
+        public async void LoadAllChartsLeaderboards()
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -83,7 +83,7 @@ namespace TootTallyDifficultyCalculator2._0
             var currentCount = 0;
             ProgressBarLoading.Maximum = maxCount;
             ProgressBarLoading.Value = 0;
-            Parallel.ForEach(chartList, new ParallelOptions() { MaxDegreeOfParallelism = 8 }, chart =>
+            Parallel.ForEach(chartList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, chart =>
             {
                 chart.GetLeaderboardFromAPI();
                 currentCount++;
@@ -92,6 +92,15 @@ namespace TootTallyDifficultyCalculator2._0
                     UpdateProgressBar(currentCount, maxCount);
                 }
             });
+            /*List<string> urls = new List<string>();
+            chartList.ForEach(chart => urls.Add($"hashcheck/custom/?songHash={chart.songHash}"));
+            var t = await Task.Run(() => TootTallyAPIServices.GetLeaderboardsId(urls.ToArray()));
+
+            urls.Clear();
+            t.ForEach(id => urls.Add($"songs/{id}/leaderboard"));
+            var t2 = await Task.Run(() => TootTallyAPIServices.GetLeaderboards(urls.ToArray()));
+            t2.ForEach(leaderboard => chartList.Find(chart => chart.songHash == leaderboard.songHash).leaderboard = leaderboard);*/
+
             ProgressBarLoading.Visible = false;
             LoadingLabel.Visible = false;
             stopwatch.Stop();
@@ -193,20 +202,21 @@ namespace TootTallyDifficultyCalculator2._0
         public string GetDisplayScoreLine(Leaderboard.ScoreDataFromDB score, Chart chart, int count) =>
             $"#{count} {score.player} {score.score} ({score.replay_speed:0.00}x) {score.percentage:0.00}% {score.grade} {CalculateScoreTT(chart, score):0.00}tt diff:{chart.GetDiffRating(score.replay_speed):0.00}";
 
-
+        //TT for S rank (60% score)
         public double CalculateBaseTT(float starRating)
         {
 
-            return 2.5f * Chart.FastPow(starRating, 2);
+            return 1.25f * Chart.FastPow(starRating, 2);
         }
 
+        //https://www.desmos.com/calculator/ih9dp8uvdy
         public double CalculateScoreTT(Chart chart, Leaderboard.ScoreDataFromDB score)
         {
             var baseTT = CalculateBaseTT(chart.GetDiffRating(score.replay_speed));
 
-            var percentage = score.percentage / 100f;
+            var percentage = score.percentage / 100d;
 
-            var scoreTT = ((0.0080042 * Math.Pow(Math.E, 6.90823 * percentage)) - 0.0080042) * baseTT;
+            var scoreTT = ((0.028091281 * Math.Pow(Math.E, 6d * percentage)) - 0.028091281) * baseTT;
 
             return scoreTT;
         }

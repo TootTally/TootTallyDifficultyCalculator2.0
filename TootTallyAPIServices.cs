@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
@@ -27,14 +28,52 @@ namespace TootTallyDifficultyCalculator2._0
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
+        public async static Task<List<int>> GetLeaderboardsId(params string[] urls)
+        {
+            var requests = urls.Select
+                (
+                    url => GetStringRequest(url)
+                ).ToList();
+
+            //Wait for all the requests to finish
+            await Task.WhenAll(requests);
+
+            //Get the responses
+            var responses = requests.Where(task => task.Result != null).Select
+                (
+                    task => int.Parse(task.Result)
+                );
+
+            return responses.ToList();
+        }
+
+        public async static Task<List<Leaderboard>> GetLeaderboards(params string[] urls)
+        {
+            var requests = urls.Select
+                (
+                    url => GetStringRequest(url)
+                ).ToList();
+
+            //Wait for all the requests to finish
+            await Task.WhenAll(requests);
+
+            //Get the responses
+            var responses = requests.Where(task => task.Result != null).Select
+                (
+                    task => JsonConvert.DeserializeObject<Leaderboard>(task.Result)
+                );
+
+            return responses.ToList();
+        }
+
         public static void GetChartData(string songHash, Action<Leaderboard> callback)
         {
             int chartID;
             try
             {
-                chartID = int.Parse(GetStringRequest($"hashcheck/custom/?songHash={songHash}").Result);
+                chartID = int.Parse(GetStringRequestOld($"hashcheck/custom/?songHash={songHash}").Result);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Trace.WriteLine("Couldn't find songID for " + songHash);
                 return;
@@ -45,8 +84,9 @@ namespace TootTallyDifficultyCalculator2._0
             {
                 try
                 {
-                    leaderboard = JsonConvert.DeserializeObject<Leaderboard>(GetStringRequest($"songs/{chartID}/leaderboard").Result);
-                } catch(Exception ex)
+                    leaderboard = JsonConvert.DeserializeObject<Leaderboard>(GetStringRequestOld($"songs/{chartID}/leaderboard").Result);
+                }
+                catch (Exception)
                 {
                     Trace.WriteLine("Couldn't find leaderboard for " + chartID);
                 }
@@ -64,11 +104,23 @@ namespace TootTallyDifficultyCalculator2._0
             return response;
         }
 
-        private static Task<string> GetStringRequest(string query)
+        private async static Task<string> GetStringRequest(string query)
         {
-            //Trace.WriteLine(APIURL + query);
-            var response = webRequest.GetStringAsync(query);
-            return response;
+            Trace.WriteLine(APIURL + query);
+            try
+            {
+                return await webRequest.GetStringAsync(query);
+            }
+            catch (HttpRequestException)
+            {
+                return null;
+            }
+        }
+
+        private static Task<string> GetStringRequestOld(string query)
+        {
+            var reponse = webRequest.GetStringAsync(query);
+            return reponse;
         }
 
         private class APIChartRequest
