@@ -121,9 +121,9 @@ namespace TootTallyDifficultyCalculator2._0
                     var aimPerc = aimRating / totalRating;
                     var tapPerc = tapRating / totalRating;
                     var accPerc = accRating / totalRating;
-                    var aimWeight = (aimPerc + 0.25f) * 1.5f;
+                    var aimWeight = (aimPerc + 0.25f) * 1.25f;
                     var tapWeight = (tapPerc + 0.25f);
-                    var accWeight = (accPerc + 0.25f) * 1.2f;
+                    var accWeight = (accPerc + 0.25f);
                     var totalWeight = aimWeight + tapWeight + accWeight;
                     starRatingDict[gamespeed] = ((aimRating * aimWeight) + (tapRating * tapWeight) + (accRating * accWeight)) / totalWeight;
                 }
@@ -255,7 +255,7 @@ namespace TootTallyDifficultyCalculator2._0
                         tapEndurance /= endDecayMult;
 
                     //Aim Calc
-                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME) * 15f) / 175f;
+                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME) * 12f) / 175f;
                     aimEndurance += CalcAimEndurance(nextNote, previousNote, weight, directionMultiplier);
 
                     //Tap Calc
@@ -263,7 +263,7 @@ namespace TootTallyDifficultyCalculator2._0
                     tapEndurance += CalcTapEndurance(nextNote, previousNote, weight);
 
                     //Acc Calc
-                    accStrain += Math.Sqrt(CalcAccStrain(nextNote, previousNote, weight, comboMultiplier, directionMultiplier, AVERAGE_NOTE_LENGTH) * 9f) / 175f; // I can't figure that out yet
+                    accStrain += Math.Sqrt(CalcAccStrain(nextNote, previousNote, weight, comboMultiplier, directionMultiplier, AVERAGE_NOTE_LENGTH) * 7f) / 175f; // I can't figure that out yet
 
 
                     previousNote = nextNote;
@@ -294,22 +294,22 @@ namespace TootTallyDifficultyCalculator2._0
             else
                 currentDirection = Direction.Null;
 
-            var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) * 2.5f;
+            var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) * 1.5f;
             var t = nextNote.position - (previousNote.position + previousNote.length);
             speed = distance / Math.Max(t, MAX_TIME);
             //Add directionalMultiplier bonus here
             if (previousDirection != currentDirection && currentDirection != Direction.Null)
-                directionMultiplier *= 1.05f;
+                directionMultiplier *= 1.02f;
 
             previousDirection = currentDirection; //update direction before looking at slider
 
 
-            if (nextNote.pitchDelta != 0 && nextNote.position - (previousNote.position + previousNote.length) <= 0) //Calc extra speed if its a slider
+            if (nextNote.pitchDelta != 0) //Calc extra speed if its a slider
             {
-                speed += MathF.Abs(nextNote.pitchDelta * 1.15f) / nextNote.length; //This is equal to 0 if its not a slider
+                speed += MathF.Abs(nextNote.pitchDelta) / nextNote.length; //This is equal to 0 if its not a slider
                 currentDirection = nextNote.pitchDelta > 0 ? Direction.Up : nextNote.pitchDelta < 0 ? Direction.Down : Direction.Null; //Set direction for slider
                 if (previousDirection != currentDirection && currentDirection != Direction.Null)
-                    directionMultiplier *= 1.12f;
+                    directionMultiplier *= 1.08f;
 
                 previousDirection = currentDirection; //update direction from slider
             }
@@ -337,14 +337,14 @@ namespace TootTallyDifficultyCalculator2._0
             if (nextNote.pitchDelta == 0 && nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd);
-                var accFactor = distance / Math.Sqrt(0.15f * (nextNote.length / AVERAGE_NOTE_LENGTH));
+                var accFactor = distance / Math.Sqrt(0.12f * (nextNote.length / AVERAGE_NOTE_LENGTH));
                 var strain = accFactor;
                 accStrain = strain * weight * directionMultiplier * comboMultiplier;
             }
             else if (nextNote.pitchDelta != 0)
             {
-                var sliderSpeed = Math.Abs(nextNote.pitchDelta * 1.15f) / nextNote.length; //Promote height over speed
-                var strain = sliderSpeed / Math.Sqrt(0.02f * (nextNote.length / AVERAGE_NOTE_LENGTH));
+                var sliderSpeed = Math.Abs(nextNote.pitchDelta) / nextNote.length; //Promote height over speed
+                var strain = sliderSpeed / Math.Sqrt(0.12f * (nextNote.length / AVERAGE_NOTE_LENGTH));
                 accStrain = strain * weight * comboMultiplier;
             }
 

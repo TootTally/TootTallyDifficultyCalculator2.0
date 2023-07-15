@@ -206,7 +206,7 @@ namespace TootTallyDifficultyCalculator2._0
         public double CalculateBaseTT(float starRating)
         {
 
-            return 1.25f * Chart.FastPow(starRating, 2);
+            return 1.5f * Chart.FastPow(starRating, 2);
         }
 
         //https://www.desmos.com/calculator/ih9dp8uvdy
