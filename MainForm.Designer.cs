@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ButtonLoadChart = new Button();
+            ButtonForceRefresh = new Button();
             ComboBoxReplay = new ComboBox();
             ButtonLoadReplay = new Button();
             checkboxAllSpeed = new CheckBox();
@@ -39,21 +39,27 @@
             TextBoxLeaderboardData = new TextBox();
             ProgressBarLoading = new ProgressBar();
             LoadingLabel = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            FilterMinTT = new NumericUpDown();
+            FilterMaxTT = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             SuspendLayout();
             // 
-            // ButtonLoadChart
+            // ButtonForceRefresh
             // 
-            ButtonLoadChart.BackColor = Color.Crimson;
-            ButtonLoadChart.FlatStyle = FlatStyle.Popup;
-            ButtonLoadChart.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            ButtonLoadChart.ForeColor = Color.White;
-            ButtonLoadChart.Location = new Point(12, 12);
-            ButtonLoadChart.Name = "ButtonLoadChart";
-            ButtonLoadChart.Size = new Size(140, 25);
-            ButtonLoadChart.TabIndex = 1;
-            ButtonLoadChart.Text = "DISPLAY CHART";
-            ButtonLoadChart.UseVisualStyleBackColor = false;
-            ButtonLoadChart.Click += OnDisplayChartsButtonClick;
+            ButtonForceRefresh.BackColor = Color.Crimson;
+            ButtonForceRefresh.FlatStyle = FlatStyle.Popup;
+            ButtonForceRefresh.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            ButtonForceRefresh.ForeColor = Color.White;
+            ButtonForceRefresh.Location = new Point(12, 12);
+            ButtonForceRefresh.Name = "ButtonForceRefresh";
+            ButtonForceRefresh.Size = new Size(140, 25);
+            ButtonForceRefresh.TabIndex = 1;
+            ButtonForceRefresh.Text = "FORCE REFRESH";
+            ButtonForceRefresh.UseVisualStyleBackColor = false;
+            ButtonForceRefresh.Click += OnDisplayChartsButtonClick;
             // 
             // ComboBoxReplay
             // 
@@ -96,12 +102,16 @@
             checkboxAllSpeed.TabIndex = 3;
             checkboxAllSpeed.Text = "All Speed";
             checkboxAllSpeed.UseVisualStyleBackColor = true;
+            checkboxAllSpeed.CheckedChanged += OnValueBoxTextChanged;
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.DarkRed;
+            textBox1.Font = new Font("Courier New", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.White;
             textBox1.Location = new Point(227, 12);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(281, 23);
+            textBox1.Size = new Size(281, 22);
             textBox1.TabIndex = 4;
             textBox1.KeyPress += OnTextBoxTextChanged;
             // 
@@ -145,6 +155,7 @@
             // TextBoxLeaderboardData
             // 
             TextBoxLeaderboardData.BackColor = Color.DarkRed;
+            TextBoxLeaderboardData.Font = new Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TextBoxLeaderboardData.ForeColor = Color.White;
             TextBoxLeaderboardData.Location = new Point(12, 247);
             TextBoxLeaderboardData.Multiline = true;
@@ -153,10 +164,12 @@
             TextBoxLeaderboardData.ScrollBars = ScrollBars.Vertical;
             TextBoxLeaderboardData.Size = new Size(1085, 699);
             TextBoxLeaderboardData.TabIndex = 8;
+            TextBoxLeaderboardData.Text = "Test Font";
             TextBoxLeaderboardData.Visible = false;
             // 
             // ProgressBarLoading
             // 
+            ProgressBarLoading.BackColor = Color.White;
             ProgressBarLoading.Location = new Point(300, 141);
             ProgressBarLoading.Name = "ProgressBarLoading";
             ProgressBarLoading.Size = new Size(451, 24);
@@ -176,32 +189,84 @@
             LoadingLabel.TabIndex = 10;
             LoadingLabel.Text = "LOADING";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(177, 44);
+            label2.Name = "label2";
+            label2.Size = new Size(44, 20);
+            label2.TabIndex = 5;
+            label2.Text = "MIN:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(358, 47);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 20);
+            label3.TabIndex = 5;
+            label3.Text = "MAX:";
+            // 
+            // FilterMinTT
+            // 
+            FilterMinTT.BackColor = Color.DarkRed;
+            FilterMinTT.ForeColor = Color.White;
+            FilterMinTT.Increment = new decimal(new int[] { 10, 0, 0, 0 });
+            FilterMinTT.Location = new Point(227, 44);
+            FilterMinTT.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            FilterMinTT.Name = "FilterMinTT";
+            FilterMinTT.Size = new Size(96, 23);
+            FilterMinTT.TabIndex = 11;
+            FilterMinTT.ValueChanged += OnValueBoxTextChanged;
+            // 
+            // FilterMaxTT
+            // 
+            FilterMaxTT.BackColor = Color.DarkRed;
+            FilterMaxTT.ForeColor = Color.White;
+            FilterMaxTT.Location = new Point(412, 44);
+            FilterMaxTT.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            FilterMaxTT.Name = "FilterMaxTT";
+            FilterMaxTT.Size = new Size(96, 23);
+            FilterMaxTT.TabIndex = 11;
+            FilterMaxTT.Value = new decimal(new int[] { 9999, 0, 0, 0 });
+            FilterMaxTT.ValueChanged += OnValueBoxTextChanged;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(1109, 965);
+            Controls.Add(FilterMaxTT);
+            Controls.Add(FilterMinTT);
             Controls.Add(LoadingLabel);
             Controls.Add(ProgressBarLoading);
             Controls.Add(TextBoxLeaderboardData);
             Controls.Add(TextBoxChartData);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(checkboxAllSpeed);
             Controls.Add(ButtonSwitchBox);
             Controls.Add(ButtonLoadReplay);
-            Controls.Add(ButtonLoadChart);
+            Controls.Add(ButtonForceRefresh);
             Controls.Add(ComboBoxReplay);
             Name = "MainForm";
             Text = "Main";
             Shown += OnFormShown;
+            ((System.ComponentModel.ISupportInitialize)FilterMinTT).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FilterMaxTT).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button ButtonLoadChart;
+        private Button ButtonForceRefresh;
         private ComboBox ComboBoxReplay;
         private Button ButtonLoadReplay;
         private CheckBox checkboxAllSpeed;
@@ -212,5 +277,9 @@
         private TextBox TextBoxLeaderboardData;
         private ProgressBar ProgressBarLoading;
         private Label LoadingLabel;
+        private Label label2;
+        private Label label3;
+        private NumericUpDown FilterMinTT;
+        private NumericUpDown FilterMaxTT;
     }
 }

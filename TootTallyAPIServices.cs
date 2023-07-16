@@ -66,16 +66,16 @@ namespace TootTallyDifficultyCalculator2._0
             return responses.ToList();
         }
 
-        public static void GetChartData(string songHash, Action<Leaderboard> callback)
+        public static void GetChartData(Chart chart, Action<Leaderboard> callback)
         {
             int chartID;
             try
             {
-                chartID = int.Parse(GetStringRequestOld($"hashcheck/custom/?songHash={songHash}").Result);
+                chartID = int.Parse(GetStringRequestOld($"hashcheck/custom/?songHash={chart.songHash}").Result);
             }
             catch (Exception)
             {
-                Trace.WriteLine("Couldn't find songID for " + songHash);
+                Trace.WriteLine("Couldn't find songID for " + chart.songHash);
                 return;
             }
             Leaderboard leaderboard = null;
@@ -91,7 +91,8 @@ namespace TootTallyDifficultyCalculator2._0
                     Trace.WriteLine("Couldn't find leaderboard for " + chartID);
                 }
             }
-
+            Parallel.ForEach(leaderboard.results, score => score.tt = (float)MainForm.CalculateScoreTT(chart, score));
+            leaderboard.results.OrderBy(x => x.tt);
             if (leaderboard != null)
                 callback(leaderboard);
         }

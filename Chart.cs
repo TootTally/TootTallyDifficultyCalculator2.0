@@ -172,7 +172,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void GetLeaderboardFromAPI()
         {
-            TootTallyAPIServices.GetChartData(songHash, (leaderboard) => this.leaderboard = leaderboard);
+            TootTallyAPIServices.GetChartData(this, (leaderboard) => this.leaderboard = leaderboard);
         }
 
         public float GetDiffRating(float speed)
@@ -298,7 +298,7 @@ namespace TootTallyDifficultyCalculator2._0
             var t = nextNote.position - (previousNote.position + previousNote.length);
             speed = distance / Math.Max(t, MAX_TIME);
             //Add directionalMultiplier bonus here
-            if (previousDirection != currentDirection && currentDirection != Direction.Null)
+            if (CheckDirectionChange(previousDirection, currentDirection))
                 directionMultiplier *= 1.02f;
 
             previousDirection = currentDirection; //update direction before looking at slider
@@ -308,7 +308,7 @@ namespace TootTallyDifficultyCalculator2._0
             {
                 speed += MathF.Abs(nextNote.pitchDelta) / nextNote.length; //This is equal to 0 if its not a slider
                 currentDirection = nextNote.pitchDelta > 0 ? Direction.Up : nextNote.pitchDelta < 0 ? Direction.Down : Direction.Null; //Set direction for slider
-                if (previousDirection != currentDirection && currentDirection != Direction.Null)
+                if (CheckDirectionChange(previousDirection, currentDirection))
                     directionMultiplier *= 1.08f;
 
                 previousDirection = currentDirection; //update direction from slider
