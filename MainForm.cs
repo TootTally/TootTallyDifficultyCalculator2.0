@@ -160,7 +160,9 @@ namespace TootTallyDifficultyCalculator2._0
                 
                 leaderboardTextLines.AddRange(leaderboardText);
                 leaderboardTextLines.Add("=====================================================================================================");
+                leaderboardTextLines.Add("");
                 chartTextLines.Add("=====================================================================================================");
+                chartTextLines.Add("");
                 allChartDataTextLines.AddRange(chartTextLines);
                 allLeaderboardTextLines.AddRange(leaderboardTextLines);
 
@@ -254,7 +256,7 @@ namespace TootTallyDifficultyCalculator2._0
             return 1.5f * Chart.FastPow(starRating, 2);
         }
 
-        //https://www.desmos.com/calculator/ih9dp8uvdy
+        //https://www.desmos.com/calculator/bnyo9f5u1y
         public static double CalculateScoreTT(Chart chart, Leaderboard.ScoreDataFromDB score)
         {
             var baseTT = CalculateBaseTT(chart.GetDiffRating(score.replay_speed));
