@@ -112,13 +112,13 @@ namespace TootTallyDifficultyCalculator2._0
         {
             Chart.SerializableDiffData chartdata = new Chart.SerializableDiffData()
             {
-                speed050 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.5f], tap = chart.aimPerformanceDict[0.5f], acc = chart.aimPerformanceDict[0.5f] },
-                speed075 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.75f], tap = chart.aimPerformanceDict[0.75f], acc = chart.aimPerformanceDict[0.75f] },
-                speed100 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1f], tap = chart.aimPerformanceDict[1f], acc = chart.aimPerformanceDict[1f] },
-                speed125 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.25f], tap = chart.aimPerformanceDict[1.25f], acc = chart.aimPerformanceDict[1.25f] },
-                speed150 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.5f], tap = chart.aimPerformanceDict[1.5f], acc = chart.aimPerformanceDict[1.5f] },
-                speed175 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.75f], tap = chart.aimPerformanceDict[1.75f], acc = chart.aimPerformanceDict[1.75f] },
-                speed200 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[2f], tap = chart.aimPerformanceDict[2f], acc = chart.aimPerformanceDict[2f] },
+                speed050 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.5f], tap = chart.tapPerformanceDict[0.5f], acc = chart.accPerformanceDict[0.5f] },
+                speed075 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.75f], tap = chart.tapPerformanceDict[0.75f], acc = chart.accPerformanceDict[0.75f] },
+                speed100 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1f], tap = chart.tapPerformanceDict[1f], acc = chart.accPerformanceDict[1f] },
+                speed125 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.25f], tap = chart.tapPerformanceDict[1.25f], acc = chart.accPerformanceDict[1.25f] },
+                speed150 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.5f], tap = chart.tapPerformanceDict[1.5f], acc = chart.accPerformanceDict[1.5f] },
+                speed175 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.75f], tap = chart.tapPerformanceDict[1.75f], acc = chart.accPerformanceDict[1.75f] },
+                speed200 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[2f], tap = chart.tapPerformanceDict[2f], acc = chart.accPerformanceDict[2f] },
 
             };
             var json = JsonConvert.SerializeObject(chartdata, Formatting.Indented);
@@ -157,7 +157,7 @@ namespace TootTallyDifficultyCalculator2._0
                     DisplayAllSpeed(chart, ref chartTextLines);
                 else
                     DisplayNormalSpeed(chart, ref chartTextLines);
-                
+
                 leaderboardTextLines.AddRange(leaderboardText);
                 leaderboardTextLines.Add("=====================================================================================================");
                 leaderboardTextLines.Add("");
