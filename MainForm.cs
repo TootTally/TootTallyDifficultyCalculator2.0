@@ -138,6 +138,10 @@ namespace TootTallyDifficultyCalculator2._0
             foreach (Chart chart in chartList)
             {
                 if (!chart.name.ToLower().Contains(textBox1.Text.ToLower())) continue;
+
+                var leaderboardText = DisplayLeaderboard(chart);
+                if (leaderboardText.Count == 0) continue; //Skip if no scores found
+
                 var chartTextLines = new List<string>()
                 {
                     $"{chart.name} processed in {chart.calculationTime.TotalSeconds}s"
@@ -153,7 +157,8 @@ namespace TootTallyDifficultyCalculator2._0
                     DisplayAllSpeed(chart, ref chartTextLines);
                 else
                     DisplayNormalSpeed(chart, ref chartTextLines);
-                leaderboardTextLines.AddRange(DisplayLeaderboard(chart));
+                
+                leaderboardTextLines.AddRange(leaderboardText);
                 leaderboardTextLines.Add("=====================================================================================================");
                 chartTextLines.Add("=====================================================================================================");
                 allChartDataTextLines.AddRange(chartTextLines);
