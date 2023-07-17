@@ -137,15 +137,25 @@ namespace TootTallyDifficultyCalculator2._0
             allLeaderboardTextLines.Add($"Calculation time took {_leaderboardLoadingTime.TotalSeconds}s for {chartList.Count} charts.");
             foreach (Chart chart in chartList)
             {
-                if (!chart.name.ToLower().Contains(textBox1.Text.ToLower())) continue;
+                if (!chart.name.ToLower().Contains(FilterMapName.Text.ToLower())) continue;
 
-                var leaderboardText = DisplayLeaderboard(chart);
-                if (leaderboardText.Count == 0) continue; //Skip if no scores found
-
+                //CHART DISPLAY
                 var chartTextLines = new List<string>()
                 {
                     $"{chart.name} processed in {chart.calculationTime.TotalSeconds}s"
                 };
+
+                if (checkboxAllSpeed.Checked)
+                    DisplayAllSpeed(chart, ref chartTextLines);
+                else
+                    DisplayNormalSpeed(chart, ref chartTextLines);
+                chartTextLines.Add("=====================================================================================================");
+                chartTextLines.Add("");
+                allChartDataTextLines.AddRange(chartTextLines);
+
+                //LEADERBOARD DISPLAY
+                var leaderboardText = DisplayLeaderboard(chart);
+                if (leaderboardText.Count == 0) continue; //Skip leaderboard display if no scores found
                 var leaderboardTextLines = new List<string>
                 {
                     $"{chart.name} processed in {chart.calculationTime.TotalSeconds}s",
@@ -153,17 +163,9 @@ namespace TootTallyDifficultyCalculator2._0
                     "-----------------------------------------------------------------------------------------------------"
                 };
 
-                if (checkboxAllSpeed.Checked)
-                    DisplayAllSpeed(chart, ref chartTextLines);
-                else
-                    DisplayNormalSpeed(chart, ref chartTextLines);
-
                 leaderboardTextLines.AddRange(leaderboardText);
                 leaderboardTextLines.Add("=====================================================================================================");
                 leaderboardTextLines.Add("");
-                chartTextLines.Add("=====================================================================================================");
-                chartTextLines.Add("");
-                allChartDataTextLines.AddRange(chartTextLines);
                 allLeaderboardTextLines.AddRange(leaderboardTextLines);
 
             }
@@ -207,7 +209,7 @@ namespace TootTallyDifficultyCalculator2._0
             chart.leaderboard?.results.ForEach(score =>
                 {
                     score.tt = (float)CalculateScoreTT(chart, score);
-                    if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value)
+                    if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value && score.player.Contains(FilterPlayerName.Text))
                         textLines.Add(GetDisplayScoreLine2(score, chart, count));
                     count++;
                 });
@@ -253,7 +255,7 @@ namespace TootTallyDifficultyCalculator2._0
         public static double CalculateBaseTT(float starRating)
         {
 
-            return 1.5f * Chart.FastPow(starRating, 2);
+            return 1.5f * Chart.FastPow(starRating, 2) + 0.01f;
         }
 
         //https://www.desmos.com/calculator/bnyo9f5u1y

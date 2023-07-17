@@ -32,7 +32,7 @@
             ComboBoxReplay = new ComboBox();
             ButtonLoadReplay = new Button();
             checkboxAllSpeed = new CheckBox();
-            textBox1 = new TextBox();
+            FilterMapName = new TextBox();
             label1 = new Label();
             ButtonSwitchBox = new Button();
             TextBoxChartData = new TextBox();
@@ -43,6 +43,8 @@
             label3 = new Label();
             FilterMinTT = new NumericUpDown();
             FilterMaxTT = new NumericUpDown();
+            FilterPlayerName = new TextBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             SuspendLayout();
@@ -69,7 +71,7 @@
             ComboBoxReplay.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             ComboBoxReplay.ForeColor = SystemColors.Window;
             ComboBoxReplay.FormattingEnabled = true;
-            ComboBoxReplay.Location = new Point(514, 10);
+            ComboBoxReplay.Location = new Point(551, 9);
             ComboBoxReplay.Name = "ComboBoxReplay";
             ComboBoxReplay.Size = new Size(281, 25);
             ComboBoxReplay.TabIndex = 0;
@@ -81,7 +83,7 @@
             ButtonLoadReplay.FlatStyle = FlatStyle.Popup;
             ButtonLoadReplay.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             ButtonLoadReplay.ForeColor = Color.White;
-            ButtonLoadReplay.Location = new Point(801, 10);
+            ButtonLoadReplay.Location = new Point(838, 9);
             ButtonLoadReplay.Name = "ButtonLoadReplay";
             ButtonLoadReplay.Size = new Size(112, 25);
             ButtonLoadReplay.TabIndex = 1;
@@ -104,16 +106,16 @@
             checkboxAllSpeed.UseVisualStyleBackColor = true;
             checkboxAllSpeed.CheckedChanged += OnValueBoxTextChanged;
             // 
-            // textBox1
+            // FilterMapName
             // 
-            textBox1.BackColor = Color.DarkRed;
-            textBox1.Font = new Font("Courier New", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(227, 12);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(281, 22);
-            textBox1.TabIndex = 4;
-            textBox1.KeyPress += OnTextBoxTextChanged;
+            FilterMapName.BackColor = Color.DarkRed;
+            FilterMapName.Font = new Font("Courier New", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            FilterMapName.ForeColor = Color.White;
+            FilterMapName.Location = new Point(263, 12);
+            FilterMapName.Name = "FilterMapName";
+            FilterMapName.Size = new Size(281, 22);
+            FilterMapName.TabIndex = 4;
+            FilterMapName.KeyPress += OnTextBoxTextChanged;
             // 
             // label1
             // 
@@ -122,9 +124,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(161, 14);
             label1.Name = "label1";
-            label1.Size = new Size(60, 20);
+            label1.Size = new Size(96, 20);
             label1.TabIndex = 5;
-            label1.Text = "FILTER:";
+            label1.Text = "MAP NAME:";
             // 
             // ButtonSwitchBox
             // 
@@ -194,7 +196,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(177, 44);
+            label2.Location = new Point(214, 43);
             label2.Name = "label2";
             label2.Size = new Size(44, 20);
             label2.TabIndex = 5;
@@ -205,7 +207,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(358, 47);
+            label3.Location = new Point(395, 46);
             label3.Name = "label3";
             label3.Size = new Size(48, 20);
             label3.TabIndex = 5;
@@ -216,7 +218,7 @@
             FilterMinTT.BackColor = Color.DarkRed;
             FilterMinTT.ForeColor = Color.White;
             FilterMinTT.Increment = new decimal(new int[] { 10, 0, 0, 0 });
-            FilterMinTT.Location = new Point(227, 44);
+            FilterMinTT.Location = new Point(264, 43);
             FilterMinTT.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             FilterMinTT.Name = "FilterMinTT";
             FilterMinTT.Size = new Size(96, 23);
@@ -227,13 +229,35 @@
             // 
             FilterMaxTT.BackColor = Color.DarkRed;
             FilterMaxTT.ForeColor = Color.White;
-            FilterMaxTT.Location = new Point(412, 44);
+            FilterMaxTT.Location = new Point(449, 43);
             FilterMaxTT.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             FilterMaxTT.Name = "FilterMaxTT";
             FilterMaxTT.Size = new Size(96, 23);
             FilterMaxTT.TabIndex = 11;
             FilterMaxTT.Value = new decimal(new int[] { 9999, 0, 0, 0 });
             FilterMaxTT.ValueChanged += OnValueBoxTextChanged;
+            // 
+            // FilterPlayerName
+            // 
+            FilterPlayerName.BackColor = Color.DarkRed;
+            FilterPlayerName.Font = new Font("Courier New", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            FilterPlayerName.ForeColor = Color.White;
+            FilterPlayerName.Location = new Point(264, 72);
+            FilterPlayerName.Name = "FilterPlayerName";
+            FilterPlayerName.Size = new Size(281, 22);
+            FilterPlayerName.TabIndex = 4;
+            FilterPlayerName.KeyPress += OnTextBoxTextChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(190, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(67, 20);
+            label4.TabIndex = 5;
+            label4.Text = "PLAYER:";
             // 
             // MainForm
             // 
@@ -249,8 +273,10 @@
             Controls.Add(TextBoxChartData);
             Controls.Add(label3);
             Controls.Add(label2);
+            Controls.Add(label4);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(FilterPlayerName);
+            Controls.Add(FilterMapName);
             Controls.Add(checkboxAllSpeed);
             Controls.Add(ButtonSwitchBox);
             Controls.Add(ButtonLoadReplay);
@@ -270,7 +296,7 @@
         private ComboBox ComboBoxReplay;
         private Button ButtonLoadReplay;
         private CheckBox checkboxAllSpeed;
-        private TextBox textBox1;
+        private TextBox FilterMapName;
         private Label label1;
         private Button ButtonSwitchBox;
         private TextBox TextBoxChartData;
@@ -281,5 +307,7 @@
         private Label label3;
         private NumericUpDown FilterMinTT;
         private NumericUpDown FilterMaxTT;
+        private TextBox FilterPlayerName;
+        private Label label4;
     }
 }
