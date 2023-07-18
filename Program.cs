@@ -6,6 +6,7 @@ namespace TootTallyDifficultyCalculator2._0
         public const string EXPORT_DIRECTORY = "export/";
         public const string REPLAY_DIRECTORY = "replays/";
         public const string DOWNLOAD_DIRECTORY = "downloads/";
+        public const string LEADERBOARD_DIRECTORY = "leaderboard/";
 
         [STAThread]
         static void Main()

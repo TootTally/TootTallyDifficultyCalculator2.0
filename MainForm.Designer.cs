@@ -45,6 +45,7 @@
             FilterMaxTT = new NumericUpDown();
             FilterPlayerName = new TextBox();
             label4 = new Label();
+            ButtonSaveTo = new Button();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             SuspendLayout();
@@ -259,6 +260,20 @@
             label4.TabIndex = 5;
             label4.Text = "PLAYER:";
             // 
+            // ButtonSaveTo
+            // 
+            ButtonSaveTo.BackColor = Color.Crimson;
+            ButtonSaveTo.FlatStyle = FlatStyle.Popup;
+            ButtonSaveTo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            ButtonSaveTo.ForeColor = Color.White;
+            ButtonSaveTo.Location = new Point(867, 216);
+            ButtonSaveTo.Name = "ButtonSaveTo";
+            ButtonSaveTo.Size = new Size(112, 25);
+            ButtonSaveTo.TabIndex = 1;
+            ButtonSaveTo.Text = "SAVE TO";
+            ButtonSaveTo.UseVisualStyleBackColor = false;
+            ButtonSaveTo.Click += OnSaveToButtonPress;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -278,6 +293,7 @@
             Controls.Add(FilterPlayerName);
             Controls.Add(FilterMapName);
             Controls.Add(checkboxAllSpeed);
+            Controls.Add(ButtonSaveTo);
             Controls.Add(ButtonSwitchBox);
             Controls.Add(ButtonLoadReplay);
             Controls.Add(ButtonForceRefresh);
@@ -309,5 +325,6 @@
         private NumericUpDown FilterMaxTT;
         private TextBox FilterPlayerName;
         private Label label4;
+        private Button ButtonSaveTo;
     }
 }

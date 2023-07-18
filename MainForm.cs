@@ -31,6 +31,8 @@ namespace TootTallyDifficultyCalculator2._0
                 Directory.CreateDirectory(Program.REPLAY_DIRECTORY);
             if (!Directory.Exists(Program.EXPORT_DIRECTORY))
                 Directory.CreateDirectory(Program.EXPORT_DIRECTORY);
+            if (!Directory.Exists(Program.LEADERBOARD_DIRECTORY))
+                Directory.CreateDirectory(Program.LEADERBOARD_DIRECTORY);
         }
 
 
@@ -321,6 +323,19 @@ namespace TootTallyDifficultyCalculator2._0
         private void OnValueBoxTextChanged(object sender, EventArgs e)
         {
             OnDisplayChartsButtonClick(sender, e);
+        }
+
+        private void OnSaveToButtonPress(object sender, EventArgs e)
+        {
+            string date = DateTime.Now.ToString("yyyyMMddHHmmss");
+            string fileName = Program.LEADERBOARD_DIRECTORY + "ChartRatings" + date + ".txt";
+            string text = "";
+            TextBoxChartData.Lines.ToList().ForEach(line => { text += line + "\n"; });
+            ChartReader.SaveChartData(fileName, text);
+            fileName = Program.LEADERBOARD_DIRECTORY + "Leaderboards" + date + ".txt";
+            text = "";
+            TextBoxLeaderboardData.Lines.ToList().ForEach(line => { text += line + "\n"; });
+            ChartReader.SaveChartData(fileName, text);
         }
     }
 }
