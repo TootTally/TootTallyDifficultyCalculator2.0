@@ -335,7 +335,7 @@ namespace TootTallyDifficultyCalculator2._0
         {
             var accStrain = 0d;
 
-            if (nextNote.pitchDelta == 0 && nextNote.position - (previousNote.position + previousNote.length) > 0)
+            if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd);
                 var accFactor = distance / Math.Sqrt(0.08f * (nextNote.length / AVERAGE_NOTE_LENGTH));
