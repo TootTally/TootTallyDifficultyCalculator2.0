@@ -297,7 +297,7 @@ namespace TootTallyDifficultyCalculator2._0
         private void OnFormShown(object sender, EventArgs e)
         {
             LoadAllCharts();
-            //LoadAllChartsLeaderboards();
+            LoadAllChartsLeaderboards();
             FillComboBoxReplay();
             OnDisplayChartsButtonClick(sender, e);
 
