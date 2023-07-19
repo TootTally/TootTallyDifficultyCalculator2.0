@@ -34,23 +34,9 @@ namespace TootTallyDifficultyCalculator2._0
         public Leaderboard leaderboard;
 
         public List<Lyrics> lyrics;
-        public Dictionary<float, List<DataVector>> aimPerformanceDict;
-        public Dictionary<float, DataVectorAnalytics> aimAnalyticsDict;
-        public Dictionary<float, List<DataVector>> aimEndPerformanceDict;
-        public Dictionary<float, DataVectorAnalytics> aimEndAnalyticsDict;
 
-        public Dictionary<float, List<DataVector>> tapPerformanceDict;
-        public Dictionary<float, DataVectorAnalytics> tapAnalyticsDict;
-        public Dictionary<float, List<DataVector>> tapEndPerformanceDict;
-        public Dictionary<float, DataVectorAnalytics> tapEndAnalyticsDict;
+        public ChartPerformances performances;
 
-        public Dictionary<float, List<DataVector>> accPerformanceDict;
-        public Dictionary<float, DataVectorAnalytics> accAnalyticsDict;
-
-        public Dictionary<float, float> aimRatingDict;
-        public Dictionary<float, float> tapRatingDict;
-        public Dictionary<float, float> accRatingDict;
-        public Dictionary<float, float> starRatingDict;
         public TimeSpan calculationTime;
 
 
@@ -81,77 +67,15 @@ namespace TootTallyDifficultyCalculator2._0
                         n.SetIsSlider(CheckIfIsSlider(GAME_SPEED[i], n.count - 1));
             }
 
-
-            aimPerformanceDict = new Dictionary<float, List<DataVector>>();
-            aimEndPerformanceDict = new Dictionary<float, List<DataVector>>();
-            tapPerformanceDict = new Dictionary<float, List<DataVector>>();
-            tapEndPerformanceDict = new Dictionary<float, List<DataVector>>();
-            accPerformanceDict = new Dictionary<float, List<DataVector>>();
-            aimRatingDict = new Dictionary<float, float>();
-            tapRatingDict = new Dictionary<float, float>();
-            accRatingDict = new Dictionary<float, float>();
-            starRatingDict = new Dictionary<float, float>();
-            aimAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-            aimEndAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-            tapAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-            tapEndAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-            accAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-
+            performances = new ChartPerformances(this);
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             for (int i = 0; i < GAME_SPEED.Length; i++)
-                CalcAllDiff(GAME_SPEED[i]);
-
-
-            for (int i = 0; i < GAME_SPEED.Length; i++)
             {
-                var gamespeed = GAME_SPEED[i];
-                //prevent crash from A
-                if (!aimPerformanceDict.ContainsKey(gamespeed))
-                    aimPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
-                if (!aimEndPerformanceDict.ContainsKey(gamespeed))
-                    aimEndPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
-
-                if (!tapPerformanceDict.ContainsKey(gamespeed))
-                    tapPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
-                if (!tapEndPerformanceDict.ContainsKey(gamespeed))
-                    tapEndPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
-
-                if (!accPerformanceDict.ContainsKey(gamespeed))
-                    accPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
-
-                if (!aimAnalyticsDict.ContainsKey(gamespeed))
-                    aimAnalyticsDict[gamespeed] = new DataVectorAnalytics(aimPerformanceDict[gamespeed]);
-                if (!aimEndAnalyticsDict.ContainsKey(gamespeed))
-                    aimEndAnalyticsDict[gamespeed] = new DataVectorAnalytics(aimEndPerformanceDict[gamespeed]);
-
-                if (!tapAnalyticsDict.ContainsKey(gamespeed))
-                    tapAnalyticsDict[gamespeed] = new DataVectorAnalytics(tapPerformanceDict[gamespeed]);
-                if (!tapEndAnalyticsDict.ContainsKey(gamespeed))
-                    tapEndAnalyticsDict[gamespeed] = new DataVectorAnalytics(tapEndPerformanceDict[gamespeed]);
-
-                if (!accAnalyticsDict.ContainsKey(gamespeed))
-                    accAnalyticsDict[gamespeed] = new DataVectorAnalytics(accPerformanceDict[gamespeed]);
-
-                var aimRating = aimRatingDict[gamespeed] = aimPerformanceDict[gamespeed].Average(x => x.performance) + 0.01f;
-                var tapRating = tapRatingDict[gamespeed] = tapPerformanceDict[gamespeed].Average(x => x.performance) + 0.01f;
-                var accRating = accRatingDict[gamespeed] = accPerformanceDict[gamespeed].Average(x => x.performance) + 0.01f;
-
-                if (aimRating != 0 && tapRating != 0 && accRating != 0)
-                {
-                    var totalRating = aimRating + tapRating + accRating;
-                    var aimPerc = aimRating / totalRating;
-                    var tapPerc = tapRating / totalRating;
-                    var accPerc = accRating / totalRating;
-                    var aimWeight = (aimPerc + 0.25f) * 1.3f;
-                    var tapWeight = (tapPerc + 0.25f) * 1.05f;
-                    var accWeight = (accPerc + 0.25f) * 1.1f;
-                    var totalWeight = aimWeight + tapWeight + accWeight;
-                    starRatingDict[gamespeed] = ((aimRating * aimWeight) + (tapRating * tapWeight) + (accRating * accWeight)) / totalWeight;
-                }
-                else
-                    starRatingDict[gamespeed] = 0f;
+                performances.CalculatePerformances(GAME_SPEED[i]);
+                performances.CalculateAnalytics(GAME_SPEED[i]);
+                performances.CalculateRatings(GAME_SPEED[i]);
             }
             stopwatch.Stop();
             calculationTime = stopwatch.Elapsed;
@@ -198,219 +122,15 @@ namespace TootTallyDifficultyCalculator2._0
             TootTallyAPIServices.GetChartData(this, (leaderboard) => this.leaderboard = leaderboard);
         }
 
-        public float GetDiffRating(float speed)
-        {
-            if (speed % .25f == 0)
-                return starRatingDict[speed];
+        public float GetDiffRating(float speed) => performances.GetDiffRating(speed);
 
-            var index = (int)((speed - 0.5f) / .25f);
-            var minSpeed = GAME_SPEED[index];
-            var maxSpeed = GAME_SPEED[index + 1];
-            var by = (speed - minSpeed) / (maxSpeed - minSpeed);
-            return Lerp(starRatingDict[minSpeed], starRatingDict[maxSpeed], by);
-        }
+        public float GetAimPerformance(float speed) => performances.aimAnalyticsDict[speed].perfAverage;
+        public float GetAimEndPerformance(float speed) => performances.aimEndPerfDict[speed].Average(x=>x.performance);
+        public float GetTapPerformance(float speed) => performances.tapAnalyticsDict[speed].perfAverage;
+        public float GetTapEndPerformance(float speed) => performances.tapEndPerfDict[speed].Average(x=>x.performance);
+        public float GetAccPerformance(float speed) => performances.accAnalyticsDict[speed].perfAverage;
 
-        public static float Lerp(float firstFloat, float secondFloat, float by) //Linear easing
-        {
-            return firstFloat + (secondFloat - firstFloat) * by;
-        }
-
-        public static double FastPow(double num, int exp)
-        {
-            double result = 1.0;
-            while (exp > 0)
-            {
-                if (exp % 2 == 1)
-                    result *= num;
-                exp >>= 1;
-                num *= num;
-            }
-            return result;
-        }
-
-        public void CalcAllDiff(float gamespeed)
-        {
-            var MAX_TIME = BeatToSeconds2(0.05, float.Parse(tempo) * gamespeed);
-            var MIN_TIMEDELTA = 1d / 240d;
-            var AVERAGE_NOTE_LENGTH = notesDict[gamespeed].Average(n => n.length);
-            var aimEndurance = 0.3d;
-            var tapEndurance = 0.3d;
-            var endurance_decay = 1.005d;
-
-            List<double> weights = new List<double>();//Pre calc weights
-            for (int i = 0; i < 26; i++)
-                weights.Add(FastPow(0.945f, i));
-
-
-            for (int i = 0; i < notesDict[gamespeed].Count - 1; i++) //Main Forward Loop
-            {
-                Note currentNote = notesDict[gamespeed][i];
-                Note previousNote = currentNote;
-                var comboMultiplier = 0.8f;
-                var directionMultiplier = 1f;
-                var lengthSum = 0d;
-                Direction currentDirection = Direction.Null, previousDirection = Direction.Null;
-
-                var lenCount = 0;
-                for (int j = i + 1; j < notesDict[gamespeed].Count && j < i + 10; j++)
-                {
-                    //Combo Calc
-                    lengthSum += notesDict[gamespeed][j].length;
-                    lenCount++;
-                }
-                comboMultiplier += (float)lengthSum;
-                //Trace.WriteLine($"{name} - CM: " + comboMultiplier);
-
-                //Second Forward Loop up to 26 notes and notes are at max 4 seconds appart
-                var aimStrain = 0d;
-                var tapStrain = 0d;
-                var accStrain = 0d;
-
-
-                for (int j = i + 1; j < notesDict[gamespeed].Count && j < i + 26 && notesDict[gamespeed][j].position - (currentNote.position + currentNote.length) <= 4; j++)
-                {
-                    Note nextNote = notesDict[gamespeed][j];
-                    var weight = weights[j - i - 1];
-                    var endDecayMult = Math.Pow(endurance_decay, weight);
-                    if (aimEndurance > 1f)
-                        aimEndurance /= endDecayMult;
-                    if (tapEndurance > 1f)
-                        tapEndurance /= endDecayMult;
-
-                    //Aim Calc
-                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME)) / 64f;
-                    aimEndurance += CalcAimEndurance(nextNote, previousNote, weight, directionMultiplier);
-
-                    //Tap Calc
-                    tapStrain += Math.Sqrt(CalcTapStrain(nextNote, previousNote, weight, comboMultiplier, tapEndurance, MIN_TIMEDELTA)) / 52f;
-                    tapEndurance += CalcTapEndurance(nextNote, previousNote, weight);
-
-                    //Acc Calc
-                    accStrain += Math.Sqrt(CalcAccStrain(nextNote, previousNote, weight, comboMultiplier, directionMultiplier, AVERAGE_NOTE_LENGTH) * 7f) / 135f; // I can't figure that out yet
-
-
-                    previousNote = nextNote;
-
-                }
-                if (!aimPerformanceDict.ContainsKey(gamespeed))
-                {
-                    aimPerformanceDict[gamespeed] = new List<DataVector>();
-                    aimEndPerformanceDict[gamespeed] = new List<DataVector>();
-                    tapPerformanceDict[gamespeed] = new List<DataVector>();
-                    tapEndPerformanceDict[gamespeed] = new List<DataVector>();
-                    accPerformanceDict[gamespeed] = new List<DataVector>();
-                }
-
-                aimPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)aimStrain));
-                aimEndPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)aimEndurance));
-                tapPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)tapStrain));
-                tapEndPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)tapEndurance));
-                accPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)accStrain));
-            }
-        }
-
-        public static double CalcAimStrain(Note nextNote, Note previousNote, ref Direction currentDirection, ref Direction previousDirection, double weight, ref float directionMultiplier, double endurance, double MAX_TIME)
-        {
-            double speed;
-            //Calc the space between two notes
-            if (nextNote.position - (previousNote.position + previousNote.length) > 0)
-                if (nextNote.pitchStart - previousNote.pitchEnd != 0)
-                    if (previousNote.pitchStart - nextNote.pitchEnd > 0)
-                        currentDirection = Direction.Up;
-                    else
-                        currentDirection = Direction.Down;
-                else
-                    currentDirection = Direction.Null;
-
-            var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd);
-            var t = nextNote.position - (previousNote.position + previousNote.length);
-            speed = distance / Math.Max(t, MAX_TIME);
-            //Add directionalMultiplier bonus here
-            if (CheckDirectionChange(previousDirection, currentDirection))
-                directionMultiplier *= 1.02f;
-
-            previousDirection = currentDirection; //update direction before looking at slider
-
-
-            if (nextNote.pitchDelta != 0) //Calc extra speed if its a slider
-            {
-                speed += MathF.Abs(nextNote.pitchDelta * 0.85f) / nextNote.length; //This is equal to 0 if its not a slider
-                currentDirection = nextNote.pitchDelta > 0 ? Direction.Up : nextNote.pitchDelta < 0 ? Direction.Down : Direction.Null; //Set direction for slider
-                if (CheckDirectionChange(previousDirection, currentDirection))
-                    directionMultiplier *= 1.06f;
-
-                previousDirection = currentDirection; //update direction from slider
-            }
-            return speed * weight * directionMultiplier * endurance;
-        }
-
-        public static double CalcTapStrain(Note nextNote, Note previousNote, double weight, float comboMultiplier, double endurance, double MIN_TIMEDELTA)
-        {
-            var tapStrain = 0d;
-            if (nextNote.position - (previousNote.position + previousNote.length) > 0)
-            {
-                var timeDelta = Math.Max(nextNote.position - previousNote.position, MIN_TIMEDELTA);
-                var strain = 9.8f / Math.Pow(timeDelta, 1.65f);
-                tapStrain = strain * weight * comboMultiplier * endurance;
-            }
-            return tapStrain;
-        }
-
-        public static bool CheckDirectionChange(Direction prevDir, Direction currDir) => (prevDir != currDir && prevDir != Direction.Null && currDir != Direction.Null);
-
-        public static double CalcAccStrain(Note nextNote, Note previousNote, double weight, float comboMultiplier, float directionMultiplier, double AVERAGE_NOTE_LENGTH)
-        {
-            var accStrain = 0d;
-
-            if (nextNote.position - (previousNote.position + previousNote.length) > 0)
-            {
-                var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd);
-                var accFactor = distance / Math.Sqrt(0.06f * (nextNote.length / AVERAGE_NOTE_LENGTH));
-                var strain = accFactor;
-                accStrain = strain * weight * directionMultiplier * comboMultiplier;
-            }
-            if (nextNote.pitchDelta != 0)
-            {
-                var sliderSpeed = Math.Abs(nextNote.pitchDelta * 1.1f) / nextNote.length; //Promote height over speed
-                var strain = sliderSpeed / Math.Sqrt(0.85f * (nextNote.length / AVERAGE_NOTE_LENGTH));
-                accStrain = strain * weight * comboMultiplier;
-            }
-
-            return accStrain;
-        }
-
-        public static double CalcAimEndurance(Note nextNote, Note previousNote, double weight, float directionalMultiplier)
-        {
-            var endurance = 0d;
-
-            var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) / 115f;
-            var t = nextNote.position - (previousNote.position + previousNote.length);
-            var enduranceAimStrain = distance / t;
-
-            if (nextNote.pitchDelta != 0) //Calc extra speed if its a slider
-                enduranceAimStrain += (MathF.Abs(nextNote.pitchDelta) / nextNote.length) / 135f; //This is equal to 0 if its not a slider
-
-            endurance += Math.Sqrt(enduranceAimStrain) / 295f;
-
-            return endurance * weight * directionalMultiplier;
-        }
-
-        public static double CalcTapEndurance(Note nextNote, Note previousNote, double weight)
-        {
-            var endurance = 0d;
-
-            var enduranceTapStrain = 0d;
-            if (nextNote.position - (previousNote.position + previousNote.length) > 0)
-            {
-                var timeDelta = nextNote.position - previousNote.position;
-                enduranceTapStrain = 0.65f / Math.Pow(timeDelta, 1.55f);
-            }
-
-            endurance += Math.Sqrt(enduranceTapStrain) / 350f;
-
-            return endurance * weight;
-        }
-
+        public float GetStarRating(float speed) => performances.starRatingDict[speed];
         #region Note
 
         public enum Direction
@@ -429,52 +149,6 @@ namespace TootTallyDifficultyCalculator2._0
 
         public bool CheckIfIsSlider(float gamespeed, int index) => (notesDict[gamespeed][index].position + notesDict[gamespeed][index].length >= notesDict[gamespeed][index + 1].position) || (notesDict[gamespeed][index].pitchDelta != 0);
 
-        public List<string> ToDisplayData()
-        {
-            List<string> data = new List<string>
-            {
-                "Diff calculated in " + calculationTime.TotalMilliseconds.ToString("0.0000") + "ms",
-                "___MAP DATA___",
-                "Name: " + name,
-                "shortName: " + shortName,
-                "trackRef: " + trackRef,
-                "year: " + year,
-                "author: " + author,
-                "genre: " + genre,
-                "description: " + description,
-                "difficulty: " + difficulty,
-                "savednotespacing: " + savednotespacing,
-                "endpoint: " + endpoint,
-                "timesig: " + timesig,
-                "tempo: " + tempo
-            };
-            string lyricsString = "Lyrics: ";
-            if (lyrics != null && lyrics.Count > 0)
-                lyrics.ForEach(s => lyricsString += s);
-            else
-                lyricsString += "No Lyrics found";
-            data.Add(lyricsString);
-
-            data.Add("Aim Rating: " + aimPerformanceDict[1].Average(x => x.performance));
-            data.Add("Tap Rating: " + tapPerformanceDict[1].Average(x => x.performance));
-            data.Add("Acc Rating: " + accPerformanceDict[1].Average(x => x.performance));
-
-            for (int i = 0; i < notesDict[1].Count; i++)
-            {
-                var n = notesDict[1][i];
-                data.Add("nu: " + n.count.ToString("0.00") + " | " +
-                    "po: " + n.position.ToString("0.00") + " | " +
-                    "le: " + n.length.ToString("0.00") + " | " +
-                    "ps: " + n.pitchStart.ToString("0.00") + " | " +
-                    "pd: " + n.pitchDelta.ToString("0.00") + " | " +
-                    "pe: " + n.pitchEnd.ToString("0.00") +
-                    (n.isSlider ? " | Slider" : "") + " | " +
-                    (i < aimPerformanceDict[1].Count ? $"a: {aimPerformanceDict[1][i].performance} t: {tapPerformanceDict[1][i].performance} a: {accPerformanceDict[1][i].performance}" : ""));
-            }
-
-            return data;
-        }
-
         public float GetTempoMultiplier() => (float.Parse(tempo) / 100f);
         public static double BeatToSeconds(double time, float bpm)
         {
@@ -483,49 +157,5 @@ namespace TootTallyDifficultyCalculator2._0
 
         public static double BeatToSeconds2(double beat, float bpm) => (60f / bpm) * beat;
 
-        public class DataVector
-        {
-            public float performance;
-            public float time;
-
-            public DataVector(float time, float performance)
-            {
-                this.time = time;
-                this.performance = performance;
-            }
-
-        }
-
-        public class DataVectorAnalytics
-        {
-            public float perfAverage, perfMax, perfMin, perfSum;
-
-            public DataVectorAnalytics(List<DataVector> dataVectorList)
-            {
-                perfAverage = dataVectorList.Average(x => x.performance);
-                perfMax = dataVectorList.Max(x => x.performance);
-                perfMin = dataVectorList.Min(x => x.performance);
-                perfSum = dataVectorList.Sum(x => x.performance);
-            }
-        }
-
-
-        public class SerializableDiffData
-        {
-            public SerializableDataVector speed050;
-            public SerializableDataVector speed075;
-            public SerializableDataVector speed100;
-            public SerializableDataVector speed125;
-            public SerializableDataVector speed150;
-            public SerializableDataVector speed175;
-            public SerializableDataVector speed200;
-        }
-
-        public class SerializableDataVector
-        {
-            public List<DataVector> aim;
-            public List<DataVector> tap;
-            public List<DataVector> acc;
-        }
     }
 }

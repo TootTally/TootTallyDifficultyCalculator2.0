@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static TootTallyDifficultyCalculator2._0.Chart;
+using static TootTallyDifficultyCalculator2._0.ChartPerformances;
 
 namespace TootTallyDifficultyCalculator2._0
 {

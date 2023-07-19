@@ -13,7 +13,7 @@ namespace TootTallyDifficultyCalculator2._0
 {
     public partial class Graph : Form
     {
-        public Graph(string name, List<Chart.DataVector> points)
+        public Graph(string name, List<ChartPerformances.DataVector> points)
         {
             InitializeComponent();
             ChartData.Series.Clear();

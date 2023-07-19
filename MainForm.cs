@@ -5,6 +5,7 @@ using System.Numerics;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Linq;
 using static System.Formats.Asn1.AsnWriter;
+using static TootTallyDifficultyCalculator2._0.ChartPerformances;
 
 namespace TootTallyDifficultyCalculator2._0
 {
@@ -112,17 +113,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void ExportChartToJson(string path, Chart chart)
         {
-            Chart.SerializableDiffData chartdata = new Chart.SerializableDiffData()
-            {
-                speed050 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.5f], tap = chart.tapPerformanceDict[0.5f], acc = chart.accPerformanceDict[0.5f] },
-                speed075 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[0.75f], tap = chart.tapPerformanceDict[0.75f], acc = chart.accPerformanceDict[0.75f] },
-                speed100 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1f], tap = chart.tapPerformanceDict[1f], acc = chart.accPerformanceDict[1f] },
-                speed125 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.25f], tap = chart.tapPerformanceDict[1.25f], acc = chart.accPerformanceDict[1.25f] },
-                speed150 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.5f], tap = chart.tapPerformanceDict[1.5f], acc = chart.accPerformanceDict[1.5f] },
-                speed175 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[1.75f], tap = chart.tapPerformanceDict[1.75f], acc = chart.accPerformanceDict[1.75f] },
-                speed200 = new Chart.SerializableDataVector() { aim = chart.aimPerformanceDict[2f], tap = chart.tapPerformanceDict[2f], acc = chart.accPerformanceDict[2f] },
-
-            };
+            SerializableDiffData chartdata = new SerializableDiffData(chart.performances);
             var json = JsonConvert.SerializeObject(chartdata, Formatting.Indented);
             ChartReader.SaveChartData(path, json);
         }
@@ -183,12 +174,12 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void DisplayAtSpeed(Chart chart, float gamespeed, ref List<string> textLines)
         {
-            Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[gamespeed];
-            Chart.DataVectorAnalytics aimEndAnalytics = chart.aimEndAnalyticsDict[gamespeed];
-            Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[gamespeed];
-            Chart.DataVectorAnalytics tapEndAnalytics = chart.tapEndAnalyticsDict[gamespeed];
-            Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[gamespeed];
-            textLines.Add($"SPEED: {gamespeed:0.00}x rated {chart.starRatingDict[gamespeed]}");
+            DataVectorAnalytics aimAnalytics = chart.performances.aimAnalyticsDict[gamespeed];
+            DataVectorAnalytics aimEndAnalytics = chart.performances.aimEndAnalyticsDict[gamespeed];
+            DataVectorAnalytics tapAnalytics = chart.performances.tapAnalyticsDict[gamespeed];
+            DataVectorAnalytics tapEndAnalytics = chart.performances.tapEndAnalyticsDict[gamespeed];
+            DataVectorAnalytics accAnalytics = chart.performances.accAnalyticsDict[gamespeed];
+            textLines.Add($"SPEED: {gamespeed:0.00}x rated {chart.GetStarRating(gamespeed)}");
             textLines.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
             textLines.Add($"  aend: " + aimEndAnalytics.perfAverage + " min: " + aimEndAnalytics.perfMin + " max: " + aimEndAnalytics.perfMax);
             textLines.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
@@ -250,7 +241,7 @@ namespace TootTallyDifficultyCalculator2._0
         public static double CalculateBaseTT(float starRating)
         {
 
-            return 1.05f * Chart.FastPow(starRating, 2) + (3f * starRating) + 0.01f;
+            return 1.05f * FastPow(starRating, 2) + (3f * starRating) + 0.01f;
             //y = 1.05x^2 + 3x + 0.01
         }
 
@@ -306,7 +297,7 @@ namespace TootTallyDifficultyCalculator2._0
         private void OnFormShown(object sender, EventArgs e)
         {
             LoadAllCharts();
-            LoadAllChartsLeaderboards();
+            //LoadAllChartsLeaderboards();
             FillComboBoxReplay();
             OnDisplayChartsButtonClick(sender, e);
 
