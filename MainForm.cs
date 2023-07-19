@@ -150,7 +150,7 @@ namespace TootTallyDifficultyCalculator2._0
                 if (checkboxAllSpeed.Checked)
                     DisplayAllSpeed(chart, ref chartTextLines);
                 else
-                    DisplayNormalSpeed(chart, ref chartTextLines);
+                    DisplayAtSpeed(chart,1f, ref chartTextLines);
                 chartTextLines.Add("=====================================================================================================");
                 chartTextLines.Add("");
                 allChartDataTextLines.AddRange(chartTextLines);
@@ -178,28 +178,21 @@ namespace TootTallyDifficultyCalculator2._0
         public void DisplayAllSpeed(Chart chart, ref List<string> textLines)
         {
             for (int i = 0; i < chart.GAME_SPEED.Length; i++)
-            {
-                var gamespeed = chart.GAME_SPEED[i];
-                Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[gamespeed];
-                Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[gamespeed];
-                Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[gamespeed];
-                textLines.Add($"SPEED: {gamespeed:0.00}x rated {chart.starRatingDict[gamespeed]}");
-                textLines.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
-                textLines.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
-                textLines.Add($"  acc: " + accAnalytics.perfAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
-                textLines.Add("--------------------------------------------");
-            }
+                DisplayAtSpeed(chart, chart.GAME_SPEED[i], ref textLines);
         }
 
-        public void DisplayNormalSpeed(Chart chart, ref List<string> textLines)
+        public void DisplayAtSpeed(Chart chart, float gamespeed, ref List<string> textLines)
         {
-            var gamespeed = 1f;
             Chart.DataVectorAnalytics aimAnalytics = chart.aimAnalyticsDict[gamespeed];
+            Chart.DataVectorAnalytics aimEndAnalytics = chart.aimEndAnalyticsDict[gamespeed];
             Chart.DataVectorAnalytics tapAnalytics = chart.tapAnalyticsDict[gamespeed];
+            Chart.DataVectorAnalytics tapEndAnalytics = chart.tapEndAnalyticsDict[gamespeed];
             Chart.DataVectorAnalytics accAnalytics = chart.accAnalyticsDict[gamespeed];
             textLines.Add($"SPEED: {gamespeed:0.00}x rated {chart.starRatingDict[gamespeed]}");
             textLines.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
+            textLines.Add($"  aend: " + aimEndAnalytics.perfAverage + " min: " + aimEndAnalytics.perfMin + " max: " + aimEndAnalytics.perfMax);
             textLines.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
+            textLines.Add($"  tend: " + tapEndAnalytics.perfAverage + " min: " + tapEndAnalytics.perfMin + " max: " + tapEndAnalytics.perfMax);
             textLines.Add($"  acc: " + accAnalytics.perfAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
             textLines.Add("--------------------------------------------");
         }
@@ -257,7 +250,8 @@ namespace TootTallyDifficultyCalculator2._0
         public static double CalculateBaseTT(float starRating)
         {
 
-            return 1.5f * Chart.FastPow(starRating, 2) + 0.01f;
+            return 1.05f * Chart.FastPow(starRating, 2) + (3f * starRating) + 0.01f;
+            //y = 1.05x^2 + 3x + 0.01
         }
 
         //https://www.desmos.com/calculator/bnyo9f5u1y

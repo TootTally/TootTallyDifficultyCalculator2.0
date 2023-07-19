@@ -36,10 +36,17 @@ namespace TootTallyDifficultyCalculator2._0
         public List<Lyrics> lyrics;
         public Dictionary<float, List<DataVector>> aimPerformanceDict;
         public Dictionary<float, DataVectorAnalytics> aimAnalyticsDict;
+        public Dictionary<float, List<DataVector>> aimEndPerformanceDict;
+        public Dictionary<float, DataVectorAnalytics> aimEndAnalyticsDict;
+
         public Dictionary<float, List<DataVector>> tapPerformanceDict;
         public Dictionary<float, DataVectorAnalytics> tapAnalyticsDict;
+        public Dictionary<float, List<DataVector>> tapEndPerformanceDict;
+        public Dictionary<float, DataVectorAnalytics> tapEndAnalyticsDict;
+
         public Dictionary<float, List<DataVector>> accPerformanceDict;
         public Dictionary<float, DataVectorAnalytics> accAnalyticsDict;
+
         public Dictionary<float, float> aimRatingDict;
         public Dictionary<float, float> tapRatingDict;
         public Dictionary<float, float> accRatingDict;
@@ -76,14 +83,18 @@ namespace TootTallyDifficultyCalculator2._0
 
 
             aimPerformanceDict = new Dictionary<float, List<DataVector>>();
+            aimEndPerformanceDict = new Dictionary<float, List<DataVector>>();
             tapPerformanceDict = new Dictionary<float, List<DataVector>>();
+            tapEndPerformanceDict = new Dictionary<float, List<DataVector>>();
             accPerformanceDict = new Dictionary<float, List<DataVector>>();
             aimRatingDict = new Dictionary<float, float>();
             tapRatingDict = new Dictionary<float, float>();
             accRatingDict = new Dictionary<float, float>();
             starRatingDict = new Dictionary<float, float>();
             aimAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
+            aimEndAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
             tapAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
+            tapEndAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
             accAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
 
 
@@ -99,21 +110,33 @@ namespace TootTallyDifficultyCalculator2._0
                 //prevent crash from A
                 if (!aimPerformanceDict.ContainsKey(gamespeed))
                     aimPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
+                if (!aimEndPerformanceDict.ContainsKey(gamespeed))
+                    aimEndPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
+
                 if (!tapPerformanceDict.ContainsKey(gamespeed))
                     tapPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
+                if (!tapEndPerformanceDict.ContainsKey(gamespeed))
+                    tapEndPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
+
                 if (!accPerformanceDict.ContainsKey(gamespeed))
                     accPerformanceDict[gamespeed] = new List<DataVector>() { new DataVector(0, 0) };
 
                 if (!aimAnalyticsDict.ContainsKey(gamespeed))
                     aimAnalyticsDict[gamespeed] = new DataVectorAnalytics(aimPerformanceDict[gamespeed]);
+                if (!aimEndAnalyticsDict.ContainsKey(gamespeed))
+                    aimEndAnalyticsDict[gamespeed] = new DataVectorAnalytics(aimEndPerformanceDict[gamespeed]);
+
                 if (!tapAnalyticsDict.ContainsKey(gamespeed))
                     tapAnalyticsDict[gamespeed] = new DataVectorAnalytics(tapPerformanceDict[gamespeed]);
+                if (!tapEndAnalyticsDict.ContainsKey(gamespeed))
+                    tapEndAnalyticsDict[gamespeed] = new DataVectorAnalytics(tapEndPerformanceDict[gamespeed]);
+
                 if (!accAnalyticsDict.ContainsKey(gamespeed))
                     accAnalyticsDict[gamespeed] = new DataVectorAnalytics(accPerformanceDict[gamespeed]);
 
-                var aimRating = aimRatingDict[gamespeed] = aimPerformanceDict[gamespeed].Average(x => x.performance) + 0.05f;
-                var tapRating = tapRatingDict[gamespeed] = tapPerformanceDict[gamespeed].Average(x => x.performance) + 0.05f;
-                var accRating = accRatingDict[gamespeed] = accPerformanceDict[gamespeed].Average(x => x.performance) + 0.05f;
+                var aimRating = aimRatingDict[gamespeed] = aimPerformanceDict[gamespeed].Average(x => x.performance) + 0.01f;
+                var tapRating = tapRatingDict[gamespeed] = tapPerformanceDict[gamespeed].Average(x => x.performance) + 0.01f;
+                var accRating = accRatingDict[gamespeed] = accPerformanceDict[gamespeed].Average(x => x.performance) + 0.01f;
 
                 if (aimRating != 0 && tapRating != 0 && accRating != 0)
                 {
@@ -210,8 +233,8 @@ namespace TootTallyDifficultyCalculator2._0
             var MAX_TIME = BeatToSeconds2(0.05, float.Parse(tempo) * gamespeed);
             var MIN_TIMEDELTA = 1d / 240d;
             var AVERAGE_NOTE_LENGTH = notesDict[gamespeed].Average(n => n.length);
-            var aimEndurance = 0.5d;
-            var tapEndurance = 0.5d;
+            var aimEndurance = 0.3d;
+            var tapEndurance = 0.3d;
             var endurance_decay = 1.005d;
 
             List<double> weights = new List<double>();//Pre calc weights
@@ -255,11 +278,11 @@ namespace TootTallyDifficultyCalculator2._0
                         tapEndurance /= endDecayMult;
 
                     //Aim Calc
-                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME) * 6f) / 125f;
+                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME)) / 64f;
                     aimEndurance += CalcAimEndurance(nextNote, previousNote, weight, directionMultiplier);
 
                     //Tap Calc
-                    tapStrain += Math.Sqrt(CalcTapStrain(nextNote, previousNote, weight, comboMultiplier, tapEndurance, MIN_TIMEDELTA) * 7f) / 120f;
+                    tapStrain += Math.Sqrt(CalcTapStrain(nextNote, previousNote, weight, comboMultiplier, tapEndurance, MIN_TIMEDELTA)) / 52f;
                     tapEndurance += CalcTapEndurance(nextNote, previousNote, weight);
 
                     //Acc Calc
@@ -272,12 +295,16 @@ namespace TootTallyDifficultyCalculator2._0
                 if (!aimPerformanceDict.ContainsKey(gamespeed))
                 {
                     aimPerformanceDict[gamespeed] = new List<DataVector>();
+                    aimEndPerformanceDict[gamespeed] = new List<DataVector>();
                     tapPerformanceDict[gamespeed] = new List<DataVector>();
+                    tapEndPerformanceDict[gamespeed] = new List<DataVector>();
                     accPerformanceDict[gamespeed] = new List<DataVector>();
                 }
 
                 aimPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)aimStrain));
+                aimEndPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)aimEndurance));
                 tapPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)tapStrain));
+                tapEndPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)tapEndurance));
                 accPerformanceDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)accStrain));
             }
         }
@@ -307,7 +334,7 @@ namespace TootTallyDifficultyCalculator2._0
 
             if (nextNote.pitchDelta != 0) //Calc extra speed if its a slider
             {
-                speed += MathF.Abs(nextNote.pitchDelta * 0.95f) / nextNote.length; //This is equal to 0 if its not a slider
+                speed += MathF.Abs(nextNote.pitchDelta * 0.85f) / nextNote.length; //This is equal to 0 if its not a slider
                 currentDirection = nextNote.pitchDelta > 0 ? Direction.Up : nextNote.pitchDelta < 0 ? Direction.Down : Direction.Null; //Set direction for slider
                 if (CheckDirectionChange(previousDirection, currentDirection))
                     directionMultiplier *= 1.06f;
@@ -323,7 +350,7 @@ namespace TootTallyDifficultyCalculator2._0
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var timeDelta = Math.Max(nextNote.position - previousNote.position, MIN_TIMEDELTA);
-                var strain = 7f / Math.Pow(timeDelta, 1.75f);
+                var strain = 9.8f / Math.Pow(timeDelta, 1.65f);
                 tapStrain = strain * weight * comboMultiplier * endurance;
             }
             return tapStrain;
@@ -338,14 +365,14 @@ namespace TootTallyDifficultyCalculator2._0
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd);
-                var accFactor = distance / Math.Sqrt(0.08f * (nextNote.length / AVERAGE_NOTE_LENGTH));
+                var accFactor = distance / Math.Sqrt(0.06f * (nextNote.length / AVERAGE_NOTE_LENGTH));
                 var strain = accFactor;
                 accStrain = strain * weight * directionMultiplier * comboMultiplier;
             }
             if (nextNote.pitchDelta != 0)
             {
                 var sliderSpeed = Math.Abs(nextNote.pitchDelta * 1.1f) / nextNote.length; //Promote height over speed
-                var strain = sliderSpeed / Math.Sqrt(0.75f * (nextNote.length / AVERAGE_NOTE_LENGTH));
+                var strain = sliderSpeed / Math.Sqrt(0.85f * (nextNote.length / AVERAGE_NOTE_LENGTH));
                 accStrain = strain * weight * comboMultiplier;
             }
 
@@ -356,14 +383,14 @@ namespace TootTallyDifficultyCalculator2._0
         {
             var endurance = 0d;
 
-            var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) / 225f;
+            var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) / 115f;
             var t = nextNote.position - (previousNote.position + previousNote.length);
             var enduranceAimStrain = distance / t;
 
             if (nextNote.pitchDelta != 0) //Calc extra speed if its a slider
-                enduranceAimStrain += (MathF.Abs(nextNote.pitchDelta) / nextNote.length) / 225f; //This is equal to 0 if its not a slider
+                enduranceAimStrain += (MathF.Abs(nextNote.pitchDelta) / nextNote.length) / 135f; //This is equal to 0 if its not a slider
 
-            endurance += Math.Sqrt(enduranceAimStrain) / 550f;
+            endurance += Math.Sqrt(enduranceAimStrain) / 295f;
 
             return endurance * weight * directionalMultiplier;
         }
@@ -376,7 +403,7 @@ namespace TootTallyDifficultyCalculator2._0
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var timeDelta = nextNote.position - previousNote.position;
-                enduranceTapStrain = .15f / Math.Pow(timeDelta, 1.05f);
+                enduranceTapStrain = 0.65f / Math.Pow(timeDelta, 1.55f);
             }
 
             endurance += Math.Sqrt(enduranceTapStrain) / 350f;
