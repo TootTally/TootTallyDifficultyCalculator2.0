@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -11,73 +12,55 @@ namespace TootTallyDifficultyCalculator2._0
 {
     public class ChartPerformances
     {
+        public static readonly double[] weights = {1d, 0.945d, 0.893025d, 0.84390863d, 0.79749365d, 0.7536315d, 0.71218177d, 0.67301177d, 0.63599612d, 0.60101634d,
+                                                   0.56796044d,   0.53672261d, 0.50720287d,0.47930671d,0.45294484d,0.42803288d,0.40449107,0.38224406,0.36122064d,0.3413535,
+                                                   0.32257906d,  0.30483721d,0.28807116,0.27222725d,0.25725475d,0.25725475d,}; //lol
+
         public Dictionary<float, List<DataVector>> aimPerfDict;
         public Dictionary<float, DataVectorAnalytics> aimAnalyticsDict;
-        public Dictionary<float, List<DataVector>> aimEndPerfDict;
-        public Dictionary<float, DataVectorAnalytics> aimEndAnalyticsDict;
 
         public Dictionary<float, List<DataVector>> tapPerfDict;
         public Dictionary<float, DataVectorAnalytics> tapAnalyticsDict;
-        public Dictionary<float, List<DataVector>> tapEndPerfDict;
-        public Dictionary<float, DataVectorAnalytics> tapEndAnalyticsDict;
 
         public Dictionary<float, List<DataVector>> accPerfDict;
         public Dictionary<float, DataVectorAnalytics> accAnalyticsDict;
 
-        public Dictionary<float, float> aimRatingDict;
-        public Dictionary<float, float> tapRatingDict;
-        public Dictionary<float, float> accRatingDict;
-        public Dictionary<float, float> starRatingDict;
+        public Dictionary<float, double> aimRatingDict;
+        public Dictionary<float, double> tapRatingDict;
+        public Dictionary<float, double> accRatingDict;
+        public Dictionary<float, double> starRatingDict;
 
         private Chart _chart;
 
         public ChartPerformances(Chart chart)
         {
-            aimPerfDict = new Dictionary<float, List<DataVector>>();
-            aimEndPerfDict = new Dictionary<float, List<DataVector>>();
-            tapPerfDict = new Dictionary<float, List<DataVector>>();
-            tapEndPerfDict = new Dictionary<float, List<DataVector>>();
-            accPerfDict = new Dictionary<float, List<DataVector>>();
-            aimRatingDict = new Dictionary<float, float>();
-            tapRatingDict = new Dictionary<float, float>();
-            accRatingDict = new Dictionary<float, float>();
-            starRatingDict = new Dictionary<float, float>();
-            aimAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-            aimEndAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-            tapAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-            tapEndAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
-            accAnalyticsDict = new Dictionary<float, DataVectorAnalytics>();
+            aimPerfDict = new Dictionary<float, List<DataVector>>(7);
+            tapPerfDict = new Dictionary<float, List<DataVector>>(7);
+            accPerfDict = new Dictionary<float, List<DataVector>>(7);
+            aimRatingDict = new Dictionary<float, double>(7);
+            tapRatingDict = new Dictionary<float, double>(7);
+            accRatingDict = new Dictionary<float, double>(7);
+            starRatingDict = new Dictionary<float, double>(7);
+            aimAnalyticsDict = new Dictionary<float, DataVectorAnalytics>(7);
+            tapAnalyticsDict = new Dictionary<float, DataVectorAnalytics>(7);
+            accAnalyticsDict = new Dictionary<float, DataVectorAnalytics>(7);
 
 
             for (int i = 0; i < chart.GAME_SPEED.Length; i++)
             {
-                var gamespeed = chart.GAME_SPEED[i];
-                aimPerfDict[gamespeed] = new List<DataVector>();
-                aimEndPerfDict[gamespeed] = new List<DataVector>();
-                tapPerfDict[gamespeed] = new List<DataVector>();
-                tapEndPerfDict[gamespeed] = new List<DataVector>();
-                accPerfDict[gamespeed] = new List<DataVector>();
+                aimPerfDict[i] = new List<DataVector>(chart.notes.Length) { new DataVector(0, 0, 0) };
+                tapPerfDict[i] = new List<DataVector>(chart.notes.Length) { new DataVector(0, 0, 0) };
+                accPerfDict[i] = new List<DataVector>(chart.notes.Length) { new DataVector(0, 0, 0) };
             }
             _chart = chart;
-            PrecalculateVariables();
         }
 
-        List<double> weights;
-
-        public void PrecalculateVariables()
+        private const double MIN_TIMEDELTA = 1d / 240d;
+        public void CalculatePerformances(int speedIndex)
         {
-            weights = new List<double>();
-            for (int i = 0; i < 26; i++)
-                weights.Add(FastPow(0.945f, i));
-        }
 
-        Note currentNote, previousNote, nextNote;
-        double MAX_TIME;
-        public void CalculatePerformances(float gamespeed)
-        {
-            var noteList = _chart.notesDict[gamespeed];
-            MAX_TIME = BeatToSeconds2(0.05, float.Parse(_chart.tempo) * gamespeed);
-            var MIN_TIMEDELTA = 1d / 240d;
+            var noteList = _chart.notesDict[speedIndex];
+            var MAX_TIME = BeatToSeconds2(0.05, float.Parse(_chart.tempo) * _chart.GAME_SPEED[speedIndex]);
             var AVERAGE_NOTE_LENGTH = noteList.Average(n => n.length);
             var TOTAL_NOTE_LENGTH = noteList.Sum(n => n.length);
             var aimEndurance = 0.3d;
@@ -89,10 +72,10 @@ namespace TootTallyDifficultyCalculator2._0
 
             for (int i = 0; i < noteList.Count - 1; i++) //Main Forward Loop
             {
-                currentNote = noteList[i];
-                previousNote = currentNote;
-                var comboMultiplier = 0.8f;
-                var directionMultiplier = 1f;
+                var currentNote = noteList[i];
+                var previousNote = currentNote;
+                var comboMultiplier = 0.8d;
+                var directionMultiplier = 1d;
                 var lengthSum = 0d;
                 Direction currentDirection = Direction.Null, previousDirection = Direction.Null;
 
@@ -103,7 +86,7 @@ namespace TootTallyDifficultyCalculator2._0
                     lengthSum += noteList[j].length;
                     lenCount++;
                 }
-                comboMultiplier += (float)lengthSum;
+                comboMultiplier += lengthSum;
 
                 //Second Forward Loop up to 26 notes and notes are at max 4 seconds appart
                 var aimStrain = 0d;
@@ -112,7 +95,7 @@ namespace TootTallyDifficultyCalculator2._0
 
                 for (int j = i + 1; j < noteList.Count && j < i + 26 && noteList[j].position - (currentNote.position + currentNote.length) <= 4; j++)
                 {
-                    nextNote = noteList[j];
+                    var nextNote = noteList[j];
                     var weight = weights[j - i - 1];
                     var endDecayMult = Math.Pow(endurance_decay, weight);
                     if (aimEndurance > 1f)
@@ -134,16 +117,14 @@ namespace TootTallyDifficultyCalculator2._0
                     previousNote = nextNote;
 
                 }
-
-                aimPerfDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)aimStrain, (float)(currentNote.length / TOTAL_NOTE_LENGTH)));
-                aimEndPerfDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)aimEndurance, 1));
-                tapPerfDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)tapStrain, (float)(currentNote.length / TOTAL_NOTE_LENGTH)));
-                tapEndPerfDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)tapEndurance, 1));
-                accPerfDict[gamespeed].Add(new DataVector((float)currentNote.position, (float)accStrain, (float)(currentNote.length / TOTAL_NOTE_LENGTH)));
+                var lenWeight = currentNote.length / TOTAL_NOTE_LENGTH;
+                aimPerfDict[speedIndex].Add(new DataVector(currentNote.position, aimStrain, lenWeight));
+                tapPerfDict[speedIndex].Add(new DataVector(currentNote.position, tapStrain, lenWeight));
+                accPerfDict[speedIndex].Add(new DataVector(currentNote.position, accStrain, lenWeight));
             }
         }
 
-        public static double CalcAimStrain(Note nextNote, Note previousNote, ref Direction currentDirection, ref Direction previousDirection, double weight, ref float directionMultiplier, double endurance, double MAX_TIME)
+        public static double CalcAimStrain(Note nextNote, Note previousNote, ref Direction currentDirection, ref Direction previousDirection, double weight, ref double directionMultiplier, double endurance, double MAX_TIME)
         {
             double speed = 0d;
 
@@ -185,7 +166,7 @@ namespace TootTallyDifficultyCalculator2._0
             return speed * weight * directionMultiplier * endurance;
         }
 
-        public double CalcTapStrain(Note nextNote, Note previousNote, double weight, float comboMultiplier, double endurance, double MIN_TIMEDELTA)
+        public static double CalcTapStrain(Note nextNote, Note previousNote, double weight, double comboMultiplier, double endurance, double MIN_TIMEDELTA)
         {
             var tapStrain = 0d;
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
@@ -199,10 +180,10 @@ namespace TootTallyDifficultyCalculator2._0
 
         public static bool CheckDirectionChange(Direction prevDir, Direction currDir) => (prevDir != currDir && prevDir != Direction.Null && currDir != Direction.Null);
 
-        public double CalcAccStrain(Note nextNote, Note previousNote, double weight, float comboMultiplier, float directionMultiplier, double AVERAGE_NOTE_LENGTH, double TOTAL_NOTE_LENGTH)
+        public static double CalcAccStrain(Note nextNote, Note previousNote, double weight, double comboMultiplier, double directionMultiplier, double AVERAGE_NOTE_LENGTH, double TOTAL_NOTE_LENGTH)
         {
             var accStrain = 0d;
-            var lengthmult = Math.Sqrt((nextNote.length*1.01f) / AVERAGE_NOTE_LENGTH);
+            var lengthmult = Math.Sqrt((nextNote.length * 1.01f) / AVERAGE_NOTE_LENGTH);
 
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
@@ -220,7 +201,7 @@ namespace TootTallyDifficultyCalculator2._0
             return accStrain;
         }
 
-        public static double CalcAimEndurance(Note nextNote, Note previousNote, double weight, float directionalMultiplier)
+        public static double CalcAimEndurance(Note nextNote, Note previousNote, double weight, double directionalMultiplier)
         {
             var endurance = 0d;
             var enduranceAimStrain = 0d;
@@ -258,22 +239,8 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void CalculateAnalytics(float gamespeed)
         {
-            if (aimPerfDict[gamespeed].Count <= 0)
-                aimPerfDict[gamespeed].Add(new DataVector(0, 0, 0));
-            if (aimEndPerfDict[gamespeed].Count <= 0)
-                aimEndPerfDict[gamespeed].Add(new DataVector(0, 0, 0));
-            if (tapPerfDict[gamespeed].Count <= 0)
-                tapPerfDict[gamespeed].Add(new DataVector(0, 0, 0));
-            if (tapEndPerfDict[gamespeed].Count <= 0)
-                tapEndPerfDict[gamespeed].Add(new DataVector(0, 0, 0));
-            if (accPerfDict[gamespeed].Count <= 0)
-                accPerfDict[gamespeed].Add(new DataVector(0, 0, 0));
-
-
             aimAnalyticsDict[gamespeed] = new DataVectorAnalytics(aimPerfDict[gamespeed]);
-            aimEndAnalyticsDict[gamespeed] = new DataVectorAnalytics(aimEndPerfDict[gamespeed]);
             tapAnalyticsDict[gamespeed] = new DataVectorAnalytics(tapPerfDict[gamespeed]);
-            tapEndAnalyticsDict[gamespeed] = new DataVectorAnalytics(tapEndPerfDict[gamespeed]);
             accAnalyticsDict[gamespeed] = new DataVectorAnalytics(accPerfDict[gamespeed]);
         }
 
@@ -299,19 +266,19 @@ namespace TootTallyDifficultyCalculator2._0
                 starRatingDict[gamespeed] = 0f;
         }
 
-        public float GetDiffRating(float speed)
+        public double GetDiffRating(float speed)
         {
-            if (speed % .25f == 0)
-                return starRatingDict[speed];
-
             var index = (int)((speed - 0.5f) / .25f);
+            if (speed % .25f == 0)
+                return starRatingDict[index];
+
             var minSpeed = _chart.GAME_SPEED[index];
             var maxSpeed = _chart.GAME_SPEED[index + 1];
             var by = (speed - minSpeed) / (maxSpeed - minSpeed);
-            return Lerp(starRatingDict[minSpeed], starRatingDict[maxSpeed], by);
+            return Lerp(starRatingDict[index], starRatingDict[index+1], by);
         }
 
-        public static float Lerp(float firstFloat, float secondFloat, float by) //Linear easing
+        public static double Lerp(double firstFloat, double secondFloat, float by) //Linear easing
         {
             return firstFloat + (secondFloat - firstFloat) * by;
         }
@@ -331,11 +298,11 @@ namespace TootTallyDifficultyCalculator2._0
 
         public class DataVector
         {
-            public float performance;
-            public float time;
-            public float weight;
+            public double performance;
+            public double time;
+            public double weight;
 
-            public DataVector(float time, float performance, float weight)
+            public DataVector(double time, double performance, double weight)
             {
                 this.time = time;
                 this.performance = performance;
@@ -346,19 +313,17 @@ namespace TootTallyDifficultyCalculator2._0
 
         public class DataVectorAnalytics
         {
-            public float perfAverage, perfMax, perfMin, perfSum, perfWeightedAverage;
+            public double perfAverage, perfMax, perfMin, perfSum, perfWeightedAverage;
 
             public DataVectorAnalytics(List<DataVector> dataVectorList)
             {
-                perfAverage = dataVectorList.Average(x => x.performance);
                 perfWeightedAverage = CalculateWeightedAverage(dataVectorList);
                 perfMax = dataVectorList.Max(x => x.performance);
                 perfMin = dataVectorList.Min(x => x.performance);
-                perfSum = dataVectorList.Sum(x => x.performance);
             }
 
-            public float CalculateWeightedAverage(List<DataVector> dataVectorList) => dataVectorList.Sum(x => x.performance * x.weight) / dataVectorList.Sum(x => x.weight);
-        } 
+            public double CalculateWeightedAverage(List<DataVector> dataVectorList) => dataVectorList.Sum(x => x.performance * x.weight) / dataVectorList.Sum(x => x.weight);
+        }
 
         public class SerializableDiffData
         {

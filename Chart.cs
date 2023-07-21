@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Permissions;
@@ -39,30 +40,23 @@ namespace TootTallyDifficultyCalculator2._0
 
         public TimeSpan calculationTime;
 
-
         public void OnDeserialize()
         {
             notesDict = new Dictionary<float, List<Note>>();
             for (int i = 0; i < GAME_SPEED.Length; i++)
             {
                 var gamespeed = GAME_SPEED[i];
+                var newTempo = float.Parse(tempo) * gamespeed;
+                var minLength = BeatToSeconds2(0.01, newTempo);
                 int count = 1;
-                if (!notesDict.ContainsKey(gamespeed))
-                    notesDict[gamespeed] = new List<Note>();
+                notesDict[i] = new List<Note>(notes.Length);
                 foreach (string[] n in notes)
                 {
-                    notesDict[gamespeed].Add(new Note(count, BeatToSeconds2(double.Parse(n[0]), float.Parse(tempo) * gamespeed), BeatToSeconds2(double.Parse(n[1]), float.Parse(tempo) * gamespeed), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
-                    if (notesDict[gamespeed].Last().length == 0)
-                        notesDict[gamespeed].Last().length = BeatToSeconds2(0.01, float.Parse(tempo) * gamespeed);
+                    notesDict[i].Add(new Note(count, BeatToSeconds2(double.Parse(n[0]), newTempo), BeatToSeconds2(double.Parse(n[1]), newTempo), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
+                    if (notesDict[i].Last().length == 0)
+                        notesDict[i].Last().length = minLength;
                     count++;
                 }
-            }
-
-            for (int i = 0; i < GAME_SPEED.Length; i++)
-            {
-                foreach (Note n in notesDict[GAME_SPEED[i]])
-                    if (n.count < notesDict[GAME_SPEED[i]].Count)
-                        n.SetIsSlider(CheckIfIsSlider(GAME_SPEED[i], n.count - 1));
             }
 
             performances = new ChartPerformances(this);
@@ -71,9 +65,9 @@ namespace TootTallyDifficultyCalculator2._0
             stopwatch.Start();
             for (int i = 0; i < GAME_SPEED.Length; i++)
             {
-                performances.CalculatePerformances(GAME_SPEED[i]);
-                performances.CalculateAnalytics(GAME_SPEED[i]);
-                performances.CalculateRatings(GAME_SPEED[i]);
+                performances.CalculatePerformances(i);
+                performances.CalculateAnalytics(i);
+                performances.CalculateRatings(i);
             }
             stopwatch.Stop();
             calculationTime = stopwatch.Elapsed;
@@ -120,15 +114,13 @@ namespace TootTallyDifficultyCalculator2._0
             TootTallyAPIServices.GetChartData(this, (leaderboard) => this.leaderboard = leaderboard);
         }
 
-        public float GetDiffRating(float speed) => performances.GetDiffRating(speed);
+        public double GetDiffRating(float speed) => performances.GetDiffRating(speed);
 
-        public float GetAimPerformance(float speed) => performances.aimAnalyticsDict[speed].perfAverage;
-        public float GetAimEndPerformance(float speed) => performances.aimEndPerfDict[speed].Average(x=>x.performance);
-        public float GetTapPerformance(float speed) => performances.tapAnalyticsDict[speed].perfAverage;
-        public float GetTapEndPerformance(float speed) => performances.tapEndPerfDict[speed].Average(x=>x.performance);
-        public float GetAccPerformance(float speed) => performances.accAnalyticsDict[speed].perfAverage;
+        public double GetAimPerformance(float speed) => performances.aimAnalyticsDict[speed].perfAverage;
+        public double GetTapPerformance(float speed) => performances.tapAnalyticsDict[speed].perfAverage;
+        public double GetAccPerformance(float speed) => performances.accAnalyticsDict[speed].perfAverage;
 
-        public float GetStarRating(float speed) => performances.starRatingDict[speed];
+        public double GetStarRating(float speed) => performances.starRatingDict[speed];
         #region Note
 
         public enum Direction
@@ -144,10 +136,6 @@ namespace TootTallyDifficultyCalculator2._0
             public string bar;
             public string text;
         }
-
-        public bool CheckIfIsSlider(float gamespeed, int index) => (notesDict[gamespeed][index].position + notesDict[gamespeed][index].length >= notesDict[gamespeed][index + 1].position) || (notesDict[gamespeed][index].pitchDelta != 0);
-
-        public float GetTempoMultiplier() => (float.Parse(tempo) / 100f);
         public static double BeatToSeconds(double time, float bpm)
         {
             return time / bpm * 60d;

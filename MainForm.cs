@@ -11,7 +11,6 @@ namespace TootTallyDifficultyCalculator2._0
 {
     public partial class MainForm : Form
     {
-        private List<string> _fileNameLists;
         private List<string> _replayNameLists;
         private Chart _currentChart;
         private ReplayData _currentReplay;
@@ -22,7 +21,6 @@ namespace TootTallyDifficultyCalculator2._0
         public MainForm()
         {
             InitializeComponent();
-            _fileNameLists = new List<string>();
             _replayNameLists = new List<string>();
             chartList = new List<Chart>();
 
@@ -46,14 +44,13 @@ namespace TootTallyDifficultyCalculator2._0
             var currentCount = 0;
             ProgressBarLoading.Maximum = maxCount;
             ProgressBarLoading.Value = 0;
-            Parallel.ForEach(filesList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, name =>
+            Parallel.ForEach(filesList, name =>
             {
 
                 chartList.Add(ChartReader.LoadChart(name));
-                if (!File.Exists(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json"))
-                    ExportChartToJson(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json", chartList.Last());
+                /*if (!File.Exists(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json"))
+                    ExportChartToJson(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json", chartList.Last());*/
 
-                _fileNameLists.Add(name.Remove(0, Program.MAIN_DIRECTORY.Length));
                 currentCount++;
                 if (!ProgressBarLoading.InvokeRequired)
                 {
@@ -69,6 +66,7 @@ namespace TootTallyDifficultyCalculator2._0
             ProgressBarLoading.Value = value;
             float percent = (value / (float)maxValue) * 100f;
             LoadingLabel.Text = $"LOADING {percent:0.00}%";
+            this.Update();
         }
 
         public void FillComboBoxReplay()
@@ -122,7 +120,7 @@ namespace TootTallyDifficultyCalculator2._0
         {
             TextBoxChartData.Clear();
             TextBoxLeaderboardData.Clear();
-            var allChartDataTextLines = new List<string>();
+            var allChartDataTextLines = new List<string>((checkboxAllSpeed.Checked ? 40 : 7) * chartList.Count);
             var allLeaderboardTextLines = new List<string>();
 
             chartList.Sort((x, y) => String.Compare(x.name, y.name));
@@ -141,7 +139,7 @@ namespace TootTallyDifficultyCalculator2._0
                 if (checkboxAllSpeed.Checked)
                     DisplayAllSpeed(chart, ref chartTextLines);
                 else
-                    DisplayAtSpeed(chart,1f, ref chartTextLines);
+                    DisplayAtSpeed(chart, 3, ref chartTextLines);
                 chartTextLines.Add("=====================================================================================================");
                 chartTextLines.Add("");
                 allChartDataTextLines.AddRange(chartTextLines);
@@ -169,22 +167,18 @@ namespace TootTallyDifficultyCalculator2._0
         public void DisplayAllSpeed(Chart chart, ref List<string> textLines)
         {
             for (int i = 0; i < chart.GAME_SPEED.Length; i++)
-                DisplayAtSpeed(chart, chart.GAME_SPEED[i], ref textLines);
+                DisplayAtSpeed(chart, i, ref textLines);
         }
 
-        public void DisplayAtSpeed(Chart chart, float gamespeed, ref List<string> textLines)
+        public void DisplayAtSpeed(Chart chart, int speedIndex, ref List<string> textLines)
         {
-            DataVectorAnalytics aimAnalytics = chart.performances.aimAnalyticsDict[gamespeed];
-            DataVectorAnalytics aimEndAnalytics = chart.performances.aimEndAnalyticsDict[gamespeed];
-            DataVectorAnalytics tapAnalytics = chart.performances.tapAnalyticsDict[gamespeed];
-            DataVectorAnalytics tapEndAnalytics = chart.performances.tapEndAnalyticsDict[gamespeed];
-            DataVectorAnalytics accAnalytics = chart.performances.accAnalyticsDict[gamespeed];
-            textLines.Add($"SPEED: {gamespeed:0.00}x rated {chart.GetStarRating(gamespeed)}");
-            textLines.Add($"  aim: " + aimAnalytics.perfWeightedAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
-            textLines.Add($"  aend: " + aimEndAnalytics.perfAverage + " min: " + aimEndAnalytics.perfMin + " max: " + aimEndAnalytics.perfMax);
-            textLines.Add($"  tap: " + tapAnalytics.perfWeightedAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
-            textLines.Add($"  tend: " + tapEndAnalytics.perfAverage + " min: " + tapEndAnalytics.perfMin + " max: " + tapEndAnalytics.perfMax);
-            textLines.Add($"  acc: " + accAnalytics.perfWeightedAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
+            DataVectorAnalytics aimAnalytics = chart.performances.aimAnalyticsDict[speedIndex];
+            DataVectorAnalytics tapAnalytics = chart.performances.tapAnalyticsDict[speedIndex];
+            DataVectorAnalytics accAnalytics = chart.performances.accAnalyticsDict[speedIndex];
+            textLines.Add($"SPEED: {chart.GAME_SPEED[speedIndex]:0.00}x rated {chart.GetStarRating(speedIndex):0.0000}");
+            textLines.Add($"  aim: {aimAnalytics.perfWeightedAverage:0.0000} min: {aimAnalytics.perfMin:0.0000} max: {aimAnalytics.perfMax:0.0000}");
+            textLines.Add($"  tap: {tapAnalytics.perfWeightedAverage:0.0000} min: {tapAnalytics.perfMin:0.0000} max: {tapAnalytics.perfMax:0.0000}");
+            textLines.Add($"  acc: {accAnalytics.perfWeightedAverage:0.0000} min: {accAnalytics.perfMin:0.0000} max: {accAnalytics.perfMax:0.0000}");
             textLines.Add("--------------------------------------------");
         }
 
@@ -238,7 +232,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         //TT for S rank (60% score)
         //https://www.desmos.com/calculator/rhwqyp21nr
-        public static double CalculateBaseTT(float starRating)
+        public static double CalculateBaseTT(double starRating)
         {
 
             return 1.05f * FastPow(starRating, 2) + (3f * starRating) + 0.01f;
