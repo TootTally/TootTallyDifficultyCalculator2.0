@@ -34,7 +34,6 @@ namespace TootTallyDifficultyCalculator2._0
                 Directory.CreateDirectory(Program.LEADERBOARD_DIRECTORY);
         }
 
-
         public void LoadAllCharts()
         {
             Stopwatch stopwatch = new Stopwatch();

@@ -13,6 +13,7 @@
     <SourceRoot Include="C:\Users\Sabz\.nuget\packages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgUnmanagedExports Condition=" '$(PkgUnmanagedExports)' == '' ">C:\Users\Sabz\.nuget\packages\unmanagedexports\1.2.7</PkgUnmanagedExports>
     <PkgSyncfusion_Shared_Base Condition=" '$(PkgSyncfusion_Shared_Base)' == '' ">C:\Users\Sabz\.nuget\packages\syncfusion.shared.base\22.1.36</PkgSyncfusion_Shared_Base>
     <PkgSyncfusion_Chart_Windows Condition=" '$(PkgSyncfusion_Chart_Windows)' == '' ">C:\Users\Sabz\.nuget\packages\syncfusion.chart.windows\22.1.36</PkgSyncfusion_Chart_Windows>
   </PropertyGroup>

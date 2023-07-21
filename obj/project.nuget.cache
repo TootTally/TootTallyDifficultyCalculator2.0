@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ddQGWQ0zYW2NBDDT/b72bKb3nPXs0BgmrvqGTQDTIUNXLcsjihH/tn14EbBGyz8mor+N+sauwRN/26T/ODz3Vg==",
+  "dgSpecHash": "p9lWs+9thtFZILmHH92PrZwNVxekTjgUcGD6hYKxpjF+sV0ObZ7vWJCUzY3RZD6683fumSL/abFPr6nZUsFmmg==",
   "success": true,
   "projectFilePath": "E:\\Visual Studio Projects\\Beat Saber Project\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0\\TootTallyDifficultyCalculator2.0.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,19 @@
     "C:\\Users\\Sabz\\.nuget\\packages\\syncfusion.licensing\\22.1.36\\syncfusion.licensing.22.1.36.nupkg.sha512",
     "C:\\Users\\Sabz\\.nuget\\packages\\syncfusion.shared.base\\22.1.36\\syncfusion.shared.base.22.1.36.nupkg.sha512",
     "C:\\Users\\Sabz\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
-    "C:\\Users\\Sabz\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\Sabz\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Sabz\\.nuget\\packages\\unmanagedexports\\1.2.7\\unmanagedexports.1.2.7.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'UnmanagedExports 1.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "UnmanagedExports",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }
