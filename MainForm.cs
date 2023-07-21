@@ -180,11 +180,11 @@ namespace TootTallyDifficultyCalculator2._0
             DataVectorAnalytics tapEndAnalytics = chart.performances.tapEndAnalyticsDict[gamespeed];
             DataVectorAnalytics accAnalytics = chart.performances.accAnalyticsDict[gamespeed];
             textLines.Add($"SPEED: {gamespeed:0.00}x rated {chart.GetStarRating(gamespeed)}");
-            textLines.Add($"  aim: " + aimAnalytics.perfAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
+            textLines.Add($"  aim: " + aimAnalytics.perfWeightedAverage + " min: " + aimAnalytics.perfMin + " max: " + aimAnalytics.perfMax);
             textLines.Add($"  aend: " + aimEndAnalytics.perfAverage + " min: " + aimEndAnalytics.perfMin + " max: " + aimEndAnalytics.perfMax);
-            textLines.Add($"  tap: " + tapAnalytics.perfAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
+            textLines.Add($"  tap: " + tapAnalytics.perfWeightedAverage + " min: " + tapAnalytics.perfMin + " max: " + tapAnalytics.perfMax);
             textLines.Add($"  tend: " + tapEndAnalytics.perfAverage + " min: " + tapEndAnalytics.perfMin + " max: " + tapEndAnalytics.perfMax);
-            textLines.Add($"  acc: " + accAnalytics.perfAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
+            textLines.Add($"  acc: " + accAnalytics.perfWeightedAverage + " min: " + accAnalytics.perfMin + " max: " + accAnalytics.perfMax);
             textLines.Add("--------------------------------------------");
         }
 

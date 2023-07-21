@@ -3,655 +3,817 @@
     "aim": [
       {
         "performance": 0.0,
-        "time": 4.0
+        "time": 4.0,
+        "weight": 0.050847456
       },
       {
-        "performance": "NaN",
-        "time": 11.0
+        "performance": 0.68567777,
+        "time": 11.0,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 11.25
+        "performance": 0.72973996,
+        "time": 11.25,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 11.75
+        "performance": 0.6557468,
+        "time": 11.75,
+        "weight": 0.033898305
       },
       {
-        "performance": "NaN",
-        "time": 12.5
+        "performance": 0.6712215,
+        "time": 12.5,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 15.0
+        "performance": 0.8453407,
+        "time": 15.0,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 15.25
+        "performance": 0.5293946,
+        "time": 15.25,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 15.75
+        "performance": 0.63239306,
+        "time": 15.75,
+        "weight": 0.033898305
       },
       {
-        "performance": "NaN",
-        "time": 16.5
+        "performance": 0.63425326,
+        "time": 16.5,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 17.0
+        "performance": 0.6127031,
+        "time": 17.0,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 17.5
+        "performance": 0.67834675,
+        "time": 17.5,
+        "weight": 0.004237288
       },
       {
-        "performance": "NaN",
-        "time": 17.75
+        "performance": 0.5721242,
+        "time": 17.75,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 20.0
+        "performance": 0.9357031,
+        "time": 20.0,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 20.5
+        "performance": 0.88008237,
+        "time": 20.5,
+        "weight": 0.004237288
       },
       {
-        "performance": "NaN",
-        "time": 20.75
+        "performance": 0.8052414,
+        "time": 20.75,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 21.25
+        "performance": 0.66470647,
+        "time": 21.25,
+        "weight": 0.033898305
       },
       {
-        "performance": "NaN",
-        "time": 22.0
+        "performance": 0.50595903,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 22.5
+        "performance": 0.43953112,
+        "time": 22.5,
+        "weight": 0.004237288
       },
       {
-        "performance": "NaN",
-        "time": 22.75
+        "performance": 0.62443405,
+        "time": 22.75,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 23.25
+        "performance": 0.3585662,
+        "time": 23.25,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 24.0
+        "performance": 0.6562588,
+        "time": 24.0,
+        "weight": 0.06779661
       },
       {
-        "performance": "NaN",
-        "time": 27.0
+        "performance": 1.08786,
+        "time": 27.0,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 27.25
+        "performance": 1.1346014,
+        "time": 27.25,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 27.75
+        "performance": 1.0064129,
+        "time": 27.75,
+        "weight": 0.033898305
       },
       {
-        "performance": "NaN",
-        "time": 28.5
+        "performance": 1.0231736,
+        "time": 28.5,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 31.0
+        "performance": 1.2740804,
+        "time": 31.0,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 31.25
+        "performance": 0.78194284,
+        "time": 31.25,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 31.75
+        "performance": 0.9178796,
+        "time": 31.75,
+        "weight": 0.033898305
       },
       {
-        "performance": "NaN",
-        "time": 32.5
+        "performance": 0.90512043,
+        "time": 32.5,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 33.0
+        "performance": 0.8618751,
+        "time": 33.0,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 33.5
+        "performance": 0.93930703,
+        "time": 33.5,
+        "weight": 0.004237288
       },
       {
-        "performance": "NaN",
-        "time": 33.75
+        "performance": 0.7727769,
+        "time": 33.75,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 36.0
+        "performance": 1.3054354,
+        "time": 36.0,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 36.5
+        "performance": 1.204601,
+        "time": 36.5,
+        "weight": 0.004237288
       },
       {
-        "performance": "NaN",
-        "time": 36.75
+        "performance": 1.2255076,
+        "time": 36.75,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 37.25
+        "performance": 1.175978,
+        "time": 37.25,
+        "weight": 0.033898305
       },
       {
-        "performance": "NaN",
-        "time": 38.0
+        "performance": 0.98163706,
+        "time": 38.0,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 38.5
+        "performance": 1.3347354,
+        "time": 38.5,
+        "weight": 0.004237288
       },
       {
-        "performance": "NaN",
-        "time": 38.75
+        "performance": 1.5066563,
+        "time": 38.75,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 39.25
+        "performance": 1.6983625,
+        "time": 39.25,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 40.0
+        "performance": 1.8714916,
+        "time": 40.0,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 40.75
+        "performance": 1.9143347,
+        "time": 40.75,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 41.5
+        "performance": 1.9567405,
+        "time": 41.5,
+        "weight": 0.042372882
       },
       {
-        "performance": "NaN",
-        "time": 42.5
+        "performance": 2.4616904,
+        "time": 42.5,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 42.75
+        "performance": 2.1235774,
+        "time": 42.75,
+        "weight": 0.021186441
       },
       {
-        "performance": "NaN",
-        "time": 43.25
+        "performance": 2.1186843,
+        "time": 43.25,
+        "weight": 0.004237288
       },
       {
-        "performance": "NaN",
-        "time": 43.5
+        "performance": 2.1537802,
+        "time": 43.5,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 44.0
+        "performance": 2.0776281,
+        "time": 44.0,
+        "weight": 0.008474576
       },
       {
-        "performance": "NaN",
-        "time": 44.75
+        "performance": 1.9756039,
+        "time": 44.75,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 45.5
+        "performance": 1.8728231,
+        "time": 45.5,
+        "weight": 0.033898305
       },
       {
-        "performance": "NaN",
-        "time": 46.5
+        "performance": 1.1853797,
+        "time": 46.5,
+        "weight": 0.016949153
       },
       {
-        "performance": "NaN",
-        "time": 46.75
+        "performance": 0.64728224,
+        "time": 46.75,
+        "weight": 0.021186441
       },
       {
-        "performance": "NaN",
-        "time": 47.25
+        "performance": 0.3950416,
+        "time": 47.25,
+        "weight": 0.004237288
       },
       {
-        "performance": "NaN",
-        "time": 47.5
+        "performance": 0.13277104,
+        "time": 47.5,
+        "weight": 0.016949153
       }
     ],
     "tap": [
       {
         "performance": 0.0,
-        "time": 4.0
+        "time": 4.0,
+        "weight": 0.050847456
       },
       {
-        "performance": 0.5460278,
-        "time": 11.0
+        "performance": 0.18481627,
+        "time": 11.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.5632007,
-        "time": 11.25
+        "performance": 0.1925505,
+        "time": 11.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.51163715,
-        "time": 11.75
+        "performance": 0.17761925,
+        "time": 11.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 0.48429847,
-        "time": 12.5
+        "performance": 0.17121468,
+        "time": 12.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.4251369,
-        "time": 15.0
+        "performance": 0.47991204,
+        "time": 15.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.5468849,
-        "time": 15.25
+        "performance": 0.53289825,
+        "time": 15.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.2935694,
-        "time": 15.75
+        "performance": 0.44661653,
+        "time": 15.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.3491454,
-        "time": 16.5
+        "performance": 0.4820866,
+        "time": 16.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.5375342,
-        "time": 17.0
+        "performance": 0.5862734,
+        "time": 17.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.5713073,
-        "time": 17.5
+        "performance": 0.6127069,
+        "time": 17.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.5403863,
-        "time": 17.75
+        "performance": 0.5741385,
+        "time": 17.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.8091207,
-        "time": 20.0
+        "performance": 1.1015375,
+        "time": 20.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.6149197,
-        "time": 20.5
+        "performance": 1.0558172,
+        "time": 20.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.1920745,
-        "time": 20.75
+        "performance": 0.8698167,
+        "time": 20.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8088673,
-        "time": 21.25
+        "performance": 0.73063326,
+        "time": 21.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.5965637,
-        "time": 22.0
+        "performance": 0.667173,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.284043,
-        "time": 22.5
+        "performance": 0.5499743,
+        "time": 22.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.71782035,
-        "time": 22.75
+        "performance": 0.31041524,
+        "time": 22.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.31809792,
-        "time": 23.25
+        "performance": 0.15011375,
+        "time": 23.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 0.6050684,
-        "time": 24.0
+        "performance": 0.26651075,
+        "time": 24.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 0.6057376,
-        "time": 27.0
+        "performance": 0.269285,
+        "time": 27.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.62447524,
-        "time": 27.25
+        "performance": 0.27868533,
+        "time": 27.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.56700665,
-        "time": 27.75
+        "performance": 0.25537923,
+        "time": 27.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 0.5364599,
-        "time": 28.5
+        "performance": 0.24469799,
+        "time": 28.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.5772629,
-        "time": 31.0
+        "performance": 0.67900634,
+        "time": 31.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.7098433,
-        "time": 31.25
+        "performance": 0.7430217,
+        "time": 31.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.4281175,
-        "time": 31.75
+        "performance": 0.61467093,
+        "time": 31.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.4877676,
-        "time": 32.5
+        "performance": 0.6557659,
+        "time": 32.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.6934872,
-        "time": 33.0
+        "performance": 0.78804845,
+        "time": 33.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.7704604,
-        "time": 33.5
+        "performance": 0.83346784,
+        "time": 33.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.4879355,
-        "time": 33.75
+        "performance": 0.66352063,
+        "time": 33.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.7242477,
-        "time": 36.0
+        "performance": 1.2652171,
+        "time": 36.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.712204,
-        "time": 36.5
+        "performance": 1.2827878,
+        "time": 36.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.4498272,
-        "time": 36.75
+        "performance": 1.1158131,
+        "time": 36.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.320895,
-        "time": 37.25
+        "performance": 1.055005,
+        "time": 37.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.076906,
-        "time": 38.0
+        "performance": 0.9639875,
+        "time": 38.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.7772256,
-        "time": 38.5
+        "performance": 0.91628647,
+        "time": 38.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.2021834,
-        "time": 38.75
+        "performance": 0.60405934,
+        "time": 38.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.6718707,
-        "time": 39.25
+        "performance": 0.8681818,
+        "time": 39.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8530895,
-        "time": 40.0
+        "performance": 0.97200006,
+        "time": 40.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.856633,
-        "time": 40.75
+        "performance": 0.97633743,
+        "time": 40.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.7696265,
-        "time": 41.5
+        "performance": 0.9330302,
+        "time": 41.5,
+        "weight": 0.042372882
       },
       {
-        "performance": 1.7700654,
-        "time": 42.5
+        "performance": 0.91158634,
+        "time": 42.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8086835,
-        "time": 42.75
+        "performance": 0.92795306,
+        "time": 42.75,
+        "weight": 0.021186441
       },
       {
-        "performance": 2.0134413,
-        "time": 43.25
+        "performance": 1.0317571,
+        "time": 43.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.9246763,
-        "time": 43.5
+        "performance": 0.97830594,
+        "time": 43.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.8750815,
-        "time": 44.0
+        "performance": 0.9534709,
+        "time": 44.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.545279,
-        "time": 44.75
+        "performance": 0.81532776,
+        "time": 44.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.1658987,
-        "time": 45.5
+        "performance": 0.64838284,
+        "time": 45.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.1391675,
-        "time": 46.5
+        "performance": 0.54727864,
+        "time": 46.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.0877396,
-        "time": 46.75
+        "performance": 0.52138245,
+        "time": 46.75,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.78270906,
-        "time": 47.25
+        "performance": 0.3863174,
+        "time": 47.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.28938752,
-        "time": 47.5
+        "performance": 0.1278434,
+        "time": 47.5,
+        "weight": 0.016949153
       }
     ],
     "acc": [
       {
         "performance": 0.0,
-        "time": 4.0
+        "time": 4.0,
+        "weight": 0.050847456
       },
       {
-        "performance": 1.2563846,
-        "time": 11.0
+        "performance": 1.0902101,
+        "time": 11.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.2924291,
-        "time": 11.25
+        "performance": 1.1214871,
+        "time": 11.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.96213734,
-        "time": 11.75
+        "performance": 0.78972495,
+        "time": 11.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 0.97527087,
-        "time": 12.5
+        "performance": 0.73713714,
+        "time": 12.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.149423,
-        "time": 15.0
+        "performance": 1.4230909,
+        "time": 15.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9111257,
-        "time": 15.25
+        "performance": 1.151644,
+        "time": 15.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.4626317,
-        "time": 15.75
+        "performance": 1.2532407,
+        "time": 15.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.5029135,
-        "time": 16.5
+        "performance": 1.249393,
+        "time": 16.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2843745,
-        "time": 17.0
+        "performance": 1.2392486,
+        "time": 17.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.1980448,
-        "time": 17.5
+        "performance": 1.4140526,
+        "time": 17.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.3353994,
-        "time": 17.75
+        "performance": 1.1442722,
+        "time": 17.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.972271,
-        "time": 20.0
+        "performance": 1.8004185,
+        "time": 20.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.5963252,
-        "time": 20.5
+        "performance": 1.7078638,
+        "time": 20.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.4560938,
-        "time": 20.75
+        "performance": 1.5175114,
+        "time": 20.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.0474122,
-        "time": 21.25
+        "performance": 1.109621,
+        "time": 21.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.5571333,
-        "time": 22.0
+        "performance": 0.9169731,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.2406862,
-        "time": 22.5
+        "performance": 0.8234954,
+        "time": 22.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.2159201,
-        "time": 22.75
+        "performance": 0.7548714,
+        "time": 22.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.33112663,
-        "time": 23.25
+        "performance": 0.31198606,
+        "time": 23.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 0.9181977,
-        "time": 24.0
+        "performance": 0.7702381,
+        "time": 24.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 0.8849493,
-        "time": 27.0
+        "performance": 1.0902101,
+        "time": 27.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.2924291,
-        "time": 27.25
+        "performance": 1.1214871,
+        "time": 27.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.96213734,
-        "time": 27.75
+        "performance": 0.78972495,
+        "time": 27.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 0.97527087,
-        "time": 28.5
+        "performance": 0.73713714,
+        "time": 28.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.149423,
-        "time": 31.0
+        "performance": 1.4230909,
+        "time": 31.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9111257,
-        "time": 31.25
+        "performance": 1.151644,
+        "time": 31.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.4626317,
-        "time": 31.75
+        "performance": 1.2532407,
+        "time": 31.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.5029135,
-        "time": 32.5
+        "performance": 1.249393,
+        "time": 32.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2843745,
-        "time": 33.0
+        "performance": 1.2392486,
+        "time": 33.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2512739,
-        "time": 33.5
+        "performance": 1.4482961,
+        "time": 33.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.0529308,
-        "time": 33.75
+        "performance": 1.0058714,
+        "time": 33.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.758634,
-        "time": 36.0
+        "performance": 1.7457974,
+        "time": 36.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.6071196,
-        "time": 36.5
+        "performance": 1.7918301,
+        "time": 36.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.8356874,
-        "time": 36.75
+        "performance": 1.8213564,
+        "time": 36.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.758263,
-        "time": 37.25
+        "performance": 1.7191519,
+        "time": 37.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.2762246,
-        "time": 38.0
+        "performance": 1.5250374,
+        "time": 38.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2653189,
-        "time": 38.5
+        "performance": 1.7089967,
+        "time": 38.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.1288564,
-        "time": 38.75
+        "performance": 1.5946734,
+        "time": 38.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.5692384,
-        "time": 39.25
+        "performance": 1.7058727,
+        "time": 39.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.0876927,
-        "time": 40.0
+        "performance": 2.0430074,
+        "time": 40.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.1043007,
-        "time": 40.75
+        "performance": 2.0673602,
+        "time": 40.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.0080683,
-        "time": 41.5
+        "performance": 1.9728594,
+        "time": 41.5,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.2444134,
-        "time": 42.5
+        "performance": 2.232132,
+        "time": 42.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.0359547,
-        "time": 42.75
+        "performance": 1.9976923,
+        "time": 42.75,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.3031464,
-        "time": 43.25
+        "performance": 2.236605,
+        "time": 43.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.1878324,
-        "time": 43.5
+        "performance": 2.2793539,
+        "time": 43.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.6877363,
-        "time": 44.0
+        "performance": 2.1508026,
+        "time": 44.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.1644404,
-        "time": 44.75
+        "performance": 1.8382158,
+        "time": 44.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.702863,
-        "time": 45.5
+        "performance": 1.4541345,
+        "time": 45.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.2723789,
-        "time": 46.5
+        "performance": 1.0091462,
+        "time": 46.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.9220619,
-        "time": 46.75
+        "performance": 0.6591479,
+        "time": 46.75,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.4623405,
-        "time": 47.25
+        "performance": 0.49867028,
+        "time": 47.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.13155337,
-        "time": 47.5
+        "performance": 0.1627673,
+        "time": 47.5,
+        "weight": 0.016949153
       }
     ]
   },
@@ -659,3935 +821,4907 @@
     "aim": [
       {
         "performance": 0.0,
-        "time": 2.6666667
+        "time": 2.6666667,
+        "weight": 0.050847456
       },
       {
-        "performance": 0.9259235,
-        "time": 7.3333335
+        "performance": 1.0592629,
+        "time": 7.3333335,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.95944387,
-        "time": 7.5
+        "performance": 1.2294279,
+        "time": 7.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.2604169,
-        "time": 7.8333335
+        "performance": 1.407728,
+        "time": 7.8333335,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.1622474,
-        "time": 8.333333
+        "performance": 1.366351,
+        "time": 8.333333,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.3744088,
-        "time": 10.0
+        "performance": 1.5424986,
+        "time": 10.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.346799,
-        "time": 10.166667
+        "performance": 1.1650506,
+        "time": 10.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.549057,
-        "time": 10.5
+        "performance": 1.4127898,
+        "time": 10.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.5315052,
-        "time": 11.0
+        "performance": 1.4162993,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.5359411,
-        "time": 11.333333
+        "performance": 1.4636824,
+        "time": 11.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.6882112,
-        "time": 11.666667
+        "performance": 1.6780653,
+        "time": 11.666667,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.3265237,
-        "time": 11.833333
+        "performance": 1.3679924,
+        "time": 11.833333,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.2433314,
-        "time": 13.333333
+        "performance": 1.3182912,
+        "time": 13.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.1295108,
-        "time": 13.666667
+        "performance": 1.2302777,
+        "time": 13.666667,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.9997889,
-        "time": 13.833333
+        "performance": 1.1185056,
+        "time": 13.833333,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.0228002,
-        "time": 14.166667
+        "performance": 1.52399,
+        "time": 14.166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.00156,
-        "time": 14.666667
+        "performance": 1.3283842,
+        "time": 14.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.05717,
-        "time": 15.0
+        "performance": 1.4471585,
+        "time": 15.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.85410106,
-        "time": 15.166667
+        "performance": 1.2516155,
+        "time": 15.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.53971535,
-        "time": 15.5
+        "performance": 0.89548457,
+        "time": 15.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 0.55680686,
-        "time": 16.0
+        "performance": 1.3791837,
+        "time": 16.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 1.0727043,
-        "time": 18.0
+        "performance": 1.8907542,
+        "time": 18.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.1094894,
-        "time": 18.166666
+        "performance": 2.093138,
+        "time": 18.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.4545021,
-        "time": 18.5
+        "performance": 2.2979555,
+        "time": 18.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.3383036,
-        "time": 19.0
+        "performance": 2.1456435,
+        "time": 19.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.5790513,
-        "time": 20.666666
+        "performance": 2.323391,
+        "time": 20.666666,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.543771,
-        "time": 20.833334
+        "performance": 1.6725682,
+        "time": 20.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.7714003,
-        "time": 21.166666
+        "performance": 1.9497753,
+        "time": 21.166666,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.7470843,
-        "time": 21.666666
+        "performance": 1.8829015,
+        "time": 21.666666,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.7480984,
-        "time": 22.0
+        "performance": 1.8797958,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.9169935,
-        "time": 22.333334
+        "performance": 2.0843832,
+        "time": 22.333334,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.5031836,
-        "time": 22.5
+        "performance": 1.7428844,
+        "time": 22.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8012083,
-        "time": 24.0
+        "performance": 1.967333,
+        "time": 24.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.9296691,
-        "time": 24.333334
+        "performance": 2.332255,
+        "time": 24.333334,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.952821,
-        "time": 24.5
+        "performance": 2.6047294,
+        "time": 24.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.2716405,
-        "time": 24.833334
+        "performance": 2.9867008,
+        "time": 24.833334,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.3361251,
-        "time": 25.333334
+        "performance": 3.015393,
+        "time": 25.333334,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2919693,
-        "time": 25.666666
+        "performance": 2.9872763,
+        "time": 25.666666,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.2586322,
-        "time": 25.833334
+        "performance": 2.9645483,
+        "time": 25.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9275539,
-        "time": 26.166666
+        "performance": 2.7581224,
+        "time": 26.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.0425947,
-        "time": 26.666666
+        "performance": 2.7316854,
+        "time": 26.666666,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.4413025,
-        "time": 27.166666
+        "performance": 3.920556,
+        "time": 27.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.8320742,
-        "time": 27.666666
+        "performance": 4.565227,
+        "time": 27.666666,
+        "weight": 0.042372882
       },
       {
-        "performance": 2.6494358,
-        "time": 28.333334
+        "performance": 3.8435287,
+        "time": 28.333334,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.5166366,
-        "time": 28.5
+        "performance": 3.4313602,
+        "time": 28.5,
+        "weight": 0.021186441
       },
       {
-        "performance": 2.2744565,
-        "time": 28.833334
+        "performance": 3.1486247,
+        "time": 28.833334,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.0112479,
-        "time": 29.0
+        "performance": 2.9075432,
+        "time": 29.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.7478205,
-        "time": 29.333334
+        "performance": 2.6605344,
+        "time": 29.333334,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.5818324,
-        "time": 29.833334
+        "performance": 2.5274045,
+        "time": 29.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.4208052,
-        "time": 30.333334
+        "performance": 2.3943179,
+        "time": 30.333334,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.0348704,
-        "time": 31.0
+        "performance": 1.514527,
+        "time": 31.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.7595254,
-        "time": 31.166666
+        "performance": 0.82642,
+        "time": 31.166666,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.4887768,
-        "time": 31.5
+        "performance": 0.50402486,
+        "time": 31.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.15398958,
-        "time": 31.666666
+        "performance": 0.16931719,
+        "time": 31.666666,
+        "weight": 0.016949153
       }
     ],
     "tap": [
       {
         "performance": 0.0,
-        "time": 2.6666667
+        "time": 2.6666667,
+        "weight": 0.050847456
       },
       {
-        "performance": 1.7736464,
-        "time": 7.3333335
+        "performance": 0.5151961,
+        "time": 7.3333335,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.3330417,
-        "time": 7.5
+        "performance": 0.65823346,
+        "time": 7.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.650534,
-        "time": 7.8333335
+        "performance": 0.7286864,
+        "time": 7.8333335,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.4269974,
-        "time": 8.333333
+        "performance": 0.6632657,
+        "time": 8.333333,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.2087755,
-        "time": 10.0
+        "performance": 1.1241511,
+        "time": 10.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.6347804,
-        "time": 10.166667
+        "performance": 1.2686753,
+        "time": 10.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.48003,
-        "time": 10.5
+        "performance": 1.2178265,
+        "time": 10.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.5590954,
-        "time": 11.0
+        "performance": 1.3063573,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.7789576,
-        "time": 11.333333
+        "performance": 1.504105,
+        "time": 11.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.8452506,
-        "time": 11.666667
+        "performance": 1.590488,
+        "time": 11.666667,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.6844106,
-        "time": 11.833333
+        "performance": 1.5261253,
+        "time": 11.833333,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.9181066,
-        "time": 13.333333
+        "performance": 1.7081554,
+        "time": 13.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.70271,
-        "time": 13.666667
+        "performance": 1.6286182,
+        "time": 13.666667,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.2513552,
-        "time": 13.833333
+        "performance": 1.3347281,
+        "time": 13.833333,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.3797944,
-        "time": 14.166667
+        "performance": 1.3526797,
+        "time": 14.166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.5192645,
-        "time": 14.666667
+        "performance": 1.2694712,
+        "time": 14.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.5109196,
-        "time": 15.0
+        "performance": 1.2509452,
+        "time": 15.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.9975685,
-        "time": 15.166667
+        "performance": 0.86061615,
+        "time": 15.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.6300365,
-        "time": 15.5
+        "performance": 0.6240419,
+        "time": 15.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.2252678,
-        "time": 16.0
+        "performance": 0.4620073,
+        "time": 16.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 2.1340897,
-        "time": 18.0
+        "performance": 0.925093,
+        "time": 18.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.5995803,
-        "time": 18.166666
+        "performance": 1.1343219,
+        "time": 18.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9755726,
-        "time": 18.5
+        "performance": 1.2046993,
+        "time": 18.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.7038221,
-        "time": 19.0
+        "performance": 1.0536884,
+        "time": 19.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.629652,
-        "time": 20.666666
+        "performance": 1.7097347,
+        "time": 20.666666,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.125615,
-        "time": 20.833334
+        "performance": 1.8424373,
+        "time": 20.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.9313617,
-        "time": 21.166666
+        "performance": 1.6957318,
+        "time": 21.166666,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.0142536,
-        "time": 21.666666
+        "performance": 1.7507426,
+        "time": 21.666666,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.2618396,
-        "time": 22.0
+        "performance": 1.9431281,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.3864496,
-        "time": 22.333334
+        "performance": 2.0285633,
+        "time": 22.333334,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.8445613,
-        "time": 22.5
+        "performance": 1.7716064,
+        "time": 22.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.5748196,
-        "time": 24.0
+        "performance": 2.052945,
+        "time": 24.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.545084,
-        "time": 24.333334
+        "performance": 2.1638098,
+        "time": 24.333334,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.9940476,
-        "time": 24.5
+        "performance": 1.7780353,
+        "time": 24.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4179668,
-        "time": 24.833334
+        "performance": 2.0434175,
+        "time": 24.833334,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.4968588,
-        "time": 25.333334
+        "performance": 2.0942063,
+        "time": 25.333334,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.2102685,
-        "time": 25.666666
+        "performance": 1.9369192,
+        "time": 25.666666,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.8538332,
-        "time": 25.833334
+        "performance": 1.6457218,
+        "time": 25.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.5125754,
-        "time": 26.166666
+        "performance": 1.5779015,
+        "time": 26.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.6389375,
-        "time": 26.666666
+        "performance": 1.534471,
+        "time": 26.666666,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.366857,
-        "time": 27.166666
+        "performance": 1.5068568,
+        "time": 27.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.8554919,
-        "time": 27.666666
+        "performance": 1.9761283,
+        "time": 27.666666,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.2008154,
-        "time": 28.333334
+        "performance": 1.8502898,
+        "time": 28.333334,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.2650516,
-        "time": 28.5
+        "performance": 1.8894215,
+        "time": 28.5,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.1787612,
-        "time": 28.833334
+        "performance": 1.8989766,
+        "time": 28.833334,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.5007463,
-        "time": 29.0
+        "performance": 1.4658324,
+        "time": 29.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.0711653,
-        "time": 29.333334
+        "performance": 1.2366105,
+        "time": 29.333334,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.7174655,
-        "time": 29.833334
+        "performance": 1.0610331,
+        "time": 29.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.3254565,
-        "time": 30.333334
+        "performance": 0.8539608,
+        "time": 30.333334,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.3125378,
-        "time": 31.0
+        "performance": 0.7265471,
+        "time": 31.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.2820067,
-        "time": 31.166666
+        "performance": 0.70287883,
+        "time": 31.166666,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.9257617,
-        "time": 31.5
+        "performance": 0.5235276,
+        "time": 31.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.3514993,
-        "time": 31.666666
+        "performance": 0.17603177,
+        "time": 31.666666,
+        "weight": 0.016949153
       }
     ],
     "acc": [
       {
         "performance": 0.0,
-        "time": 2.6666667
+        "time": 2.6666667,
+        "weight": 0.050847456
       },
       {
-        "performance": 1.8522943,
-        "time": 7.3333335
+        "performance": 1.5742308,
+        "time": 7.3333335,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9054347,
-        "time": 7.5
+        "performance": 1.7767345,
+        "time": 7.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.3497329,
-        "time": 7.8333335
+        "performance": 1.9653542,
+        "time": 7.8333335,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.1016138,
-        "time": 8.333333
+        "performance": 1.757729,
+        "time": 8.333333,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.7644625,
-        "time": 10.0
+        "performance": 2.3198693,
+        "time": 10.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.690012,
-        "time": 10.166667
+        "performance": 2.0767307,
+        "time": 10.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.923244,
-        "time": 10.5
+        "performance": 2.173622,
+        "time": 10.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.86044,
-        "time": 11.0
+        "performance": 2.123863,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.750902,
-        "time": 11.333333
+        "performance": 2.202627,
+        "time": 11.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.9271076,
-        "time": 11.666667
+        "performance": 2.4088151,
+        "time": 11.666667,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.7632012,
-        "time": 11.833333
+        "performance": 2.0195184,
+        "time": 11.833333,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.2522857,
-        "time": 13.333333
+        "performance": 1.9026499,
+        "time": 13.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.9558344,
-        "time": 13.666667
+        "performance": 1.7999351,
+        "time": 13.666667,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.8371696,
-        "time": 13.833333
+        "performance": 1.5941527,
+        "time": 13.833333,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8531452,
-        "time": 14.166667
+        "performance": 1.7308607,
+        "time": 14.166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.6973019,
-        "time": 14.666667
+        "performance": 1.54547,
+        "time": 14.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.7313579,
-        "time": 15.0
+        "performance": 1.6825438,
+        "time": 15.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.5074224,
-        "time": 15.166667
+        "performance": 1.3297533,
+        "time": 15.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.8680616,
-        "time": 15.5
+        "performance": 0.88161606,
+        "time": 15.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 0.8139799,
-        "time": 16.0
+        "performance": 1.090789,
+        "time": 16.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 1.8522943,
-        "time": 18.0
+        "performance": 1.5742308,
+        "time": 18.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9054347,
-        "time": 18.166666
+        "performance": 1.7767345,
+        "time": 18.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.3497329,
-        "time": 18.5
+        "performance": 1.9653542,
+        "time": 18.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.1016138,
-        "time": 19.0
+        "performance": 1.757729,
+        "time": 19.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.7644625,
-        "time": 20.666666
+        "performance": 2.3198693,
+        "time": 20.666666,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.690012,
-        "time": 20.833334
+        "performance": 2.0767307,
+        "time": 20.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.923244,
-        "time": 21.166666
+        "performance": 2.173622,
+        "time": 21.166666,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.86044,
-        "time": 21.666666
+        "performance": 2.123863,
+        "time": 21.666666,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.750902,
-        "time": 22.0
+        "performance": 2.202627,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.9043763,
-        "time": 22.333334
+        "performance": 2.5201614,
+        "time": 22.333334,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.4367876,
-        "time": 22.5
+        "performance": 1.961154,
+        "time": 22.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.6479893,
-        "time": 24.0
+        "performance": 2.3576567,
+        "time": 24.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.7984052,
-        "time": 24.333334
+        "performance": 2.6916778,
+        "time": 24.333334,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.8836803,
-        "time": 24.5
+        "performance": 2.7085435,
+        "time": 24.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.368953,
-        "time": 24.833334
+        "performance": 2.8614995,
+        "time": 24.833334,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.4150121,
-        "time": 25.333334
+        "performance": 2.9495203,
+        "time": 25.333334,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.2689834,
-        "time": 25.666666
+        "performance": 2.9277868,
+        "time": 25.666666,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.3206177,
-        "time": 25.833334
+        "performance": 2.808992,
+        "time": 25.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.8927064,
-        "time": 26.166666
+        "performance": 2.6283152,
+        "time": 26.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.1139238,
-        "time": 26.666666
+        "performance": 2.7171526,
+        "time": 26.666666,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.5182078,
-        "time": 27.166666
+        "performance": 3.212458,
+        "time": 27.166666,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8705907,
-        "time": 27.666666
+        "performance": 3.6252098,
+        "time": 27.666666,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.5896337,
-        "time": 28.333334
+        "performance": 3.1386395,
+        "time": 28.333334,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3554688,
-        "time": 28.5
+        "performance": 2.8974972,
+        "time": 28.5,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.1883793,
-        "time": 28.833334
+        "performance": 3.008382,
+        "time": 28.833334,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.825849,
-        "time": 29.0
+        "performance": 2.6388247,
+        "time": 29.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.3312347,
-        "time": 29.333334
+        "performance": 2.2822685,
+        "time": 29.333334,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.9473228,
-        "time": 29.833334
+        "performance": 1.9598796,
+        "time": 29.833334,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.6141883,
-        "time": 30.333334
+        "performance": 1.5694877,
+        "time": 30.333334,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.1433163,
-        "time": 31.0
+        "performance": 1.0980271,
+        "time": 31.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.7620675,
-        "time": 31.166666
+        "performance": 0.726489,
+        "time": 31.166666,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.38442662,
-        "time": 31.5
+        "performance": 0.55130076,
+        "time": 31.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.11249027,
-        "time": 31.666666
+        "performance": 0.18256547,
+        "time": 31.666666,
+        "weight": 0.016949153
       }
     ]
   },
   "speed100": {
     "aim": [
       {
-        "performance": 0.3834862,
-        "time": 2.0
+        "performance": 0.5724495,
+        "time": 2.0,
+        "weight": 0.050847456
       },
       {
-        "performance": 1.5613782,
-        "time": 5.5
+        "performance": 1.6103529,
+        "time": 5.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.6250662,
-        "time": 5.625
+        "performance": 1.7599691,
+        "time": 5.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.6110656,
-        "time": 5.875
+        "performance": 1.8067098,
+        "time": 5.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.6547076,
-        "time": 6.25
+        "performance": 1.9882596,
+        "time": 6.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.2131004,
-        "time": 7.5
+        "performance": 2.548585,
+        "time": 7.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.2295449,
-        "time": 7.625
+        "performance": 2.151398,
+        "time": 7.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.3257172,
-        "time": 7.875
+        "performance": 2.3249013,
+        "time": 7.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.2381248,
-        "time": 8.25
+        "performance": 2.2707343,
+        "time": 8.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.0582945,
-        "time": 8.5
+        "performance": 2.1574159,
+        "time": 8.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.9414912,
-        "time": 8.75
+        "performance": 2.0947144,
+        "time": 8.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.5192808,
-        "time": 8.875
+        "performance": 1.699766,
+        "time": 8.875,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8161528,
-        "time": 10.0
+        "performance": 2.2873344,
+        "time": 10.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.8324223,
-        "time": 10.25
+        "performance": 2.409219,
+        "time": 10.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.6975061,
-        "time": 10.375
+        "performance": 2.3117204,
+        "time": 10.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.5103778,
-        "time": 10.625
+        "performance": 2.0808818,
+        "time": 10.625,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.3334986,
-        "time": 11.0
+        "performance": 1.816457,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.2450386,
-        "time": 11.25
+        "performance": 1.7273576,
+        "time": 11.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.0059025,
-        "time": 11.375
+        "performance": 1.9700541,
+        "time": 11.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.1975273,
-        "time": 11.625
+        "performance": 2.2500484,
+        "time": 11.625,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.3851649,
-        "time": 12.0
+        "performance": 2.7563226,
+        "time": 12.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 1.8944194,
-        "time": 13.5
+        "performance": 2.7801754,
+        "time": 13.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9643698,
-        "time": 13.625
+        "performance": 2.8708427,
+        "time": 13.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9403805,
-        "time": 13.875
+        "performance": 2.812987,
+        "time": 13.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.9859836,
-        "time": 14.25
+        "performance": 2.9694517,
+        "time": 14.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.645621,
-        "time": 15.5
+        "performance": 3.617215,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.6541426,
-        "time": 15.625
+        "performance": 2.895587,
+        "time": 15.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.849267,
-        "time": 15.875
+        "performance": 3.0983021,
+        "time": 15.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.738471,
-        "time": 16.25
+        "performance": 2.9214003,
+        "time": 16.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.7008836,
-        "time": 16.5
+        "performance": 2.8737247,
+        "time": 16.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.7291284,
-        "time": 16.75
+        "performance": 2.9075031,
+        "time": 16.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.242349,
-        "time": 16.875
+        "performance": 2.4091544,
+        "time": 16.875,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.423128,
-        "time": 18.0
+        "performance": 4.168054,
+        "time": 18.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.3389513,
-        "time": 18.25
+        "performance": 4.102854,
+        "time": 18.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.3974338,
-        "time": 18.375
+        "performance": 4.174588,
+        "time": 18.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4006748,
-        "time": 18.625
+        "performance": 4.160848,
+        "time": 18.625,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.241351,
-        "time": 19.0
+        "performance": 3.9301362,
+        "time": 19.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.5697002,
-        "time": 19.25
+        "performance": 4.6538324,
+        "time": 19.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.6196775,
-        "time": 19.375
+        "performance": 5.114764,
+        "time": 19.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4713438,
-        "time": 19.625
+        "performance": 5.3370414,
+        "time": 19.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8602982,
-        "time": 20.0
+        "performance": 5.539293,
+        "time": 20.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.7165182,
-        "time": 20.375
+        "performance": 5.4859443,
+        "time": 20.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.5920753,
-        "time": 20.75
+        "performance": 5.4299297,
+        "time": 20.75,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.1850727,
-        "time": 21.25
+        "performance": 4.5672636,
+        "time": 21.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.9669106,
-        "time": 21.375
+        "performance": 4.0735755,
+        "time": 21.375,
+        "weight": 0.021186441
       },
       {
-        "performance": 2.69099,
-        "time": 21.625
+        "performance": 3.7347786,
+        "time": 21.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.3778222,
-        "time": 21.75
+        "performance": 3.4464457,
+        "time": 21.75,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.0675628,
-        "time": 22.0
+        "performance": 3.1519299,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.8725595,
-        "time": 22.375
+        "performance": 2.9929998,
+        "time": 22.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.6944156,
-        "time": 22.75
+        "performance": 2.8347368,
+        "time": 22.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.2028334,
-        "time": 23.25
+        "performance": 1.7926894,
+        "time": 23.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.8328663,
-        "time": 23.375
+        "performance": 0.9778447,
+        "time": 23.375,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.544537,
-        "time": 23.625
+        "performance": 0.5961522,
+        "time": 23.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.1675183,
-        "time": 23.75
+        "performance": 0.20021184,
+        "time": 23.75,
+        "weight": 0.016949153
       }
     ],
     "tap": [
       {
-        "performance": 0.8169965,
-        "time": 2.0
+        "performance": 0.25029653,
+        "time": 2.0,
+        "weight": 0.050847456
       },
       {
-        "performance": 2.5200152,
-        "time": 5.5
+        "performance": 0.964565,
+        "time": 5.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.0930972,
-        "time": 5.625
+        "performance": 1.0590659,
+        "time": 5.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8662877,
-        "time": 5.875
+        "performance": 0.96327055,
+        "time": 5.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.9042115,
-        "time": 6.25
+        "performance": 1.2685491,
+        "time": 6.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4504025,
-        "time": 7.5
+        "performance": 2.0738742,
+        "time": 7.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.9508235,
-        "time": 7.625
+        "performance": 2.3738546,
+        "time": 7.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8260899,
-        "time": 7.875
+        "performance": 2.3560205,
+        "time": 7.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.7049189,
-        "time": 8.25
+        "performance": 2.3849344,
+        "time": 8.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.5604265,
-        "time": 8.5
+        "performance": 2.3937802,
+        "time": 8.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.3696542,
-        "time": 8.75
+        "performance": 2.348512,
+        "time": 8.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.147246,
-        "time": 8.875
+        "performance": 2.2457736,
+        "time": 8.875,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.93573,
-        "time": 10.0
+        "performance": 2.5603392,
+        "time": 10.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.9860063,
-        "time": 10.25
+        "performance": 2.5798316,
+        "time": 10.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.560079,
-        "time": 10.375
+        "performance": 2.1862142,
+        "time": 10.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.1924324,
-        "time": 10.625
+        "performance": 1.8990011,
+        "time": 10.625,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.0060394,
-        "time": 11.0
+        "performance": 1.7761139,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.712469,
-        "time": 11.25
+        "performance": 1.558565,
+        "time": 11.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.146817,
-        "time": 11.375
+        "performance": 1.12048,
+        "time": 11.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.7521197,
-        "time": 11.625
+        "performance": 0.8278955,
+        "time": 11.625,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.9784784,
-        "time": 12.0
+        "performance": 1.1863657,
+        "time": 12.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 3.2065086,
-        "time": 13.5
+        "performance": 1.737096,
+        "time": 13.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.6497672,
-        "time": 13.625
+        "performance": 1.7933396,
+        "time": 13.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.3527584,
-        "time": 13.875
+        "performance": 1.5456342,
+        "time": 13.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.3912325,
-        "time": 14.25
+        "performance": 1.9328101,
+        "time": 14.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.31017,
-        "time": 15.5
+        "performance": 2.9801798,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.903458,
-        "time": 15.625
+        "performance": 3.220226,
+        "time": 15.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.7185426,
-        "time": 15.875
+        "performance": 3.0385444,
+        "time": 15.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.5424623,
-        "time": 16.25
+        "performance": 2.945764,
+        "time": 16.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.58809,
-        "time": 16.5
+        "performance": 2.987702,
+        "time": 16.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.6570554,
-        "time": 16.75
+        "performance": 3.0499363,
+        "time": 16.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.0554566,
-        "time": 16.875
+        "performance": 2.5826137,
+        "time": 16.875,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.139166,
-        "time": 18.0
+        "performance": 3.5168467,
+        "time": 18.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.087436,
-        "time": 18.25
+        "performance": 3.6142197,
+        "time": 18.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.7417607,
-        "time": 18.375
+        "performance": 3.3036406,
+        "time": 18.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.5690894,
-        "time": 18.625
+        "performance": 3.1654658,
+        "time": 18.625,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.3065753,
-        "time": 19.0
+        "performance": 3.0235665,
+        "time": 19.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.980849,
-        "time": 19.25
+        "performance": 2.9504387,
+        "time": 19.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.3256035,
-        "time": 19.375
+        "performance": 2.4195638,
+        "time": 19.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.2766173,
-        "time": 19.625
+        "performance": 2.7651505,
+        "time": 19.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.9561276,
-        "time": 20.0
+        "performance": 2.9726825,
+        "time": 20.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.6922803,
-        "time": 20.375
+        "performance": 2.8318508,
+        "time": 20.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3260534,
-        "time": 20.75
+        "performance": 2.5836654,
+        "time": 20.75,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.3615806,
-        "time": 21.25
+        "performance": 2.429577,
+        "time": 21.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.437539,
-        "time": 21.375
+        "performance": 2.4866664,
+        "time": 21.375,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.275082,
-        "time": 21.625
+        "performance": 2.4764736,
+        "time": 21.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.5837414,
-        "time": 21.75
+        "performance": 1.9164174,
+        "time": 21.75,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.148607,
-        "time": 22.0
+        "performance": 1.6206461,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.7962568,
-        "time": 22.375
+        "performance": 1.3966472,
+        "time": 22.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.4119172,
-        "time": 22.75
+        "performance": 1.1353137,
+        "time": 22.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.4147545,
-        "time": 23.25
+        "performance": 0.9721737,
+        "time": 23.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.4044515,
-        "time": 23.375
+        "performance": 0.9496271,
+        "time": 23.375,
+        "weight": 0.021186441
       },
       {
-        "performance": 1.0176431,
-        "time": 23.625
+        "performance": 0.70910037,
+        "time": 23.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.39276376,
-        "time": 23.75
+        "performance": 0.24083304,
+        "time": 23.75,
+        "weight": 0.016949153
       }
     ],
     "acc": [
       {
-        "performance": 0.58456165,
-        "time": 2.0
+        "performance": 0.85853887,
+        "time": 2.0,
+        "weight": 0.050847456
       },
       {
-        "performance": 2.43848,
-        "time": 5.5
+        "performance": 2.4158785,
+        "time": 5.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.5084374,
-        "time": 5.625
+        "performance": 2.4851878,
+        "time": 5.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.6956697,
-        "time": 5.875
+        "performance": 2.2494643,
+        "time": 5.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.7535906,
-        "time": 6.25
+        "performance": 2.394123,
+        "time": 6.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3507152,
-        "time": 7.5
+        "performance": 3.3183107,
+        "time": 7.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3605711,
-        "time": 7.625
+        "performance": 3.1050358,
+        "time": 7.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3299997,
-        "time": 7.875
+        "performance": 3.0231822,
+        "time": 7.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.1098125,
-        "time": 8.25
+        "performance": 2.8745742,
+        "time": 8.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.8364182,
-        "time": 8.5
+        "performance": 2.6766727,
+        "time": 8.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.5923185,
-        "time": 8.75
+        "performance": 2.5669348,
+        "time": 8.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.386036,
-        "time": 8.875
+        "performance": 2.1258807,
+        "time": 8.875,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.4139023,
-        "time": 10.0
+        "performance": 2.5341537,
+        "time": 10.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.3610835,
-        "time": 10.25
+        "performance": 2.6402206,
+        "time": 10.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.280615,
-        "time": 10.375
+        "performance": 2.4553595,
+        "time": 10.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.0432925,
-        "time": 10.625
+        "performance": 2.0150068,
+        "time": 10.625,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.7449632,
-        "time": 11.0
+        "performance": 1.8249476,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.5678378,
-        "time": 11.25
+        "performance": 1.758629,
+        "time": 11.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.3753387,
-        "time": 11.375
+        "performance": 1.6882331,
+        "time": 11.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.718981,
-        "time": 11.625
+        "performance": 1.6560467,
+        "time": 11.625,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.8777527,
-        "time": 12.0
+        "performance": 1.987855,
+        "time": 12.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 2.43848,
-        "time": 13.5
+        "performance": 2.4158785,
+        "time": 13.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.5084374,
-        "time": 13.625
+        "performance": 2.4851878,
+        "time": 13.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.6956697,
-        "time": 13.875
+        "performance": 2.2494643,
+        "time": 13.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.7535906,
-        "time": 14.25
+        "performance": 2.394123,
+        "time": 14.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3507152,
-        "time": 15.5
+        "performance": 3.3751018,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.2999861,
-        "time": 15.625
+        "performance": 3.1655967,
+        "time": 15.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4099836,
-        "time": 15.875
+        "performance": 3.1765687,
+        "time": 15.875,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.1907513,
-        "time": 16.25
+        "performance": 3.0292854,
+        "time": 16.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.158954,
-        "time": 16.5
+        "performance": 3.066011,
+        "time": 16.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.1257026,
-        "time": 16.75
+        "performance": 3.2755983,
+        "time": 16.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.7273536,
-        "time": 16.875
+        "performance": 2.5828838,
+        "time": 16.875,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.735836,
-        "time": 18.0
+        "performance": 3.7292736,
+        "time": 18.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.7107334,
-        "time": 18.25
+        "performance": 3.929777,
+        "time": 18.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.8643904,
-        "time": 18.375
+        "performance": 3.9665117,
+        "time": 18.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8424559,
-        "time": 18.625
+        "performance": 3.82421,
+        "time": 18.625,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.558509,
-        "time": 19.0
+        "performance": 3.6292439,
+        "time": 19.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.8375945,
-        "time": 19.25
+        "performance": 3.9746997,
+        "time": 19.25,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.9704247,
-        "time": 19.375
+        "performance": 3.9258418,
+        "time": 19.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.9310498,
-        "time": 19.625
+        "performance": 4.051913,
+        "time": 19.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.3006263,
-        "time": 20.0
+        "performance": 4.445113,
+        "time": 20.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.08247,
-        "time": 20.375
+        "performance": 4.234744,
+        "time": 20.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8541627,
-        "time": 20.75
+        "performance": 3.8332734,
+        "time": 20.75,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.4364357,
-        "time": 21.25
+        "performance": 3.3290298,
+        "time": 21.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.161868,
-        "time": 21.375
+        "performance": 3.0766592,
+        "time": 21.375,
+        "weight": 0.021186441
       },
       {
-        "performance": 2.975104,
-        "time": 21.625
+        "performance": 3.1617725,
+        "time": 21.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.6756978,
-        "time": 21.75
+        "performance": 2.7778041,
+        "time": 21.75,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2600708,
-        "time": 22.0
+        "performance": 2.4065633,
+        "time": 22.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.9420729,
-        "time": 22.375
+        "performance": 2.07442,
+        "time": 22.375,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.6728495,
-        "time": 22.75
+        "performance": 1.6769246,
+        "time": 22.75,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.1359617,
-        "time": 23.25
+        "performance": 1.1802335,
+        "time": 23.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.6974517,
-        "time": 23.375
+        "performance": 0.7880968,
+        "time": 23.375,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.3531184,
-        "time": 23.625
+        "performance": 0.5993271,
+        "time": 23.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.105003715,
-        "time": 23.75
+        "performance": 0.20041732,
+        "time": 23.75,
+        "weight": 0.016949153
       }
     ]
   },
   "speed125": {
     "aim": [
       {
-        "performance": 0.59477085,
-        "time": 1.6
+        "performance": 0.64019895,
+        "time": 1.6,
+        "weight": 0.050847456
       },
       {
-        "performance": 2.16597,
-        "time": 4.4
+        "performance": 2.243301,
+        "time": 4.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.4376671,
-        "time": 4.5
+        "performance": 2.4946697,
+        "time": 4.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.3297405,
-        "time": 4.7
+        "performance": 2.6898193,
+        "time": 4.7,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.5177844,
-        "time": 5.0
+        "performance": 2.9756236,
+        "time": 5.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.798228,
-        "time": 6.0
+        "performance": 3.024285,
+        "time": 6.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.493741,
-        "time": 6.1
+        "performance": 2.53743,
+        "time": 6.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.602981,
-        "time": 6.3
+        "performance": 2.7289846,
+        "time": 6.3,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.5111847,
-        "time": 6.6
+        "performance": 2.6546948,
+        "time": 6.6,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.586493,
-        "time": 6.8
+        "performance": 2.9894993,
+        "time": 6.8,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.4664445,
-        "time": 7.0
+        "performance": 2.940702,
+        "time": 7.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.160804,
-        "time": 7.1
+        "performance": 2.705292,
+        "time": 7.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.207,
-        "time": 8.0
+        "performance": 2.8835235,
+        "time": 8.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.0819743,
-        "time": 8.2
+        "performance": 2.7782187,
+        "time": 8.2,
+        "weight": 0.004237288
       },
       {
-        "performance": 1.9292526,
-        "time": 8.3
+        "performance": 3.1245728,
+        "time": 8.3,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.352141,
-        "time": 8.5
+        "performance": 3.588828,
+        "time": 8.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.1805115,
-        "time": 8.8
+        "performance": 3.3148685,
+        "time": 8.8,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2564974,
-        "time": 9.0
+        "performance": 3.464577,
+        "time": 9.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.0089068,
-        "time": 9.1
+        "performance": 3.2023451,
+        "time": 9.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8826429,
-        "time": 9.3
+        "performance": 3.0089636,
+        "time": 9.3,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.5785694,
-        "time": 9.6
+        "performance": 3.750127,
+        "time": 9.6,
+        "weight": 0.06779661
       },
       {
-        "performance": 2.7475748,
-        "time": 10.8
+        "performance": 3.8700035,
+        "time": 10.8,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.073428,
-        "time": 10.9
+        "performance": 4.0014973,
+        "time": 10.9,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.920038,
-        "time": 11.1
+        "performance": 4.0599065,
+        "time": 11.1,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.1378613,
-        "time": 11.4
+        "performance": 4.2572656,
+        "time": 11.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.7510178,
-        "time": 12.4
+        "performance": 4.3848443,
+        "time": 12.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.370544,
-        "time": 12.5
+        "performance": 3.5724075,
+        "time": 12.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.6783183,
-        "time": 12.7
+        "performance": 3.879212,
+        "time": 12.7,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.9076395,
-        "time": 13.0
+        "performance": 4.2478795,
+        "time": 13.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.927237,
-        "time": 13.2
+        "performance": 4.4823112,
+        "time": 13.2,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.3657084,
-        "time": 13.4
+        "performance": 5.028815,
+        "time": 13.4,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.7997782,
-        "time": 13.5
+        "performance": 4.5040708,
+        "time": 13.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.341059,
-        "time": 14.4
+        "performance": 5.1215477,
+        "time": 14.4,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.633088,
-        "time": 14.6
+        "performance": 5.8131,
+        "time": 14.6,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.813603,
-        "time": 14.7
+        "performance": 6.3919373,
+        "time": 14.7,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.8612623,
-        "time": 14.9
+        "performance": 6.8769817,
+        "time": 14.9,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.100458,
-        "time": 15.2
+        "performance": 6.8334446,
+        "time": 15.2,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.072262,
-        "time": 15.4
+        "performance": 6.910978,
+        "time": 15.4,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.816978,
-        "time": 15.5
+        "performance": 6.7321815,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.417809,
-        "time": 15.7
+        "performance": 6.29819,
+        "time": 15.7,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.3980384,
-        "time": 16.0
+        "performance": 6.3558326,
+        "time": 16.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.2411556,
-        "time": 16.3
+        "performance": 6.288296,
+        "time": 16.3,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.1098814,
-        "time": 16.6
+        "performance": 6.2191,
+        "time": 16.6,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.629041,
-        "time": 17.0
+        "performance": 5.2273903,
+        "time": 17.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3479784,
-        "time": 17.1
+        "performance": 4.6589518,
+        "time": 17.1,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.0590565,
-        "time": 17.3
+        "performance": 4.268737,
+        "time": 17.3,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.716291,
-        "time": 17.4
+        "performance": 3.937129,
+        "time": 17.4,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.3762758,
-        "time": 17.6
+        "performance": 3.5991998,
+        "time": 17.6,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.1611316,
-        "time": 17.9
+        "performance": 3.4166903,
+        "time": 17.9,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9714401,
-        "time": 18.2
+        "performance": 3.2354906,
+        "time": 18.2,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.3698866,
-        "time": 18.6
+        "performance": 2.045763,
+        "time": 18.6,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.9053403,
-        "time": 18.7
+        "performance": 1.1155658,
+        "time": 18.7,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.5971817,
-        "time": 18.9
+        "performance": 0.6799119,
+        "time": 18.9,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.1814126,
-        "time": 19.0
+        "performance": 0.22829318,
+        "time": 19.0,
+        "weight": 0.016949153
       }
     ],
     "tap": [
       {
-        "performance": 1.1146451,
-        "time": 1.6
+        "performance": 0.28548378,
+        "time": 1.6,
+        "weight": 0.050847456
       },
       {
-        "performance": 3.435965,
-        "time": 4.4
+        "performance": 1.967446,
+        "time": 4.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.2880301,
-        "time": 4.5
+        "performance": 2.2761219,
+        "time": 4.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.983356,
-        "time": 4.7
+        "performance": 2.3517494,
+        "time": 4.7,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.2501006,
-        "time": 5.0
+        "performance": 2.8580434,
+        "time": 5.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.251792,
-        "time": 6.0
+        "performance": 3.4137151,
+        "time": 6.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.546691,
-        "time": 6.1
+        "performance": 3.3722448,
+        "time": 6.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.25338,
-        "time": 6.3
+        "performance": 3.203839,
+        "time": 6.3,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.1299787,
-        "time": 6.6
+        "performance": 3.1672013,
+        "time": 6.6,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.9583614,
-        "time": 6.8
+        "performance": 3.1420257,
+        "time": 6.8,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.198134,
-        "time": 7.0
+        "performance": 3.0190432,
+        "time": 7.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.257426,
-        "time": 7.1
+        "performance": 3.067516,
+        "time": 7.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.555206,
-        "time": 8.0
+        "performance": 3.3276029,
+        "time": 8.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.3484406,
-        "time": 8.2
+        "performance": 3.174181,
+        "time": 8.2,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.8676891,
-        "time": 8.3
+        "performance": 2.7551966,
+        "time": 8.3,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4857135,
-        "time": 8.5
+        "performance": 2.4082088,
+        "time": 8.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.631375,
-        "time": 8.8
+        "performance": 2.529541,
+        "time": 8.8,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.6050935,
-        "time": 9.0
+        "performance": 2.4723396,
+        "time": 9.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.019097,
-        "time": 9.1
+        "performance": 1.8808604,
+        "time": 9.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.0048747,
-        "time": 9.3
+        "performance": 1.8299041,
+        "time": 9.3,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.4889276,
-        "time": 9.6
+        "performance": 2.2136145,
+        "time": 9.6,
+        "weight": 0.06779661
       },
       {
-        "performance": 4.5839996,
-        "time": 10.8
+        "performance": 3.1613638,
+        "time": 10.8,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.350079,
-        "time": 10.9
+        "performance": 3.276249,
+        "time": 10.9,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.9185784,
-        "time": 11.1
+        "performance": 3.0671418,
+        "time": 11.1,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.2399063,
-        "time": 11.4
+        "performance": 3.5098808,
+        "time": 11.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.7318373,
-        "time": 12.4
+        "performance": 4.1019735,
+        "time": 12.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.0086393,
-        "time": 12.5
+        "performance": 4.41652,
+        "time": 12.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.7770534,
-        "time": 12.7
+        "performance": 4.1965237,
+        "time": 12.7,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.5432267,
-        "time": 13.0
+        "performance": 4.2149997,
+        "time": 13.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.271655,
-        "time": 13.2
+        "performance": 4.108521,
+        "time": 13.2,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.810724,
-        "time": 13.4
+        "performance": 4.671617,
+        "time": 13.4,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.1738787,
-        "time": 13.5
+        "performance": 4.1014166,
+        "time": 13.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.9773726,
-        "time": 14.4
+        "performance": 4.792791,
+        "time": 14.4,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.885222,
-        "time": 14.6
+        "performance": 5.0529723,
+        "time": 14.6,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.268462,
-        "time": 14.7
+        "performance": 4.4860764,
+        "time": 14.7,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.158613,
-        "time": 14.9
+        "performance": 4.8078,
+        "time": 14.9,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.672711,
-        "time": 15.2
+        "performance": 4.8883038,
+        "time": 15.2,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.3576493,
-        "time": 15.4
+        "performance": 4.6878467,
+        "time": 15.4,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.696127,
-        "time": 15.5
+        "performance": 4.037808,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.3303614,
-        "time": 15.7
+        "performance": 3.7608376,
+        "time": 15.7,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.173145,
-        "time": 16.0
+        "performance": 3.7535768,
+        "time": 16.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.8962944,
-        "time": 16.3
+        "performance": 3.5757806,
+        "time": 16.3,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.534048,
-        "time": 16.6
+        "performance": 3.274364,
+        "time": 16.6,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.5868008,
-        "time": 17.0
+        "performance": 3.0867553,
+        "time": 17.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.672954,
-        "time": 17.1
+        "performance": 3.1620991,
+        "time": 17.1,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.4454546,
-        "time": 17.3
+        "performance": 3.1230214,
+        "time": 17.3,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.7255566,
-        "time": 17.4
+        "performance": 2.4199452,
+        "time": 17.4,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2731187,
-        "time": 17.6
+        "performance": 2.0493288,
+        "time": 17.6,
+        "weight": 0.008474576
       },
       {
-        "performance": 1.9108603,
-        "time": 17.9
+        "performance": 1.7714957,
+        "time": 17.9,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.5223082,
-        "time": 18.2
+        "performance": 1.4508114,
+        "time": 18.2,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.5350817,
-        "time": 18.6
+        "performance": 1.2480856,
+        "time": 18.6,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.540286,
-        "time": 18.7
+        "performance": 1.2275937,
+        "time": 18.7,
+        "weight": 0.021186441
       },
       {
-        "performance": 1.1189641,
-        "time": 18.9
+        "performance": 0.9181021,
+        "time": 18.9,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.43606263,
-        "time": 19.0
+        "performance": 0.31402084,
+        "time": 19.0,
+        "weight": 0.016949153
       }
     ],
     "acc": [
       {
-        "performance": 0.8276192,
-        "time": 1.6
+        "performance": 0.89944434,
+        "time": 1.6,
+        "weight": 0.050847456
       },
       {
-        "performance": 3.1624384,
-        "time": 4.4
+        "performance": 3.397005,
+        "time": 4.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.418744,
-        "time": 4.5
+        "performance": 3.4944618,
+        "time": 4.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.2242327,
-        "time": 4.7
+        "performance": 3.2387807,
+        "time": 4.7,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.4449768,
-        "time": 5.0
+        "performance": 3.4083734,
+        "time": 5.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.5901349,
-        "time": 6.0
+        "performance": 3.510834,
+        "time": 6.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.119252,
-        "time": 6.1
+        "performance": 3.2729952,
+        "time": 6.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.1216087,
-        "time": 6.3
+        "performance": 3.2051878,
+        "time": 6.3,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.9203935,
-        "time": 6.6
+        "performance": 3.0509543,
+        "time": 6.6,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.970125,
-        "time": 6.8
+        "performance": 3.067023,
+        "time": 6.8,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.748149,
-        "time": 7.0
+        "performance": 2.9543521,
+        "time": 7.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.6802342,
-        "time": 7.1
+        "performance": 2.763398,
+        "time": 7.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.448431,
-        "time": 8.0
+        "performance": 2.8412998,
+        "time": 8.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2295744,
-        "time": 8.2
+        "performance": 2.757295,
+        "time": 8.2,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.150049,
-        "time": 8.3
+        "performance": 2.8356142,
+        "time": 8.3,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.802071,
-        "time": 8.5
+        "performance": 2.7643542,
+        "time": 8.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 2.560907,
-        "time": 8.8
+        "performance": 2.5846043,
+        "time": 8.8,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.6396258,
-        "time": 9.0
+        "performance": 2.7147107,
+        "time": 9.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.5117862,
-        "time": 9.1
+        "performance": 2.3625536,
+        "time": 9.1,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.3655815,
-        "time": 9.3
+        "performance": 2.2125745,
+        "time": 9.3,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.8621633,
-        "time": 9.6
+        "performance": 2.876919,
+        "time": 9.6,
+        "weight": 0.06779661
       },
       {
-        "performance": 3.1624384,
-        "time": 10.8
+        "performance": 3.397005,
+        "time": 10.8,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.418744,
-        "time": 10.9
+        "performance": 3.4944618,
+        "time": 10.9,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.2242327,
-        "time": 11.1
+        "performance": 3.2387807,
+        "time": 11.1,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.4449768,
-        "time": 11.4
+        "performance": 3.4083734,
+        "time": 11.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8663454,
-        "time": 12.4
+        "performance": 3.8896022,
+        "time": 12.4,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4086006,
-        "time": 12.5
+        "performance": 3.6754081,
+        "time": 12.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.5548468,
-        "time": 12.7
+        "performance": 3.8442822,
+        "time": 12.7,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.646997,
-        "time": 13.0
+        "performance": 3.9164333,
+        "time": 13.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.6497598,
-        "time": 13.2
+        "performance": 3.947661,
+        "time": 13.2,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.9957912,
-        "time": 13.4
+        "performance": 4.4284782,
+        "time": 13.4,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.648998,
-        "time": 13.5
+        "performance": 3.704159,
+        "time": 13.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.954719,
-        "time": 14.4
+        "performance": 4.4083557,
+        "time": 14.4,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.3281374,
-        "time": 14.6
+        "performance": 4.982212,
+        "time": 14.6,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.610479,
-        "time": 14.7
+        "performance": 5.105507,
+        "time": 14.7,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.720651,
-        "time": 14.9
+        "performance": 5.265909,
+        "time": 14.9,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.7510023,
-        "time": 15.2
+        "performance": 5.2750235,
+        "time": 15.2,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.6906133,
-        "time": 15.4
+        "performance": 5.3177385,
+        "time": 15.4,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.53781,
-        "time": 15.5
+        "performance": 4.9251513,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.2377276,
-        "time": 15.7
+        "performance": 4.4728236,
+        "time": 15.7,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.286193,
-        "time": 16.0
+        "performance": 4.6569023,
+        "time": 16.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.0957437,
-        "time": 16.3
+        "performance": 4.4365106,
+        "time": 16.3,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.913224,
-        "time": 16.6
+        "performance": 4.030611,
+        "time": 16.6,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.4561365,
-        "time": 17.0
+        "performance": 3.5091057,
+        "time": 17.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.1358747,
-        "time": 17.1
+        "performance": 3.2459471,
+        "time": 17.1,
+        "weight": 0.021186441
       },
       {
-        "performance": 2.9349883,
-        "time": 17.3
+        "performance": 3.308058,
+        "time": 17.3,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.6715584,
-        "time": 17.4
+        "performance": 2.9101539,
+        "time": 17.4,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.3000665,
-        "time": 17.6
+        "performance": 2.5247462,
+        "time": 17.6,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.0201244,
-        "time": 17.9
+        "performance": 2.1829588,
+        "time": 17.9,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.7893242,
-        "time": 18.2
+        "performance": 1.777881,
+        "time": 18.2,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.1734545,
-        "time": 18.6
+        "performance": 1.2570754,
+        "time": 18.6,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.66542304,
-        "time": 18.7
+        "performance": 0.84522593,
+        "time": 18.7,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.33764577,
-        "time": 18.9
+        "performance": 0.6437806,
+        "time": 18.9,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.10135147,
-        "time": 19.0
+        "performance": 0.21680419,
+        "time": 19.0,
+        "weight": 0.016949153
       }
     ]
   },
   "speed150": {
     "aim": [
       {
-        "performance": 1.3723894,
-        "time": 1.3333334
+        "performance": 1.7058644,
+        "time": 1.3333334,
+        "weight": 0.050847456
       },
       {
-        "performance": 3.0355914,
-        "time": 3.6666667
+        "performance": 3.1286218,
+        "time": 3.6666667,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4522839,
-        "time": 3.75
+        "performance": 3.5183337,
+        "time": 3.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3801165,
-        "time": 3.9166667
+        "performance": 3.631443,
+        "time": 3.9166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.3627405,
-        "time": 4.1666665
+        "performance": 3.728028,
+        "time": 4.1666665,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4367666,
-        "time": 5.0
+        "performance": 3.8919337,
+        "time": 5.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.0670857,
-        "time": 5.0833335
+        "performance": 3.359804,
+        "time": 5.0833335,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.364521,
-        "time": 5.25
+        "performance": 3.7978206,
+        "time": 5.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.4239128,
-        "time": 5.5
+        "performance": 3.9576325,
+        "time": 5.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.225337,
-        "time": 5.6666665
+        "performance": 3.8608143,
+        "time": 5.6666665,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.1050913,
-        "time": 5.8333335
+        "performance": 3.8324463,
+        "time": 5.8333335,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.5931919,
-        "time": 5.9166665
+        "performance": 3.3101587,
+        "time": 5.9166665,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.2018704,
-        "time": 6.6666665
+        "performance": 4.472778,
+        "time": 6.6666665,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.2407327,
-        "time": 6.8333335
+        "performance": 4.58378,
+        "time": 6.8333335,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.1016417,
-        "time": 6.9166665
+        "performance": 4.436329,
+        "time": 6.9166665,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.1554172,
-        "time": 7.0833335
+        "performance": 5.08009,
+        "time": 7.0833335,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.6083736,
-        "time": 7.3333335
+        "performance": 4.8047047,
+        "time": 7.3333335,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.5798206,
-        "time": 7.5
+        "performance": 4.777511,
+        "time": 7.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.3334901,
-        "time": 7.5833335
+        "performance": 4.5147,
+        "time": 7.5833335,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.9624655,
-        "time": 7.75
+        "performance": 4.052213,
+        "time": 7.75,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.242536,
-        "time": 8.0
+        "performance": 4.7120857,
+        "time": 8.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 4.0478745,
-        "time": 9.0
+        "performance": 5.3332644,
+        "time": 9.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.561035,
-        "time": 9.083333
+        "performance": 5.5234494,
+        "time": 9.083333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.4259195,
-        "time": 9.25
+        "performance": 5.44176,
+        "time": 9.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.472289,
-        "time": 9.5
+        "performance": 5.4856644,
+        "time": 9.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.172255,
-        "time": 10.333333
+        "performance": 6.4638205,
+        "time": 10.333333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.925413,
-        "time": 10.416667
+        "performance": 5.916609,
+        "time": 10.416667,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.374755,
-        "time": 10.583333
+        "performance": 6.4166117,
+        "time": 10.583333,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.5160017,
-        "time": 10.833333
+        "performance": 6.2645864,
+        "time": 10.833333,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.4400887,
-        "time": 11.0
+        "performance": 6.2506723,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.450182,
-        "time": 11.166667
+        "performance": 6.3436337,
+        "time": 11.166667,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.8440595,
-        "time": 11.25
+        "performance": 5.7713695,
+        "time": 11.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.2669187,
-        "time": 12.0
+        "performance": 8.069319,
+        "time": 12.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 6.1760263,
-        "time": 12.166667
+        "performance": 8.10187,
+        "time": 12.166667,
+        "weight": 0.004237288
       },
       {
-        "performance": 6.0250034,
-        "time": 12.25
+        "performance": 8.049679,
+        "time": 12.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.849575,
-        "time": 12.416667
+        "performance": 7.908719,
+        "time": 12.416667,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.6667237,
-        "time": 12.666667
+        "performance": 7.6803555,
+        "time": 12.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.6386337,
-        "time": 12.833333
+        "performance": 7.7566023,
+        "time": 12.833333,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.364332,
-        "time": 12.916667
+        "performance": 7.546718,
+        "time": 12.916667,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.9389715,
-        "time": 13.083333
+        "performance": 7.0533967,
+        "time": 13.083333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.922059,
-        "time": 13.333333
+        "performance": 7.1118617,
+        "time": 13.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.7560406,
-        "time": 13.583333
+        "performance": 7.030993,
+        "time": 13.583333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.6176705,
-        "time": 13.833333
+        "performance": 6.9494777,
+        "time": 13.833333,
+        "weight": 0.042372882
       },
       {
-        "performance": 4.0612626,
-        "time": 14.166667
+        "performance": 5.8382244,
+        "time": 14.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.7198822,
-        "time": 14.25
+        "performance": 5.2004547,
+        "time": 14.25,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.4148843,
-        "time": 14.416667
+        "performance": 4.7625494,
+        "time": 14.416667,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.0464432,
-        "time": 14.5
+        "performance": 4.390839,
+        "time": 14.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.6794667,
-        "time": 14.666667
+        "performance": 4.0127254,
+        "time": 14.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.4484022,
-        "time": 14.916667
+        "performance": 3.8084066,
+        "time": 14.916667,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.2438214,
-        "time": 15.166667
+        "performance": 3.6060321,
+        "time": 15.166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.5346727,
-        "time": 15.5
+        "performance": 2.279756,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.9746036,
-        "time": 15.583333
+        "performance": 1.2428789,
+        "time": 15.583333,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.6457876,
-        "time": 15.75
+        "performance": 0.7573236,
+        "time": 15.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.19449508,
-        "time": 15.833333
+        "performance": 0.25424197,
+        "time": 15.833333,
+        "weight": 0.016949153
       }
     ],
     "tap": [
       {
-        "performance": 1.5024476,
-        "time": 1.3333334
+        "performance": 0.63848263,
+        "time": 1.3333334,
+        "weight": 0.050847456
       },
       {
-        "performance": 4.7657557,
-        "time": 3.6666667
+        "performance": 2.5642953,
+        "time": 3.6666667,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.6598935,
-        "time": 3.75
+        "performance": 3.0081398,
+        "time": 3.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.405443,
-        "time": 3.9166667
+        "performance": 3.1496212,
+        "time": 3.9166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.467149,
-        "time": 4.1666665
+        "performance": 3.2550995,
+        "time": 4.1666665,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.6937017,
-        "time": 5.0
+        "performance": 3.572083,
+        "time": 5.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.4276175,
-        "time": 5.0833335
+        "performance": 4.039814,
+        "time": 5.0833335,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.4353466,
-        "time": 5.25
+        "performance": 4.0136523,
+        "time": 5.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.568461,
-        "time": 5.5
+        "performance": 4.1446567,
+        "time": 5.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.4362426,
-        "time": 5.6666665
+        "performance": 4.100928,
+        "time": 5.6666665,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.2566752,
-        "time": 5.8333335
+        "performance": 3.990994,
+        "time": 5.8333335,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.972839,
-        "time": 5.9166665
+        "performance": 3.8032634,
+        "time": 5.9166665,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.3621545,
-        "time": 6.6666665
+        "performance": 4.262064,
+        "time": 6.6666665,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.4045076,
-        "time": 6.8333335
+        "performance": 4.2986526,
+        "time": 6.8333335,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.899721,
-        "time": 6.9166665
+        "performance": 3.7565107,
+        "time": 6.9166665,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.8721085,
-        "time": 7.0833335
+        "performance": 4.4537444,
+        "time": 7.0833335,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.596253,
-        "time": 7.3333335
+        "performance": 4.3670206,
+        "time": 7.3333335,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.337577,
-        "time": 7.5
+        "performance": 4.1492567,
+        "time": 7.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.756331,
-        "time": 7.5833335
+        "performance": 3.5170426,
+        "time": 7.5833335,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.374043,
-        "time": 7.75
+        "performance": 3.1502945,
+        "time": 7.75,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.046674,
-        "time": 8.0
+        "performance": 3.5999286,
+        "time": 8.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 6.5740466,
-        "time": 9.0
+        "performance": 5.0602703,
+        "time": 9.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.264432,
-        "time": 9.083333
+        "performance": 5.2609477,
+        "time": 9.083333,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.7897024,
-        "time": 9.25
+        "performance": 5.0059376,
+        "time": 9.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.7454963,
-        "time": 9.5
+        "performance": 4.9735565,
+        "time": 9.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.4179487,
-        "time": 10.333333
+        "performance": 5.6257973,
+        "time": 10.333333,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.004263,
-        "time": 10.416667
+        "performance": 6.4861774,
+        "time": 10.416667,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.0064635,
-        "time": 10.583333
+        "performance": 6.281698,
+        "time": 10.583333,
+        "weight": 0.033898305
       },
       {
-        "performance": 7.0816245,
-        "time": 10.833333
+        "performance": 6.195087,
+        "time": 10.833333,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.051855,
-        "time": 11.0
+        "performance": 6.291327,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.0437403,
-        "time": 11.166667
+        "performance": 6.422575,
+        "time": 11.166667,
+        "weight": 0.004237288
       },
       {
-        "performance": 6.3900695,
-        "time": 11.25
+        "performance": 5.7363744,
+        "time": 11.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.4444985,
-        "time": 12.0
+        "performance": 7.029038,
+        "time": 12.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.3489423,
-        "time": 12.166667
+        "performance": 7.2599416,
+        "time": 12.166667,
+        "weight": 0.004237288
       },
       {
-        "performance": 6.7242584,
-        "time": 12.25
+        "performance": 6.5997667,
+        "time": 12.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.310836,
-        "time": 12.416667
+        "performance": 6.1937866,
+        "time": 12.416667,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.0562587,
-        "time": 12.666667
+        "performance": 6.012163,
+        "time": 12.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.7145696,
-        "time": 12.833333
+        "performance": 5.758886,
+        "time": 12.833333,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.0164685,
-        "time": 12.916667
+        "performance": 4.9645567,
+        "time": 12.916667,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.6267056,
-        "time": 13.083333
+        "performance": 4.62225,
+        "time": 13.083333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.4326487,
-        "time": 13.333333
+        "performance": 4.5947075,
+        "time": 13.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.1379204,
-        "time": 13.583333
+        "performance": 4.3756666,
+        "time": 13.583333,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.7706757,
-        "time": 13.833333
+        "performance": 4.0178246,
+        "time": 13.833333,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.8406537,
-        "time": 14.166667
+        "performance": 3.7943094,
+        "time": 14.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.9370496,
-        "time": 14.25
+        "performance": 3.888687,
+        "time": 14.25,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.6530566,
-        "time": 14.416667
+        "performance": 3.813263,
+        "time": 14.416667,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.8962688,
-        "time": 14.5
+        "performance": 2.9574533,
+        "time": 14.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.4186022,
-        "time": 14.666667
+        "performance": 2.5070364,
+        "time": 14.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.0421665,
-        "time": 14.916667
+        "performance": 2.1723483,
+        "time": 14.916667,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.640995,
-        "time": 15.166667
+        "performance": 1.7897002,
+        "time": 15.166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.6634674,
-        "time": 15.5
+        "performance": 1.5451163,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.6794081,
-        "time": 15.583333
+        "performance": 1.5277872,
+        "time": 15.583333,
+        "weight": 0.021186441
       },
       {
-        "performance": 1.2210556,
-        "time": 15.75
+        "performance": 1.1438873,
+        "time": 15.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.47822693,
-        "time": 15.833333
+        "performance": 0.39331013,
+        "time": 15.833333,
+        "weight": 0.016949153
       }
     ],
     "acc": [
       {
-        "performance": 1.9719605,
-        "time": 1.3333334
+        "performance": 1.8693337,
+        "time": 1.3333334,
+        "weight": 0.050847456
       },
       {
-        "performance": 3.8356142,
-        "time": 3.6666667
+        "performance": 4.4562025,
+        "time": 3.6666667,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.2553277,
-        "time": 3.75
+        "performance": 4.5840464,
+        "time": 3.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.0897236,
-        "time": 3.9166667
+        "performance": 4.1250715,
+        "time": 3.9166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.9619198,
-        "time": 4.1666665
+        "performance": 3.9103062,
+        "time": 4.1666665,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8888373,
-        "time": 5.0
+        "performance": 3.9176993,
+        "time": 5.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3202887,
-        "time": 5.0833335
+        "performance": 3.6703978,
+        "time": 5.0833335,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.4600382,
-        "time": 5.25
+        "performance": 3.8485835,
+        "time": 5.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.4162138,
-        "time": 5.5
+        "performance": 3.8555677,
+        "time": 5.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.1731384,
-        "time": 5.6666665
+        "performance": 3.6445262,
+        "time": 5.6666665,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.9645584,
-        "time": 5.8333335
+        "performance": 3.5342948,
+        "time": 5.8333335,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.7584436,
-        "time": 5.9166665
+        "performance": 3.0736127,
+        "time": 5.9166665,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.2692795,
-        "time": 6.6666665
+        "performance": 3.5873282,
+        "time": 6.6666665,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.265965,
-        "time": 6.8333335
+        "performance": 3.6808877,
+        "time": 6.8333335,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.2304392,
-        "time": 6.9166665
+        "performance": 3.5036001,
+        "time": 6.9166665,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3139102,
-        "time": 7.0833335
+        "performance": 4.0746145,
+        "time": 7.0833335,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.5900898,
-        "time": 7.3333335
+        "performance": 3.9216914,
+        "time": 7.3333335,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.5103924,
-        "time": 7.5
+        "performance": 3.934601,
+        "time": 7.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.4171662,
-        "time": 7.5833335
+        "performance": 3.6109624,
+        "time": 7.5833335,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.0273068,
-        "time": 7.75
+        "performance": 3.168205,
+        "time": 7.75,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.3322134,
-        "time": 8.0
+        "performance": 3.5760286,
+        "time": 8.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 3.8356142,
-        "time": 9.0
+        "performance": 4.5169525,
+        "time": 9.0,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.2060575,
-        "time": 9.083333
+        "performance": 4.646539,
+        "time": 9.083333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.0405383,
-        "time": 9.25
+        "performance": 4.283929,
+        "time": 9.25,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.0286345,
-        "time": 9.5
+        "performance": 4.2976513,
+        "time": 9.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.5209904,
-        "time": 10.333333
+        "performance": 4.9624414,
+        "time": 10.333333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.248611,
-        "time": 10.416667
+        "performance": 5.0675955,
+        "time": 10.416667,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.472371,
-        "time": 10.583333
+        "performance": 5.2396007,
+        "time": 10.583333,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.5544963,
-        "time": 10.833333
+        "performance": 5.099649,
+        "time": 10.833333,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.5284915,
-        "time": 11.0
+        "performance": 5.1576877,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.517752,
-        "time": 11.166667
+        "performance": 5.3991766,
+        "time": 11.166667,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.2026186,
-        "time": 11.25
+        "performance": 4.64711,
+        "time": 11.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.15179,
-        "time": 12.0
+        "performance": 5.9730415,
+        "time": 12.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.1652966,
-        "time": 12.166667
+        "performance": 6.311393,
+        "time": 12.166667,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.1305647,
-        "time": 12.25
+        "performance": 6.113769,
+        "time": 12.25,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.012663,
-        "time": 12.416667
+        "performance": 5.71219,
+        "time": 12.416667,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.807503,
-        "time": 12.666667
+        "performance": 5.5212197,
+        "time": 12.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.754556,
-        "time": 12.833333
+        "performance": 5.562359,
+        "time": 12.833333,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.624367,
-        "time": 12.916667
+        "performance": 5.158422,
+        "time": 12.916667,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.346842,
-        "time": 13.083333
+        "performance": 4.684671,
+        "time": 13.083333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.38396,
-        "time": 13.333333
+        "performance": 4.8594704,
+        "time": 13.333333,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.2127047,
-        "time": 13.583333
+        "performance": 4.629492,
+        "time": 13.583333,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.061938,
-        "time": 13.833333
+        "performance": 4.218728,
+        "time": 13.833333,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.5563996,
-        "time": 14.166667
+        "performance": 3.680381,
+        "time": 14.166667,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.1869917,
-        "time": 14.25
+        "performance": 3.4068334,
+        "time": 14.25,
+        "weight": 0.021186441
       },
       {
-        "performance": 2.9767635,
-        "time": 14.416667
+        "performance": 3.4481432,
+        "time": 14.416667,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.7367194,
-        "time": 14.5
+        "performance": 3.0367408,
+        "time": 14.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.3933547,
-        "time": 14.666667
+        "performance": 2.6376393,
+        "time": 14.666667,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.1384354,
-        "time": 14.916667
+        "performance": 2.2863507,
+        "time": 14.916667,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9336778,
-        "time": 15.166667
+        "performance": 1.8734049,
+        "time": 15.166667,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.2314582,
-        "time": 15.5
+        "performance": 1.3294834,
+        "time": 15.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.64736086,
-        "time": 15.583333
+        "performance": 0.8987308,
+        "time": 15.583333,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.32893598,
-        "time": 15.75
+        "performance": 0.68535674,
+        "time": 15.75,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.09931125,
-        "time": 15.833333
+        "performance": 0.23203665,
+        "time": 15.833333,
+        "weight": 0.016949153
       }
     ]
   },
   "speed175": {
     "aim": [
       {
-        "performance": 2.5252557,
-        "time": 1.1428572
+        "performance": 2.4668474,
+        "time": 1.1428572,
+        "weight": 0.050847456
       },
       {
-        "performance": 3.615693,
-        "time": 3.142857
+        "performance": 3.4549296,
+        "time": 3.142857,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.807986,
-        "time": 3.2142856
+        "performance": 3.8747444,
+        "time": 3.2142856,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.7390797,
-        "time": 3.357143
+        "performance": 3.9923341,
+        "time": 3.357143,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.7309394,
-        "time": 3.5714285
+        "performance": 4.0937247,
+        "time": 3.5714285,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.0915227,
-        "time": 4.285714
+        "performance": 4.621205,
+        "time": 4.285714,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.661224,
-        "time": 4.357143
+        "performance": 4.07908,
+        "time": 4.357143,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8344631,
-        "time": 4.5
+        "performance": 4.39585,
+        "time": 4.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.7632995,
-        "time": 4.714286
+        "performance": 4.3670597,
+        "time": 4.714286,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.8714166,
-        "time": 4.857143
+        "performance": 4.7731857,
+        "time": 4.857143,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.2103868,
-        "time": 5.0
+        "performance": 5.474833,
+        "time": 5.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.6826859,
-        "time": 5.071429
+        "performance": 4.893191,
+        "time": 5.071429,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.6070657,
-        "time": 5.714286
+        "performance": 5.936465,
+        "time": 5.714286,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.5487833,
-        "time": 5.857143
+        "performance": 5.871506,
+        "time": 5.857143,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.435958,
-        "time": 5.928571
+        "performance": 5.7416444,
+        "time": 5.928571,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.279606,
-        "time": 6.071429
+        "performance": 5.503323,
+        "time": 6.071429,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.284496,
-        "time": 6.285714
+        "performance": 5.353448,
+        "time": 6.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.455256,
-        "time": 6.428571
+        "performance": 5.513339,
+        "time": 6.428571,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.3882504,
-        "time": 6.5
+        "performance": 5.415573,
+        "time": 6.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.256579,
-        "time": 6.642857
+        "performance": 5.2068954,
+        "time": 6.642857,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.638086,
-        "time": 6.857143
+        "performance": 6.0467696,
+        "time": 6.857143,
+        "weight": 0.06779661
       },
       {
-        "performance": 5.270692,
-        "time": 7.714286
+        "performance": 6.110297,
+        "time": 7.714286,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.4216266,
-        "time": 7.785714
+        "performance": 6.5141606,
+        "time": 7.785714,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.410826,
-        "time": 7.928571
+        "performance": 6.3232226,
+        "time": 7.928571,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.7221303,
-        "time": 8.142858
+        "performance": 7.2583323,
+        "time": 8.142858,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.71317,
-        "time": 8.857142
+        "performance": 7.85848,
+        "time": 8.857142,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.130589,
-        "time": 8.928572
+        "performance": 7.1489263,
+        "time": 8.928572,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.485587,
-        "time": 9.071428
+        "performance": 7.41965,
+        "time": 9.071428,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.8650384,
-        "time": 9.285714
+        "performance": 8.062323,
+        "time": 9.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.0118904,
-        "time": 9.428572
+        "performance": 8.576403,
+        "time": 9.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.388288,
-        "time": 9.571428
+        "performance": 9.196542,
+        "time": 9.571428,
+        "weight": 0.004237288
       },
       {
-        "performance": 6.766763,
-        "time": 9.642858
+        "performance": 8.800552,
+        "time": 9.642858,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.8415217,
-        "time": 10.285714
+        "performance": 8.872907,
+        "time": 10.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 6.7484584,
-        "time": 10.428572
+        "performance": 8.898962,
+        "time": 10.428572,
+        "weight": 0.004237288
       },
       {
-        "performance": 6.584382,
-        "time": 10.5
+        "performance": 8.833136,
+        "time": 10.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.406473,
-        "time": 10.642858
+        "performance": 8.671647,
+        "time": 10.642858,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.2150965,
-        "time": 10.857142
+        "performance": 8.415515,
+        "time": 10.857142,
+        "weight": 0.008474576
       },
       {
-        "performance": 6.1895576,
-        "time": 11.0
+        "performance": 8.493765,
+        "time": 11.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.898246,
-        "time": 11.071428
+        "performance": 8.259564,
+        "time": 11.071428,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.448719,
-        "time": 11.214286
+        "performance": 7.716604,
+        "time": 11.214286,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.4350023,
-        "time": 11.428572
+        "performance": 7.777919,
+        "time": 11.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.258132,
-        "time": 11.642858
+        "performance": 7.687297,
+        "time": 11.642858,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.1186786,
-        "time": 11.857142
+        "performance": 7.596692,
+        "time": 11.857142,
+        "weight": 0.042372882
       },
       {
-        "performance": 4.483928,
-        "time": 12.142858
+        "performance": 6.380802,
+        "time": 12.142858,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.079929,
-        "time": 12.214286
+        "performance": 5.682358,
+        "time": 12.214286,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.7622137,
-        "time": 12.357142
+        "performance": 5.202774,
+        "time": 12.357142,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.3659217,
-        "time": 12.428572
+        "performance": 4.795968,
+        "time": 12.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.9762168,
-        "time": 12.571428
+        "performance": 4.3825297,
+        "time": 12.571428,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.729854,
-        "time": 12.785714
+        "performance": 4.159192,
+        "time": 12.785714,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.5154998,
-        "time": 13.0
+        "performance": 3.938275,
+        "time": 13.0,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.6940905,
-        "time": 13.285714
+        "performance": 2.489774,
+        "time": 13.285714,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.0391563,
-        "time": 13.357142
+        "performance": 1.3572093,
+        "time": 13.357142,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.69163334,
-        "time": 13.5
+        "performance": 0.8268632,
+        "time": 13.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.2073805,
-        "time": 13.571428
+        "performance": 0.2775572,
+        "time": 13.571428,
+        "weight": 0.016949153
       }
     ],
     "tap": [
       {
-        "performance": 2.9569848,
-        "time": 1.1428572
+        "performance": 1.3665204,
+        "time": 1.1428572,
+        "weight": 0.050847456
       },
       {
-        "performance": 5.5731583,
-        "time": 3.142857
+        "performance": 3.103351,
+        "time": 3.142857,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.2316,
-        "time": 3.2142856
+        "performance": 3.6629798,
+        "time": 3.2142856,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.9954104,
-        "time": 3.357143
+        "performance": 3.72817,
+        "time": 3.357143,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.87122,
-        "time": 3.5714285
+        "performance": 3.863149,
+        "time": 3.5714285,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.043467,
-        "time": 4.285714
+        "performance": 5.022757,
+        "time": 4.285714,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.444684,
-        "time": 4.357143
+        "performance": 5.5937424,
+        "time": 4.357143,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.2091117,
-        "time": 4.5
+        "performance": 5.378996,
+        "time": 4.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.1389995,
-        "time": 4.714286
+        "performance": 5.4245734,
+        "time": 4.714286,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.987203,
-        "time": 4.857143
+        "performance": 5.4953346,
+        "time": 4.857143,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.787956,
-        "time": 5.0
+        "performance": 5.9341736,
+        "time": 5.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.77163,
-        "time": 5.071429
+        "performance": 6.1741443,
+        "time": 5.071429,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.2910867,
-        "time": 5.714286
+        "performance": 7.8294044,
+        "time": 5.714286,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.1376843,
-        "time": 5.857143
+        "performance": 7.872987,
+        "time": 5.857143,
+        "weight": 0.004237288
       },
       {
-        "performance": 6.6540112,
-        "time": 5.928571
+        "performance": 7.4382143,
+        "time": 5.928571,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.303211,
-        "time": 6.071429
+        "performance": 7.0665402,
+        "time": 6.071429,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.279441,
-        "time": 6.285714
+        "performance": 7.1688347,
+        "time": 6.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 6.300074,
-        "time": 6.428571
+        "performance": 7.388655,
+        "time": 6.428571,
+        "weight": 0.004237288
       },
       {
-        "performance": 6.2064795,
-        "time": 6.5
+        "performance": 7.4452167,
+        "time": 6.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.1666884,
-        "time": 6.642857
+        "performance": 7.517487,
+        "time": 6.642857,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.9645677,
-        "time": 6.857143
+        "performance": 8.060288,
+        "time": 6.857143,
+        "weight": 0.06779661
       },
       {
-        "performance": 7.857968,
-        "time": 7.714286
+        "performance": 8.922813,
+        "time": 7.714286,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.1998506,
-        "time": 7.785714
+        "performance": 8.465102,
+        "time": 7.785714,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.983726,
-        "time": 7.928571
+        "performance": 7.906941,
+        "time": 7.928571,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.690706,
-        "time": 8.142858
+        "performance": 7.8326125,
+        "time": 8.142858,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.205459,
-        "time": 8.857142
+        "performance": 9.350993,
+        "time": 8.857142,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.531862,
-        "time": 8.928572
+        "performance": 9.126403,
+        "time": 8.928572,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.310813,
-        "time": 9.071428
+        "performance": 8.524241,
+        "time": 9.071428,
+        "weight": 0.033898305
       },
       {
-        "performance": 8.093071,
-        "time": 9.285714
+        "performance": 8.539392,
+        "time": 9.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.8144007,
-        "time": 9.428572
+        "performance": 8.404685,
+        "time": 9.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 8.295846,
-        "time": 9.571428
+        "performance": 9.143826,
+        "time": 9.571428,
+        "weight": 0.004237288
       },
       {
-        "performance": 7.623468,
-        "time": 9.642858
+        "performance": 8.565551,
+        "time": 9.642858,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.9677587,
-        "time": 10.285714
+        "performance": 8.811994,
+        "time": 10.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.814373,
-        "time": 10.428572
+        "performance": 9.022273,
+        "time": 10.428572,
+        "weight": 0.004237288
       },
       {
-        "performance": 7.1502714,
-        "time": 10.5
+        "performance": 8.175416,
+        "time": 10.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.724654,
-        "time": 10.642858
+        "performance": 7.6628838,
+        "time": 10.642858,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.457903,
-        "time": 10.857142
+        "performance": 7.4232078,
+        "time": 10.857142,
+        "weight": 0.008474576
       },
       {
-        "performance": 6.0899553,
-        "time": 11.0
+        "performance": 7.090117,
+        "time": 11.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.353108,
-        "time": 11.071428
+        "performance": 6.106619,
+        "time": 11.071428,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.936352,
-        "time": 11.214286
+        "performance": 5.675874,
+        "time": 11.214286,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.7113967,
-        "time": 11.428572
+        "performance": 5.6157446,
+        "time": 11.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.39525,
-        "time": 11.642858
+        "performance": 5.340321,
+        "time": 11.642858,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.022872,
-        "time": 11.857142
+        "performance": 4.9096303,
+        "time": 11.857142,
+        "weight": 0.042372882
       },
       {
-        "performance": 4.1041265,
-        "time": 12.142858
+        "performance": 4.638651,
+        "time": 12.142858,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.2112293,
-        "time": 12.214286
+        "performance": 4.7511086,
+        "time": 12.214286,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.8744955,
-        "time": 12.357142
+        "performance": 4.626705,
+        "time": 12.357142,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.0785205,
-        "time": 12.428572
+        "performance": 3.5883462,
+        "time": 12.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.5750988,
-        "time": 12.571428
+        "performance": 3.0426283,
+        "time": 12.571428,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.179026,
-        "time": 12.785714
+        "performance": 2.6404097,
+        "time": 12.785714,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.7626686,
-        "time": 13.0
+        "performance": 2.1850674,
+        "time": 13.0,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.7922648,
-        "time": 13.285714
+        "performance": 1.8911855,
+        "time": 13.285714,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8180621,
-        "time": 13.357142
+        "performance": 1.8771707,
+        "time": 13.357142,
+        "weight": 0.021186441
       },
       {
-        "performance": 1.3222926,
-        "time": 13.5
+        "performance": 1.4062494,
+        "time": 13.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.5204936,
-        "time": 13.571428
+        "performance": 0.48540285,
+        "time": 13.571428,
+        "weight": 0.016949153
       }
     ],
     "acc": [
       {
-        "performance": 3.1394162,
-        "time": 1.1428572
+        "performance": 3.12219,
+        "time": 1.1428572,
+        "weight": 0.050847456
       },
       {
-        "performance": 4.1818457,
-        "time": 3.142857
+        "performance": 4.641474,
+        "time": 3.142857,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.3018184,
-        "time": 3.2142856
+        "performance": 4.774633,
+        "time": 3.2142856,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.1613803,
-        "time": 3.357143
+        "performance": 4.311083,
+        "time": 3.357143,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.049993,
-        "time": 3.5714285
+        "performance": 4.09442,
+        "time": 3.5714285,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.18468,
-        "time": 4.285714
+        "performance": 4.49748,
+        "time": 4.285714,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.5179863,
-        "time": 4.357143
+        "performance": 4.2512875,
+        "time": 4.357143,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.5609457,
-        "time": 4.5
+        "performance": 4.198949,
+        "time": 4.5,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.3915982,
-        "time": 4.714286
+        "performance": 4.0413413,
+        "time": 4.714286,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.520976,
-        "time": 4.857143
+        "performance": 4.0454125,
+        "time": 4.857143,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.8531306,
-        "time": 5.0
+        "performance": 4.2589607,
+        "time": 5.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.6884553,
-        "time": 5.071429
+        "performance": 3.8102965,
+        "time": 5.071429,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.1656065,
-        "time": 5.714286
+        "performance": 4.838373,
+        "time": 5.714286,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.027014,
-        "time": 5.857143
+        "performance": 4.8203683,
+        "time": 5.857143,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.0125537,
-        "time": 5.928571
+        "performance": 4.671497,
+        "time": 5.928571,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.8759441,
-        "time": 6.071429
+        "performance": 4.203282,
+        "time": 6.071429,
+        "weight": 0.033898305
       },
       {
-        "performance": 3.9959733,
-        "time": 6.285714
+        "performance": 4.2137256,
+        "time": 6.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.1313,
-        "time": 6.428571
+        "performance": 4.3968654,
+        "time": 6.428571,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.1574364,
-        "time": 6.5
+        "performance": 4.3090734,
+        "time": 6.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.955763,
-        "time": 6.642857
+        "performance": 4.2207575,
+        "time": 6.642857,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.131079,
-        "time": 6.857143
+        "performance": 4.624615,
+        "time": 6.857143,
+        "weight": 0.06779661
       },
       {
-        "performance": 4.42021,
-        "time": 7.714286
+        "performance": 5.04035,
+        "time": 7.714286,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.547021,
-        "time": 7.785714
+        "performance": 5.4400706,
+        "time": 7.785714,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.5292187,
-        "time": 7.928571
+        "performance": 4.963536,
+        "time": 7.928571,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.7658577,
-        "time": 8.142858
+        "performance": 5.188994,
+        "time": 8.142858,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.4246697,
-        "time": 8.857142
+        "performance": 5.955619,
+        "time": 8.857142,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.807281,
-        "time": 8.928572
+        "performance": 6.0218334,
+        "time": 8.928572,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.9887476,
-        "time": 9.071428
+        "performance": 5.9476967,
+        "time": 9.071428,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.283524,
-        "time": 9.285714
+        "performance": 6.1155214,
+        "time": 9.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.469522,
-        "time": 9.428572
+        "performance": 6.2559514,
+        "time": 9.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.7109303,
-        "time": 9.571428
+        "performance": 6.805093,
+        "time": 9.571428,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.437873,
-        "time": 9.642858
+        "performance": 6.2125416,
+        "time": 9.642858,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.2500095,
-        "time": 10.285714
+        "performance": 6.246235,
+        "time": 10.285714,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.243235,
-        "time": 10.428572
+        "performance": 6.567147,
+        "time": 10.428572,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.216983,
-        "time": 10.5
+        "performance": 6.361515,
+        "time": 10.5,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.118734,
-        "time": 10.642858
+        "performance": 5.9528084,
+        "time": 10.642858,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.930447,
-        "time": 10.857142
+        "performance": 5.7568965,
+        "time": 10.857142,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.8844504,
-        "time": 11.0
+        "performance": 5.796665,
+        "time": 11.0,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.7715025,
-        "time": 11.071428
+        "performance": 5.3815913,
+        "time": 11.071428,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.510791,
-        "time": 11.214286
+        "performance": 4.887344,
+        "time": 11.214286,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.5421276,
-        "time": 11.428572
+        "performance": 5.0539255,
+        "time": 11.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.385745,
-        "time": 11.642858
+        "performance": 4.814744,
+        "time": 11.642858,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.2589602,
-        "time": 11.857142
+        "performance": 4.398807,
+        "time": 11.857142,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.699439,
-        "time": 12.142858
+        "performance": 3.8440325,
+        "time": 12.142858,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.278591,
-        "time": 12.214286
+        "performance": 3.5604572,
+        "time": 12.214286,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.0625198,
-        "time": 12.357142
+        "performance": 3.582755,
+        "time": 12.357142,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.8392344,
-        "time": 12.428572
+        "performance": 3.1582582,
+        "time": 12.428572,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.5156388,
-        "time": 12.571428
+        "performance": 2.7458947,
+        "time": 12.571428,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.2788157,
-        "time": 12.785714
+        "performance": 2.3852654,
+        "time": 12.785714,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.0933053,
-        "time": 13.0
+        "performance": 1.9642887,
+        "time": 13.0,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.3002168,
-        "time": 13.285714
+        "performance": 1.3981465,
+        "time": 13.285714,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.6362222,
-        "time": 13.357142
+        "performance": 0.9492246,
+        "time": 13.357142,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.32357097,
-        "time": 13.5
+        "performance": 0.72455114,
+        "time": 13.5,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.09806055,
-        "time": 13.571428
+        "performance": 0.24632898,
+        "time": 13.571428,
+        "weight": 0.016949153
       }
     ]
   },
   "speed200": {
     "aim": [
       {
-        "performance": 2.9224617,
-        "time": 1.0
+        "performance": 2.9941447,
+        "time": 1.0,
+        "weight": 0.050847456
       },
       {
-        "performance": 4.2333093,
-        "time": 2.75
+        "performance": 4.0843534,
+        "time": 2.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.4723406,
-        "time": 2.8125
+        "performance": 4.589723,
+        "time": 2.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.580902,
-        "time": 2.9375
+        "performance": 4.926929,
+        "time": 2.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.74952,
-        "time": 3.125
+        "performance": 5.2921267,
+        "time": 3.125,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.805796,
-        "time": 3.75
+        "performance": 6.1241684,
+        "time": 3.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.7710037,
-        "time": 3.8125
+        "performance": 5.617972,
+        "time": 3.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.0119195,
-        "time": 3.9375
+        "performance": 6.0596294,
+        "time": 3.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.123667,
-        "time": 4.125
+        "performance": 6.3237977,
+        "time": 4.125,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.1761184,
-        "time": 4.25
+        "performance": 6.5071793,
+        "time": 4.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.26642,
-        "time": 4.375
+        "performance": 6.5916395,
+        "time": 4.375,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.174306,
-        "time": 4.4375
+        "performance": 6.44789,
+        "time": 4.4375,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.315184,
-        "time": 5.0
+        "performance": 6.579677,
+        "time": 5.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.444519,
-        "time": 5.125
+        "performance": 6.7003474,
+        "time": 5.125,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.520592,
-        "time": 5.1875
+        "performance": 6.7510934,
+        "time": 5.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.619445,
-        "time": 5.3125
+        "performance": 6.791073,
+        "time": 5.3125,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.6854734,
-        "time": 5.5
+        "performance": 6.768578,
+        "time": 5.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.8289046,
-        "time": 5.625
+        "performance": 6.91247,
+        "time": 5.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.7759647,
-        "time": 5.6875
+        "performance": 6.8978605,
+        "time": 5.6875,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.710743,
-        "time": 5.8125
+        "performance": 6.840199,
+        "time": 5.8125,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.987466,
-        "time": 6.0
+        "performance": 7.393742,
+        "time": 6.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 6.6342144,
-        "time": 6.75
+        "performance": 8.276808,
+        "time": 6.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.0968337,
-        "time": 6.8125
+        "performance": 8.898949,
+        "time": 6.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.2245092,
-        "time": 6.9375
+        "performance": 9.030707,
+        "time": 6.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 7.4525433,
-        "time": 7.125
+        "performance": 9.15854,
+        "time": 7.125,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.956115,
-        "time": 7.75
+        "performance": 9.554173,
+        "time": 7.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.7569427,
-        "time": 7.8125
+        "performance": 9.314549,
+        "time": 7.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.212297,
-        "time": 7.9375
+        "performance": 10.010466,
+        "time": 7.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 8.407358,
-        "time": 8.125
+        "performance": 10.2398815,
+        "time": 8.125,
+        "weight": 0.008474576
       },
       {
-        "performance": 8.262248,
-        "time": 8.25
+        "performance": 10.241432,
+        "time": 8.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 8.110324,
-        "time": 8.375
+        "performance": 10.20925,
+        "time": 8.375,
+        "weight": 0.004237288
       },
       {
-        "performance": 7.452547,
-        "time": 8.4375
+        "performance": 9.592954,
+        "time": 8.4375,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.397543,
-        "time": 9.0
+        "performance": 9.660294,
+        "time": 9.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.303458,
-        "time": 9.125
+        "performance": 9.6778755,
+        "time": 9.125,
+        "weight": 0.004237288
       },
       {
-        "performance": 7.131205,
-        "time": 9.1875
+        "performance": 9.596818,
+        "time": 9.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.9456534,
-        "time": 9.3125
+        "performance": 9.413712,
+        "time": 9.3125,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.750288,
-        "time": 9.5
+        "performance": 9.129162,
+        "time": 9.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 6.7246885,
-        "time": 9.625
+        "performance": 9.208027,
+        "time": 9.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 6.419379,
-        "time": 9.6875
+        "performance": 8.949112,
+        "time": 9.6875,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.9447994,
-        "time": 9.8125
+        "performance": 8.357249,
+        "time": 9.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.9361186,
-        "time": 10.0
+        "performance": 8.420512,
+        "time": 10.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.7519197,
-        "time": 10.1875
+        "performance": 8.319763,
+        "time": 10.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.606023,
-        "time": 10.375
+        "performance": 8.219813,
+        "time": 10.375,
+        "weight": 0.042372882
       },
       {
-        "performance": 4.894512,
-        "time": 10.625
+        "performance": 6.9027314,
+        "time": 10.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.4324055,
-        "time": 10.6875
+        "performance": 6.145533,
+        "time": 10.6875,
+        "weight": 0.021186441
       },
       {
-        "performance": 4.099805,
-        "time": 10.8125
+        "performance": 5.625576,
+        "time": 10.8125,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.681636,
-        "time": 10.875
+        "performance": 5.1848187,
+        "time": 10.875,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.2675965,
-        "time": 11.0
+        "performance": 4.7372923,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 3.0064259,
-        "time": 11.1875
+        "performance": 4.495577,
+        "time": 11.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.7838972,
-        "time": 11.375
+        "performance": 4.2567983,
+        "time": 11.375,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.8515599,
-        "time": 11.625
+        "performance": 2.691063,
+        "time": 11.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.1006421,
-        "time": 11.6875
+        "performance": 1.46675,
+        "time": 11.6875,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.73448133,
-        "time": 11.8125
+        "performance": 0.89346784,
+        "time": 11.8125,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.21939339,
-        "time": 11.875
+        "performance": 0.29988316,
+        "time": 11.875,
+        "weight": 0.016949153
       }
     ],
     "tap": [
       {
-        "performance": 3.2619786,
-        "time": 1.0
+        "performance": 2.0583367,
+        "time": 1.0,
+        "weight": 0.050847456
       },
       {
-        "performance": 5.939934,
-        "time": 2.75
+        "performance": 3.5858548,
+        "time": 2.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.9958825,
-        "time": 2.8125
+        "performance": 4.2511177,
+        "time": 2.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.0634427,
-        "time": 2.9375
+        "performance": 4.5683966,
+        "time": 2.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.20437,
-        "time": 3.125
+        "performance": 4.9317646,
+        "time": 3.125,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.5515804,
-        "time": 3.75
+        "performance": 5.3250537,
+        "time": 3.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.9781585,
-        "time": 3.8125
+        "performance": 5.885255,
+        "time": 3.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.0476737,
-        "time": 3.9375
+        "performance": 5.888456,
+        "time": 3.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 7.2353315,
-        "time": 4.125
+        "performance": 6.1067753,
+        "time": 4.125,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.41692,
-        "time": 4.25
+        "performance": 6.367149,
+        "time": 4.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.5771666,
-        "time": 4.375
+        "performance": 6.5680146,
+        "time": 4.375,
+        "weight": 0.004237288
       },
       {
-        "performance": 7.7745667,
-        "time": 4.4375
+        "performance": 6.9832487,
+        "time": 4.4375,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.090309,
-        "time": 5.0
+        "performance": 7.3575087,
+        "time": 5.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 8.272377,
-        "time": 5.125
+        "performance": 7.589568,
+        "time": 5.125,
+        "weight": 0.004237288
       },
       {
-        "performance": 8.277188,
-        "time": 5.1875
+        "performance": 7.6081133,
+        "time": 5.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.184366,
-        "time": 5.3125
+        "performance": 7.509268,
+        "time": 5.3125,
+        "weight": 0.033898305
       },
       {
-        "performance": 8.24555,
-        "time": 5.5
+        "performance": 7.715647,
+        "time": 5.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 8.262941,
-        "time": 5.625
+        "performance": 7.8732533,
+        "time": 5.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 8.14559,
-        "time": 5.6875
+        "performance": 7.801895,
+        "time": 5.6875,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.10872,
-        "time": 5.8125
+        "performance": 7.7912383,
+        "time": 5.8125,
+        "weight": 0.008474576
       },
       {
-        "performance": 7.9049134,
-        "time": 6.0
+        "performance": 7.5558085,
+        "time": 6.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 8.612674,
-        "time": 6.75
+        "performance": 8.287309,
+        "time": 6.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.237354,
-        "time": 6.8125
+        "performance": 9.166455,
+        "time": 6.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.250135,
-        "time": 6.9375
+        "performance": 8.8974285,
+        "time": 6.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 8.281406,
-        "time": 7.125
+        "performance": 8.864339,
+        "time": 7.125,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.996915,
-        "time": 7.75
+        "performance": 9.438309,
+        "time": 7.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 9.333683,
-        "time": 7.8125
+        "performance": 10.073166,
+        "time": 7.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 9.178171,
-        "time": 7.9375
+        "performance": 9.788805,
+        "time": 7.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 9.40809,
-        "time": 8.125
+        "performance": 10.234339,
+        "time": 8.125,
+        "weight": 0.008474576
       },
       {
-        "performance": 9.420681,
-        "time": 8.25
+        "performance": 10.469562,
+        "time": 8.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 9.152164,
-        "time": 8.375
+        "performance": 10.451656,
+        "time": 8.375,
+        "weight": 0.004237288
       },
       {
-        "performance": 8.453745,
-        "time": 8.4375
+        "performance": 9.5377,
+        "time": 8.4375,
+        "weight": 0.016949153
       },
       {
-        "performance": 8.497824,
-        "time": 9.0
+        "performance": 9.834156,
+        "time": 9.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 8.296895,
-        "time": 9.125
+        "performance": 10.056864,
+        "time": 9.125,
+        "weight": 0.004237288
       },
       {
-        "performance": 7.587704,
-        "time": 9.1875
+        "performance": 9.137034,
+        "time": 9.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 7.1500344,
-        "time": 9.3125
+        "performance": 8.595165,
+        "time": 9.3125,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.869904,
-        "time": 9.5
+        "performance": 8.347652,
+        "time": 9.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 6.471676,
-        "time": 9.625
+        "performance": 7.984693,
+        "time": 9.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.696556,
-        "time": 9.6875
+        "performance": 6.8948503,
+        "time": 9.6875,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.2545586,
-        "time": 9.8125
+        "performance": 6.4175134,
+        "time": 9.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.9967103,
-        "time": 10.0
+        "performance": 6.340754,
+        "time": 10.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.66489,
-        "time": 10.1875
+        "performance": 6.0369434,
+        "time": 10.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.278372,
-        "time": 10.375
+        "performance": 5.568375,
+        "time": 10.375,
+        "weight": 0.042372882
       },
       {
-        "performance": 4.3742933,
-        "time": 10.625
+        "performance": 5.2740655,
+        "time": 10.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.4899564,
-        "time": 10.6875
+        "performance": 5.4100885,
+        "time": 10.6875,
+        "weight": 0.021186441
       },
       {
-        "performance": 4.110551,
-        "time": 10.8125
+        "performance": 5.2472987,
+        "time": 10.8125,
+        "weight": 0.004237288
       },
       {
-        "performance": 3.263372,
-        "time": 10.875
+        "performance": 4.076107,
+        "time": 10.875,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.7327387,
-        "time": 11.0
+        "performance": 3.4612234,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.3181994,
-        "time": 11.1875
+        "performance": 3.01069,
+        "time": 11.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.8841401,
-        "time": 11.375
+        "performance": 2.503173,
+        "time": 11.375,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.920857,
-        "time": 11.625
+        "performance": 2.172737,
+        "time": 11.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 1.9518373,
-        "time": 11.6875
+        "performance": 2.1650808,
+        "time": 11.6875,
+        "weight": 0.021186441
       },
       {
-        "performance": 1.4234915,
-        "time": 11.8125
+        "performance": 1.6237237,
+        "time": 11.8125,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.5604807,
-        "time": 11.875
+        "performance": 0.56247294,
+        "time": 11.875,
+        "weight": 0.016949153
       }
     ],
     "acc": [
       {
-        "performance": 3.6474652,
-        "time": 1.0
+        "performance": 3.8569176,
+        "time": 1.0,
+        "weight": 0.050847456
       },
       {
-        "performance": 4.642573,
-        "time": 2.75
+        "performance": 5.0528493,
+        "time": 2.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.7757635,
-        "time": 2.8125
+        "performance": 5.1978106,
+        "time": 2.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.75982,
-        "time": 2.9375
+        "performance": 4.9647803,
+        "time": 2.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.7908087,
-        "time": 3.125
+        "performance": 4.9136257,
+        "time": 3.125,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.6456413,
-        "time": 3.75
+        "performance": 5.2251625,
+        "time": 3.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.41671,
-        "time": 3.8125
+        "performance": 4.9880643,
+        "time": 3.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.4854913,
-        "time": 3.9375
+        "performance": 4.9426875,
+        "time": 3.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.485697,
-        "time": 4.125
+        "performance": 4.920399,
+        "time": 4.125,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.479565,
-        "time": 4.25
+        "performance": 4.9344163,
+        "time": 4.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.4831777,
-        "time": 4.375
+        "performance": 4.9726596,
+        "time": 4.375,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.556941,
-        "time": 4.4375
+        "performance": 5.092439,
+        "time": 4.4375,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.536542,
-        "time": 5.0
+        "performance": 5.1976037,
+        "time": 5.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.586096,
-        "time": 5.125
+        "performance": 5.3370957,
+        "time": 5.125,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.671335,
-        "time": 5.1875
+        "performance": 5.412232,
+        "time": 5.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.6880484,
-        "time": 5.3125
+        "performance": 5.2595806,
+        "time": 5.3125,
+        "weight": 0.033898305
       },
       {
-        "performance": 4.7008014,
-        "time": 5.5
+        "performance": 5.2995577,
+        "time": 5.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.786633,
-        "time": 5.625
+        "performance": 5.4653497,
+        "time": 5.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.8554573,
-        "time": 5.6875
+        "performance": 5.4789853,
+        "time": 5.6875,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.776157,
-        "time": 5.8125
+        "performance": 5.483652,
+        "time": 5.8125,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.8817325,
-        "time": 6.0
+        "performance": 5.6001315,
+        "time": 6.0,
+        "weight": 0.06779661
       },
       {
-        "performance": 5.264537,
-        "time": 6.75
+        "performance": 6.138832,
+        "time": 6.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.648795,
-        "time": 6.8125
+        "performance": 6.608299,
+        "time": 6.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.707445,
-        "time": 6.9375
+        "performance": 6.368205,
+        "time": 6.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.8538203,
-        "time": 7.125
+        "performance": 6.388105,
+        "time": 7.125,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.1001177,
-        "time": 7.75
+        "performance": 6.7408905,
+        "time": 7.75,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.7849383,
-        "time": 7.8125
+        "performance": 6.887588,
+        "time": 7.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 6.0689273,
-        "time": 7.9375
+        "performance": 6.994759,
+        "time": 7.9375,
+        "weight": 0.033898305
       },
       {
-        "performance": 6.094379,
-        "time": 8.125
+        "performance": 7.1979647,
+        "time": 8.125,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.990558,
-        "time": 8.25
+        "performance": 7.2327647,
+        "time": 8.25,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.887398,
-        "time": 8.375
+        "performance": 7.279,
+        "time": 8.375,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.6317334,
-        "time": 8.4375
+        "performance": 6.479869,
+        "time": 8.4375,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.3870764,
-        "time": 9.0
+        "performance": 6.5079694,
+        "time": 9.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.367626,
-        "time": 9.125
+        "performance": 6.8133073,
+        "time": 9.125,
+        "weight": 0.004237288
       },
       {
-        "performance": 5.349116,
-        "time": 9.1875
+        "performance": 6.599968,
+        "time": 9.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 5.266542,
-        "time": 9.3125
+        "performance": 6.1840706,
+        "time": 9.3125,
+        "weight": 0.033898305
       },
       {
-        "performance": 5.0918574,
-        "time": 9.5
+        "performance": 5.983298,
+        "time": 9.5,
+        "weight": 0.008474576
       },
       {
-        "performance": 5.0526366,
-        "time": 9.625
+        "performance": 6.0218616,
+        "time": 9.625,
+        "weight": 0.004237288
       },
       {
-        "performance": 4.953803,
-        "time": 9.6875
+        "performance": 5.5958667,
+        "time": 9.6875,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.706713,
-        "time": 9.8125
+        "performance": 5.0819407,
+        "time": 9.8125,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.7358346,
-        "time": 10.0
+        "performance": 5.241171,
+        "time": 10.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 4.5919213,
-        "time": 10.1875
+        "performance": 4.993128,
+        "time": 10.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 4.4844565,
-        "time": 10.375
+        "performance": 4.571799,
+        "time": 10.375,
+        "weight": 0.042372882
       },
       {
-        "performance": 3.8673778,
-        "time": 10.625
+        "performance": 4.000996,
+        "time": 10.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 3.3935173,
-        "time": 10.6875
+        "performance": 3.7077212,
+        "time": 10.6875,
+        "weight": 0.021186441
       },
       {
-        "performance": 3.1740887,
-        "time": 10.8125
+        "performance": 3.7124894,
+        "time": 10.8125,
+        "weight": 0.004237288
       },
       {
-        "performance": 2.9637527,
-        "time": 10.875
+        "performance": 3.27527,
+        "time": 10.875,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.655152,
-        "time": 11.0
+        "performance": 2.8500412,
+        "time": 11.0,
+        "weight": 0.008474576
       },
       {
-        "performance": 2.4324038,
-        "time": 11.1875
+        "performance": 2.480238,
+        "time": 11.1875,
+        "weight": 0.016949153
       },
       {
-        "performance": 2.262083,
-        "time": 11.375
+        "performance": 2.0511496,
+        "time": 11.375,
+        "weight": 0.033898305
       },
       {
-        "performance": 1.3751861,
-        "time": 11.625
+        "performance": 1.4635918,
+        "time": 11.625,
+        "weight": 0.016949153
       },
       {
-        "performance": 0.6288872,
-        "time": 11.6875
+        "performance": 0.9971648,
+        "time": 11.6875,
+        "weight": 0.021186441
       },
       {
-        "performance": 0.32004073,
-        "time": 11.8125
+        "performance": 0.76173145,
+        "time": 11.8125,
+        "weight": 0.004237288
       },
       {
-        "performance": 0.09724019,
-        "time": 11.875
+        "performance": 0.25983635,
+        "time": 11.875,
+        "weight": 0.016949153
       }
     ]
   }

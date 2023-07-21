@@ -51,11 +51,9 @@ namespace TootTallyDifficultyCalculator2._0
                     notesDict[gamespeed] = new List<Note>();
                 foreach (string[] n in notes)
                 {
-                    notesDict[gamespeed].Add(new Note(count, BeatToSeconds(double.Parse(n[0]), float.Parse(tempo) * gamespeed), BeatToSeconds(double.Parse(n[1]), float.Parse(tempo) * gamespeed), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
+                    notesDict[gamespeed].Add(new Note(count, BeatToSeconds2(double.Parse(n[0]), float.Parse(tempo) * gamespeed), BeatToSeconds2(double.Parse(n[1]), float.Parse(tempo) * gamespeed), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
                     if (notesDict[gamespeed].Last().length == 0)
-                        notesDict[gamespeed].Last().length = BeatToSeconds(0.01, float.Parse(tempo) * gamespeed);
-                    else
-                        notesDict[gamespeed].Last().length = BeatToSeconds(notesDict[gamespeed].Last().length, float.Parse(tempo) * gamespeed);
+                        notesDict[gamespeed].Last().length = BeatToSeconds2(0.01, float.Parse(tempo) * gamespeed);
                     count++;
                 }
             }
@@ -152,10 +150,10 @@ namespace TootTallyDifficultyCalculator2._0
         public float GetTempoMultiplier() => (float.Parse(tempo) / 100f);
         public static double BeatToSeconds(double time, float bpm)
         {
-            return time / bpm * 60f;
+            return time / bpm * 60d;
         }
 
-        public static double BeatToSeconds2(double beat, float bpm) => (60f / bpm) * beat;
+        public static double BeatToSeconds2(double beat, float bpm) => (60d / bpm) * beat;
 
     }
 }
