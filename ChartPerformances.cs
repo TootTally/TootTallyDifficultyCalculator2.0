@@ -328,32 +328,31 @@ namespace TootTallyDifficultyCalculator2._0
 
         public class SerializableDiffData
         {
-            public SerializableDataVector speed050;
-            public SerializableDataVector speed075;
-            public SerializableDataVector speed100;
-            public SerializableDataVector speed125;
-            public SerializableDataVector speed150;
-            public SerializableDataVector speed175;
-            public SerializableDataVector speed200;
+            public SerializableDataVector[] data;
 
             public SerializableDiffData(ChartPerformances performances)
             {
-                speed050 = new SerializableDataVector() { aim = performances.aimPerfDict[0], tap = performances.tapPerfDict[0], acc = performances.accPerfDict[0] };
-                speed075 = new SerializableDataVector() { aim = performances.aimPerfDict[1], tap = performances.tapPerfDict[1], acc = performances.accPerfDict[1] };
-                speed100 = new SerializableDataVector() { aim = performances.aimPerfDict[2], tap = performances.tapPerfDict[2], acc = performances.accPerfDict[2] };
-                speed125 = new SerializableDataVector() { aim = performances.aimPerfDict[3], tap = performances.tapPerfDict[3], acc = performances.accPerfDict[3] };
-                speed150 = new SerializableDataVector() { aim = performances.aimPerfDict[4], tap = performances.tapPerfDict[4], acc = performances.accPerfDict[4] };
-                speed175 = new SerializableDataVector() { aim = performances.aimPerfDict[5], tap = performances.tapPerfDict[5], acc = performances.accPerfDict[5] };
-                speed200 = new SerializableDataVector() { aim = performances.aimPerfDict[6], tap = performances.tapPerfDict[6], acc = performances.accPerfDict[6] };
+                data = new SerializableDataVector[]
+                {
+                    new SerializableDataVector() { speed = .5f, aim = performances.aimPerfDict[0], tap = performances.tapPerfDict[0], acc = performances.accPerfDict[0]},
+                    new SerializableDataVector() { speed = .75f,aim = performances.aimPerfDict[1], tap = performances.tapPerfDict[1], acc = performances.accPerfDict[1]},
+                    new SerializableDataVector() { speed = 1f,aim = performances.aimPerfDict[2], tap = performances.tapPerfDict[2], acc = performances.accPerfDict[2]},
+                    new SerializableDataVector() { speed = 1.25f,aim = performances.aimPerfDict[3], tap = performances.tapPerfDict[3], acc = performances.accPerfDict[3]},
+                    new SerializableDataVector() { speed = 1.50f,aim = performances.aimPerfDict[4], tap = performances.tapPerfDict[4], acc = performances.accPerfDict[4]},
+                    new SerializableDataVector() { speed = 1.75f,aim = performances.aimPerfDict[5], tap = performances.tapPerfDict[5], acc = performances.accPerfDict[5]},
+                    new SerializableDataVector() { speed = 2f,aim = performances.aimPerfDict[6], tap = performances.tapPerfDict[6], acc = performances.accPerfDict[6]},
+                };
             }
         }
 
         public class SerializableDataVector
         {
+            public float speed;
             public List<DataVector> aim;
             public List<DataVector> tap;
             public List<DataVector> acc;
         }
+
     }
 
 }
