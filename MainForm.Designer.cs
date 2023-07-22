@@ -231,11 +231,11 @@
             FilterMaxTT.BackColor = Color.DarkRed;
             FilterMaxTT.ForeColor = Color.White;
             FilterMaxTT.Location = new Point(449, 43);
-            FilterMaxTT.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            FilterMaxTT.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
             FilterMaxTT.Name = "FilterMaxTT";
             FilterMaxTT.Size = new Size(96, 23);
             FilterMaxTT.TabIndex = 11;
-            FilterMaxTT.Value = new decimal(new int[] { 9999, 0, 0, 0 });
+            FilterMaxTT.Value = new decimal(new int[] { 999999, 0, 0, 0 });
             FilterMaxTT.ValueChanged += OnValueBoxTextChanged;
             // 
             // FilterPlayerName

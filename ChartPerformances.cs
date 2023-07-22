@@ -55,7 +55,7 @@ namespace TootTallyDifficultyCalculator2._0
             _chart = chart;
         }
 
-        private const double MIN_TIMEDELTA = 1d / 240d;
+        private const double MIN_TIMEDELTA = 1d / 120d;
         public void CalculatePerformances(int speedIndex)
         {
 
@@ -105,7 +105,7 @@ namespace TootTallyDifficultyCalculator2._0
 
                     //Aim Calc
                     aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME)) / 45f;
-                    aimEndurance += CalcAimEndurance(nextNote, previousNote, weight, directionMultiplier);
+                    aimEndurance += CalcAimEndurance(nextNote, previousNote, weight, directionMultiplier, MAX_TIME);
 
                     //Tap Calc
                     tapStrain += Math.Sqrt(CalcTapStrain(nextNote, previousNote, weight, comboMultiplier, tapEndurance, MIN_TIMEDELTA)) / 58f;
@@ -166,12 +166,12 @@ namespace TootTallyDifficultyCalculator2._0
             return speed * weight * directionMultiplier * endurance;
         }
 
-        public static double CalcTapStrain(Note nextNote, Note previousNote, double weight, double comboMultiplier, double endurance, double MIN_TIMEDELTA)
+        public static double CalcTapStrain(Note nextNote, Note previousNote, double weight, double comboMultiplier, double endurance, double MAX_TIMEDELTA)
         {
             var tapStrain = 0d;
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
-                var timeDelta = Math.Max(nextNote.position - previousNote.position, MIN_TIMEDELTA);
+                var timeDelta = Math.Max(nextNote.position - previousNote.position, MAX_TIMEDELTA);
                 var strain = 10.5f / Math.Pow(timeDelta, 1.75f);
                 tapStrain = strain * weight * comboMultiplier * endurance;
             }
@@ -201,7 +201,7 @@ namespace TootTallyDifficultyCalculator2._0
             return accStrain;
         }
 
-        public static double CalcAimEndurance(Note nextNote, Note previousNote, double weight, double directionalMultiplier)
+        public static double CalcAimEndurance(Note nextNote, Note previousNote, double weight, double directionalMultiplier, double MAX_TIME)
         {
             var endurance = 0d;
             var enduranceAimStrain = 0d;
@@ -210,7 +210,7 @@ namespace TootTallyDifficultyCalculator2._0
             {
                 var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) * (nextNote.length / 10f);
                 var t = nextNote.position - (previousNote.position + previousNote.length);
-                enduranceAimStrain = distance / t;
+                enduranceAimStrain = distance / Math.Max(t, MAX_TIME);
             }
 
             if (nextNote.pitchDelta != 0) //Calc extra speed if its a slider
@@ -275,7 +275,7 @@ namespace TootTallyDifficultyCalculator2._0
             var minSpeed = _chart.GAME_SPEED[index];
             var maxSpeed = _chart.GAME_SPEED[index + 1];
             var by = (speed - minSpeed) / (maxSpeed - minSpeed);
-            return Lerp(starRatingDict[index], starRatingDict[index+1], by);
+            return Lerp(starRatingDict[index], starRatingDict[index + 1], by);
         }
 
         public static double Lerp(double firstFloat, double secondFloat, float by) //Linear easing
@@ -317,7 +317,8 @@ namespace TootTallyDifficultyCalculator2._0
 
             public DataVectorAnalytics(List<DataVector> dataVectorList)
             {
-                perfWeightedAverage = CalculateWeightedAverage(dataVectorList);
+                var weightedAverage = CalculateWeightedAverage(dataVectorList);
+                perfWeightedAverage = double.IsNaN(weightedAverage) ? 0 : weightedAverage;
                 perfMax = dataVectorList.Max(x => x.performance);
                 perfMin = dataVectorList.Min(x => x.performance);
             }
@@ -337,13 +338,13 @@ namespace TootTallyDifficultyCalculator2._0
 
             public SerializableDiffData(ChartPerformances performances)
             {
-                speed050 = new SerializableDataVector() { aim = performances.aimPerfDict[0.5f], tap = performances.tapPerfDict[0.5f], acc = performances.accPerfDict[0.5f] };
-                speed075 = new SerializableDataVector() { aim = performances.aimPerfDict[0.75f], tap = performances.tapPerfDict[0.75f], acc = performances.accPerfDict[0.75f] };
-                speed100 = new SerializableDataVector() { aim = performances.aimPerfDict[1f], tap = performances.tapPerfDict[1f], acc = performances.accPerfDict[1f] };
-                speed125 = new SerializableDataVector() { aim = performances.aimPerfDict[1.25f], tap = performances.tapPerfDict[1.25f], acc = performances.accPerfDict[1.25f] };
-                speed150 = new SerializableDataVector() { aim = performances.aimPerfDict[1.5f], tap = performances.tapPerfDict[1.5f], acc = performances.accPerfDict[1.5f] };
-                speed175 = new SerializableDataVector() { aim = performances.aimPerfDict[1.75f], tap = performances.tapPerfDict[1.75f], acc = performances.accPerfDict[1.75f] };
-                speed200 = new SerializableDataVector() { aim = performances.aimPerfDict[2f], tap = performances.tapPerfDict[2f], acc = performances.accPerfDict[2f] };
+                speed050 = new SerializableDataVector() { aim = performances.aimPerfDict[0], tap = performances.tapPerfDict[0], acc = performances.accPerfDict[0] };
+                speed075 = new SerializableDataVector() { aim = performances.aimPerfDict[1], tap = performances.tapPerfDict[1], acc = performances.accPerfDict[1] };
+                speed100 = new SerializableDataVector() { aim = performances.aimPerfDict[2], tap = performances.tapPerfDict[2], acc = performances.accPerfDict[2] };
+                speed125 = new SerializableDataVector() { aim = performances.aimPerfDict[3], tap = performances.tapPerfDict[3], acc = performances.accPerfDict[3] };
+                speed150 = new SerializableDataVector() { aim = performances.aimPerfDict[4], tap = performances.tapPerfDict[4], acc = performances.accPerfDict[4] };
+                speed175 = new SerializableDataVector() { aim = performances.aimPerfDict[5], tap = performances.tapPerfDict[5], acc = performances.accPerfDict[5] };
+                speed200 = new SerializableDataVector() { aim = performances.aimPerfDict[6], tap = performances.tapPerfDict[6], acc = performances.accPerfDict[6] };
             }
         }
 
