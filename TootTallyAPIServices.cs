@@ -85,14 +85,15 @@ namespace TootTallyDifficultyCalculator2._0
                 try
                 {
                     leaderboard = JsonConvert.DeserializeObject<Leaderboard>(GetStringRequestOld($"songs/{chartID}/leaderboard").Result);
+                    Parallel.ForEach(leaderboard.results, score => score.tt = (float)MainForm.CalculateScoreTT(chart, score));
+                    leaderboard.results.OrderBy(x => x.tt);
                 }
                 catch (Exception)
                 {
                     Trace.WriteLine("Couldn't find leaderboard for " + chartID);
                 }
             }
-            Parallel.ForEach(leaderboard.results, score => score.tt = (float)MainForm.CalculateScoreTT(chart, score));
-            leaderboard.results.OrderBy(x => x.tt);
+           
             if (leaderboard != null)
                 callback(leaderboard);
         }

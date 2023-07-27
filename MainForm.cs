@@ -138,7 +138,7 @@ namespace TootTallyDifficultyCalculator2._0
                 if (checkboxAllSpeed.Checked)
                     DisplayAllSpeed(chart, ref chartTextLines);
                 else
-                    DisplayAtSpeed(chart, 3, ref chartTextLines);
+                    DisplayAtSpeed(chart, 2, ref chartTextLines);
                 chartTextLines.Add("=====================================================================================================");
                 chartTextLines.Add("");
                 allChartDataTextLines.AddRange(chartTextLines);
@@ -188,7 +188,7 @@ namespace TootTallyDifficultyCalculator2._0
             chart.leaderboard?.results.ForEach(score =>
                 {
                     score.tt = (float)CalculateScoreTT(chart, score);
-                    if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value && score.player.Contains(FilterPlayerName.Text))
+                    if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value && score.player.ToLower().Contains(FilterPlayerName.Text.ToLower()))
                         textLines.Add(GetDisplayScoreLine2(score, chart, count));
                     count++;
                 });

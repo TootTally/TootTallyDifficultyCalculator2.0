@@ -1,23 +1,18 @@
 ﻿using RGiesecke.DllExport;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TootTallyDifficultyCalculator2._0
 {
     public class PythonExport
     {
-        [DllExport("LoadChart", CallingConvention = System.Runtime.InteropServices.CallingConvention.Cdecl)]
+        [DllExport("LoadChart", CallingConvention = CallingConvention.StdCall)]
         public static Chart LoadChart(string path)
         {
             return ChartReader.LoadChart(path);
         }
 
-        [DllExport("GetChartRatings", CallingConvention = System.Runtime.InteropServices.CallingConvention.Cdecl)]
-        public static double[][] GetRatings(string path)
+        [DllExport("GetChartRatings", CallingConvention = CallingConvention.StdCall)]
+        public static double[][] GetChartRatings(string path)
         {
             
             var chart = ChartReader.LoadChart(path);

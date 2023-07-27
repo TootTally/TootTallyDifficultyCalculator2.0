@@ -63,9 +63,9 @@ namespace TootTallyDifficultyCalculator2._0
             var MAX_TIME = BeatToSeconds2(0.05, float.Parse(_chart.tempo) * _chart.GAME_SPEED[speedIndex]);
             var AVERAGE_NOTE_LENGTH = noteList.Average(n => n.length);
             var TOTAL_NOTE_LENGTH = noteList.Sum(n => n.length);
-            var aimEndurance = 0.3d;
-            var tapEndurance = 0.3d;
-            var endurance_decay = 1.005d;
+            var aimEndurance = 0.05d;
+            var tapEndurance = 0.15d;
+            var endurance_decay = 1.006d;
 
             //Trace.WriteLine($"{_chart.name,15} T: " + TOTAL_NOTE_LENGTH);
             //Trace.WriteLine($"{_chart.name,15} A: " + AVERAGE_NOTE_LENGTH);
@@ -104,7 +104,7 @@ namespace TootTallyDifficultyCalculator2._0
                         tapEndurance /= endDecayMult;
 
                     //Aim Calc
-                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME)) / 45f;
+                    aimStrain += Math.Sqrt(CalcAimStrain(nextNote, previousNote, ref currentDirection, ref previousDirection, weight, ref directionMultiplier, aimEndurance, MAX_TIME)) / 26f;
                     aimEndurance += CalcAimEndurance(nextNote, previousNote, weight, directionMultiplier, MAX_TIME);
 
                     //Tap Calc
@@ -141,7 +141,7 @@ namespace TootTallyDifficultyCalculator2._0
                     currentDirection = Direction.Null;
 
                 //Calculate the speed in units per seconds, capped at a minimum of 0.05 beats for the time to prevent bad mapping practices
-                var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) * 0.55f;
+                var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) * 0.45f;
                 var t = nextNote.position - (previousNote.position + previousNote.length);
                 speed = distance / Math.Max(t, MAX_TIME);
 
@@ -154,11 +154,11 @@ namespace TootTallyDifficultyCalculator2._0
 
             if (nextNote.pitchDelta != 0) //Calc extra speed if its a slider
             {
-                speed += MathF.Abs(nextNote.pitchDelta * 6f) / nextNote.length;
+                speed += (MathF.Abs(nextNote.pitchDelta) / nextNote.length) * 0.35f;
                 currentDirection = nextNote.pitchDelta > 0 ? Direction.Up : nextNote.pitchDelta < 0 ? Direction.Down : Direction.Null; //Set direction for slider
                 //Add directionalMultiplier bonus for slider
                 if (CheckDirectionChange(previousDirection, currentDirection))
-                    directionMultiplier *= 1.06f;
+                    directionMultiplier *= 1.04f;
 
                 previousDirection = currentDirection; //update direction from slider
             }
@@ -193,7 +193,7 @@ namespace TootTallyDifficultyCalculator2._0
             }
             if (nextNote.pitchDelta != 0)
             {
-                var sliderHeight = Math.Abs(nextNote.pitchDelta * 1.25f) / nextNote.length; //Promote height over speed
+                var sliderHeight = Math.Abs(nextNote.pitchDelta * 1.15f) / nextNote.length; //Promote height over speed
                 var strain = sliderHeight * lengthmult;
                 accStrain = strain * weight * directionMultiplier * comboMultiplier;
             }
@@ -208,15 +208,15 @@ namespace TootTallyDifficultyCalculator2._0
 
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
-                var distance = MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd) * (nextNote.length / 10f);
+                var distance = Math.Sqrt(MathF.Abs(nextNote.pitchStart - previousNote.pitchEnd)) * nextNote.length;
                 var t = nextNote.position - (previousNote.position + previousNote.length);
-                enduranceAimStrain = distance / Math.Max(t, MAX_TIME);
+                enduranceAimStrain = distance / Math.Max(t, MAX_TIME) / 45f;
             }
 
             if (nextNote.pitchDelta != 0) //Calc extra speed if its a slider
-                enduranceAimStrain += (MathF.Abs(nextNote.pitchDelta) / nextNote.length) / 135f; //This is equal to 0 if its not a slider
+                enduranceAimStrain += (MathF.Abs(nextNote.pitchDelta) / (nextNote.length)) / 85f; //This is equal to 0 if its not a slider
 
-            endurance += Math.Sqrt(enduranceAimStrain) / 240f;
+            endurance += Math.Sqrt(enduranceAimStrain) / 125f;
 
             return endurance * weight * directionalMultiplier;
         }
@@ -229,10 +229,10 @@ namespace TootTallyDifficultyCalculator2._0
             if (nextNote.position - (previousNote.position + previousNote.length) > 0)
             {
                 var timeDelta = nextNote.position - previousNote.position;
-                enduranceTapStrain = 0.65f / Math.Pow(timeDelta, 1.85f);
+                enduranceTapStrain = 0.45f / Math.Pow(timeDelta, 1.75f);
             }
 
-            endurance += Math.Sqrt(enduranceTapStrain) / 350f;
+            endurance += Math.Sqrt(enduranceTapStrain) / 200f;
 
             return endurance * weight;
         }
