@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using static TootTallyDifficultyCalculator2._0.Chart;
-using System.Xml.Linq;
-using System.Data.Common;
-
-namespace TootTallyDifficultyCalculator2._0
+﻿namespace TootTallyDifficultyCalculator2._0
 {
     public class ReplayData
     {

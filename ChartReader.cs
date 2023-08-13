@@ -1,30 +1,61 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TootTallyDifficultyCalculator2._0
 {
     public static class ChartReader
     {
-        private static List<Chart> _allChartList = new List<Chart>();
-
-        public static void AddChartToList(string path) =>
-            _allChartList.Add(LoadChart(path));
 
         public static Chart LoadChart(string path)
         {
             StreamReader reader = new StreamReader(path);
             string json = reader.ReadToEnd();
-            Chart chart = JsonConvert.DeserializeObject<Chart>(json);
-            chart.songHash = CalcSHA256Hash(File.ReadAllBytes(path));
-            chart.OnDeserialize();
             reader.Close();
+            Chart chart = JsonConvert.DeserializeObject<Chart>(json);
+            chart.songHash = CalcSHA256Hash(Encoding.UTF8.GetBytes(string.Join("",File.ReadAllLines(path)).Replace("\n","").Replace("\t","")));
+            chart.OnDeserialize();
             return chart;
+        }
+
+        public static Chart LoadChartFromJson(string json)
+        {
+            Chart chart = JsonConvert.DeserializeObject<Chart>(json);
+            chart.OnDeserialize();
+            return chart;
+        }
+
+        public static List<Leaderboard.SongInfoFromDB> GetCachedFileHashes()
+        {
+            if (!File.Exists(Program.CACHE_DIRECTORY + "file_hash.txt"))
+                File.Create(Program.CACHE_DIRECTORY + "file_hash.txt").Close();
+
+            StreamReader reader = new StreamReader(Program.CACHE_DIRECTORY + "file_hash.txt");
+            string json = reader.ReadToEnd();
+            reader.Close();
+            try
+            {
+
+                return JsonConvert.DeserializeObject<List<Leaderboard.SongInfoFromDB>>(json);
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public static void SaveCacheFileHashes(List<Leaderboard.SongInfoFromDB> fileHashes)
+        {
+            if (File.Exists(Program.CACHE_DIRECTORY + "file_hash.txt"))
+                File.Delete(Program.CACHE_DIRECTORY + "file_hash.txt");
+
+            StreamWriter writer = new StreamWriter(Program.CACHE_DIRECTORY + "file_hash.txt");
+            writer.WriteLine(JsonConvert.SerializeObject(fileHashes));
+            writer.Close();
+
         }
 
         public static string CalcSHA256Hash(byte[] data)
@@ -48,37 +79,5 @@ namespace TootTallyDifficultyCalculator2._0
             writer.Close();
         }
 
-        public static ReplayData LoadReplay(string path)
-        {
-            string json = GetJsonStringFromZipFilePath(path);
-            ReplayData replayData = JsonConvert.DeserializeObject<ReplayData>(json);
-            replayData.OnDeserialize();
-            return replayData;
-        }
-
-        private static string GetJsonStringFromZipFilePath(string path)
-        {
-            string jsonString;
-            using (var memoryStream = new MemoryStream())
-            {
-                using (var fileStream = new FileStream(path, FileMode.Open))
-                {
-                    fileStream.CopyTo(memoryStream);
-                }
-
-                using (var zipArchive = new ZipArchive(memoryStream, ZipArchiveMode.Read, true))
-                {
-                    var zipFile = zipArchive.GetEntry(zipArchive.Entries[0].Name);
-
-                    using (var entry = zipFile.Open())
-                    using (var sr = new StreamReader(entry))
-                    {
-                        jsonString = sr.ReadToEnd();
-                    }
-
-                }
-            }
-            return jsonString;
-        }
     }
 }

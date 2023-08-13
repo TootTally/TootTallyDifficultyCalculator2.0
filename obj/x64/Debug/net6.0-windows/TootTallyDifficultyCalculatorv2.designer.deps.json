@@ -39,63 +39,6 @@
           }
         }
       },
-      "Syncfusion.Chart.Base/22.1.36": {
-        "dependencies": {
-          "Syncfusion.Licensing": "22.1.36",
-          "Syncfusion.Shared.Base": "22.1.36"
-        },
-        "runtime": {
-          "lib/net6.0-windows7.0/Syncfusion.Chart.Base.dll": {
-            "assemblyVersion": "22.1.36.0",
-            "fileVersion": "22.1.36.0"
-          }
-        }
-      },
-      "Syncfusion.Chart.Windows/22.1.36": {
-        "dependencies": {
-          "Syncfusion.Chart.Base": "22.1.36",
-          "Syncfusion.Grouping.Base": "22.1.36",
-          "Syncfusion.Licensing": "22.1.36",
-          "Syncfusion.Shared.Base": "22.1.36"
-        },
-        "runtime": {
-          "lib/net6.0-windows7.0/Syncfusion.Chart.Windows.dll": {
-            "assemblyVersion": "22.1.36.0",
-            "fileVersion": "22.1.36.0"
-          }
-        }
-      },
-      "Syncfusion.Grouping.Base/22.1.36": {
-        "dependencies": {
-          "Syncfusion.Licensing": "22.1.36",
-          "Syncfusion.Shared.Base": "22.1.36"
-        },
-        "runtime": {
-          "lib/net6.0-windows7.0/Syncfusion.Grouping.Base.dll": {
-            "assemblyVersion": "22.1.36.0",
-            "fileVersion": "22.1.36.0"
-          }
-        }
-      },
-      "Syncfusion.Licensing/22.1.36": {
-        "runtime": {
-          "lib/net6.0/Syncfusion.Licensing.dll": {
-            "assemblyVersion": "22.1.36.0",
-            "fileVersion": "22.1.36.0"
-          }
-        }
-      },
-      "Syncfusion.Shared.Base/22.1.36": {
-        "dependencies": {
-          "Syncfusion.Licensing": "22.1.36"
-        },
-        "runtime": {
-          "lib/net6.0-windows7.0/Syncfusion.Shared.Base.dll": {
-            "assemblyVersion": "22.1.36.0",
-            "fileVersion": "22.1.36.0"
-          }
-        }
-      },
       "System.Memory/4.5.5": {},
       "System.Threading.Tasks.Extensions/4.5.4": {},
       "UnmanagedExports/1.2.7": {
@@ -129,41 +72,6 @@
       "sha512": "sha512-QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
       "path": "newtonsoft.json.bson/1.0.2",
       "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
-    },
-    "Syncfusion.Chart.Base/22.1.36": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cpEqknt12lOi0cMJ8am6QtsfXCSHZq1qT839MTa7l79vJPh/sLAYYxywz2HrdkKMKts4qiYnpTwcVgYXi8zCzA==",
-      "path": "syncfusion.chart.base/22.1.36",
-      "hashPath": "syncfusion.chart.base.22.1.36.nupkg.sha512"
-    },
-    "Syncfusion.Chart.Windows/22.1.36": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Osek924zfvWmK4JhOdk7XMi5spZVC0BbZ+GtuXKxmveDv/R7YX3XpMh+mP4a6d9xNXwAHCgMZwS/kdcZnZlzGw==",
-      "path": "syncfusion.chart.windows/22.1.36",
-      "hashPath": "syncfusion.chart.windows.22.1.36.nupkg.sha512"
-    },
-    "Syncfusion.Grouping.Base/22.1.36": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-yQaNRXXMOEdjPOM6F6ODOrIjxBD7ATYViz9wZ/p8ztmFgKJOttDw/OLhIqDKpfIunjboV259lYIzIW11zPJ9Lg==",
-      "path": "syncfusion.grouping.base/22.1.36",
-      "hashPath": "syncfusion.grouping.base.22.1.36.nupkg.sha512"
-    },
-    "Syncfusion.Licensing/22.1.36": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-d5W9c8+dXp16WYU3ZdoFQsf3xQziChiD52L+yuoNrfI2pdy6ys0Sykvaw/i5iNCdjhe+C9zb9v7s25/Ad6qeRA==",
-      "path": "syncfusion.licensing/22.1.36",
-      "hashPath": "syncfusion.licensing.22.1.36.nupkg.sha512"
-    },
-    "Syncfusion.Shared.Base/22.1.36": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cx/VMwx9Bo24Rfex9zAZ9bDtSWmBUReUVDO17H7VAw429h4gtgC38LNa/Qe3/VLUcrnlVWba2R4OWS9prWWDhg==",
-      "path": "syncfusion.shared.base/22.1.36",
-      "hashPath": "syncfusion.shared.base.22.1.36.nupkg.sha512"
     },
     "System.Memory/4.5.5": {
       "type": "package",

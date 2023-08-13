@@ -1,45 +1,96 @@
 using Newtonsoft.Json;
-using System.CodeDom;
 using System.Diagnostics;
-using System.Numerics;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml.Linq;
-using static System.Formats.Asn1.AsnWriter;
 using static TootTallyDifficultyCalculator2._0.ChartPerformances;
 
 namespace TootTallyDifficultyCalculator2._0
 {
     public partial class MainForm : Form
     {
-        private List<string> _replayNameLists;
-        private Chart _currentChart;
-        private ReplayData _currentReplay;
         public List<Chart> chartList;
+        public List<Leaderboard> leaderboardList;
         private TimeSpan _calculationTime;
         private TimeSpan _leaderboardLoadingTime;
 
         public MainForm()
         {
             InitializeComponent();
-            _replayNameLists = new List<string>();
-            chartList = new List<Chart>();
+            Directory.CreateDirectory(Program.EXPORT_DIRECTORY);
+            Directory.CreateDirectory(Program.DOWNLOAD_DIRECTORY);
+            Directory.CreateDirectory(Program.CACHE_DIRECTORY);
+        }
 
-            if (!Directory.Exists(Program.MAIN_DIRECTORY))
-                Directory.CreateDirectory(Program.MAIN_DIRECTORY);
-            if (!Directory.Exists(Program.REPLAY_DIRECTORY))
-                Directory.CreateDirectory(Program.REPLAY_DIRECTORY);
-            if (!Directory.Exists(Program.EXPORT_DIRECTORY))
-                Directory.CreateDirectory(Program.EXPORT_DIRECTORY);
-            if (!Directory.Exists(Program.LEADERBOARD_DIRECTORY))
-                Directory.CreateDirectory(Program.LEADERBOARD_DIRECTORY);
+        public async void DownloadAllTmbs(object sender, EventArgs e)
+        {
+            List<int> idList = TootTallyAPIServices.GetAllRatedChartIDs();
+            List<Leaderboard.SongInfoFromDB> fileHashes = ChartReader.GetCachedFileHashes();
+            fileHashes ??= new();
+            var filteredIDs = idList.Where(id => fileHashes.Any(x => x.id == id)).ToList();
+
+            Trace.WriteLine("Waiting for all leaderboards...");
+            leaderboardList = new List<Leaderboard>(idList.Count);
+
+            var maxCount = idList.Count;
+            var currentCount = 0;
+            ProgressBarLoading.Maximum = maxCount;
+            ProgressBarLoading.Value = 0;
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
+            {
+                TootTallyAPIServices.GetLeaderboardFromId(id, (leaderboard) =>
+                leaderboardList.Add(leaderboard));
+                currentCount++;
+                if (!ProgressBarLoading.InvokeRequired)
+                {
+                    UpdateProgressBar(currentCount, maxCount);
+                }
+            });
+            Trace.WriteLine("Leaderboards finished processing.");
+            stopwatch.Stop();
+            _leaderboardLoadingTime = stopwatch.Elapsed;
+
+            List<string> urls = new List<string>(leaderboardList.Count);
+            Parallel.ForEach(leaderboardList, l =>
+            {
+                if (l.results.Count > 0 && !filteredIDs.Any(id => id == l.song_info.id))
+                {
+                    urls.Add($"{l.song_info.file_hash}.tmb");
+                    fileHashes.Add(new Leaderboard.SongInfoFromDB() { id = l.song_info.id, file_hash = l.song_info.file_hash });
+                }
+            });
+
+            if (urls.Count > 0)
+            {
+                Trace.WriteLine($"{urls.Count} new file hashes found, saving to cache");
+                ChartReader.SaveCacheFileHashes(fileHashes);
+
+                Trace.WriteLine("Waiting for all TMBS downloads...");
+                var t3 = await Task.Run(() => TootTallyAPIServices.GetAllTmbsJson(urls.ToArray()));
+
+                Parallel.ForEach(t3, file =>
+                {
+                    var fileName = ChartReader.LoadChartFromJson(file).trackRef;
+                    if (!File.Exists(Program.DOWNLOAD_DIRECTORY + fileName.Replace('/', '-').Replace('.', '_') + ".tmb"))
+                        ChartReader.SaveChartData(Program.DOWNLOAD_DIRECTORY + fileName.Replace('/', '-').Replace('.', '_') + ".tmb", file);
+                });
+                Trace.WriteLine("Tmbs all downloaded.");
+            }
+            LoadAllCharts();
+            AsignLeaderboardsToCharts();
+            OnDisplayChartsButtonClick(sender, e);
+
+            ProgressBarLoading.Visible = false;
+            LoadingLabel.Visible = false;
         }
 
         public void LoadAllCharts()
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            var filesList = Directory.GetFiles(Program.MAIN_DIRECTORY);
-            var maxCount = filesList.Count();
+            var filesList = Directory.GetFiles(Program.DOWNLOAD_DIRECTORY);
+            chartList = new List<Chart>(filesList.Length);
+            var maxCount = filesList.Length;
             var currentCount = 0;
             ProgressBarLoading.Maximum = maxCount;
             ProgressBarLoading.Value = 0;
@@ -47,8 +98,6 @@ namespace TootTallyDifficultyCalculator2._0
             {
 
                 chartList.Add(ChartReader.LoadChart(name));
-                if (!File.Exists(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json"))
-                    ExportChartToJson(Program.EXPORT_DIRECTORY + name.Remove(0, Program.MAIN_DIRECTORY.Length).Split('.')[0] + ".json", chartList.Last());
 
                 currentCount++;
                 if (!ProgressBarLoading.InvokeRequired)
@@ -68,44 +117,22 @@ namespace TootTallyDifficultyCalculator2._0
             this.Update();
         }
 
-        public void FillComboBoxReplay()
+        public void AsignLeaderboardsToCharts()
         {
-            foreach (string replayNames in Directory.GetFiles(Program.REPLAY_DIRECTORY))
-            {
-                ComboBoxReplay.Items.Add(replayNames.Remove(0, Program.REPLAY_DIRECTORY.Length));
-                _replayNameLists.Add(replayNames.Remove(0, Program.REPLAY_DIRECTORY.Length));
-            }
-        }
-
-        public async void LoadAllChartsLeaderboards()
-        {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            var maxCount = chartList.Count;
+            var maxCount = leaderboardList.Count;
             var currentCount = 0;
             ProgressBarLoading.Maximum = maxCount;
             ProgressBarLoading.Value = 0;
-            Parallel.ForEach(chartList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, chart =>
+            Parallel.ForEach(leaderboardList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, l =>
             {
-                chart.GetLeaderboardFromAPI();
+                var chart = chartList.Find(chart => chart.songHash == l.song_info.file_hash);
+                if (chart != null) { chart.leaderboard = l; }
                 currentCount++;
                 if (!ProgressBarLoading.InvokeRequired)
                 {
                     UpdateProgressBar(currentCount, maxCount);
                 }
             });
-            /*List<string> urls = new List<string>();
-            chartList.ForEach(chart => urls.Add($"hashcheck/custom/?songHash={chart.songHash}"));
-            var t = await Task.Run(() => TootTallyAPIServices.GetLeaderboardsId(urls.ToArray()));
-
-            urls.Clear();
-            t.ForEach(id => urls.Add($"songs/{id}/leaderboard"));
-            var t2 = await Task.Run(() => TootTallyAPIServices.GetLeaderboards(urls.ToArray()));
-            t2.ForEach(leaderboard => chartList.Find(chart => chart.songHash == leaderboard.songHash).leaderboard = leaderboard);*/
-
-            stopwatch.Stop();
-            _leaderboardLoadingTime = stopwatch.Elapsed;
-
         }
 
         public void ExportChartToJson(string path, Chart chart)
@@ -145,13 +172,25 @@ namespace TootTallyDifficultyCalculator2._0
 
                 //LEADERBOARD DISPLAY
                 var leaderboardText = DisplayLeaderboard(chart);
-                if (leaderboardText.Count == 0) continue; //Skip leaderboard display if no scores found
-                var leaderboardTextLines = new List<string>
+                List<string> leaderboardTextLines = new();
+                if (chart.leaderboard == null && leaderboardText.Count == 0)
                 {
-                    $"{chart.name} processed in {chart.calculationTime.TotalSeconds}s",
-                    GetLeaderboardScoreHeader(),
-                    "-----------------------------------------------------------------------------------------------------"
-                };
+                    leaderboardTextLines = new List<string>
+                    {
+                        $"{chart.name} processed in {chart.calculationTime.TotalSeconds}s",
+                        $"SongHash {chart.songHash} leaderboard not found.",
+                        "-----------------------------------------------------------------------------------------------------"
+                    };
+                }
+                else if (chart.leaderboard != null)
+                {
+                    leaderboardTextLines = new List<string>
+                    {
+                        $"{chart.name} processed in {chart.calculationTime.TotalSeconds}s",
+                        GetLeaderboardScoreHeader(),
+                        "-----------------------------------------------------------------------------------------------------"
+                    };
+                }
 
                 leaderboardTextLines.AddRange(leaderboardText);
                 leaderboardTextLines.Add("=====================================================================================================");
@@ -246,22 +285,9 @@ namespace TootTallyDifficultyCalculator2._0
             var percentage = score.percentage / 100d;
 
             var scoreTT = ((0.028091281 * Math.Pow(Math.E, 6d * percentage)) - 0.028091281) * baseTT;
+            //y = (0.28091281 * e^6x - 0.028091281) * b
 
             return scoreTT;
-        }
-
-        private void OnLoadReplayButtonClick(object sender, EventArgs e)
-        {
-            _currentReplay = ChartReader.LoadReplay(Program.REPLAY_DIRECTORY + ComboBoxReplay.Text);
-            _currentReplay.SetChart(_currentChart);
-            TextBoxChartData.Clear();
-            List<string> textLines = new List<string>
-            {
-                "Replay Loaded: " + _currentReplay.username
-            };
-            _currentReplay.ToDisplayData().ForEach(x => textLines.Add(x));
-            TextBoxChartData.Lines = textLines.ToArray();
-            TextBoxChartData.Visible = true;
         }
 
         private void OnDropDownSongNameValueChange(object sender, EventArgs e)
@@ -269,10 +295,6 @@ namespace TootTallyDifficultyCalculator2._0
             ButtonForceRefresh.Visible = true;
         }
 
-        private void OnDropDownReplayValueChange(object sender, EventArgs e)
-        {
-            ButtonLoadReplay.Visible = true;
-        }
 
         private void OnTextBoxTextChanged(object sender, KeyPressEventArgs e)
         {
@@ -289,13 +311,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         private void OnFormShown(object sender, EventArgs e)
         {
-            LoadAllCharts();
-            LoadAllChartsLeaderboards();
-            FillComboBoxReplay();
-            OnDisplayChartsButtonClick(sender, e);
-
-            ProgressBarLoading.Visible = false;
-            LoadingLabel.Visible = false;
+            DownloadAllTmbs(sender, e);
         }
 
         private void OnValueBoxTextChanged(object sender, EventArgs e)
@@ -306,11 +322,11 @@ namespace TootTallyDifficultyCalculator2._0
         private void OnSaveToButtonPress(object sender, EventArgs e)
         {
             string date = DateTime.Now.ToString("yyyyMMddHHmmss");
-            string fileName = Program.LEADERBOARD_DIRECTORY + "ChartRatings" + date + ".txt";
+            string fileName = Program.EXPORT_DIRECTORY + "ChartRatings" + date + ".txt";
             string text = "";
             TextBoxChartData.Lines.ToList().ForEach(line => { text += line + "\n"; });
             ChartReader.SaveChartData(fileName, text);
-            fileName = Program.LEADERBOARD_DIRECTORY + "Leaderboards" + date + ".txt";
+            fileName = Program.EXPORT_DIRECTORY + "Leaderboards" + date + ".txt";
             text = "";
             TextBoxLeaderboardData.Lines.ToList().ForEach(line => { text += line + "\n"; });
             ChartReader.SaveChartData(fileName, text);

@@ -50,84 +50,6 @@
           }
         }
       },
-      "Syncfusion.Chart.Base/22.1.36": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "22.1.36",
-          "Syncfusion.Shared.Base": "22.1.36"
-        },
-        "compile": {
-          "lib/net6.0-windows7.0/Syncfusion.Chart.Base.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0-windows7.0/Syncfusion.Chart.Base.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Syncfusion.Chart.Windows/22.1.36": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Chart.Base": "22.1.36",
-          "Syncfusion.Grouping.Base": "22.1.36",
-          "Syncfusion.Licensing": "22.1.36",
-          "Syncfusion.Shared.Base": "22.1.36"
-        },
-        "compile": {
-          "lib/net6.0-windows7.0/Syncfusion.Chart.Windows.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0-windows7.0/Syncfusion.Chart.Windows.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Syncfusion.Grouping.Base/22.1.36": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "22.1.36",
-          "Syncfusion.Shared.Base": "22.1.36"
-        },
-        "compile": {
-          "lib/net6.0-windows7.0/Syncfusion.Grouping.Base.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0-windows7.0/Syncfusion.Grouping.Base.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Syncfusion.Licensing/22.1.36": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Shared.Base/22.1.36": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "22.1.36"
-        },
-        "compile": {
-          "lib/net6.0-windows7.0/Syncfusion.Shared.Base.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0-windows7.0/Syncfusion.Shared.Base.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "System.Memory/4.5.5": {
         "type": "package",
         "compile": {
@@ -228,129 +150,6 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "Syncfusion.Chart.Base/22.1.36": {
-      "sha512": "cpEqknt12lOi0cMJ8am6QtsfXCSHZq1qT839MTa7l79vJPh/sLAYYxywz2HrdkKMKts4qiYnpTwcVgYXi8zCzA==",
-      "type": "package",
-      "path": "syncfusion.chart.base/22.1.36",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/net40/Syncfusion.Chart.Base.dll",
-        "lib/net40/Syncfusion.Chart.Base.xml",
-        "lib/net45/Syncfusion.Chart.Base.dll",
-        "lib/net45/Syncfusion.Chart.Base.xml",
-        "lib/net451/Syncfusion.Chart.Base.dll",
-        "lib/net451/Syncfusion.Chart.Base.xml",
-        "lib/net46/Syncfusion.Chart.Base.dll",
-        "lib/net46/Syncfusion.Chart.Base.xml",
-        "lib/net6.0-windows7.0/Syncfusion.Chart.Base.dll",
-        "lib/net6.0-windows7.0/Syncfusion.Chart.Base.xml",
-        "syncfusion.chart.base.22.1.36.nupkg.sha512",
-        "syncfusion.chart.base.nuspec",
-        "syncfusion_logo.png"
-      ]
-    },
-    "Syncfusion.Chart.Windows/22.1.36": {
-      "sha512": "Osek924zfvWmK4JhOdk7XMi5spZVC0BbZ+GtuXKxmveDv/R7YX3XpMh+mP4a6d9xNXwAHCgMZwS/kdcZnZlzGw==",
-      "type": "package",
-      "path": "syncfusion.chart.windows/22.1.36",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "lib/net40/Syncfusion.Chart.Windows.dll",
-        "lib/net40/Syncfusion.Chart.Windows.xml",
-        "lib/net45/Syncfusion.Chart.Windows.dll",
-        "lib/net45/Syncfusion.Chart.Windows.xml",
-        "lib/net451/Syncfusion.Chart.Windows.dll",
-        "lib/net451/Syncfusion.Chart.Windows.xml",
-        "lib/net46/Syncfusion.Chart.Windows.dll",
-        "lib/net46/Syncfusion.Chart.Windows.xml",
-        "lib/net6.0-windows7.0/Syncfusion.Chart.Windows.dll",
-        "lib/net6.0-windows7.0/Syncfusion.Chart.Windows.xml",
-        "syncfusion.chart.windows.22.1.36.nupkg.sha512",
-        "syncfusion.chart.windows.nuspec",
-        "syncfusion_logo.png",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
-    "Syncfusion.Grouping.Base/22.1.36": {
-      "sha512": "yQaNRXXMOEdjPOM6F6ODOrIjxBD7ATYViz9wZ/p8ztmFgKJOttDw/OLhIqDKpfIunjboV259lYIzIW11zPJ9Lg==",
-      "type": "package",
-      "path": "syncfusion.grouping.base/22.1.36",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "lib/net40/Syncfusion.Grouping.Base.dll",
-        "lib/net40/Syncfusion.Grouping.Base.xml",
-        "lib/net45/Syncfusion.Grouping.Base.dll",
-        "lib/net45/Syncfusion.Grouping.Base.xml",
-        "lib/net451/Syncfusion.Grouping.Base.dll",
-        "lib/net451/Syncfusion.Grouping.Base.xml",
-        "lib/net46/Syncfusion.Grouping.Base.dll",
-        "lib/net46/Syncfusion.Grouping.Base.xml",
-        "lib/net6.0-windows7.0/Syncfusion.Grouping.Base.dll",
-        "lib/net6.0-windows7.0/Syncfusion.Grouping.Base.xml",
-        "syncfusion.grouping.base.22.1.36.nupkg.sha512",
-        "syncfusion.grouping.base.nuspec",
-        "syncfusion_logo.png"
-      ]
-    },
-    "Syncfusion.Licensing/22.1.36": {
-      "sha512": "d5W9c8+dXp16WYU3ZdoFQsf3xQziChiD52L+yuoNrfI2pdy6ys0Sykvaw/i5iNCdjhe+C9zb9v7s25/Ad6qeRA==",
-      "type": "package",
-      "path": "syncfusion.licensing/22.1.36",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
-        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
-        "lib/net40/Syncfusion.Licensing.dll",
-        "lib/net45/Syncfusion.Licensing.dll",
-        "lib/net451/Syncfusion.Licensing.dll",
-        "lib/net46/Syncfusion.Licensing.dll",
-        "lib/net6.0/Syncfusion.Licensing.dll",
-        "lib/net7.0/Syncfusion.Licensing.dll",
-        "lib/netstandard2.0/Syncfusion.Licensing.dll",
-        "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.22.1.36.nupkg.sha512",
-        "syncfusion.licensing.nuspec",
-        "syncfusion_logo.png"
-      ]
-    },
-    "Syncfusion.Shared.Base/22.1.36": {
-      "sha512": "cx/VMwx9Bo24Rfex9zAZ9bDtSWmBUReUVDO17H7VAw429h4gtgC38LNa/Qe3/VLUcrnlVWba2R4OWS9prWWDhg==",
-      "type": "package",
-      "path": "syncfusion.shared.base/22.1.36",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "README.md",
-        "lib/net40/Syncfusion.Shared.Base.dll",
-        "lib/net40/Syncfusion.Shared.Base.xml",
-        "lib/net45/Syncfusion.Shared.Base.dll",
-        "lib/net45/Syncfusion.Shared.Base.xml",
-        "lib/net451/Syncfusion.Shared.Base.dll",
-        "lib/net451/Syncfusion.Shared.Base.xml",
-        "lib/net46/Syncfusion.Shared.Base.dll",
-        "lib/net46/Syncfusion.Shared.Base.xml",
-        "lib/net6.0-windows7.0/Syncfusion.Shared.Base.dll",
-        "lib/net6.0-windows7.0/Syncfusion.Shared.Base.xml",
-        "syncfusion.shared.base.22.1.36.nupkg.sha512",
-        "syncfusion.shared.base.nuspec",
-        "syncfusion_logo.png",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
     "System.Memory/4.5.5": {
       "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
@@ -439,7 +238,6 @@
     "net6.0-windows7.0": [
       "Microsoft.AspNet.WebApi.Client >= 6.0.0-preview1",
       "Newtonsoft.Json >= 13.0.3",
-      "Syncfusion.Chart.Windows >= 22.1.36",
       "UnmanagedExports >= 1.2.7"
     ]
   },
@@ -489,10 +287,6 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
-          },
-          "Syncfusion.Chart.Windows": {
-            "target": "Package",
-            "version": "[22.1.36, )"
           },
           "UnmanagedExports": {
             "target": "Package",

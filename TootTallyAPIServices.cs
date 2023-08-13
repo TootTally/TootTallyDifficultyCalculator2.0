@@ -1,21 +1,15 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Net;
 using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TootTallyDifficultyCalculator2._0
 {
     public static class TootTallyAPIServices
     {
-        public static HttpClient webRequest;
+        public static HttpClient webRequest, downloadRequest;
         public const string APIURL = "https://toottally.com/api/";
         public const string REPLAYURL = "http://cdn.toottally.com/replays/";
+        public const string TMBURL = "http://cdn.toottally.com/";
 
         static TootTallyAPIServices()
         {
@@ -26,6 +20,16 @@ namespace TootTallyDifficultyCalculator2._0
             webRequest.DefaultRequestHeaders.Accept.Clear();
             webRequest.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
+            webRequest.Timeout = new TimeSpan(0, 5, 0);
+
+            downloadRequest = new HttpClient()
+            {
+                BaseAddress = new Uri(TMBURL)
+            };
+            downloadRequest.DefaultRequestHeaders.Accept.Clear();
+            downloadRequest.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            downloadRequest.Timeout = new TimeSpan(0, 5, 0);
         }
 
         public async static Task<List<int>> GetLeaderboardsId(params string[] urls)
@@ -42,6 +46,25 @@ namespace TootTallyDifficultyCalculator2._0
             var responses = requests.Where(task => task.Result != null).Select
                 (
                     task => int.Parse(task.Result)
+                );
+
+            return responses.ToList();
+        }
+
+        public async static Task<List<Leaderboard>> GetSongHashes(params string[] urls)
+        {
+            var requests = urls.Select
+                (
+                    url => GetStringRequest(url)
+                ).ToList();
+
+            //Wait for all the requests to finish
+            await Task.WhenAll(requests);
+
+            //Get the responses
+            var responses = requests.Where(task => task.Result != null).Select
+                (
+                    task => JsonConvert.DeserializeObject<Leaderboard>(task.Result)
                 );
 
             return responses.ToList();
@@ -64,6 +87,30 @@ namespace TootTallyDifficultyCalculator2._0
                 );
 
             return responses.ToList();
+        }
+
+        public async static Task<List<string>> GetAllTmbsJson(params string[] urls)
+        {
+            var requests = urls.Select
+                (
+                    url => GetStringDownloadRequest(url)
+                ).ToList();
+
+            //Wait for all the requests to finish
+            await Task.WhenAll(requests);
+
+            //Get the responses
+            var responses = requests.Where(task => task.Result != null).Select
+                (
+                    task => task.Result
+                );
+
+            return responses.ToList();
+        }
+
+        public static List<int> GetAllRatedChartIDs()
+        {
+            return JsonConvert.DeserializeObject<List<int>>(GetStringRequestOld($"songs/rated").Result);
         }
 
         public static void GetChartData(Chart chart, Action<Leaderboard> callback)
@@ -98,6 +145,18 @@ namespace TootTallyDifficultyCalculator2._0
                 callback(leaderboard);
         }
 
+        public static void GetLeaderboardFromId(int id, Action<Leaderboard> callback)
+        {
+            try
+            {
+                callback(JsonConvert.DeserializeObject<Leaderboard>(GetStringRequestOld($"songs/{id}/leaderboard").Result));
+            }
+            catch (Exception)
+            {
+                Trace.WriteLine("Couldn't find leaderboard for " + id);
+            }
+        }
+
 
         private static Task<HttpResponseMessage> PostUploadRequest(string query, dynamic data)
         {
@@ -112,6 +171,18 @@ namespace TootTallyDifficultyCalculator2._0
             try
             {
                 return await webRequest.GetStringAsync(query);
+            }
+            catch (HttpRequestException)
+            {
+                return null;
+            }
+        }
+
+        private async static Task<string> GetStringDownloadRequest(string query)
+        {
+            try
+            {
+                return await downloadRequest.GetStringAsync(query);
             }
             catch (HttpRequestException)
             {

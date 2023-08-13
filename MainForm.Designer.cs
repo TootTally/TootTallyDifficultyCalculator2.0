@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             ButtonForceRefresh = new Button();
-            ComboBoxReplay = new ComboBox();
-            ButtonLoadReplay = new Button();
             checkboxAllSpeed = new CheckBox();
             FilterMapName = new TextBox();
             label1 = new Label();
@@ -63,35 +61,6 @@
             ButtonForceRefresh.Text = "FORCE REFRESH";
             ButtonForceRefresh.UseVisualStyleBackColor = false;
             ButtonForceRefresh.Click += OnDisplayChartsButtonClick;
-            // 
-            // ComboBoxReplay
-            // 
-            ComboBoxReplay.BackColor = Color.DarkRed;
-            ComboBoxReplay.DropDownStyle = ComboBoxStyle.DropDownList;
-            ComboBoxReplay.FlatStyle = FlatStyle.Popup;
-            ComboBoxReplay.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            ComboBoxReplay.ForeColor = SystemColors.Window;
-            ComboBoxReplay.FormattingEnabled = true;
-            ComboBoxReplay.Location = new Point(551, 9);
-            ComboBoxReplay.Name = "ComboBoxReplay";
-            ComboBoxReplay.Size = new Size(281, 25);
-            ComboBoxReplay.TabIndex = 0;
-            ComboBoxReplay.SelectedValueChanged += OnDropDownReplayValueChange;
-            // 
-            // ButtonLoadReplay
-            // 
-            ButtonLoadReplay.BackColor = Color.Crimson;
-            ButtonLoadReplay.FlatStyle = FlatStyle.Popup;
-            ButtonLoadReplay.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            ButtonLoadReplay.ForeColor = Color.White;
-            ButtonLoadReplay.Location = new Point(838, 9);
-            ButtonLoadReplay.Name = "ButtonLoadReplay";
-            ButtonLoadReplay.Size = new Size(112, 25);
-            ButtonLoadReplay.TabIndex = 1;
-            ButtonLoadReplay.Text = "LOAD REPLAY";
-            ButtonLoadReplay.UseVisualStyleBackColor = false;
-            ButtonLoadReplay.Visible = false;
-            ButtonLoadReplay.Click += OnLoadReplayButtonClick;
             // 
             // checkboxAllSpeed
             // 
@@ -135,7 +104,7 @@
             ButtonSwitchBox.FlatStyle = FlatStyle.Popup;
             ButtonSwitchBox.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             ButtonSwitchBox.ForeColor = Color.White;
-            ButtonSwitchBox.Location = new Point(985, 216);
+            ButtonSwitchBox.Location = new Point(983, 216);
             ButtonSwitchBox.Name = "ButtonSwitchBox";
             ButtonSwitchBox.Size = new Size(112, 25);
             ButtonSwitchBox.TabIndex = 1;
@@ -266,7 +235,7 @@
             ButtonSaveTo.FlatStyle = FlatStyle.Popup;
             ButtonSaveTo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             ButtonSaveTo.ForeColor = Color.White;
-            ButtonSaveTo.Location = new Point(867, 216);
+            ButtonSaveTo.Location = new Point(865, 216);
             ButtonSaveTo.Name = "ButtonSaveTo";
             ButtonSaveTo.Size = new Size(112, 25);
             ButtonSaveTo.TabIndex = 1;
@@ -295,9 +264,7 @@
             Controls.Add(checkboxAllSpeed);
             Controls.Add(ButtonSaveTo);
             Controls.Add(ButtonSwitchBox);
-            Controls.Add(ButtonLoadReplay);
             Controls.Add(ButtonForceRefresh);
-            Controls.Add(ComboBoxReplay);
             Name = "MainForm";
             Text = "Main";
             Shown += OnFormShown;
@@ -309,8 +276,6 @@
 
         #endregion
         private Button ButtonForceRefresh;
-        private ComboBox ComboBoxReplay;
-        private Button ButtonLoadReplay;
         private CheckBox checkboxAllSpeed;
         private TextBox FilterMapName;
         private Label label1;

@@ -48,10 +48,6 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "Syncfusion.Chart.Windows": {
-              "target": "Package",
-              "version": "[22.1.36, )"
-            },
             "UnmanagedExports": {
               "target": "Package",
               "version": "[1.2.7, )"

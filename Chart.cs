@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Permissions;
-using System.Text;
+﻿using System.Diagnostics;
 
 namespace TootTallyDifficultyCalculator2._0
 {
     public class Chart
     {
-        public const float SLIDER_BREAK_CONST = 34.375f;
         public readonly float[] GAME_SPEED = { .5f, .75f, 1f, 1.25f, 1.5f, 1.75f, 2f };
 
         public string[][] notes;
@@ -72,8 +64,7 @@ namespace TootTallyDifficultyCalculator2._0
             stopwatch.Stop();
             calculationTime = stopwatch.Elapsed;
 
-            /*
-            var breakDistThreshold = 3.5f / (float.Parse(tempo) / 120f);
+            /*var breakDistThreshold = 3.5f / (float.Parse(tempo) / 120f);
 
 
             List<NoteCluster> clusters = new List<NoteCluster>();
@@ -105,8 +96,7 @@ namespace TootTallyDifficultyCalculator2._0
                     Trace.WriteLine($"break length between {i - 1} and {i}: {clusters[i - 1].GetDistanceFromCluster(clusters[i])}");
                 Trace.WriteLine($"cluster #{i} has {clusters[i].noteList.Count} notes and last {clusters[i].GetClusterSize()}s.");
             }
-            Trace.WriteLine($"-----------------------------------------------------");
-            */
+            Trace.WriteLine($"-----------------------------------------------------");*/
         }
 
         public void GetLeaderboardFromAPI()
