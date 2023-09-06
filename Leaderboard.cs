@@ -28,6 +28,7 @@
         {
             public int id;
             public string file_hash;
+            public string track_ref;
         }
 
 

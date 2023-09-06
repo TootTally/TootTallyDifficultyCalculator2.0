@@ -16,7 +16,6 @@ namespace TootTallyDifficultyCalculator2._0
             string json = reader.ReadToEnd();
             reader.Close();
             Chart chart = JsonConvert.DeserializeObject<Chart>(json);
-            chart.songHash = CalcSHA256Hash(Encoding.UTF8.GetBytes(string.Join("",File.ReadAllLines(path)).Replace("\n","").Replace("\t","")));
             chart.OnDeserialize();
             return chart;
         }
@@ -38,7 +37,6 @@ namespace TootTallyDifficultyCalculator2._0
             reader.Close();
             try
             {
-
                 return JsonConvert.DeserializeObject<List<Leaderboard.SongInfoFromDB>>(json);
             }
             catch (Exception e)

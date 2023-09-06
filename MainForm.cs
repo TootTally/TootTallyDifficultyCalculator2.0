@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using static TootTallyDifficultyCalculator2._0.ChartPerformances;
 
 namespace TootTallyDifficultyCalculator2._0
@@ -10,6 +11,7 @@ namespace TootTallyDifficultyCalculator2._0
         public List<Leaderboard> leaderboardList;
         private TimeSpan _calculationTime;
         private TimeSpan _leaderboardLoadingTime;
+        public static MainForm Instance;
 
         public MainForm()
         {
@@ -17,7 +19,17 @@ namespace TootTallyDifficultyCalculator2._0
             Directory.CreateDirectory(Program.EXPORT_DIRECTORY);
             Directory.CreateDirectory(Program.DOWNLOAD_DIRECTORY);
             Directory.CreateDirectory(Program.CACHE_DIRECTORY);
+            Instance ??= this;
         }
+
+        public float GetAimNum() => (float)AimNum.Value;
+        public float GetTapNum() => (float)TapNum.Value;
+        public float GetAccNum() => (float)AccNum.Value;
+        public float GetAimEndNote() => (float)AimEndNote.Value;
+        public float GetAimEndSlider() => (float)AimEndSlider.Value;
+        public float GetAimEndMult() => (float)AimEndMult.Value;
+        public float GetTapEndMult() => (float)TapEndMult.Value;
+        public float GetRatingOffset() => (float)RatingOffset.Value;
 
         public async void DownloadAllTmbs(object sender, EventArgs e)
         {
@@ -53,10 +65,10 @@ namespace TootTallyDifficultyCalculator2._0
             List<string> urls = new List<string>(leaderboardList.Count);
             Parallel.ForEach(leaderboardList, l =>
             {
-                if (l.results.Count > 0 && !filteredIDs.Any(id => id == l.song_info.id))
+                if (l.results.Count > 0 && !filteredIDs.Any(id => id == l.song_info.id) && l.song_info != null)
                 {
                     urls.Add($"{l.song_info.file_hash}.tmb");
-                    fileHashes.Add(new Leaderboard.SongInfoFromDB() { id = l.song_info.id, file_hash = l.song_info.file_hash });
+                    fileHashes.Add(new Leaderboard.SongInfoFromDB() { id = l.song_info.id, file_hash = l.song_info.file_hash, track_ref = l.song_info.track_ref });
                 }
             });
 
@@ -125,7 +137,7 @@ namespace TootTallyDifficultyCalculator2._0
             ProgressBarLoading.Value = 0;
             Parallel.ForEach(leaderboardList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, l =>
             {
-                var chart = chartList.Find(chart => chart.songHash == l.song_info.file_hash);
+                var chart = chartList.Find(chart => chart.trackRef == l.song_info.track_ref);
                 if (chart != null) { chart.leaderboard = l; }
                 currentCount++;
                 if (!ProgressBarLoading.InvokeRequired)
@@ -140,6 +152,13 @@ namespace TootTallyDifficultyCalculator2._0
             SerializableDiffData chartdata = new SerializableDiffData(chart.performances);
             var json = JsonConvert.SerializeObject(chartdata, Formatting.Indented);
             ChartReader.SaveChartData(path, json);
+        }
+
+        private void OnForceRefreshClick(object sender, EventArgs e)
+        {
+            LoadAllCharts();
+            AsignLeaderboardsToCharts();
+            OnDisplayChartsButtonClick(sender, e);
         }
 
         private void OnDisplayChartsButtonClick(object sender, EventArgs e)
@@ -173,15 +192,8 @@ namespace TootTallyDifficultyCalculator2._0
                 //LEADERBOARD DISPLAY
                 var leaderboardText = DisplayLeaderboard(chart);
                 List<string> leaderboardTextLines = new();
-                if (chart.leaderboard == null && leaderboardText.Count == 0)
-                {
-                    leaderboardTextLines = new List<string>
-                    {
-                        $"{chart.name} processed in {chart.calculationTime.TotalSeconds}s",
-                        $"SongHash {chart.songHash} leaderboard not found.",
-                        "-----------------------------------------------------------------------------------------------------"
-                    };
-                }
+                if (chart.leaderboard == null || leaderboardText.Count == 0)
+                    continue;
                 else if (chart.leaderboard != null)
                 {
                     leaderboardTextLines = new List<string>
@@ -269,23 +281,29 @@ namespace TootTallyDifficultyCalculator2._0
         }
 
         //TT for S rank (60% score)
-        //https://www.desmos.com/calculator/rhwqyp21nr
+        //https://www.desmos.com/calculator/jaeyctccxg
         public static double CalculateBaseTT(double starRating)
         {
 
-            return 1.05f * FastPow(starRating, 2) + (3f * starRating) + 0.01f;
-            //y = 1.05x^2 + 3x + 0.01
+            return (0.7f * FastPow(starRating, 2) + (12f * starRating) + 0.05f) / 1.5f;
+            //y = 0.7x^2 + 12x + 0.05
         }
 
-        //https://www.desmos.com/calculator/bnyo9f5u1y
+        //https://www.desmos.com/calculator/6yczzjjnpy
         public static double CalculateScoreTT(Chart chart, Leaderboard.ScoreDataFromDB score)
         {
             var baseTT = CalculateBaseTT(chart.GetDiffRating(score.replay_speed));
 
-            var percentage = score.percentage / 100d;
+            var percent = score.percentage / 100d;
 
-            var scoreTT = ((0.028091281 * Math.Pow(Math.E, 6d * percentage)) - 0.028091281) * baseTT;
-            //y = (0.28091281 * e^6x - 0.028091281) * b
+            double scoreTT;
+            if (percent < 0.6f)
+                scoreTT = 21.433d * FastPow(percent, 6) * baseTT;
+            else if (percent < 0.98f)
+                scoreTT = ((0.028091281d * Math.Pow(Math.E, 6d * percent)) - 0.028091281d) * baseTT; //y = (0.28091281 * e^6x - 0.028091281) * b
+            else
+                scoreTT = FastPow(9.2d * percent - 7.43037117d, 5) * baseTT;
+            
 
             return scoreTT;
         }

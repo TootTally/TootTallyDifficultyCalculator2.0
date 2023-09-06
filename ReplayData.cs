@@ -94,7 +94,7 @@
         private double ReplayPositionToTime(float position)
         {
             position /= GetNoteHolderPrecisionMultiplier();
-            var trackmovemult = (float.Parse(_chartData.tempo) / 60f) * Math.Floor(float.Parse(_chartData.savednotespacing) * scrollspeed);
+            var trackmovemult = (_chartData.tempo / 60f) * Math.Floor(_chartData.savednotespacing * scrollspeed);
             var time = (position - ZERO_X_POS) / -trackmovemult;
             return (time + NOTE_OFFSET + Ms2Sec(audiolatency)) / gamespeedmultiplier;
         }

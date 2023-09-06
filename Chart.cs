@@ -6,14 +6,14 @@ namespace TootTallyDifficultyCalculator2._0
     {
         public readonly float[] GAME_SPEED = { .5f, .75f, 1f, 1.25f, 1.5f, 1.75f, 2f };
 
-        public string[][] notes;
+        public float[][] notes;
         public string[][] bgdata;
         public Dictionary<float, List<Note>> notesDict;
         public List<string> note_color_start;
         public List<string> note_color_end;
         public string endpoint;
-        public string savednotespacing;
-        public string tempo;
+        public float savednotespacing;
+        public float tempo;
         public string timesig;
         public string trackRef;
         public string name;
@@ -23,7 +23,6 @@ namespace TootTallyDifficultyCalculator2._0
         public string description;
         public string difficulty;
         public string year;
-        public string songHash;
         public Leaderboard leaderboard;
 
         public List<Lyrics> lyrics;
@@ -38,13 +37,13 @@ namespace TootTallyDifficultyCalculator2._0
             for (int i = 0; i < GAME_SPEED.Length; i++)
             {
                 var gamespeed = GAME_SPEED[i];
-                var newTempo = float.Parse(tempo) * gamespeed;
-                var minLength = BeatToSeconds2(0.01, newTempo);
+                var newTempo = tempo * gamespeed;
+                var minLength = BeatToSeconds2(0.01f, newTempo);
                 int count = 1;
                 notesDict[i] = new List<Note>(notes.Length);
-                foreach (string[] n in notes)
+                foreach (float[] n in notes)
                 {
-                    notesDict[i].Add(new Note(count, BeatToSeconds2(double.Parse(n[0]), newTempo), BeatToSeconds2(double.Parse(n[1]), newTempo), float.Parse(n[2]), float.Parse(n[3]), float.Parse(n[4])));
+                    notesDict[i].Add(new Note(count, BeatToSeconds2(n[0], newTempo), BeatToSeconds2(n[1], newTempo), n[2], n[3], n[4]));
                     if (notesDict[i].Last().length == 0)
                         notesDict[i].Last().length = minLength;
                     count++;
@@ -99,11 +98,6 @@ namespace TootTallyDifficultyCalculator2._0
             Trace.WriteLine($"-----------------------------------------------------");*/
         }
 
-        public void GetLeaderboardFromAPI()
-        {
-            TootTallyAPIServices.GetChartData(this, (leaderboard) => this.leaderboard = leaderboard);
-        }
-
         public double GetDiffRating(float speed) => performances.GetDiffRating(speed);
 
         public double GetAimPerformance(float speed) => performances.aimAnalyticsDict[speed].perfAverage;
@@ -131,7 +125,7 @@ namespace TootTallyDifficultyCalculator2._0
             return time / bpm * 60d;
         }
 
-        public static double BeatToSeconds2(double beat, float bpm) => (60d / bpm) * beat;
+        public static double BeatToSeconds2(float beat, float bpm) => (60d / bpm) * beat;
 
     }
 }

@@ -44,8 +44,28 @@
             FilterPlayerName = new TextBox();
             label4 = new Label();
             ButtonSaveTo = new Button();
+            AimNum = new NumericUpDown();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            TapNum = new NumericUpDown();
+            AccNum = new NumericUpDown();
+            AimEndNote = new NumericUpDown();
+            TapEndMult = new NumericUpDown();
+            AimEndSlider = new NumericUpDown();
+            AimEndMult = new NumericUpDown();
+            RatingOffset = new NumericUpDown();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TapNum).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AccNum).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AimEndNote).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TapEndMult).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AimEndSlider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AimEndMult).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)RatingOffset).BeginInit();
             SuspendLayout();
             // 
             // ButtonForceRefresh
@@ -60,7 +80,7 @@
             ButtonForceRefresh.TabIndex = 1;
             ButtonForceRefresh.Text = "FORCE REFRESH";
             ButtonForceRefresh.UseVisualStyleBackColor = false;
-            ButtonForceRefresh.Click += OnDisplayChartsButtonClick;
+            ButtonForceRefresh.Click += OnForceRefreshClick;
             // 
             // checkboxAllSpeed
             // 
@@ -243,6 +263,138 @@
             ButtonSaveTo.UseVisualStyleBackColor = false;
             ButtonSaveTo.Click += OnSaveToButtonPress;
             // 
+            // AimNum
+            // 
+            AimNum.BackColor = Color.DarkRed;
+            AimNum.ForeColor = Color.White;
+            AimNum.Location = new Point(56, 107);
+            AimNum.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            AimNum.Name = "AimNum";
+            AimNum.Size = new Size(96, 23);
+            AimNum.TabIndex = 11;
+            AimNum.Value = new decimal(new int[] { 80, 0, 0, 0 });
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(6, 107);
+            label5.Name = "label5";
+            label5.Size = new Size(43, 20);
+            label5.TabIndex = 5;
+            label5.Text = "AIM:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(6, 145);
+            label6.Name = "label6";
+            label6.Size = new Size(41, 20);
+            label6.TabIndex = 5;
+            label6.Text = "TAP:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(6, 181);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 20);
+            label7.TabIndex = 5;
+            label7.Text = "ACC:";
+            // 
+            // TapNum
+            // 
+            TapNum.BackColor = Color.DarkRed;
+            TapNum.ForeColor = Color.White;
+            TapNum.Location = new Point(56, 142);
+            TapNum.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            TapNum.Name = "TapNum";
+            TapNum.Size = new Size(96, 23);
+            TapNum.TabIndex = 11;
+            TapNum.Value = new decimal(new int[] { 145, 0, 0, 0 });
+            // 
+            // AccNum
+            // 
+            AccNum.BackColor = Color.DarkRed;
+            AccNum.ForeColor = Color.White;
+            AccNum.Location = new Point(56, 178);
+            AccNum.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            AccNum.Name = "AccNum";
+            AccNum.Size = new Size(96, 23);
+            AccNum.TabIndex = 11;
+            AccNum.Value = new decimal(new int[] { 28, 0, 0, 0 });
+            // 
+            // AimEndNote
+            // 
+            AimEndNote.BackColor = Color.DarkRed;
+            AimEndNote.ForeColor = Color.White;
+            AimEndNote.Location = new Point(214, 104);
+            AimEndNote.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            AimEndNote.Name = "AimEndNote";
+            AimEndNote.Size = new Size(96, 23);
+            AimEndNote.TabIndex = 11;
+            AimEndNote.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            // 
+            // TapEndMult
+            // 
+            TapEndMult.BackColor = Color.DarkRed;
+            TapEndMult.ForeColor = Color.White;
+            TapEndMult.Location = new Point(214, 142);
+            TapEndMult.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            TapEndMult.Name = "TapEndMult";
+            TapEndMult.Size = new Size(96, 23);
+            TapEndMult.TabIndex = 11;
+            TapEndMult.Value = new decimal(new int[] { 90, 0, 0, 0 });
+            // 
+            // AimEndSlider
+            // 
+            AimEndSlider.BackColor = Color.DarkRed;
+            AimEndSlider.ForeColor = Color.White;
+            AimEndSlider.Location = new Point(316, 104);
+            AimEndSlider.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            AimEndSlider.Name = "AimEndSlider";
+            AimEndSlider.Size = new Size(96, 23);
+            AimEndSlider.TabIndex = 11;
+            AimEndSlider.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            // 
+            // AimEndMult
+            // 
+            AimEndMult.BackColor = Color.DarkRed;
+            AimEndMult.ForeColor = Color.White;
+            AimEndMult.Location = new Point(418, 104);
+            AimEndMult.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            AimEndMult.Name = "AimEndMult";
+            AimEndMult.Size = new Size(96, 23);
+            AimEndMult.TabIndex = 11;
+            AimEndMult.Value = new decimal(new int[] { 30, 0, 0, 0 });
+            // 
+            // RatingOffset
+            // 
+            RatingOffset.BackColor = Color.DarkRed;
+            RatingOffset.ForeColor = Color.White;
+            RatingOffset.Location = new Point(56, 216);
+            RatingOffset.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            RatingOffset.Name = "RatingOffset";
+            RatingOffset.Size = new Size(96, 23);
+            RatingOffset.TabIndex = 11;
+            RatingOffset.Value = new decimal(new int[] { 60, 0, 0, 0 });
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(6, 218);
+            label8.Name = "label8";
+            label8.Size = new Size(40, 20);
+            label8.TabIndex = 5;
+            label8.Text = "OFF:";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -250,12 +402,24 @@
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(1109, 965);
             Controls.Add(FilterMaxTT);
+            Controls.Add(RatingOffset);
+            Controls.Add(TapEndMult);
+            Controls.Add(AccNum);
+            Controls.Add(TapNum);
+            Controls.Add(AimEndMult);
+            Controls.Add(AimEndSlider);
+            Controls.Add(AimEndNote);
+            Controls.Add(AimNum);
             Controls.Add(FilterMinTT);
             Controls.Add(LoadingLabel);
             Controls.Add(ProgressBarLoading);
             Controls.Add(TextBoxLeaderboardData);
             Controls.Add(TextBoxChartData);
             Controls.Add(label3);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
             Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(label1);
@@ -270,6 +434,14 @@
             Shown += OnFormShown;
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AimNum).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TapNum).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AccNum).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AimEndNote).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TapEndMult).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AimEndSlider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AimEndMult).EndInit();
+            ((System.ComponentModel.ISupportInitialize)RatingOffset).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -291,5 +463,17 @@
         private TextBox FilterPlayerName;
         private Label label4;
         private Button ButtonSaveTo;
+        private NumericUpDown AimNum;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private NumericUpDown TapNum;
+        private NumericUpDown AccNum;
+        private NumericUpDown AimEndNote;
+        private NumericUpDown TapEndMult;
+        private NumericUpDown AimEndSlider;
+        private NumericUpDown AimEndMult;
+        private NumericUpDown RatingOffset;
+        private Label label8;
     }
 }

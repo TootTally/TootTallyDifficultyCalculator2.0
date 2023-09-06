@@ -113,38 +113,6 @@ namespace TootTallyDifficultyCalculator2._0
             return JsonConvert.DeserializeObject<List<int>>(GetStringRequestOld($"songs/rated").Result);
         }
 
-        public static void GetChartData(Chart chart, Action<Leaderboard> callback)
-        {
-            int chartID;
-            try
-            {
-                chartID = int.Parse(GetStringRequestOld($"hashcheck/custom/?songHash={chart.songHash}").Result);
-            }
-            catch (Exception)
-            {
-                Trace.WriteLine("Couldn't find songID for " + chart.songHash);
-                return;
-            }
-            Leaderboard leaderboard = null;
-
-            if (chartID != 0)
-            {
-                try
-                {
-                    leaderboard = JsonConvert.DeserializeObject<Leaderboard>(GetStringRequestOld($"songs/{chartID}/leaderboard").Result);
-                    Parallel.ForEach(leaderboard.results, score => score.tt = (float)MainForm.CalculateScoreTT(chart, score));
-                    leaderboard.results.OrderBy(x => x.tt);
-                }
-                catch (Exception)
-                {
-                    Trace.WriteLine("Couldn't find leaderboard for " + chartID);
-                }
-            }
-           
-            if (leaderboard != null)
-                callback(leaderboard);
-        }
-
         public static void GetLeaderboardFromId(int id, Action<Leaderboard> callback)
         {
             try
