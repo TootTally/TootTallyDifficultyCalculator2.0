@@ -12,11 +12,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         public static Chart LoadChart(string path)
         {
-            StreamReader reader = new StreamReader(path);
-            string json = reader.ReadToEnd();
-            reader.Close();
-            Chart chart = JsonConvert.DeserializeObject<Chart>(json);
-            chart.OnDeserialize();
+            Chart chart = JsonConvert.DeserializeObject<Chart>(File.ReadAllText(path));
             return chart;
         }
 

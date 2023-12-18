@@ -9,8 +9,10 @@ namespace TootTallyDifficultyCalculator2._0
     {
         public List<Chart> chartList;
         public List<Leaderboard> leaderboardList;
-        private TimeSpan _calculationTime;
+        private TimeSpan _deserializingTime;
+        private TimeSpan _algoTime;
         private TimeSpan _leaderboardLoadingTime;
+        private TimeSpan _leaderboardCalcTime;
         public static MainForm Instance;
 
         public MainForm()
@@ -30,13 +32,17 @@ namespace TootTallyDifficultyCalculator2._0
         public float GetAimEndMult() => (float)AimEndMult.Value;
         public float GetTapEndMult() => (float)TapEndMult.Value;
         public float GetRatingOffset() => (float)RatingOffset.Value;
+        public float GetMaxTime() => (float)MaxTime.Value;
+
+        public float GetEndDrain() => (float)EndDrain.Value;
+        public float GetBiasMult() => (float)BiasMult.Value;
 
         public async void DownloadAllTmbs(object sender, EventArgs e)
         {
             List<int> idList = TootTallyAPIServices.GetAllRatedChartIDs();
             List<Leaderboard.SongInfoFromDB> fileHashes = ChartReader.GetCachedFileHashes();
             fileHashes ??= new();
-            var filteredIDs = idList.Where(id => fileHashes.Any(x => x.id == id)).ToList();
+            var filteredIDs = idList.Where(id => fileHashes.Any(x => x != null && x.id == id)).ToList();
 
             Trace.WriteLine("Waiting for all leaderboards...");
             leaderboardList = new List<Leaderboard>(idList.Count);
@@ -110,15 +116,16 @@ namespace TootTallyDifficultyCalculator2._0
             {
 
                 chartList.Add(ChartReader.LoadChart(name));
-
                 currentCount++;
                 if (!ProgressBarLoading.InvokeRequired)
                 {
                     UpdateProgressBar(currentCount, maxCount);
                 }
             });
-            stopwatch.Stop();
-            _calculationTime = stopwatch.Elapsed;
+            _deserializingTime = stopwatch.Elapsed;
+            stopwatch.Restart();
+            Parallel.ForEach(chartList, chart => chart.OnDeserialize());
+            _algoTime = stopwatch.Elapsed;
         }
 
         public void UpdateProgressBar(int value, int maxValue)
@@ -169,12 +176,13 @@ namespace TootTallyDifficultyCalculator2._0
             var allLeaderboardTextLines = new List<string>();
 
             chartList.Sort((x, y) => String.Compare(x.name, y.name));
-            allChartDataTextLines.Add($"Calculation time took {_calculationTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
+            allChartDataTextLines.Add($"Json Calculation time took {_deserializingTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
+            allChartDataTextLines.Add($"Algo Calculation time took {_algoTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
             allLeaderboardTextLines.Add($"Calculation time took {_leaderboardLoadingTime.TotalSeconds}s for {chartList.Count} charts.");
+            Stopwatch sw = Stopwatch.StartNew();
             foreach (Chart chart in chartList)
             {
                 if (!chart.name.ToLower().Contains(FilterMapName.Text.ToLower())) continue;
-
                 //CHART DISPLAY
                 var chartTextLines = new List<string>()
                 {
@@ -185,7 +193,7 @@ namespace TootTallyDifficultyCalculator2._0
                     DisplayAllSpeed(chart, ref chartTextLines);
                 else
                     DisplayAtSpeed(chart, 2, ref chartTextLines);
-                chartTextLines.Add("=====================================================================================================");
+                chartTextLines.Add("==========================================================================================================");
                 chartTextLines.Add("");
                 allChartDataTextLines.AddRange(chartTextLines);
 
@@ -200,16 +208,19 @@ namespace TootTallyDifficultyCalculator2._0
                     {
                         $"{chart.name} processed in {chart.calculationTime.TotalSeconds}s",
                         GetLeaderboardScoreHeader(),
-                        "-----------------------------------------------------------------------------------------------------"
+                        "----------------------------------------------------------------------------------------------------------"
                     };
                 }
 
                 leaderboardTextLines.AddRange(leaderboardText);
-                leaderboardTextLines.Add("=====================================================================================================");
+                leaderboardTextLines.Add("==========================================================================================================");
                 leaderboardTextLines.Add("");
                 allLeaderboardTextLines.AddRange(leaderboardTextLines);
 
             }
+            sw.Stop();
+            _leaderboardCalcTime = sw.Elapsed;
+            allLeaderboardTextLines.Insert(1, $"Score Calculation time took {_leaderboardCalcTime.TotalSeconds}s for {chartList.Count} charts.");
             TextBoxChartData.Lines = allChartDataTextLines.ToArray();
             TextBoxLeaderboardData.Lines = allLeaderboardTextLines.ToArray();
         }
@@ -222,39 +233,40 @@ namespace TootTallyDifficultyCalculator2._0
 
         public void DisplayAtSpeed(Chart chart, int speedIndex, ref List<string> textLines)
         {
-            DataVectorAnalytics aimAnalytics = chart.performances.aimAnalyticsDict[speedIndex];
-            DataVectorAnalytics tapAnalytics = chart.performances.tapAnalyticsDict[speedIndex];
-            DataVectorAnalytics accAnalytics = chart.performances.accAnalyticsDict[speedIndex];
+            DataVectorAnalytics aimAnalytics = chart.performances.aimAnalyticsArray[speedIndex];
+            DataVectorAnalytics tapAnalytics = chart.performances.tapAnalyticsArray[speedIndex];
+            DataVectorAnalytics accAnalytics = chart.performances.accAnalyticsArray[speedIndex];
             textLines.Add($"SPEED: {chart.GAME_SPEED[speedIndex]:0.00}x rated {chart.GetStarRating(speedIndex):0.0000}");
             textLines.Add($"  aim: {aimAnalytics.perfWeightedAverage:0.0000} min: {aimAnalytics.perfMin:0.0000} max: {aimAnalytics.perfMax:0.0000}");
             textLines.Add($"  tap: {tapAnalytics.perfWeightedAverage:0.0000} min: {tapAnalytics.perfMin:0.0000} max: {tapAnalytics.perfMax:0.0000}");
             textLines.Add($"  acc: {accAnalytics.perfWeightedAverage:0.0000} min: {accAnalytics.perfMin:0.0000} max: {accAnalytics.perfMax:0.0000}");
-            textLines.Add("--------------------------------------------");
+            textLines.Add("-------------------------------------------------");
         }
 
         public List<string> DisplayLeaderboard(Chart chart)
         {
-            var count = 0;
+            var count = 1;
             List<string> textLines = new List<string>();
             chart.leaderboard?.results.ForEach(score =>
                 {
                     score.tt = (float)CalculateScoreTT(chart, score);
-                    if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value && score.player.ToLower().Contains(FilterPlayerName.Text.ToLower()))
-                        textLines.Add(GetDisplayScoreLine2(score, chart, count));
+                    if (!FilterModifierOnly.Checked || (FilterModifierOnly.Checked && score.modifiers != null && !score.modifiers.Contains("NONE")))
+                        if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value && score.player.ToLower().Contains(FilterPlayerName.Text.ToLower()))
+                            textLines.Add(GetDisplayScoreLine2(score, chart, count));
                     count++;
                 });
             return textLines;
         }
 
         public string GetDisplayScoreLine(Leaderboard.ScoreDataFromDB score, Chart chart, int count) =>
-            $"#{count} {score.player}\t\t{score.score}\t\t({score.replay_speed:0.00}x)\t {score.percentage:0.00}%\t{score.grade}\t{score.tt:0.00}tt\tdiff:{chart.GetDiffRating(score.replay_speed):0.00}";
+            $"#{count} {score.player}\t\t{score.score}\t\t({score.replay_speed:0.00}x)\t {score.percentage:0.00}%\t{score.grade}\t{score.tt:0.00}tt\tdiff:{chart.GetDynamicDiffRating(score.percentage / 100f, score.replay_speed, score.modifiers):0.00}";
 
         public string GetDisplayScoreLine2(Leaderboard.ScoreDataFromDB score, Chart chart, int count) =>
-            FormatLeaderboardScore(count.ToString(), score.player, score.score.ToString(), score.replay_speed.ToString("0.00"), score.percentage.ToString("0.00"), score.grade, score.tt.ToString("0.00"), chart.GetDiffRating(score.replay_speed).ToString("0.00"));
+            FormatLeaderboardScore(count.ToString(), score.player, score.score.ToString(), score.replay_speed.ToString("0.00"), score.percentage.ToString("0.00"), score.grade, score.tt.ToString("0.00"), chart.GetDynamicDiffRating(score.percentage / 100f, score.replay_speed, score.modifiers).ToString("0.00"), score.modifiers);
 
-        public string FormatLeaderboardScore(string count, string player, string score, string replaySpeed, string percentage, string grade, string tt, string diff)
+        public string FormatLeaderboardScore(string count, string player, string score, string replaySpeed, string percentage, string grade, string tt, string diff, string[] modifiers)
         {
-            return String.Format("{0,-4} | {1,-30} | {2, -11} | {3, -8} | {4, -6} | {5, -5} | {6, -10} | {7, 5}",
+            return String.Format("{0,-4} | {1,-30} | {2, -11} | {3, -8} | {4, -6} | {5, -5} | {6, -10} | {7, 5} | {8, 4} |",
                 $"#{count}",
                 $"{player}",
                 $"{score}",
@@ -262,13 +274,14 @@ namespace TootTallyDifficultyCalculator2._0
                 $"{percentage}%",
                 $"{grade}",
                 $"{tt}tt",
-                $"{diff}"
+                $"{diff}",
+                $"{(modifiers != null ? string.Join(',', modifiers) : "NONE")}"
                 );
         }
 
         public string GetLeaderboardScoreHeader()
         {
-            return String.Format("{0,-4} | {1,-30} | {2, -11} | {3, -8} | {4, -6} | {5, -5} | {6, -10} | {7, 5}",
+            return String.Format("{0,-4} | {1,-30} | {2, -11} | {3, -8} | {4, -6} | {5, -5} | {6, -10} | {7, 5} | {8, 4} |",
                 $"Rank",
                 $"Name",
                 $"Score",
@@ -276,34 +289,33 @@ namespace TootTallyDifficultyCalculator2._0
                 $"Perc",
                 $"Grade",
                 $"TT",
-                $"Diff"
+                $"Diff",
+                $"Mods"
                 );
         }
 
         //TT for S rank (60% score)
         //https://www.desmos.com/calculator/jaeyctccxg
-        public static double CalculateBaseTT(double starRating)
+        public static float CalculateBaseTT(float starRating)
         {
 
             return (0.7f * FastPow(starRating, 2) + (12f * starRating) + 0.05f) / 1.5f;
             //y = 0.7x^2 + 12x + 0.05
         }
 
-        //https://www.desmos.com/calculator/6yczzjjnpy
+        //https://www.desmos.com/calculator/x7c0zutgsn
         public static double CalculateScoreTT(Chart chart, Leaderboard.ScoreDataFromDB score)
         {
-            var baseTT = CalculateBaseTT(chart.GetDiffRating(score.replay_speed));
+            var percent = score.percentage / 100f;
 
-            var percent = score.percentage / 100d;
+            var baseTT = CalculateBaseTT(chart.GetDynamicDiffRating(percent, score.replay_speed, score.modifiers));
 
-            double scoreTT;
+            float scoreTT;
             if (percent < 0.6f)
-                scoreTT = 21.433d * FastPow(percent, 6) * baseTT;
-            else if (percent < 0.98f)
-                scoreTT = ((0.028091281d * Math.Pow(Math.E, 6d * percent)) - 0.028091281d) * baseTT; //y = (0.28091281 * e^6x - 0.028091281) * b
+                scoreTT = 21.433f * FastPow(percent, 6) * baseTT;
             else
-                scoreTT = FastPow(9.2d * percent - 7.43037117d, 5) * baseTT;
-            
+                scoreTT = ((0.028091281f * MathF.Pow(MathF.E, 6f * percent)) - 0.028091281f) * baseTT; //y = (0.28091281 * e^6x - 0.028091281) * b
+
 
             return scoreTT;
         }

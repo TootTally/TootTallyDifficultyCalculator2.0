@@ -98,15 +98,18 @@ namespace TootTallyDifficultyCalculator2._0
             Trace.WriteLine($"-----------------------------------------------------");*/
         }
 
-        public double GetDiffRating(float speed) => performances.GetDiffRating(speed);
+        //public float GetDiffRating(float speed) => performances.GetDiffRating(speed);
 
-        public double GetAimPerformance(float speed) => performances.aimAnalyticsDict[speed].perfAverage;
-        public double GetTapPerformance(float speed) => performances.tapAnalyticsDict[speed].perfAverage;
-        public double GetAccPerformance(float speed) => performances.accAnalyticsDict[speed].perfAverage;
+        public float GetDiffRating(float speed, string[] modifiers) => performances.GetDiffRating(speed, modifiers);
+        public float GetDynamicDiffRating(float percent, float speed, string[] modifiers) => performances.GetDynamicDiffRating(percent, speed, modifiers);
 
-        public double GetStarRating(float speed) => performances.starRatingDict[speed];
+        public float GetAimPerformance(int speed) => performances.aimAnalyticsArray[speed].perfWeightedAverage;
+        public float GetTapPerformance(int speed) => performances.tapAnalyticsArray[speed].perfWeightedAverage;
+        public float GetAccPerformance(int speed) => performances.accAnalyticsArray[speed].perfWeightedAverage;
+
+        public double GetStarRating(int speed) => performances.GetDiffRating(speed * .25f + 0.5f);
+
         #region Note
-
         public enum Direction
         {
             Null,
@@ -120,12 +123,8 @@ namespace TootTallyDifficultyCalculator2._0
             public string bar;
             public string text;
         }
-        public static double BeatToSeconds(double time, float bpm)
-        {
-            return time / bpm * 60d;
-        }
 
-        public static double BeatToSeconds2(float beat, float bpm) => (60d / bpm) * beat;
+        public static float BeatToSeconds2(float beat, float bpm) => (60f / bpm) * beat;
 
     }
 }

@@ -56,6 +56,17 @@
             AimEndMult = new NumericUpDown();
             RatingOffset = new NumericUpDown();
             label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label13 = new Label();
+            EndDrain = new NumericUpDown();
+            MaxTime = new NumericUpDown();
+            label14 = new Label();
+            FilterModifierOnly = new CheckBox();
+            BiasMult = new NumericUpDown();
+            label15 = new Label();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
@@ -66,6 +77,9 @@
             ((System.ComponentModel.ISupportInitialize)AimEndSlider).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimEndMult).BeginInit();
             ((System.ComponentModel.ISupportInitialize)RatingOffset).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EndDrain).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)MaxTime).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BiasMult).BeginInit();
             SuspendLayout();
             // 
             // ButtonForceRefresh
@@ -272,7 +286,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 80, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 22, 0, 0, 0 });
             // 
             // label5
             // 
@@ -316,7 +330,7 @@
             TapNum.Name = "TapNum";
             TapNum.Size = new Size(96, 23);
             TapNum.TabIndex = 11;
-            TapNum.Value = new decimal(new int[] { 145, 0, 0, 0 });
+            TapNum.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // AccNum
             // 
@@ -327,51 +341,51 @@
             AccNum.Name = "AccNum";
             AccNum.Size = new Size(96, 23);
             AccNum.TabIndex = 11;
-            AccNum.Value = new decimal(new int[] { 28, 0, 0, 0 });
+            AccNum.Value = new decimal(new int[] { 11, 0, 0, 0 });
             // 
             // AimEndNote
             // 
             AimEndNote.BackColor = Color.DarkRed;
             AimEndNote.ForeColor = Color.White;
-            AimEndNote.Location = new Point(214, 104);
+            AimEndNote.Location = new Point(204, 104);
             AimEndNote.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             AimEndNote.Name = "AimEndNote";
             AimEndNote.Size = new Size(96, 23);
             AimEndNote.TabIndex = 11;
-            AimEndNote.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            AimEndNote.Value = new decimal(new int[] { 22, 0, 0, 0 });
             // 
             // TapEndMult
             // 
             TapEndMult.BackColor = Color.DarkRed;
             TapEndMult.ForeColor = Color.White;
-            TapEndMult.Location = new Point(214, 142);
+            TapEndMult.Location = new Point(204, 142);
             TapEndMult.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             TapEndMult.Name = "TapEndMult";
             TapEndMult.Size = new Size(96, 23);
             TapEndMult.TabIndex = 11;
-            TapEndMult.Value = new decimal(new int[] { 90, 0, 0, 0 });
+            TapEndMult.Value = new decimal(new int[] { 15, 0, 0, 0 });
             // 
             // AimEndSlider
             // 
             AimEndSlider.BackColor = Color.DarkRed;
             AimEndSlider.ForeColor = Color.White;
-            AimEndSlider.Location = new Point(316, 104);
+            AimEndSlider.Location = new Point(331, 104);
             AimEndSlider.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             AimEndSlider.Name = "AimEndSlider";
             AimEndSlider.Size = new Size(96, 23);
             AimEndSlider.TabIndex = 11;
-            AimEndSlider.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            AimEndSlider.Value = new decimal(new int[] { 4, 0, 0, 0 });
             // 
             // AimEndMult
             // 
             AimEndMult.BackColor = Color.DarkRed;
             AimEndMult.ForeColor = Color.White;
-            AimEndMult.Location = new Point(418, 104);
+            AimEndMult.Location = new Point(462, 104);
             AimEndMult.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             AimEndMult.Name = "AimEndMult";
             AimEndMult.Size = new Size(96, 23);
             AimEndMult.TabIndex = 11;
-            AimEndMult.Value = new decimal(new int[] { 30, 0, 0, 0 });
+            AimEndMult.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // RatingOffset
             // 
@@ -382,7 +396,7 @@
             RatingOffset.Name = "RatingOffset";
             RatingOffset.Size = new Size(96, 23);
             RatingOffset.TabIndex = 11;
-            RatingOffset.Value = new decimal(new int[] { 60, 0, 0, 0 });
+            RatingOffset.Value = new decimal(new int[] { 34, 0, 0, 0 });
             // 
             // label8
             // 
@@ -395,6 +409,135 @@
             label8.TabIndex = 5;
             label8.Text = "OFF:";
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(165, 107);
+            label9.Name = "label9";
+            label9.Size = new Size(33, 20);
+            label9.TabIndex = 5;
+            label9.Text = "EN:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(165, 142);
+            label10.Name = "label10";
+            label10.Size = new Size(30, 20);
+            label10.TabIndex = 5;
+            label10.Text = "ET:";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(300, 105);
+            label11.Name = "label11";
+            label11.Size = new Size(29, 20);
+            label11.TabIndex = 5;
+            label11.Text = "ES:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(428, 105);
+            label12.Name = "label12";
+            label12.Size = new Size(35, 20);
+            label12.TabIndex = 5;
+            label12.Text = "EM:";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(165, 181);
+            label13.Name = "label13";
+            label13.Size = new Size(32, 20);
+            label13.TabIndex = 5;
+            label13.Text = "ED:";
+            // 
+            // EndDrain
+            // 
+            EndDrain.BackColor = Color.DarkRed;
+            EndDrain.DecimalPlaces = 4;
+            EndDrain.ForeColor = Color.White;
+            EndDrain.Location = new Point(201, 183);
+            EndDrain.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            EndDrain.Name = "EndDrain";
+            EndDrain.Size = new Size(96, 23);
+            EndDrain.TabIndex = 11;
+            EndDrain.Value = new decimal(new int[] { 1025, 0, 0, 196608 });
+            // 
+            // MaxTime
+            // 
+            MaxTime.BackColor = Color.DarkRed;
+            MaxTime.DecimalPlaces = 2;
+            MaxTime.ForeColor = Color.White;
+            MaxTime.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            MaxTime.Location = new Point(201, 218);
+            MaxTime.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            MaxTime.Minimum = new decimal(new int[] { 1, 0, 0, 131072 });
+            MaxTime.Name = "MaxTime";
+            MaxTime.Size = new Size(96, 23);
+            MaxTime.TabIndex = 11;
+            MaxTime.Value = new decimal(new int[] { 15, 0, 0, 131072 });
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(163, 219);
+            label14.Name = "label14";
+            label14.Size = new Size(35, 20);
+            label14.TabIndex = 5;
+            label14.Text = "MS:";
+            // 
+            // FilterModifierOnly
+            // 
+            FilterModifierOnly.AutoSize = true;
+            FilterModifierOnly.ForeColor = Color.White;
+            FilterModifierOnly.Location = new Point(551, 74);
+            FilterModifierOnly.Name = "FilterModifierOnly";
+            FilterModifierOnly.Size = new Size(104, 19);
+            FilterModifierOnly.TabIndex = 3;
+            FilterModifierOnly.Text = "Modifiers Only";
+            FilterModifierOnly.UseVisualStyleBackColor = true;
+            FilterModifierOnly.CheckedChanged += OnValueBoxTextChanged;
+            // 
+            // BiasMult
+            // 
+            BiasMult.BackColor = Color.DarkRed;
+            BiasMult.DecimalPlaces = 2;
+            BiasMult.ForeColor = Color.White;
+            BiasMult.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            BiasMult.Location = new Point(359, 218);
+            BiasMult.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            BiasMult.Minimum = new decimal(new int[] { 1, 0, 0, 131072 });
+            BiasMult.Name = "BiasMult";
+            BiasMult.Size = new Size(96, 23);
+            BiasMult.TabIndex = 11;
+            BiasMult.Value = new decimal(new int[] { 5, 0, 0, 65536 });
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(306, 218);
+            label15.Name = "label15";
+            label15.Size = new Size(47, 20);
+            label15.TabIndex = 5;
+            label15.Text = "BIAS:";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -403,6 +546,9 @@
             ClientSize = new Size(1109, 965);
             Controls.Add(FilterMaxTT);
             Controls.Add(RatingOffset);
+            Controls.Add(BiasMult);
+            Controls.Add(MaxTime);
+            Controls.Add(EndDrain);
             Controls.Add(TapEndMult);
             Controls.Add(AccNum);
             Controls.Add(TapNum);
@@ -419,12 +565,20 @@
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
+            Controls.Add(label12);
+            Controls.Add(label11);
+            Controls.Add(label15);
+            Controls.Add(label14);
+            Controls.Add(label13);
+            Controls.Add(label10);
+            Controls.Add(label9);
             Controls.Add(label5);
             Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(FilterPlayerName);
             Controls.Add(FilterMapName);
+            Controls.Add(FilterModifierOnly);
             Controls.Add(checkboxAllSpeed);
             Controls.Add(ButtonSaveTo);
             Controls.Add(ButtonSwitchBox);
@@ -442,6 +596,9 @@
             ((System.ComponentModel.ISupportInitialize)AimEndSlider).EndInit();
             ((System.ComponentModel.ISupportInitialize)AimEndMult).EndInit();
             ((System.ComponentModel.ISupportInitialize)RatingOffset).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EndDrain).EndInit();
+            ((System.ComponentModel.ISupportInitialize)MaxTime).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BiasMult).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -475,5 +632,16 @@
         private NumericUpDown AimEndMult;
         private NumericUpDown RatingOffset;
         private Label label8;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private Label label13;
+        private NumericUpDown EndDrain;
+        private NumericUpDown MaxTime;
+        private Label label14;
+        private CheckBox FilterModifierOnly;
+        private NumericUpDown BiasMult;
+        private Label label15;
     }
 }

@@ -21,6 +21,7 @@
             public bool is_rated;
             public int song_id;
             public float replay_speed;
+            public string[] modifiers;
         }
 
         [Serializable]
