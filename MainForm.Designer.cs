@@ -286,7 +286,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 22, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 25, 0, 0, 0 });
             // 
             // label5
             // 
@@ -341,7 +341,7 @@
             AccNum.Name = "AccNum";
             AccNum.Size = new Size(96, 23);
             AccNum.TabIndex = 11;
-            AccNum.Value = new decimal(new int[] { 11, 0, 0, 0 });
+            AccNum.Value = new decimal(new int[] { 12, 0, 0, 0 });
             // 
             // AimEndNote
             // 
@@ -352,7 +352,7 @@
             AimEndNote.Name = "AimEndNote";
             AimEndNote.Size = new Size(96, 23);
             AimEndNote.TabIndex = 11;
-            AimEndNote.Value = new decimal(new int[] { 22, 0, 0, 0 });
+            AimEndNote.Value = new decimal(new int[] { 70, 0, 0, 0 });
             // 
             // TapEndMult
             // 
@@ -363,7 +363,7 @@
             TapEndMult.Name = "TapEndMult";
             TapEndMult.Size = new Size(96, 23);
             TapEndMult.TabIndex = 11;
-            TapEndMult.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            TapEndMult.Value = new decimal(new int[] { 55, 0, 0, 0 });
             // 
             // AimEndSlider
             // 
@@ -374,7 +374,7 @@
             AimEndSlider.Name = "AimEndSlider";
             AimEndSlider.Size = new Size(96, 23);
             AimEndSlider.TabIndex = 11;
-            AimEndSlider.Value = new decimal(new int[] { 4, 0, 0, 0 });
+            AimEndSlider.Value = new decimal(new int[] { 6, 0, 0, 0 });
             // 
             // AimEndMult
             // 
@@ -474,7 +474,7 @@
             EndDrain.Name = "EndDrain";
             EndDrain.Size = new Size(96, 23);
             EndDrain.TabIndex = 11;
-            EndDrain.Value = new decimal(new int[] { 1025, 0, 0, 196608 });
+            EndDrain.Value = new decimal(new int[] { 1003, 0, 0, 196608 });
             // 
             // MaxTime
             // 
@@ -525,7 +525,7 @@
             BiasMult.Name = "BiasMult";
             BiasMult.Size = new Size(96, 23);
             BiasMult.TabIndex = 11;
-            BiasMult.Value = new decimal(new int[] { 5, 0, 0, 65536 });
+            BiasMult.Value = new decimal(new int[] { 25, 0, 0, 131072 });
             // 
             // label15
             // 
