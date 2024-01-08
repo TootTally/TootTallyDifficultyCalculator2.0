@@ -7,8 +7,8 @@ namespace TootTallyDifficultyCalculator2._0
 {
     public partial class MainForm : Form
     {
-        public List<Chart> chartList;
-        public List<Leaderboard> leaderboardList;
+        public static List<Chart> chartList;
+        public static List<Leaderboard> leaderboardList;
         private TimeSpan _deserializingTime;
         private TimeSpan _algoTime;
         private TimeSpan _leaderboardLoadingTime;
@@ -36,6 +36,9 @@ namespace TootTallyDifficultyCalculator2._0
 
         public float GetEndDrain() => (float)EndDrain.Value;
         public float GetBiasMult() => (float)BiasMult.Value;
+
+        public float GetMacc() => (float)MaccValue.Value / 100f;
+        public float GetMap() => (float)MapValue.Value / 100f;
 
         public async void DownloadAllTmbs(object sender, EventArgs e)
         {
@@ -313,9 +316,10 @@ namespace TootTallyDifficultyCalculator2._0
             float scoreTT;
             if (percent < 0.6f)
                 scoreTT = 21.433f * FastPow(percent, 6) * baseTT;
-            else
+            else if (percent < 0.98f)
                 scoreTT = ((0.028091281f * MathF.Pow(MathF.E, 6f * percent)) - 0.028091281f) * baseTT; //y = (0.28091281 * e^6x - 0.028091281) * b
-
+            else
+                scoreTT = FastPow(9.2f * percent - 7.43037117f, 5) * baseTT;
 
             return scoreTT;
         }

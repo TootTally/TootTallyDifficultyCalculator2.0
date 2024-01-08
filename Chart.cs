@@ -100,14 +100,13 @@ namespace TootTallyDifficultyCalculator2._0
 
         //public float GetDiffRating(float speed) => performances.GetDiffRating(speed);
 
-        public float GetDiffRating(float speed, string[] modifiers) => performances.GetDiffRating(speed, modifiers);
         public float GetDynamicDiffRating(float percent, float speed, string[] modifiers) => performances.GetDynamicDiffRating(percent, speed, modifiers);
 
         public float GetAimPerformance(int speed) => performances.aimAnalyticsArray[speed].perfWeightedAverage;
         public float GetTapPerformance(int speed) => performances.tapAnalyticsArray[speed].perfWeightedAverage;
         public float GetAccPerformance(int speed) => performances.accAnalyticsArray[speed].perfWeightedAverage;
 
-        public double GetStarRating(int speed) => performances.GetDiffRating(speed * .25f + 0.5f);
+        public double GetStarRating(int speed) => performances.GetDynamicDiffRating(1, speed * .25f + 0.5f);
 
         #region Note
         public enum Direction

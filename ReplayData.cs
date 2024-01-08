@@ -32,8 +32,6 @@
 
         public void OnDeserialize()
         {
-            if (audiolatency == null)
-                audiolatency = 0;
             gamemodifiers ??= "None";
             version ??= "0.0.0";
         }
