@@ -71,6 +71,8 @@
             MapValue = new NumericUpDown();
             label17 = new Label();
             MaccValue = new NumericUpDown();
+            EndDrainExtra = new NumericUpDown();
+            label18 = new Label();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
@@ -86,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)BiasMult).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MapValue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MaccValue).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EndDrainExtra).BeginInit();
             SuspendLayout();
             // 
             // ButtonForceRefresh
@@ -292,7 +295,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 30, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 27, 0, 0, 0 });
             // 
             // label5
             // 
@@ -336,7 +339,7 @@
             TapNum.Name = "TapNum";
             TapNum.Size = new Size(96, 23);
             TapNum.TabIndex = 11;
-            TapNum.Value = new decimal(new int[] { 25, 0, 0, 0 });
+            TapNum.Value = new decimal(new int[] { 20, 0, 0, 0 });
             // 
             // AccNum
             // 
@@ -358,7 +361,7 @@
             AimEndNote.Name = "AimEndNote";
             AimEndNote.Size = new Size(96, 23);
             AimEndNote.TabIndex = 11;
-            AimEndNote.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            AimEndNote.Value = new decimal(new int[] { 27, 0, 0, 0 });
             // 
             // TapEndMult
             // 
@@ -380,7 +383,7 @@
             AimEndSlider.Name = "AimEndSlider";
             AimEndSlider.Size = new Size(96, 23);
             AimEndSlider.TabIndex = 11;
-            AimEndSlider.Value = new decimal(new int[] { 60, 0, 0, 0 });
+            AimEndSlider.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // AimEndMult
             // 
@@ -391,7 +394,7 @@
             AimEndMult.Name = "AimEndMult";
             AimEndMult.Size = new Size(96, 23);
             AimEndMult.TabIndex = 11;
-            AimEndMult.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            AimEndMult.Value = new decimal(new int[] { 50, 0, 0, 0 });
             // 
             // RatingOffset
             // 
@@ -564,7 +567,7 @@
             MapValue.Name = "MapValue";
             MapValue.Size = new Size(96, 23);
             MapValue.TabIndex = 11;
-            MapValue.Value = new decimal(new int[] { 25, 0, 0, 0 });
+            MapValue.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // label17
             // 
@@ -586,7 +589,30 @@
             MaccValue.Name = "MaccValue";
             MaccValue.Size = new Size(96, 23);
             MaccValue.TabIndex = 11;
-            MaccValue.Value = new decimal(new int[] { 60, 0, 0, 0 });
+            MaccValue.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            // 
+            // EndDrainExtra
+            // 
+            EndDrainExtra.BackColor = Color.DarkRed;
+            EndDrainExtra.DecimalPlaces = 3;
+            EndDrainExtra.ForeColor = Color.White;
+            EndDrainExtra.Increment = new decimal(new int[] { 1, 0, 0, 196608 });
+            EndDrainExtra.Location = new Point(359, 181);
+            EndDrainExtra.Name = "EndDrainExtra";
+            EndDrainExtra.Size = new Size(96, 23);
+            EndDrainExtra.TabIndex = 11;
+            EndDrainExtra.Value = new decimal(new int[] { 2, 0, 0, 65536 });
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label18.ForeColor = Color.White;
+            label18.Location = new Point(313, 184);
+            label18.Name = "label18";
+            label18.Size = new Size(40, 20);
+            label18.TabIndex = 5;
+            label18.Text = "EDE:";
             // 
             // MainForm
             // 
@@ -597,6 +623,7 @@
             Controls.Add(FilterMaxTT);
             Controls.Add(RatingOffset);
             Controls.Add(MaccValue);
+            Controls.Add(EndDrainExtra);
             Controls.Add(MapValue);
             Controls.Add(BiasMult);
             Controls.Add(MaxTime);
@@ -621,6 +648,7 @@
             Controls.Add(label17);
             Controls.Add(label16);
             Controls.Add(label11);
+            Controls.Add(label18);
             Controls.Add(label15);
             Controls.Add(label14);
             Controls.Add(label13);
@@ -655,6 +683,7 @@
             ((System.ComponentModel.ISupportInitialize)BiasMult).EndInit();
             ((System.ComponentModel.ISupportInitialize)MapValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)MaccValue).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EndDrainExtra).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -703,5 +732,7 @@
         private NumericUpDown MapValue;
         private Label label17;
         private NumericUpDown MaccValue;
+        private NumericUpDown EndDrainExtra;
+        private Label label18;
     }
 }

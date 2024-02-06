@@ -35,6 +35,7 @@ namespace TootTallyDifficultyCalculator2._0
         public float GetMaxTime() => (float)MaxTime.Value;
 
         public float GetEndDrain() => (float)EndDrain.Value;
+        public float GetEndDrainExtra() => (float)EndDrainExtra.Value;
         public float GetBiasMult() => (float)BiasMult.Value;
 
         public float GetMacc() => (float)MaccValue.Value / 100f;
@@ -59,7 +60,7 @@ namespace TootTallyDifficultyCalculator2._0
 
             Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
             {
-                TootTallyAPIServices.GetLeaderboardFromId(id, (leaderboard) =>
+                TootTallyAPIServices.GetLeaderboardFromId(id, leaderboard =>
                 leaderboardList.Add(leaderboard));
                 currentCount++;
                 if (!ProgressBarLoading.InvokeRequired)
@@ -250,7 +251,7 @@ namespace TootTallyDifficultyCalculator2._0
         {
             var count = 1;
             List<string> textLines = new List<string>();
-            chart.leaderboard?.results.ForEach(score =>
+            chart.leaderboard?.results.OrderByDescending(s => s.tt).ToList().ForEach(score =>
                 {
                     score.tt = (float)CalculateScoreTT(chart, score);
                     if (!FilterModifierOnly.Checked || (FilterModifierOnly.Checked && score.modifiers != null && !score.modifiers.Contains("NONE")))
@@ -306,6 +307,9 @@ namespace TootTallyDifficultyCalculator2._0
             //y = 0.7x^2 + 12x + 0.05
         }
 
+        public const float c = 0.028091281f;
+        public const float b = 6f;
+
         //https://www.desmos.com/calculator/x7c0zutgsn
         public static double CalculateScoreTT(Chart chart, Leaderboard.ScoreDataFromDB score)
         {
@@ -314,10 +318,8 @@ namespace TootTallyDifficultyCalculator2._0
             var baseTT = CalculateBaseTT(chart.GetDynamicDiffRating(percent, score.replay_speed, score.modifiers));
 
             float scoreTT;
-            if (percent < 0.6f)
-                scoreTT = 21.433f * FastPow(percent, 6) * baseTT;
-            else if (percent < 0.98f)
-                scoreTT = ((0.028091281f * MathF.Pow(MathF.E, 6f * percent)) - 0.028091281f) * baseTT; //y = (0.28091281 * e^6x - 0.028091281) * b
+            if (percent < 0.98f)
+                scoreTT = ((c * MathF.Pow(MathF.E, b * percent)) - c) * baseTT; //y = (0.28091281 * e^6x - 0.028091281) * b
             else
                 scoreTT = FastPow(9.2f * percent - 7.43037117f, 5) * baseTT;
 
