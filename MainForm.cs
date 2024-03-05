@@ -7,7 +7,7 @@ namespace TootTallyDifficultyCalculator2._0
 {
     public partial class MainForm : Form
     {
-        public static List<Chart> chartList;
+        public static List<TMBChart> chartList;
         public static List<Leaderboard> leaderboardList;
         private TimeSpan _deserializingTime;
         private TimeSpan _algoTime;
@@ -18,6 +18,7 @@ namespace TootTallyDifficultyCalculator2._0
         public MainForm()
         {
             InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NAaF1cXmhLYVJ+WmFZfVpgd19FZFZSTWY/P1ZhSXxXdkdiWH5bc3BWT2VUWEE=");
             Directory.CreateDirectory(Program.EXPORT_DIRECTORY);
             Directory.CreateDirectory(Program.DOWNLOAD_DIRECTORY);
             Directory.CreateDirectory(Program.CACHE_DIRECTORY);
@@ -58,7 +59,7 @@ namespace TootTallyDifficultyCalculator2._0
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
+            /*Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
             {
                 TootTallyAPIServices.GetLeaderboardFromId(id, leaderboard =>
                 leaderboardList.Add(leaderboard));
@@ -67,7 +68,7 @@ namespace TootTallyDifficultyCalculator2._0
                 {
                     UpdateProgressBar(currentCount, maxCount);
                 }
-            });
+            });*/
             Trace.WriteLine("Leaderboards finished processing.");
             stopwatch.Stop();
             _leaderboardLoadingTime = stopwatch.Elapsed;
@@ -111,14 +112,13 @@ namespace TootTallyDifficultyCalculator2._0
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             var filesList = Directory.GetFiles(Program.DOWNLOAD_DIRECTORY);
-            chartList = new List<Chart>(filesList.Length);
+            chartList = new List<TMBChart>(filesList.Length);
             var maxCount = filesList.Length;
             var currentCount = 0;
             ProgressBarLoading.Maximum = maxCount;
             ProgressBarLoading.Value = 0;
             Parallel.ForEach(filesList, name =>
             {
-
                 chartList.Add(ChartReader.LoadChart(name));
                 currentCount++;
                 if (!ProgressBarLoading.InvokeRequired)
@@ -126,10 +126,14 @@ namespace TootTallyDifficultyCalculator2._0
                     UpdateProgressBar(currentCount, maxCount);
                 }
             });
+            chartList.Sort((x, y) => String.Compare(x.name, y.name));
             _deserializingTime = stopwatch.Elapsed;
             stopwatch.Restart();
             Parallel.ForEach(chartList, chart => chart.OnDeserialize());
             _algoTime = stopwatch.Elapsed;
+            ChartNameCB.Items.Clear();
+            chartList.ForEach(c => ChartNameCB.Items.Add(c.shortName));
+
         }
 
         public void UpdateProgressBar(int value, int maxValue)
@@ -158,7 +162,7 @@ namespace TootTallyDifficultyCalculator2._0
             });
         }
 
-        public void ExportChartToJson(string path, Chart chart)
+        public void ExportChartToJson(string path, TMBChart chart)
         {
             SerializableDiffData chartdata = new SerializableDiffData(chart.performances);
             var json = JsonConvert.SerializeObject(chartdata, Formatting.Indented);
@@ -179,12 +183,11 @@ namespace TootTallyDifficultyCalculator2._0
             var allChartDataTextLines = new List<string>((checkboxAllSpeed.Checked ? 40 : 7) * chartList.Count);
             var allLeaderboardTextLines = new List<string>();
 
-            chartList.Sort((x, y) => String.Compare(x.name, y.name));
             allChartDataTextLines.Add($"Json Calculation time took {_deserializingTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
             allChartDataTextLines.Add($"Algo Calculation time took {_algoTime.TotalSeconds}s for {chartList.Count} charts and {chartList.Count * 7} diffs");
             allLeaderboardTextLines.Add($"Calculation time took {_leaderboardLoadingTime.TotalSeconds}s for {chartList.Count} charts.");
             Stopwatch sw = Stopwatch.StartNew();
-            foreach (Chart chart in chartList)
+            foreach (TMBChart chart in chartList)
             {
                 if (!chart.name.ToLower().Contains(FilterMapName.Text.ToLower())) continue;
                 //CHART DISPLAY
@@ -229,13 +232,13 @@ namespace TootTallyDifficultyCalculator2._0
             TextBoxLeaderboardData.Lines = allLeaderboardTextLines.ToArray();
         }
 
-        public void DisplayAllSpeed(Chart chart, ref List<string> textLines)
+        public void DisplayAllSpeed(TMBChart chart, ref List<string> textLines)
         {
             for (int i = 0; i < chart.GAME_SPEED.Length; i++)
                 DisplayAtSpeed(chart, i, ref textLines);
         }
 
-        public void DisplayAtSpeed(Chart chart, int speedIndex, ref List<string> textLines)
+        public void DisplayAtSpeed(TMBChart chart, int speedIndex, ref List<string> textLines)
         {
             DataVectorAnalytics aimAnalytics = chart.performances.aimAnalyticsArray[speedIndex];
             DataVectorAnalytics tapAnalytics = chart.performances.tapAnalyticsArray[speedIndex];
@@ -247,7 +250,7 @@ namespace TootTallyDifficultyCalculator2._0
             textLines.Add("-------------------------------------------------");
         }
 
-        public List<string> DisplayLeaderboard(Chart chart)
+        public List<string> DisplayLeaderboard(TMBChart chart)
         {
             var count = 1;
             List<string> textLines = new List<string>();
@@ -262,10 +265,10 @@ namespace TootTallyDifficultyCalculator2._0
             return textLines;
         }
 
-        public string GetDisplayScoreLine(Leaderboard.ScoreDataFromDB score, Chart chart, int count) =>
+        public string GetDisplayScoreLine(Leaderboard.ScoreDataFromDB score, TMBChart chart, int count) =>
             $"#{count} {score.player}\t\t{score.score}\t\t({score.replay_speed:0.00}x)\t {score.percentage:0.00}%\t{score.grade}\t{score.tt:0.00}tt\tdiff:{chart.GetDynamicDiffRating(score.percentage / 100f, score.replay_speed, score.modifiers):0.00}";
 
-        public string GetDisplayScoreLine2(Leaderboard.ScoreDataFromDB score, Chart chart, int count) =>
+        public string GetDisplayScoreLine2(Leaderboard.ScoreDataFromDB score, TMBChart chart, int count) =>
             FormatLeaderboardScore(count.ToString(), score.player, score.score.ToString(), score.replay_speed.ToString("0.00"), score.percentage.ToString("0.00"), score.grade, score.tt.ToString("0.00"), chart.GetDynamicDiffRating(score.percentage / 100f, score.replay_speed, score.modifiers).ToString("0.00"), score.modifiers);
 
         public string FormatLeaderboardScore(string count, string player, string score, string replaySpeed, string percentage, string grade, string tt, string diff, string[] modifiers)
@@ -311,7 +314,7 @@ namespace TootTallyDifficultyCalculator2._0
         public const float b = 6f;
 
         //https://www.desmos.com/calculator/x7c0zutgsn
-        public static double CalculateScoreTT(Chart chart, Leaderboard.ScoreDataFromDB score)
+        public static double CalculateScoreTT(TMBChart chart, Leaderboard.ScoreDataFromDB score)
         {
             var percent = score.percentage / 100f;
 
@@ -366,6 +369,16 @@ namespace TootTallyDifficultyCalculator2._0
             text = "";
             TextBoxLeaderboardData.Lines.ToList().ForEach(line => { text += line + "\n"; });
             ChartReader.SaveChartData(fileName, text);
+        }
+
+        private void OnSelectedValueChanged(object sender, EventArgs e)
+        {
+            var chart = chartList.Find(x => x.shortName == ChartNameCB.Text);
+            if (chart != null)
+            {
+                var g = new GraphForm(chart);
+                g.Show();
+            }
         }
     }
 }

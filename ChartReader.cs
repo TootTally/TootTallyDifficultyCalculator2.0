@@ -10,15 +10,15 @@ namespace TootTallyDifficultyCalculator2._0
     public static class ChartReader
     {
 
-        public static Chart LoadChart(string path)
+        public static TMBChart LoadChart(string path)
         {
-            Chart chart = JsonConvert.DeserializeObject<Chart>(File.ReadAllText(path));
+            TMBChart chart = JsonConvert.DeserializeObject<TMBChart>(File.ReadAllText(path));
             return chart;
         }
 
-        public static Chart LoadChartFromJson(string json)
+        public static TMBChart LoadChartFromJson(string json)
         {
-            Chart chart = JsonConvert.DeserializeObject<Chart>(json);
+            TMBChart chart = JsonConvert.DeserializeObject<TMBChart>(json);
             chart.OnDeserialize();
             return chart;
         }

@@ -73,6 +73,7 @@
             MaccValue = new NumericUpDown();
             EndDrainExtra = new NumericUpDown();
             label18 = new Label();
+            ChartNameCB = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
@@ -614,12 +615,22 @@
             label18.TabIndex = 5;
             label18.Text = "EDE:";
             // 
+            // ChartNameCB
+            // 
+            ChartNameCB.FormattingEnabled = true;
+            ChartNameCB.Location = new Point(865, 15);
+            ChartNameCB.Name = "ChartNameCB";
+            ChartNameCB.Size = new Size(232, 23);
+            ChartNameCB.TabIndex = 12;
+            ChartNameCB.SelectedValueChanged += OnSelectedValueChanged;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
             ClientSize = new Size(1109, 965);
+            Controls.Add(ChartNameCB);
             Controls.Add(FilterMaxTT);
             Controls.Add(RatingOffset);
             Controls.Add(MaccValue);
@@ -734,5 +745,6 @@
         private NumericUpDown MaccValue;
         private NumericUpDown EndDrainExtra;
         private Label label18;
+        private ComboBox ChartNameCB;
     }
 }

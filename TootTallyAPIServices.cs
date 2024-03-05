@@ -169,7 +169,7 @@ namespace TootTallyDifficultyCalculator2._0
             public int count;
             public string next;
             public string previous;
-            public List<Chart> results;
+            public List<TMBChart> results;
         }
     }
 }

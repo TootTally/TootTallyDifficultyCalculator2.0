@@ -24,11 +24,11 @@
         public int finalscore;
         public int maxcombo;
         public int[] finalnotetallies;
-        public List<int[]> framedata;
-        public List<int[]> notedata;
-        public List<int[]> tootdata;
+        public List<dynamic[]> framedata;
+        public List<dynamic[]> notedata;
+        public List<dynamic[]> tootdata;
 
-        private Chart _chartData;
+        private TMBChart _chartData;
 
         public void OnDeserialize()
         {
@@ -36,7 +36,7 @@
             version ??= "0.0.0";
         }
 
-        public void SetChart(Chart chart) => _chartData = chart;
+        public void SetChart(TMBChart chart) => _chartData = chart;
 
         public List<string> ToDisplayData()
         {
@@ -101,7 +101,7 @@
 
         public float GetNoteHolderPrecisionMultiplier() => 10 / (scrollspeed <= 1 ? scrollspeed : 1);
 
-        private List<string> GetToDisplayTootData(List<int[]> tootData)
+        private List<string> GetToDisplayTootData(List<dynamic[]> tootData)
         {
             List<string> stringList = new List<string>();
 
