@@ -156,16 +156,17 @@ namespace TootTallyDifficultyCalculator2._0
                 {
                     wasSlider = true;
                     currNote = notes[++i];
-                    noteLengths.Add(new LengthAccPair(currNote[1], replay.notedata[i][0]));
+                    noteLengths.Add(new LengthAccPair(currNote[1], replay.notedata[i][0])); //Create note length and note acc pair to weight later
                 }
 
                 float noteAcc = 0f;
                 float totalLength = 0f;
                 if (wasSlider)
                 {
+                    //Get total length of all slider bodies
                     totalLength = noteLengths.Select(x => x.length).Sum();
                     for (int j = 0; j < noteLengths.Count; j++)
-                        noteAcc += noteLengths[j].acc * (noteLengths[j].length / totalLength); //Lenght weighted average acc
+                        noteAcc += noteLengths[j].acc * (noteLengths[j].length / totalLength); //Length weighted acc sum of all slider bodies
                 }
                 else
                 {
@@ -217,6 +218,8 @@ namespace TootTallyDifficultyCalculator2._0
                     tally
                 });
             }
+
+            replay.notedata = convertedNoteData;
 
             return replay;
         }
