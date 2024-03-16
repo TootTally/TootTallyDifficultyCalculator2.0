@@ -6,27 +6,28 @@
         public const float ELECTRO_OFFSET = -0.02f;
         public const float ZERO_X_POS = 60f;
 
-        public string version;
-        public string username;
-        public string starttime;
-        public string endtime;
-        public string uuid;
-        public string input;
-        public string song;
-        public float samplerate;
-        public float scrollspeed;
-        public float gamespeedmultiplier;
-        public string gamemodifiers;
-        public float audiolatency;
-        public int pluginbuilddate;
-        public string gameversion;
-        public string songhash;
-        public int finalscore;
-        public int maxcombo;
-        public int[] finalnotetallies;
-        public List<dynamic[]> framedata;
-        public List<dynamic[]> notedata;
-        public List<dynamic[]> tootdata;
+        public string version { get; set; }
+        public string username { get; set; }
+        public string starttime { get; set; }
+        public string endtime { get; set; }
+        public string input { get; set; }
+        public string song { get; set; }
+        public string uuid { get; set; }
+        public float samplerate { get; set; }
+        public float scrollspeed { get; set; }
+        public int defaultnotelength { get; set; }
+        public float gamespeedmultiplier { get; set; }
+        public string gamemodifiers { get; set; }
+        public float audiolatency { get; set; }
+        public int pluginbuilddate { get; set; }
+        public string gameversion { get; set; }
+        public string songhash { get; set; }
+        public int finalscore { get; set; }
+        public int maxcombo { get; set; }
+        public int[] finalnotetallies { get; set; }
+        public List<dynamic[]> framedata { get; set; }
+        public List<dynamic[]> notedata { get; set; }
+        public List<dynamic[]> tootdata { get; set; }
 
         private TMBChart _chartData;
 
@@ -70,7 +71,7 @@
             return data;
         }
 
-        private List<string> GetToDisplayFrameData(List<int[]> frameData)
+        private List<string> GetToDisplayFrameData(List<dynamic[]> frameData)
         {
 
             List<string> stringList = new List<string>();
@@ -116,7 +117,7 @@
             return stringList;
         }
 
-        private List<string> GetToDisplayNoteData(List<int[]> noteData)
+        private List<string> GetToDisplayNoteData(List<dynamic[]> noteData)
         {
             List<string> stringList = new List<string>();
 

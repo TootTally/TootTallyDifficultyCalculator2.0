@@ -59,7 +59,7 @@ namespace TootTallyDifficultyCalculator2._0
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            /*Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
+            Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
             {
                 TootTallyAPIServices.GetLeaderboardFromId(id, leaderboard =>
                 leaderboardList.Add(leaderboard));
@@ -68,7 +68,7 @@ namespace TootTallyDifficultyCalculator2._0
                 {
                     UpdateProgressBar(currentCount, maxCount);
                 }
-            });*/
+            });
             Trace.WriteLine("Leaderboards finished processing.");
             stopwatch.Stop();
             _leaderboardLoadingTime = stopwatch.Elapsed;
@@ -242,11 +242,11 @@ namespace TootTallyDifficultyCalculator2._0
         {
             DataVectorAnalytics aimAnalytics = chart.performances.aimAnalyticsArray[speedIndex];
             DataVectorAnalytics tapAnalytics = chart.performances.tapAnalyticsArray[speedIndex];
-            DataVectorAnalytics accAnalytics = chart.performances.accAnalyticsArray[speedIndex];
+            //DataVectorAnalytics accAnalytics = chart.performances.accAnalyticsArray[speedIndex];
             textLines.Add($"SPEED: {chart.GAME_SPEED[speedIndex]:0.00}x rated {chart.GetStarRating(speedIndex):0.0000}");
             textLines.Add($"  aim: {aimAnalytics.perfWeightedAverage:0.0000} min: {aimAnalytics.perfMin:0.0000} max: {aimAnalytics.perfMax:0.0000}");
             textLines.Add($"  tap: {tapAnalytics.perfWeightedAverage:0.0000} min: {tapAnalytics.perfMin:0.0000} max: {tapAnalytics.perfMax:0.0000}");
-            textLines.Add($"  acc: {accAnalytics.perfWeightedAverage:0.0000} min: {accAnalytics.perfMin:0.0000} max: {accAnalytics.perfMax:0.0000}");
+            //textLines.Add($"  acc: {accAnalytics.perfWeightedAverage:0.0000} min: {accAnalytics.perfMin:0.0000} max: {accAnalytics.perfMax:0.0000}");
             textLines.Add("-------------------------------------------------");
         }
 
@@ -306,7 +306,7 @@ namespace TootTallyDifficultyCalculator2._0
         public static float CalculateBaseTT(float starRating)
         {
 
-            return (0.7f * FastPow(starRating, 2) + (12f * starRating) + 0.05f) / 1.5f;
+            return 0.7f * FastPow(starRating, 2) + (12f * starRating) + 0.05f;
             //y = 0.7x^2 + 12x + 0.05
         }
 
@@ -379,6 +379,11 @@ namespace TootTallyDifficultyCalculator2._0
                 var g = new GraphForm(chart);
                 g.Show();
             }
+        }
+
+        private void OnReplaySelectedValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

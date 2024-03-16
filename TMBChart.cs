@@ -105,7 +105,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         public float GetAimPerformance(int speed) => performances.aimAnalyticsArray[speed].perfWeightedAverage;
         public float GetTapPerformance(int speed) => performances.tapAnalyticsArray[speed].perfWeightedAverage;
-        public float GetAccPerformance(int speed) => performances.accAnalyticsArray[speed].perfWeightedAverage;
+        //public float GetAccPerformance(int speed) => performances.accAnalyticsArray[speed].perfWeightedAverage;
 
         public double GetStarRating(int speed) => performances.GetDynamicDiffRating(1, speed * .25f + 0.5f);
 
@@ -135,6 +135,7 @@ namespace TootTallyDifficultyCalculator2._0
             int combo = 0;
             int highestCombo = 0;
             int multiplier = 0; // 0 to 10
+            int[] noteTally = new int[5];
 
             List<dynamic[]> convertedNoteData = new List<dynamic[]>();
             float[] nextNote = null;
@@ -148,15 +149,18 @@ namespace TootTallyDifficultyCalculator2._0
                     nextNote = notes[i + 1];
                 List<LengthAccPair> noteLengths = new List<LengthAccPair>
                 {
-                    new LengthAccPair(currNote[1], replay.notedata[i][0])
+                    new LengthAccPair(currNote[1], (float)replay.notedata[i][0])
                 };
 
                 //Scroll forward until the next note is no longer a slider
-                while (i + 1 < notes.Length && IsSlider(currNote, nextNote))
+                while (i + 1 < notes.Length && nextNote != null && IsSlider(currNote, nextNote))
                 {
                     wasSlider = true;
                     currNote = notes[++i];
-                    noteLengths.Add(new LengthAccPair(currNote[1], replay.notedata[i][0])); //Create note length and note acc pair to weight later
+                    noteLengths.Add(new LengthAccPair(currNote[1], (float)replay.notedata[i][0])); //Create note length and note acc pair to weight later
+                    if (i >= noteLengths.Count)
+                        break;
+                    nextNote = notes[i + 1];
                 }
 
                 float noteAcc = 0f;
@@ -184,16 +188,16 @@ namespace TootTallyDifficultyCalculator2._0
                 if (health == 100 && healthDiff < 0)
                     health = 0;
                 else if (health != 100)
-                    health += healthDiff;       
+                    health += healthDiff;
                 health = Math.Clamp(health, 0, 100);
-                
+
                 //Get the note tally
                 int tally = 0;
                 if (noteAcc > 95f) tally = 4;
                 else if (noteAcc > 88f) tally = 3;
                 else if (noteAcc > 79f) tally = 2;
                 else if (noteAcc > 70f) tally = 1;
-
+                noteTally[4 - tally]++;
                 //Only increase combo if you get more than 79% acc + update highest if needed
                 if (tally > 2)
                 {
@@ -208,7 +212,7 @@ namespace TootTallyDifficultyCalculator2._0
                 convertedNoteData.Add(new dynamic[9]
                 {
                     noteAcc,
-                    releasedBetweenNotes,
+                    releasedBetweenNotes ? 1 : 0,
                     i,
                     combo,
                     multiplier,
@@ -220,11 +224,14 @@ namespace TootTallyDifficultyCalculator2._0
             }
 
             replay.notedata = convertedNoteData;
+            replay.finalnotetallies = noteTally;
+            replay.finalscore = convertedNoteData.Last()[5];
+            replay.maxcombo = highestCombo;
 
             return replay;
         }
 
-        public static bool IsSlider(float[] currNote, float[] nextNote) => !(MathF.Round(nextNote[0] - (currNote[0] + currNote[1]), 3) > 0);
+        public static bool IsSlider(float[] currNote, float[] nextNote) => currNote[0] + currNote[1] + .025f >= nextNote[0];
         public static float GetHealthDiff(float acc) => Math.Clamp((acc - 79f) * 0.2193f, -15f, 4.34f);
         public static bool TestMissTheGap(float health, int tally) => false; //TODO
         public static int GetScore(float acc, float totalLength, float mult, bool champ)

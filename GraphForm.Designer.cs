@@ -30,7 +30,6 @@
         {
             AimRatingGraph = new Syncfusion.Windows.Forms.Chart.ChartControl();
             TapRatingGraph = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            AccRatingGraph = new Syncfusion.Windows.Forms.Chart.ChartControl();
             StarRatingGraph = new Syncfusion.Windows.Forms.Chart.ChartControl();
             SuspendLayout();
             // 
@@ -116,47 +115,6 @@
             TapRatingGraph.Titles.Add(TapRatingGraph.Title);
             TapRatingGraph.VisualTheme = "";
             // 
-            // AccRatingGraph
-            // 
-            AccRatingGraph.BorderAppearance.BaseColor = Color.Black;
-            AccRatingGraph.ChartArea.BorderColor = Color.Transparent;
-            AccRatingGraph.ChartArea.CursorLocation = new Point(0, 0);
-            AccRatingGraph.ChartArea.CursorReDraw = false;
-            AccRatingGraph.EnableXZooming = true;
-            AccRatingGraph.EnableYZooming = true;
-            AccRatingGraph.ForeColor = SystemColors.Control;
-            AccRatingGraph.IsWindowLess = false;
-            // 
-            // 
-            // 
-            AccRatingGraph.Legend.Location = new Point(1306, 54);
-            AccRatingGraph.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
-            AccRatingGraph.Localize = null;
-            AccRatingGraph.Location = new Point(12, 624);
-            AccRatingGraph.MouseAction = Syncfusion.Windows.Forms.Chart.ChartMouseAction.Panning;
-            AccRatingGraph.Name = "AccRatingGraph";
-            AccRatingGraph.NeedPerformance = true;
-            AccRatingGraph.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Office2016;
-            AccRatingGraph.PrimaryXAxis.DesiredIntervals = 40;
-            AccRatingGraph.PrimaryXAxis.DrawGrid = false;
-            AccRatingGraph.PrimaryXAxis.IntervalType = Syncfusion.Windows.Forms.Chart.ChartDateTimeIntervalType.Seconds;
-            AccRatingGraph.PrimaryXAxis.LineType.BackColor = Color.Red;
-            AccRatingGraph.PrimaryXAxis.LineType.ForeColor = SystemColors.ActiveBorder;
-            AccRatingGraph.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            AccRatingGraph.PrimaryXAxis.Margin = true;
-            AccRatingGraph.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            AccRatingGraph.PrimaryYAxis.Margin = true;
-            AccRatingGraph.Size = new Size(1393, 300);
-            AccRatingGraph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            AccRatingGraph.TabIndex = 2;
-            AccRatingGraph.Text = "Acc Rating";
-            // 
-            // 
-            // 
-            AccRatingGraph.Title.Name = "Default";
-            AccRatingGraph.Titles.Add(AccRatingGraph.Title);
-            AccRatingGraph.VisualTheme = "";
-            // 
             // StarRatingGraph
             // 
             StarRatingGraph.BorderAppearance.BaseColor = Color.Black;
@@ -173,7 +131,7 @@
             StarRatingGraph.Legend.Location = new Point(1306, 54);
             StarRatingGraph.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             StarRatingGraph.Localize = null;
-            StarRatingGraph.Location = new Point(12, 930);
+            StarRatingGraph.Location = new Point(12, 624);
             StarRatingGraph.MouseAction = Syncfusion.Windows.Forms.Chart.ChartMouseAction.Panning;
             StarRatingGraph.Name = "StarRatingGraph";
             StarRatingGraph.NeedPerformance = true;
@@ -206,7 +164,6 @@
             BackColor = Color.Black;
             ClientSize = new Size(1527, 961);
             Controls.Add(StarRatingGraph);
-            Controls.Add(AccRatingGraph);
             Controls.Add(TapRatingGraph);
             Controls.Add(AimRatingGraph);
             Name = "GraphForm";
@@ -220,7 +177,6 @@
 
         private Syncfusion.Windows.Forms.Chart.ChartControl AimRatingGraph;
         private Syncfusion.Windows.Forms.Chart.ChartControl TapRatingGraph;
-        private Syncfusion.Windows.Forms.Chart.ChartControl AccRatingGraph;
         private Syncfusion.Windows.Forms.Chart.ChartControl StarRatingGraph;
     }
 }

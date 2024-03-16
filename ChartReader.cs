@@ -10,6 +10,19 @@ namespace TootTallyDifficultyCalculator2._0
     public static class ChartReader
     {
 
+        public static ReplayData LoadReplay(string path)
+        {
+            ReplayData replay = JsonConvert.DeserializeObject<ReplayData>(File.ReadAllText(path));
+            return replay;
+        }
+
+        public static ReplayData LoadReplayFromJson(string json)
+        {
+            ReplayData replay = JsonConvert.DeserializeObject<ReplayData>(json);
+            replay.OnDeserialize();
+            return replay;
+        }
+
         public static TMBChart LoadChart(string path)
         {
             TMBChart chart = JsonConvert.DeserializeObject<TMBChart>(File.ReadAllText(path));
