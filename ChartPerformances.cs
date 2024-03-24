@@ -42,10 +42,6 @@ namespace TootTallyDifficultyCalculator2._0
         public void CalculatePerformances(int speedIndex)
         {
             var noteList = _chart.notesDict[speedIndex];
-            float[] weights = new float[32];
-            for (int i = 0; i < weights.Length; i++)
-                weights[i] = FastPow(.85f, i);
-
             var aimEndurance = 0f;
             var tapEndurance = 0f;
 
@@ -53,15 +49,18 @@ namespace TootTallyDifficultyCalculator2._0
             {
                 var currentNote = noteList[i];
                 int noteCount = 0;
+                float weightSum = 0f;
                 var aimStrain = 0f;
                 var tapStrain = 0f;
-
-                for (int j = i - 1; j > 0 && j > i - 32 && MathF.Abs(currentNote.position - noteList[j].position) <= 8f; j--)
+                for (int j = i - 1; j > 0 && /*j > i - 32 &&*/ MathF.Abs(currentNote.position - noteList[j].position) <= 4f; j--)
                 {
                     var prevNote = noteList[j];
                     var nextNote = noteList[j + 1];
-                    var weight = weights[noteCount];
+                    var weight = FastPow(.85f, noteCount);
+                    noteCount++;
+                    if (weight < 0.0001f) continue;
 
+                    weightSum += weight;
 
                     var deltaTime = nextNote.position - (prevNote.position + prevNote.length);
                     var lengthSum = prevNote.length;
@@ -75,14 +74,14 @@ namespace TootTallyDifficultyCalculator2._0
                         nextNote = noteList[j + 1];
                         deltaTime = nextNote.position - (prevNote.position + prevNote.length);
 
-                        lengthSum += prevNote.length;
+                        lengthSum += deltaTime == 0 ? MathF.Sqrt(prevNote.length) : prevNote.length;
                         deltaSlide += MathF.Abs(prevNote.pitchDelta);
                     }
 
                     if (deltaSlide != 0)
                     {
                         //Acc Calc
-                        aimStrain += ComputeStrain(CalcAccStrain(lengthSum, deltaSlide, weight) / MainForm.Instance.GetAccNum()) ;
+                        aimStrain += ComputeStrain(CalcAccStrain(lengthSum, deltaSlide, weight)) / MainForm.Instance.GetAccNum();
                         aimEndurance += CalcAccEndurance(lengthSum, deltaSlide, weight);
                     }
 
@@ -90,55 +89,55 @@ namespace TootTallyDifficultyCalculator2._0
                     deltaTime += lengthSum * .4f;
                     var aimDistance = MathF.Abs(nextNote.pitchStart - prevNote.pitchEnd);
                     var noteMoved = aimDistance != 0 || deltaSlide != 0;
+
                     if (noteMoved)
                     {
-                        aimStrain += ComputeStrain(CalcAimStrain(aimDistance, weight, deltaTime) / MainForm.Instance.GetAimNum()) ;
+                        aimStrain += ComputeStrain(CalcAimStrain(aimDistance, weight, deltaTime)) / MainForm.Instance.GetAimNum();
                         aimEndurance += CalcAimEndurance(aimDistance, weight, deltaTime);
                     }
 
                     //Tap Calc
                     var tapDelta = nextNote.position - prevNote.position;
-                    tapStrain += ComputeStrain(CalcTapStrain(tapDelta, weight) / MainForm.Instance.GetTapNum()) ;
-                    tapEndurance += CalcTapEndurance(tapDelta, weight);
 
-                    noteCount++;
+                    tapStrain += ComputeStrain(CalcTapStrain(tapDelta, weight)) / MainForm.Instance.GetTapNum();
+                    tapEndurance += CalcTapEndurance(tapDelta, weight);
                 }
 
                 var enduranceDecay = MainForm.Instance.GetEndDrain();
                 if (i > 0)
                 {
-                    var aimThreshold = MathF.Pow(aimStrain, 1.4f) * 4f;
-                    var tapThreshold = MathF.Pow(tapStrain, 1.4f) * 4f;
+                    var aimThreshold = MathF.Pow(aimStrain, 1.6f) * 5f;
+                    var tapThreshold = MathF.Pow(tapStrain, 1.6f) * 5f;
                     if (aimEndurance >= aimThreshold)
-                        ComputeEnduranceDecay(ref aimEndurance, enduranceDecay, aimEndurance - aimThreshold);
-                    if (tapEndurance >= tapThreshold)                                   
-                        ComputeEnduranceDecay(ref tapEndurance, enduranceDecay, tapEndurance - tapThreshold);
+                        ComputeEnduranceDecay(ref aimEndurance, enduranceDecay, (aimEndurance - aimThreshold) / 50f);
+                    if (tapEndurance >= tapThreshold)
+                        ComputeEnduranceDecay(ref tapEndurance, enduranceDecay, (tapEndurance - tapThreshold) / 50f);
                 }
 
-                aimPerfMatrix[speedIndex].Add(new DataVector(currentNote.position, aimStrain, aimEndurance));
-                tapPerfMatrix[speedIndex].Add(new DataVector(currentNote.position, tapStrain, tapEndurance));
+                aimPerfMatrix[speedIndex].Add(new DataVector(currentNote.position, aimStrain, aimEndurance, noteCount + weightSum));
+                tapPerfMatrix[speedIndex].Add(new DataVector(currentNote.position, tapStrain, tapEndurance, noteCount + weightSum));
             }
         }
         public static bool IsSlider(float deltaTime) => !(MathF.Round(deltaTime, 3) > 0);
 
         public static void ComputeEnduranceDecay(ref float endurance, float enduranceDecay, float distanceFromLastNote)
         {
-            endurance /= enduranceDecay + MathF.Pow(MainForm.Instance.GetEndDrainExtra() * distanceFromLastNote, MathF.E);
+            endurance /= 1 + MainForm.Instance.GetEndDrainExtra() * distanceFromLastNote;
         }
 
         //https://www.desmos.com/calculator/e4kskdn8mu
-        public static float ComputeStrain(float strain) => a * MathF.Pow(strain + 1, -.004f * MathF.E) - a - (4f * strain) / a;
-        private const float a = -60f;
+        public static float ComputeStrain(float strain) => a * MathF.Pow(strain + 1, -.012f * MathF.E) - a - (4f * strain) / a;
+        private const float a = -50f;
         #region AIM
         public static float CalcAimStrain(float distance, float weight, float deltaTime)
         {
-            var speed = distance / deltaTime;
+            var speed = distance / MathF.Pow(deltaTime, 1.25f);
             return speed * weight;
         }
 
         public static float CalcAimEndurance(float distance, float weight, float deltaTime)
         {
-            var speed = distance / (deltaTime + 5f) / (MainForm.Instance.GetAimEndNote() * MainForm.Instance.GetAimEndMult());
+            var speed = (distance / MathF.Pow(deltaTime, 1.02f)) / (MainForm.Instance.GetAimEndNote() * MainForm.Instance.GetAimEndMult());
             return speed * weight;
         }
         #endregion
@@ -146,26 +145,25 @@ namespace TootTallyDifficultyCalculator2._0
         #region TAP
         public static float CalcTapStrain(float tapDelta, float weight)
         {
-            return (45f / FastPow(tapDelta,2)) * weight;
+            return (11f / MathF.Pow(tapDelta, 1.25f)) * weight;
         }
 
         public static float CalcTapEndurance(float tapDelta, float weight)
         {
-            return (45f / (FastPow(tapDelta, 2) + 5f)) / (MainForm.Instance.GetTapEndMult() * MainForm.Instance.GetAimEndMult()) * weight;
+            return (1.1f / MathF.Pow(tapDelta, 1.02f)) / (MainForm.Instance.GetTapEndMult() * MainForm.Instance.GetAimEndMult()) * weight;
         }
         #endregion
 
         #region ACC
         public static float CalcAccStrain(float lengthSum, float slideDelta, float weight)
         {
-            var speed = slideDelta / lengthSum;
+            var speed = slideDelta / MathF.Pow(lengthSum, 1.25f);
             return speed * weight;
-
         }
 
         public static float CalcAccEndurance(float lengthSum, float slideDelta, float weight)
         {
-            var speed = slideDelta / (lengthSum + 5f) / (MainForm.Instance.GetAimEndSlider() * MainForm.Instance.GetAimEndMult());
+            var speed = (slideDelta / MathF.Pow(lengthSum, 1.02f)) / (MainForm.Instance.GetAimEndSlider() * MainForm.Instance.GetAimEndMult());
             return speed * weight;
         }
         #endregion
@@ -174,7 +172,7 @@ namespace TootTallyDifficultyCalculator2._0
         {
             aimAnalyticsArray[gamespeed] = new DataVectorAnalytics(aimPerfMatrix[gamespeed]);
             tapAnalyticsArray[gamespeed] = new DataVectorAnalytics(tapPerfMatrix[gamespeed]);
-            
+
         }
 
         public void CalculateRatings(int gamespeed)
@@ -221,8 +219,11 @@ namespace TootTallyDifficultyCalculator2._0
             return analytics.perfWeightedAverage + .01f;
         }
 
-        public static readonly float[] HDWeights = { .1f, .09f};
-        public static readonly float[] FLWeights = { .18f, .05f };
+        public const float AIM_WEIGHT = 1.2f;
+        public const float TAP_WEIGHT = 1.15f;
+
+        public static readonly float[] HDWeights = { .11f, .1f };
+        public static readonly float[] FLWeights = { .18f, .06f };
 
         public float GetDynamicDiffRating(float percent, float gamespeed, string[] modifiers = null)
         {
@@ -251,7 +252,14 @@ namespace TootTallyDifficultyCalculator2._0
                 tapRating = MathF.Pow(tapRating + 1f, tapPow) - 1f;
             }
 
-            return (aimRating + tapRating) / 2f;
+            var totalRating = aimRating + tapRating;
+            var aimPerc = aimRating / totalRating;
+            var tapPerc = tapRating / totalRating;
+            var aimWeight = (aimPerc + MainForm.Instance.GetBiasMult()) * AIM_WEIGHT;
+            var tapWeight = (tapPerc + MainForm.Instance.GetBiasMult()) * TAP_WEIGHT;
+            var totalWeight = aimWeight + tapWeight;
+
+            return ((aimRating * aimWeight) + (tapRating * tapWeight)) / totalWeight;
         }
 
         public static float Lerp(float firstFloat, float secondFloat, float by) //Linear easing
@@ -277,12 +285,14 @@ namespace TootTallyDifficultyCalculator2._0
             public float performance;
             public float endurance;
             public float time;
+            public float weight;
 
-            public DataVector(float time, float performance, float endurance)
+            public DataVector(float time, float performance, float endurance, float weight)
             {
                 this.time = time;
                 this.performance = performance;
                 this.endurance = endurance;
+                this.weight = weight;
             }
 
         }
@@ -290,12 +300,18 @@ namespace TootTallyDifficultyCalculator2._0
         public class DataVectorAnalytics
         {
             public float perfMax = 0f, perfMin = 0f, perfSum = 0f, perfWeightedAverage = 0f;
+            public float weightSum = 0f;
 
             public DataVectorAnalytics(List<DataVector> dataVectorList)
             {
                 if (dataVectorList.Count > 0)
+                {
+                    CalculateWeightSum(dataVectorList);
                     CalculateData(dataVectorList);
+                }
             }
+
+            public void CalculateWeightSum(List<DataVector> dataVectorList) => weightSum = dataVectorList.Sum(x => x.weight);
 
             public void CalculateData(List<DataVector> dataVectorList)
             {
@@ -309,9 +325,9 @@ namespace TootTallyDifficultyCalculator2._0
                     else if (dataVectorList[i].performance < perfMin)
                         perfMin = dataVectorList[i].performance;
 
-                    perfSum += dataVectorList[i].performance + dataVectorList[i].endurance;
+                    perfSum += (dataVectorList[i].performance + dataVectorList[i].endurance) * (dataVectorList[i].weight / weightSum);
                 }
-                perfWeightedAverage = perfSum / dataVectorList.Count;
+                perfWeightedAverage = perfSum;
             }
         }
 

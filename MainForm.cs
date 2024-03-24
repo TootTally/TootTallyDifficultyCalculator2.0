@@ -58,7 +58,6 @@ namespace TootTallyDifficultyCalculator2._0
             ProgressBarLoading.Value = 0;
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-
             Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
             {
                 TootTallyAPIServices.GetLeaderboardFromId(id, leaderboard =>
@@ -306,7 +305,7 @@ namespace TootTallyDifficultyCalculator2._0
         public static float CalculateBaseTT(float starRating)
         {
 
-            return 0.7f * FastPow(starRating, 2) + (12f * starRating) + 0.05f;
+            return 0.5f * FastPow(starRating, 2) + (7f * starRating) + 0.05f;
             //y = 0.7x^2 + 12x + 0.05
         }
 
@@ -382,6 +381,11 @@ namespace TootTallyDifficultyCalculator2._0
         }
 
         private void OnReplaySelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }

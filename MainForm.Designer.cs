@@ -297,7 +297,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 1200, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 275, 0, 0, 0 });
             // 
             // label5
             // 
@@ -341,7 +341,7 @@
             TapNum.Name = "TapNum";
             TapNum.Size = new Size(96, 23);
             TapNum.TabIndex = 11;
-            TapNum.Value = new decimal(new int[] { 900, 0, 0, 0 });
+            TapNum.Value = new decimal(new int[] { 100, 0, 0, 0 });
             // 
             // AccNum
             // 
@@ -352,7 +352,7 @@
             AccNum.Name = "AccNum";
             AccNum.Size = new Size(96, 23);
             AccNum.TabIndex = 11;
-            AccNum.Value = new decimal(new int[] { 1500, 0, 0, 0 });
+            AccNum.Value = new decimal(new int[] { 325, 0, 0, 0 });
             // 
             // AimEndNote
             // 
@@ -363,7 +363,7 @@
             AimEndNote.Name = "AimEndNote";
             AimEndNote.Size = new Size(96, 23);
             AimEndNote.TabIndex = 11;
-            AimEndNote.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            AimEndNote.Value = new decimal(new int[] { 300, 0, 0, 0 });
             // 
             // TapEndMult
             // 
@@ -374,7 +374,7 @@
             TapEndMult.Name = "TapEndMult";
             TapEndMult.Size = new Size(96, 23);
             TapEndMult.TabIndex = 11;
-            TapEndMult.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            TapEndMult.Value = new decimal(new int[] { 25, 0, 0, 0 });
             // 
             // AimEndSlider
             // 
@@ -385,7 +385,7 @@
             AimEndSlider.Name = "AimEndSlider";
             AimEndSlider.Size = new Size(96, 23);
             AimEndSlider.TabIndex = 11;
-            AimEndSlider.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            AimEndSlider.Value = new decimal(new int[] { 450, 0, 0, 0 });
             // 
             // AimEndMult
             // 
@@ -689,6 +689,7 @@
             Controls.Add(ButtonForceRefresh);
             Name = "MainForm";
             Text = "Main";
+            Load += MainForm_Load;
             Shown += OnFormShown;
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).EndInit();
