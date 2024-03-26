@@ -42,11 +42,20 @@ namespace TootTallyDifficultyCalculator2._0
                 var minLength = BeatToSeconds2(0.01f, newTempo);
                 int count = 1;
                 notesDict[i] = new List<Note>(notes.Length);
-                foreach (float[] n in notes)
+                var sortedNotes = notes.OrderBy(x => x[0]).ToArray();
+                for (int j = 0; j < sortedNotes.Length; j++)
                 {
-                    notesDict[i].Add(new Note(count, BeatToSeconds2(n[0], newTempo), BeatToSeconds2(n[1], newTempo), n[2], n[3], n[4]));
-                    if (notesDict[i].Last().length == 0)
-                        notesDict[i].Last().length = minLength;
+                    float length = sortedNotes[j][1];
+                    if (length <= 0)//minLength only applies if the note is less or equal to 0 beats, else it keeps its "lower than minimum" length
+                        length = 0.015f;
+
+                    bool isSlider;
+                    if (i > 0)
+                        isSlider = notesDict[0][j].isSlider;
+                    else
+                        isSlider = j + 1 < sortedNotes.Length && IsSlider(sortedNotes[j], sortedNotes[j + 1]);
+
+                    notesDict[i].Add(new Note(count, BeatToSeconds2(sortedNotes[j][0], newTempo), BeatToSeconds2(length, newTempo), sortedNotes[j][2], sortedNotes[j][3], sortedNotes[j][4], isSlider));
                     count++;
                 }
             }

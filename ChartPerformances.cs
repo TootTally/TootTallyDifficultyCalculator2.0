@@ -29,11 +29,10 @@ namespace TootTallyDifficultyCalculator2._0
             aimAnalyticsArray = new DataVectorAnalytics[7];
             tapAnalyticsArray = new DataVectorAnalytics[7];
 
-            var length = chart.notes.Length;
             for (int i = 0; i < chart.GAME_SPEED.Length; i++)
             {
-                aimPerfMatrix[i] = new List<DataVector>(length);
-                tapPerfMatrix[i] = new List<DataVector>(length);
+                aimPerfMatrix[i] = new List<DataVector>();
+                tapPerfMatrix[i] = new List<DataVector>();
             }
             _chart = chart;
             NOTE_COUNT = _chart.notesDict[0].Count;
@@ -52,21 +51,19 @@ namespace TootTallyDifficultyCalculator2._0
                 float weightSum = 0f;
                 var aimStrain = 0f;
                 var tapStrain = 0f;
-                for (int j = i - 1; j > 0 && /*j > i - 32 &&*/ MathF.Abs(currentNote.position - noteList[j].position) <= 4f; j--)
+                for (int j = i - 1; j >- 0 && noteCount < 42 && MathF.Abs(currentNote.position - noteList[j].position) <= 4f; j--)
                 {
                     var prevNote = noteList[j];
                     var nextNote = noteList[j + 1];
                     var weight = FastPow(.85f, noteCount);
                     noteCount++;
-                    if (weight < 0.0001f) continue;
-
                     weightSum += weight;
 
                     var deltaTime = nextNote.position - (prevNote.position + prevNote.length);
                     var lengthSum = prevNote.length;
                     var deltaSlide = MathF.Abs(prevNote.pitchDelta);
 
-                    while (IsSlider(deltaTime))
+                    while (prevNote.isSlider)
                     {
                         if (j-- <= 0)
                             break;
@@ -118,7 +115,7 @@ namespace TootTallyDifficultyCalculator2._0
                 tapPerfMatrix[speedIndex].Add(new DataVector(currentNote.position, tapStrain, tapEndurance, noteCount + weightSum));
             }
         }
-        public static bool IsSlider(float deltaTime) => !(MathF.Round(deltaTime, 3) > 0);
+        //public static bool IsSlider(float deltaTime) => !(MathF.Round(deltaTime, 3) > 0);
 
         public static void ComputeEnduranceDecay(ref float endurance, float enduranceDecay, float distanceFromLastNote)
         {
@@ -311,7 +308,12 @@ namespace TootTallyDifficultyCalculator2._0
                 }
             }
 
-            public void CalculateWeightSum(List<DataVector> dataVectorList) => weightSum = dataVectorList.Sum(x => x.weight);
+            public void CalculateWeightSum(List<DataVector> dataVectorList)
+            {
+                for (int i = 0; i < dataVectorList.Count; i++)
+                    weightSum += dataVectorList[i].weight;
+                if (weightSum < 1) weightSum = 1;
+            }
 
             public void CalculateData(List<DataVector> dataVectorList)
             {
