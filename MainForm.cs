@@ -58,7 +58,7 @@ namespace TootTallyDifficultyCalculator2._0
             ProgressBarLoading.Value = 0;
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            /*Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
+            Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
             {
                 TootTallyAPIServices.GetLeaderboardFromId(id, leaderboard =>
                 leaderboardList.Add(leaderboard));
@@ -67,7 +67,7 @@ namespace TootTallyDifficultyCalculator2._0
                 {
                     UpdateProgressBar(currentCount, maxCount);
                 }
-            });*/
+            });
             Trace.WriteLine("Leaderboards finished processing.");
             stopwatch.Stop();
             _leaderboardLoadingTime = stopwatch.Elapsed;
