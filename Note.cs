@@ -1,6 +1,6 @@
 ﻿namespace TootTallyDifficultyCalculator2._0
 {
-    public class Note
+    public struct Note
     {
         public int count;
         public float pitchStart, pitchDelta, pitchEnd;
@@ -17,6 +17,5 @@
             this.pitchEnd = pitchEnd;
             this.isSlider = isSlider;
         }
-
     }
 }

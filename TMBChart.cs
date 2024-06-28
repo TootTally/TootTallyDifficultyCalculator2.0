@@ -3,13 +3,13 @@ using System.Diagnostics;
 
 namespace TootTallyDifficultyCalculator2._0
 {
-    public class TMBChart
+    public class TMBChart : IDisposable
     {
         public readonly float[] GAME_SPEED = { .5f, .75f, 1f, 1.25f, 1.5f, 1.75f, 2f };
 
         public float[][] notes;
         public string[][] bgdata;
-        public Dictionary<float, List<Note>> notesDict;
+        public Dictionary<int, List<Note>> notesDict;
         public List<string> note_color_start;
         public List<string> note_color_end;
         public string endpoint;
@@ -31,86 +31,89 @@ namespace TootTallyDifficultyCalculator2._0
         public ChartPerformances performances;
 
         public TimeSpan calculationTime;
+        public int noteCount;
+        public float songLength, songLengthMult;
 
         public void OnDeserialize()
         {
-            notesDict = new Dictionary<float, List<Note>>();
+            notesDict = new Dictionary<int, List<Note>>();
+            var noteCount = 0;
             for (int i = 0; i < GAME_SPEED.Length; i++)
             {
                 var gamespeed = GAME_SPEED[i];
+
                 var newTempo = tempo * gamespeed;
-                var minLength = BeatToSeconds2(0.01f, newTempo);
                 int count = 1;
-                notesDict[i] = new List<Note>(notes.Length);
+                notesDict[i] = new List<Note>(notes.Length) { new Note(0, 0, .015f, 0, 0, 0, false) };
                 var sortedNotes = notes.OrderBy(x => x[0]).ToArray();
                 for (int j = 0; j < sortedNotes.Length; j++)
                 {
                     float length = sortedNotes[j][1];
                     if (length <= 0)//minLength only applies if the note is less or equal to 0 beats, else it keeps its "lower than minimum" length
                         length = 0.015f;
-
                     bool isSlider;
                     if (i > 0)
-                        isSlider = notesDict[0][j].isSlider;
+                        isSlider = notesDict[0][j + 1].isSlider;
                     else
                         isSlider = j + 1 < sortedNotes.Length && IsSlider(sortedNotes[j], sortedNotes[j + 1]);
-
+                    if (i == 0 && !isSlider)
+                        noteCount++;
                     notesDict[i].Add(new Note(count, BeatToSeconds2(sortedNotes[j][0], newTempo), BeatToSeconds2(length, newTempo), sortedNotes[j][2], sortedNotes[j][3], sortedNotes[j][4], isSlider));
                     count++;
                 }
             }
+            this.noteCount = noteCount;
+
+            if (notesDict[2].Count > 2)
+                songLength = notesDict[2].Last().position - notesDict[2][1].position;
+            if (songLength < 1) songLength = 1;
+            songLengthMult = MathF.Pow(songLength / 10f, -MathF.E * .12f) + .475f; //https://www.desmos.com/calculator/cupmg3mh8j
+
 
             performances = new ChartPerformances(this);
 
+            var stopwatch = Stopwatch.StartNew();
+            for (int i = 0; i < GAME_SPEED.Length; i++)
+            {
+                performances.CalculatePerformances(i);
+                performances.CalculateAnalytics(i, songLengthMult);
+                performances.CalculateRatings(i);
+            }
+            stopwatch.Stop();
+            calculationTime = stopwatch.Elapsed;
+        }
+
+        public static float GetLength(float length) => Math.Clamp(length, .2f, 5f) * 8f + 10f;
+
+        public int GetNoteCount()
+        {
+            var noteCount = 0;
+            for (int i = 0; i < notes.Length; i++)
+            {
+                while (i + 1 < notes.Length && IsSlider(notes[i], notes[i + 1])) { i++; }
+                noteCount++;
+            }
+            return noteCount;
+        }
+
+        public void CalcPerformances()
+        {
+            performances = new ChartPerformances(this);
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             for (int i = 0; i < GAME_SPEED.Length; i++)
             {
                 performances.CalculatePerformances(i);
-                performances.CalculateAnalytics(i);
+                performances.CalculateAnalytics(i, songLengthMult);
                 performances.CalculateRatings(i);
             }
             stopwatch.Stop();
             calculationTime = stopwatch.Elapsed;
-
-            /*var breakDistThreshold = 3.5f / (float.Parse(tempo) / 120f);
-
-
-            List<NoteCluster> clusters = new List<NoteCluster>();
-            List<Note> currentNoteList = new List<Note>();
-
-            Stopwatch stopwatch1 = new Stopwatch();
-            stopwatch1.Start();
-            for (int i = 1; i < notesDict[1].Count; i++)
-            {
-                Note previousNote = notesDict[1][i - 1];
-                Note nextNote = notesDict[1][i];
-                currentNoteList.Add(previousNote);
-                if (nextNote.position - (previousNote.position + previousNote.length) > breakDistThreshold || i == notesDict[1].Count - 1)
-                {
-                    if (i == notesDict[1].Count - 1)
-                        currentNoteList.Add(nextNote);
-                    NoteCluster cluster = new NoteCluster();
-                    cluster.AddNotes(currentNoteList.ToArray());
-                    clusters.Add(cluster);
-                    currentNoteList.Clear();
-                }
-            }
-            stopwatch1.Stop();
-            Trace.WriteLine($"{shortName} process time was {stopwatch1.Elapsed.TotalMilliseconds}ms");
-            Trace.WriteLine($"{shortName} cluster count: {clusters.Count} with {breakDistThreshold} distance threshold");
-            for (int i = 0; i < clusters.Count; i++)
-            {
-                if (i > 0)
-                    Trace.WriteLine($"break length between {i - 1} and {i}: {clusters[i - 1].GetDistanceFromCluster(clusters[i])}");
-                Trace.WriteLine($"cluster #{i} has {clusters[i].noteList.Count} notes and last {clusters[i].GetClusterSize()}s.");
-            }
-            Trace.WriteLine($"-----------------------------------------------------");*/
         }
 
         //public float GetDiffRating(float speed) => performances.GetDiffRating(speed);
 
-        public float GetDynamicDiffRating(float percent, float speed, string[] modifiers) => performances.GetDynamicDiffRating(percent, speed, modifiers);
+        public float GetDynamicDiffRating(int hitCount, float speed, string[] modifiers) => performances.GetDynamicDiffRating(hitCount, speed, modifiers);
 
         public float GetAimPerformance(int speed) => performances.aimAnalyticsArray[speed].perfWeightedAverage;
         public float GetTapPerformance(int speed) => performances.tapAnalyticsArray[speed].perfWeightedAverage;
@@ -249,6 +252,16 @@ namespace TootTallyDifficultyCalculator2._0
             return (int)Math.Floor(baseScore * acc * ((mult + (champ ? 1.5f : 0f)) * .1f + 1f)) * 10;
         }
 
+        public void Dispose()
+        {
+            notes = null;
+            bgdata = null;
+            leaderboard = null;
+            lyrics?.Clear();
+            notesDict?.Clear();
+            performances.Dispose();
+        }
+
         public class LengthAccPair
         {
             public float length, acc;
@@ -259,5 +272,7 @@ namespace TootTallyDifficultyCalculator2._0
                 this.acc = acc;
             }
         }
+
+
     }
 }

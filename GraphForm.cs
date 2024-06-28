@@ -38,6 +38,8 @@ namespace TootTallyDifficultyCalculator2._0
             var starSeries = new ChartSeries("Star Rating", ChartSeriesType.Line);
             starSeries.Style.Border = aimSeries.Style.Border;
 
+            /*var orderedAimSeries = _chart.performances.aimPerfMatrix[2].OrderBy(x => x.performance + x.endurance).ToList();
+            var orderedTapSeries = _chart.performances.tapPerfMatrix[2].OrderBy(x => x.performance + x.endurance).ToList();*/
             for (int i = 0; i < _chart.performances.aimPerfMatrix[2].Count; i++)
             {
                 var time = _chart.performances.aimPerfMatrix[2][i].time;
@@ -45,7 +47,7 @@ namespace TootTallyDifficultyCalculator2._0
                 aimEndSeries.Points.Add(time, _chart.performances.aimPerfMatrix[2][i].endurance);
                 tapSeries.Points.Add(time, _chart.performances.tapPerfMatrix[2][i].performance);
                 tapEndSeries.Points.Add(time, _chart.performances.tapPerfMatrix[2][i].endurance);
-                starSeries.Points.Add(time, (_chart.performances.aimPerfMatrix[2][i].performance + _chart.performances.tapPerfMatrix[2][i].performance) / 2f);
+                starSeries.Points.Add(time, (_chart.performances.aimPerfMatrix[2][i].performance + _chart.performances.aimPerfMatrix[2][i].endurance + _chart.performances.tapPerfMatrix[2][i].performance + _chart.performances.tapPerfMatrix[2][i].endurance) / 2f);
             }
 
             AimRatingGraph.Series.Add(aimSeries);

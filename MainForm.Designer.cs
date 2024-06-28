@@ -75,6 +75,8 @@
             label18 = new Label();
             ChartNameCB = new ComboBox();
             ReplayNameCB = new ComboBox();
+            AccFilter = new NumericUpDown();
+            label19 = new Label();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
@@ -91,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)MapValue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MaccValue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EndDrainExtra).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AccFilter).BeginInit();
             SuspendLayout();
             // 
             // ButtonForceRefresh
@@ -297,7 +300,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 275, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 175, 0, 0, 0 });
             // 
             // label5
             // 
@@ -341,7 +344,7 @@
             TapNum.Name = "TapNum";
             TapNum.Size = new Size(96, 23);
             TapNum.TabIndex = 11;
-            TapNum.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            TapNum.Value = new decimal(new int[] { 195, 0, 0, 0 });
             // 
             // AccNum
             // 
@@ -352,7 +355,7 @@
             AccNum.Name = "AccNum";
             AccNum.Size = new Size(96, 23);
             AccNum.TabIndex = 11;
-            AccNum.Value = new decimal(new int[] { 325, 0, 0, 0 });
+            AccNum.Value = new decimal(new int[] { 195, 0, 0, 0 });
             // 
             // AimEndNote
             // 
@@ -363,7 +366,7 @@
             AimEndNote.Name = "AimEndNote";
             AimEndNote.Size = new Size(96, 23);
             AimEndNote.TabIndex = 11;
-            AimEndNote.Value = new decimal(new int[] { 300, 0, 0, 0 });
+            AimEndNote.Value = new decimal(new int[] { 750, 0, 0, 0 });
             // 
             // TapEndMult
             // 
@@ -374,7 +377,7 @@
             TapEndMult.Name = "TapEndMult";
             TapEndMult.Size = new Size(96, 23);
             TapEndMult.TabIndex = 11;
-            TapEndMult.Value = new decimal(new int[] { 25, 0, 0, 0 });
+            TapEndMult.Value = new decimal(new int[] { 15, 0, 0, 0 });
             // 
             // AimEndSlider
             // 
@@ -385,7 +388,7 @@
             AimEndSlider.Name = "AimEndSlider";
             AimEndSlider.Size = new Size(96, 23);
             AimEndSlider.TabIndex = 11;
-            AimEndSlider.Value = new decimal(new int[] { 450, 0, 0, 0 });
+            AimEndSlider.Value = new decimal(new int[] { 900, 0, 0, 0 });
             // 
             // AimEndMult
             // 
@@ -396,7 +399,7 @@
             AimEndMult.Name = "AimEndMult";
             AimEndMult.Size = new Size(96, 23);
             AimEndMult.TabIndex = 11;
-            AimEndMult.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            AimEndMult.Value = new decimal(new int[] { 50, 0, 0, 0 });
             // 
             // RatingOffset
             // 
@@ -536,7 +539,7 @@
             BiasMult.Name = "BiasMult";
             BiasMult.Size = new Size(96, 23);
             BiasMult.TabIndex = 11;
-            BiasMult.Value = new decimal(new int[] { 75, 0, 0, 131072 });
+            BiasMult.Value = new decimal(new int[] { 125, 0, 0, 131072 });
             // 
             // label15
             // 
@@ -569,7 +572,7 @@
             MapValue.Name = "MapValue";
             MapValue.Size = new Size(96, 23);
             MapValue.TabIndex = 11;
-            MapValue.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            MapValue.Value = new decimal(new int[] { 5, 0, 0, 0 });
             // 
             // label17
             // 
@@ -591,7 +594,7 @@
             MaccValue.Name = "MaccValue";
             MaccValue.Size = new Size(96, 23);
             MaccValue.TabIndex = 11;
-            MaccValue.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            MaccValue.Value = new decimal(new int[] { 50, 0, 0, 0 });
             // 
             // EndDrainExtra
             // 
@@ -634,6 +637,30 @@
             ReplayNameCB.TabIndex = 13;
             ReplayNameCB.SelectedValueChanged += OnReplaySelectedValueChanged;
             // 
+            // AccFilter
+            // 
+            AccFilter.BackColor = Color.DarkRed;
+            AccFilter.DecimalPlaces = 4;
+            AccFilter.ForeColor = Color.White;
+            AccFilter.Increment = new decimal(new int[] { 1, 0, 0, 262144 });
+            AccFilter.Location = new Point(614, 42);
+            AccFilter.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            AccFilter.Name = "AccFilter";
+            AccFilter.Size = new Size(96, 23);
+            AccFilter.TabIndex = 11;
+            AccFilter.ValueChanged += OnValueBoxTextChanged;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(564, 42);
+            label19.Name = "label19";
+            label19.Size = new Size(44, 20);
+            label19.TabIndex = 5;
+            label19.Text = "MIN:";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -657,6 +684,7 @@
             Controls.Add(AimEndSlider);
             Controls.Add(AimEndNote);
             Controls.Add(AimNum);
+            Controls.Add(AccFilter);
             Controls.Add(FilterMinTT);
             Controls.Add(LoadingLabel);
             Controls.Add(ProgressBarLoading);
@@ -677,6 +705,7 @@
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label5);
+            Controls.Add(label19);
             Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(label1);
@@ -707,6 +736,7 @@
             ((System.ComponentModel.ISupportInitialize)MapValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)MaccValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)EndDrainExtra).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AccFilter).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -759,5 +789,7 @@
         private Label label18;
         private ComboBox ChartNameCB;
         private ComboBox ReplayNameCB;
+        private NumericUpDown AccFilter;
+        private Label label19;
     }
 }
