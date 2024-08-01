@@ -77,6 +77,12 @@
             ReplayNameCB = new ComboBox();
             AccFilter = new NumericUpDown();
             label19 = new Label();
+            HDAimWeight = new NumericUpDown();
+            HDTapWeight = new NumericUpDown();
+            label20 = new Label();
+            label21 = new Label();
+            FLAimWeight = new NumericUpDown();
+            FLTapWeight = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
@@ -94,6 +100,10 @@
             ((System.ComponentModel.ISupportInitialize)MaccValue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EndDrainExtra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AccFilter).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)HDAimWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)HDTapWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FLAimWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FLTapWeight).BeginInit();
             SuspendLayout();
             // 
             // ButtonForceRefresh
@@ -283,7 +293,7 @@
             ButtonSaveTo.FlatStyle = FlatStyle.Popup;
             ButtonSaveTo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             ButtonSaveTo.ForeColor = Color.White;
-            ButtonSaveTo.Location = new Point(865, 216);
+            ButtonSaveTo.Location = new Point(983, 185);
             ButtonSaveTo.Name = "ButtonSaveTo";
             ButtonSaveTo.Size = new Size(112, 25);
             ButtonSaveTo.TabIndex = 1;
@@ -300,7 +310,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 175, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 375, 0, 0, 0 });
             // 
             // label5
             // 
@@ -344,7 +354,7 @@
             TapNum.Name = "TapNum";
             TapNum.Size = new Size(96, 23);
             TapNum.TabIndex = 11;
-            TapNum.Value = new decimal(new int[] { 195, 0, 0, 0 });
+            TapNum.Value = new decimal(new int[] { 200, 0, 0, 0 });
             // 
             // AccNum
             // 
@@ -355,7 +365,7 @@
             AccNum.Name = "AccNum";
             AccNum.Size = new Size(96, 23);
             AccNum.TabIndex = 11;
-            AccNum.Value = new decimal(new int[] { 195, 0, 0, 0 });
+            AccNum.Value = new decimal(new int[] { 375, 0, 0, 0 });
             // 
             // AimEndNote
             // 
@@ -539,7 +549,7 @@
             BiasMult.Name = "BiasMult";
             BiasMult.Size = new Size(96, 23);
             BiasMult.TabIndex = 11;
-            BiasMult.Value = new decimal(new int[] { 125, 0, 0, 131072 });
+            BiasMult.Value = new decimal(new int[] { 75, 0, 0, 131072 });
             // 
             // label15
             // 
@@ -661,6 +671,80 @@
             label19.TabIndex = 5;
             label19.Text = "MIN:";
             // 
+            // HDAimWeight
+            // 
+            HDAimWeight.BackColor = Color.DarkRed;
+            HDAimWeight.DecimalPlaces = 2;
+            HDAimWeight.ForeColor = Color.White;
+            HDAimWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            HDAimWeight.Location = new Point(673, 180);
+            HDAimWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            HDAimWeight.Name = "HDAimWeight";
+            HDAimWeight.Size = new Size(96, 23);
+            HDAimWeight.TabIndex = 11;
+            HDAimWeight.Value = new decimal(new int[] { 34, 0, 0, 131072 });
+            // 
+            // HDTapWeight
+            // 
+            HDTapWeight.BackColor = Color.DarkRed;
+            HDTapWeight.DecimalPlaces = 2;
+            HDTapWeight.ForeColor = Color.White;
+            HDTapWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            HDTapWeight.Location = new Point(775, 180);
+            HDTapWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            HDTapWeight.Name = "HDTapWeight";
+            HDTapWeight.Size = new Size(96, 23);
+            HDTapWeight.TabIndex = 11;
+            HDTapWeight.Value = new decimal(new int[] { 2, 0, 0, 131072 });
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(632, 181);
+            label20.Name = "label20";
+            label20.Size = new Size(35, 20);
+            label20.TabIndex = 5;
+            label20.Text = "HD:";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.ForeColor = Color.White;
+            label21.Location = new Point(632, 210);
+            label21.Name = "label21";
+            label21.Size = new Size(29, 20);
+            label21.TabIndex = 5;
+            label21.Text = "FL:";
+            // 
+            // FLAimWeight
+            // 
+            FLAimWeight.BackColor = Color.DarkRed;
+            FLAimWeight.DecimalPlaces = 2;
+            FLAimWeight.ForeColor = Color.White;
+            FLAimWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            FLAimWeight.Location = new Point(673, 209);
+            FLAimWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            FLAimWeight.Name = "FLAimWeight";
+            FLAimWeight.Size = new Size(96, 23);
+            FLAimWeight.TabIndex = 11;
+            FLAimWeight.Value = new decimal(new int[] { 55, 0, 0, 131072 });
+            // 
+            // FLTapWeight
+            // 
+            FLTapWeight.BackColor = Color.DarkRed;
+            FLTapWeight.DecimalPlaces = 2;
+            FLTapWeight.ForeColor = Color.White;
+            FLTapWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            FLTapWeight.Location = new Point(775, 209);
+            FLTapWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            FLTapWeight.Name = "FLTapWeight";
+            FLTapWeight.Size = new Size(96, 23);
+            FLTapWeight.TabIndex = 11;
+            FLTapWeight.Value = new decimal(new int[] { 2, 0, 0, 131072 });
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -673,6 +757,10 @@
             Controls.Add(RatingOffset);
             Controls.Add(MaccValue);
             Controls.Add(EndDrainExtra);
+            Controls.Add(FLTapWeight);
+            Controls.Add(HDTapWeight);
+            Controls.Add(FLAimWeight);
+            Controls.Add(HDAimWeight);
             Controls.Add(MapValue);
             Controls.Add(BiasMult);
             Controls.Add(MaxTime);
@@ -695,7 +783,9 @@
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label12);
+            Controls.Add(label21);
             Controls.Add(label17);
+            Controls.Add(label20);
             Controls.Add(label16);
             Controls.Add(label11);
             Controls.Add(label18);
@@ -737,6 +827,10 @@
             ((System.ComponentModel.ISupportInitialize)MaccValue).EndInit();
             ((System.ComponentModel.ISupportInitialize)EndDrainExtra).EndInit();
             ((System.ComponentModel.ISupportInitialize)AccFilter).EndInit();
+            ((System.ComponentModel.ISupportInitialize)HDAimWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)HDTapWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FLAimWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FLTapWeight).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -791,5 +885,11 @@
         private ComboBox ReplayNameCB;
         private NumericUpDown AccFilter;
         private Label label19;
+        private NumericUpDown HDAimWeight;
+        private NumericUpDown HDTapWeight;
+        private Label label20;
+        private Label label21;
+        private NumericUpDown FLAimWeight;
+        private NumericUpDown FLTapWeight;
     }
 }

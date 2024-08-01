@@ -23,9 +23,9 @@ namespace TootTallyDifficultyCalculator2._0
             Directory.CreateDirectory(Program.EXPORT_DIRECTORY);
             Directory.CreateDirectory(Program.DOWNLOAD_DIRECTORY);
             Directory.CreateDirectory(Program.CACHE_DIRECTORY);
-            WEIGHTS = new float[42];
+            WEIGHTS = new float[64];
             for (int i = 0; i < WEIGHTS.Length; i++)
-                WEIGHTS[i] = FastPow(.95f, i);
+                WEIGHTS[i] = FastPow(.92f, i);
             Instance ??= this;
         }
 
@@ -45,6 +45,9 @@ namespace TootTallyDifficultyCalculator2._0
 
         public float GetMacc() => (float)MaccValue.Value / 100f;
         public float GetMap() => (float)MapValue.Value / 100f;
+
+        public float[] GetHDWeights() => new float[] { (float)HDAimWeight.Value, (float)HDTapWeight.Value };
+        public float[] GetFLWeights() => new float[] { (float)FLAimWeight.Value, (float)FLTapWeight.Value };
 
         public async void DownloadAllTmbs(object sender, EventArgs e)
         {
@@ -182,6 +185,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         private void OnDisplayChartsButtonClick(object sender, EventArgs e)
         {
+            var entryCount = 0;
             TextBoxChartData.Clear();
             TextBoxLeaderboardData.Clear();
             var allChartDataTextLines = new List<string>((checkboxAllSpeed.Checked ? 40 : 7) * chartList.Count);
@@ -210,7 +214,7 @@ namespace TootTallyDifficultyCalculator2._0
 
                 //LEADERBOARD DISPLAY
                 if (chart.leaderboard == null) continue;
-                var leaderboardText = DisplayLeaderboard(chart);
+                var leaderboardText = DisplayLeaderboard(ref entryCount, chart);
                 if (leaderboardText.Count == 0) continue;
 
                 var leaderboardTextLines = new List<string>
@@ -228,7 +232,7 @@ namespace TootTallyDifficultyCalculator2._0
             }
             sw.Stop();
             _leaderboardCalcTime = sw.Elapsed;
-            allLeaderboardTextLines.Insert(1, $"Score Calculation time took {_leaderboardCalcTime.TotalSeconds}s for {chartList.Count} charts.");
+            allLeaderboardTextLines.Insert(1, $"Score Calculation time took {_leaderboardCalcTime.TotalSeconds}s for {chartList.Count} charts and {entryCount} entries.");
             TextBoxChartData.Lines = allChartDataTextLines.ToArray();
             TextBoxLeaderboardData.Lines = allLeaderboardTextLines.ToArray();
         }
@@ -251,9 +255,10 @@ namespace TootTallyDifficultyCalculator2._0
             textLines.Add("-------------------------------------------------");
         }
 
-        public List<string> DisplayLeaderboard(TMBChart chart)
+        public List<string> DisplayLeaderboard(ref int entryCount, TMBChart chart)
         {
             var count = 1;
+            var entryCountIncrement = 0;
             List<string> textLines = new List<string>();
             for (int i = 0; i < chart.leaderboard.results.Count; i++)
                 chart.leaderboard.results[i].tt = (float)CalculateScoreTT(chart, chart.leaderboard.results[i]);
@@ -262,9 +267,13 @@ namespace TootTallyDifficultyCalculator2._0
                     //score.tt = (float)CalculateScoreTT(chart, score);
                     if (!FilterModifierOnly.Checked || (FilterModifierOnly.Checked && score.modifiers != null && !score.modifiers.Contains("NONE")))
                         if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value && score.player.ToLower().Contains(FilterPlayerName.Text.ToLower()) && score.percentage >= (float)AccFilter.Value * 100)
+                        {
+                            entryCountIncrement++;
                             textLines.Add(GetDisplayScoreLine2(score, chart, count));
+                        }
                     count++;
                 });
+            entryCount += entryCountIncrement;
             return textLines;
         }
 
@@ -311,8 +320,8 @@ namespace TootTallyDifficultyCalculator2._0
             //y = 0.7x^2 + 12x + 0.05
         }
 
-        public const float c = 0.0852880402f;
-        public const float b = 5f;
+        public const float c = 0.734992228f;
+        public const float b = 2.8f;
 
         // OLD: https://www.desmos.com/calculator/mvwr1tcpz8
         // NEW: https://www.desmos.com/calculator/0su982a1gg
@@ -322,15 +331,86 @@ namespace TootTallyDifficultyCalculator2._0
 
             var baseTT = CalculateBaseTT(chart.GetDynamicDiffRating(score.GetHitCount, score.replay_speed, score.modifiers));
 
-            float scoreTT;
-            if (percent < 0.95f)
-                scoreTT = ((c * MathF.Pow(MathF.E, b * percent)) - c) * baseTT; //y = (0.6 * e^3x - 0.6) * b
-            else
-                scoreTT = FastPow(8f * percent - 5.831914355f, 4) * baseTT;
-
-            return scoreTT;
+            return baseTT * GetMultiplier(percent);
         }
 
+        public static readonly Dictionary<float, float> accToMultDictV1 = new Dictionary<float, float>()
+        {
+            { 1f, 22.095f },
+            { .999f, 21.771f },
+            { .996f, 20.819f },
+            { .993f, 19.899f },
+            { .99f, 19.010f },
+            { .985f, 17.595f },
+            { .98f, 16.260f },
+            { .97f, 13.819f },
+            { .96f, 11.665f },
+            { .95f, 9.772f },
+            { .92f, 8.399f },
+            { .9f, 7.592f },
+            { .8f, 4.571f },
+            { .7f, 2.739f },
+            { .6f, 1.627f },
+            { .5f, 0.953f },
+            { .25f, 0.212f },
+            { 0, 0 },
+        };
+
+        public static readonly Dictionary<float, float> accToMultDictV2 = new Dictionary<float, float>()
+        {
+            { 1f, 22.1f },
+            { .999f, 21.7f },
+            { .996f, 20.8f },
+            { .993f, 19.8f },
+            { .99f, 19f },
+            { .985f, 17.5f },
+            { .98f, 16.2f },
+            { .97f, 13.8f },
+            { .96f, 12f },
+            { .95f, 11f },
+            { .925f, 8.9f },
+            { .875f, 6.8f },
+            { .8f, 4.5f },
+            { .7f, 2.7f },
+            { .6f, 1.4f },
+            { .5f, 0.6f },
+            { .25f, 0.2f },
+            { 0, 0 },
+        };
+
+        public static readonly Dictionary<float, float> accToMultDict = new Dictionary<float, float>()
+        {
+            { 1f, 40.2f },
+            { .999f, 32.4f },
+            { .996f, 27.2f },
+            { .993f, 23.2f },
+            { .99f, 20.5f },
+            { .985f, 18.1f },
+            { .98f, 16.1f },
+            { .97f, 13.8f },
+            { .96f, 11.8f },
+            { .95f, 10.8f },
+            { .925f, 9.2f },
+            { .9f, 8.2f },
+            { .875f, 7.5f },
+            { .85f, 7f },
+            { .8f, 6f },
+            { .7f, 4f },
+            { .6f, 2.2f },
+            { .5f, 0.65f },
+            { .25f, 0.2f },
+            { 0, 0 },
+        };
+
+        public static float GetMultiplier(float percent)
+        {
+            int index;
+            for (index = 1; index < accToMultDict.Count && accToMultDict.Keys.ElementAt(index) > percent; index++) ;
+            var percMax = accToMultDict.Keys.ElementAt(index);
+            var percMin = accToMultDict.Keys.ElementAt(index - 1);
+            var by = (percent - percMin) / (percMax - percMin);
+            return Lerp(accToMultDict[percMin], accToMultDict[percMax], by);
+        }
 
         private void OnDropDownSongNameValueChange(object sender, EventArgs e)
         {

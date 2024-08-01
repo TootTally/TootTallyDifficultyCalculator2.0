@@ -62,13 +62,12 @@ namespace TootTallyDifficultyCalculator2._0
                     count++;
                 }
             }
-            this.noteCount = noteCount;
+            this.noteCount = GetNoteCount();
 
             if (notesDict[2].Count > 2)
                 songLength = notesDict[2].Last().position - notesDict[2][1].position;
             if (songLength < 1) songLength = 1;
-            songLengthMult = MathF.Pow(songLength / 10f, -MathF.E * .12f) + .475f; //https://www.desmos.com/calculator/cupmg3mh8j
-
+            songLengthMult = MathF.Pow(songLength / 15f, -MathF.E * .16f) + .475f; //https://www.desmos.com/calculator/cupmg3mh8j
 
             performances = new ChartPerformances(this);
 
@@ -119,7 +118,7 @@ namespace TootTallyDifficultyCalculator2._0
         public float GetTapPerformance(int speed) => performances.tapAnalyticsArray[speed].perfWeightedAverage;
         //public float GetAccPerformance(int speed) => performances.accAnalyticsArray[speed].perfWeightedAverage;
 
-        public double GetStarRating(int speed) => performances.GetDynamicDiffRating(1, speed * .25f + 0.5f);
+        public double GetStarRating(int speed) => performances.GetDynamicDiffRating(noteCount, speed * .25f + 0.5f);
 
         #region Note
         public enum Direction
