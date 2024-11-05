@@ -48,6 +48,7 @@ namespace TootTallyDifficultyCalculator2._0
 
         public float[] GetHDWeights() => new float[] { (float)HDAimWeight.Value, (float)HDTapWeight.Value };
         public float[] GetFLWeights() => new float[] { (float)FLAimWeight.Value, (float)FLTapWeight.Value };
+        public float[] GetEZWeights() => new float[] { (float)EZAimWeight.Value, (float)EZTapWeight.Value };
 
         public async void DownloadAllTmbs(object sender, EventArgs e)
         {
@@ -68,7 +69,7 @@ namespace TootTallyDifficultyCalculator2._0
             if (DO_LEADERBOARDS)
                 Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
                 {
-                    TootTallyAPIServices.GetLeaderboardFromId(id, leaderboard =>
+                    TootTallyAPIServices.GetAllLeadboardFromId(id, leaderboard =>
                     leaderboardList.Add(leaderboard));
                     currentCount++;
                     if (!ProgressBarLoading.InvokeRequired)
@@ -331,7 +332,7 @@ namespace TootTallyDifficultyCalculator2._0
 
             var baseTT = CalculateBaseTT(chart.GetDynamicDiffRating(score.GetHitCount, score.replay_speed, score.modifiers));
 
-            return baseTT * GetMultiplier(percent);
+            return baseTT * GetMultiplier(percent, score.modifiers);
         }
 
         public static readonly Dictionary<float, float> accToMultDictV1 = new Dictionary<float, float>()
@@ -402,14 +403,39 @@ namespace TootTallyDifficultyCalculator2._0
             { 0, 0 },
         };
 
-        public static float GetMultiplier(float percent)
+        public static readonly Dictionary<float, float> ezAccToMultDict = new Dictionary<float, float>()
         {
+             { 1f, 15.4f },    //{ 1f, 15.4f },    //{ 1f, 15.4f },    //V3{ 1f, 10.4f },   //V2{ 1f, 7.5f },   //V1{ 1f, 7.1f },
+             { .999f, 12.6f }, //{ .999f, 12.6f }, //{ .999f, 12.6f }, //{ .999f, 10.2f },  //{ .999f, 6.05f }, //{ .999f, 7f },
+             { .996f, 11.6f }, //{ .996f, 10.8f }, //{ .996f, 10.6f }, //{ .996f, 9.8f },   //{ .996f, 5.05f }, //{ .996f, 6.8f },
+             { .993f, 11f }, //{ .993f, 10.6f },  //{ .993f, 9.2f },  //{ .993f, 9.5f },   //{ .993f, 4.35f }, //{ .993f, 6.6f },
+             { .99f, 10.6f },   //{ .99f, 9.2f },   //{ .99f, 8.6f },   //{ .99f, 9.2f },    //{ .99f, 3.8f },   //{ .99f, 6.4f },
+             { .985f, 10f },  //{ .985f, 8.6f },    //{ .985f, 8f },    //{ .985f, 8.75f },  //{ .985f, 3.4f },  //{ .985f, 6.2f },
+             { .98f, 9.6f },   //{ .98f, 8.2f },   //{ .98f, 7.6f },   //{ .98f, 8.3f },    //{ .98f, 3f },     //{ .98f, 5.9f },
+             { .97f, 9f },   //{ .97f, 7.6f },     //{ .97f, 7f },     //{ .97f, 7.5f },    //{ .97f, 2.5f },   //{ .97f, 5.45f },
+             { .96f, 8.6f },   //{ .96f, 7.2f },   //{ .96f, 6.6f },   //{ .96f, 6.6f },    //{ .96f, 2.2f },   //{ .96f, 5.15f },
+             { .95f, 8.3f },   //{ .95f, 6.9f },   //{ .95f, 6.2f },   //{ .95f, 6f },      //{ .95f, 2f },     //{ .95f, 4.75f },
+             { .925f, 7.6f },  //{ .925f, 6.1f },  //{ .925f, 5.5f },  //{ .925f, 5.25f },  //{ .925f, 1.75f }, //{ .925f, 4.1f },
+             { .9f, 6.8f },    //{ .9f, 5.5f },    //{ .9f, 4.8f },    //{ .9f, 4.65f },    //{ .9f, 1.55f },   //{ .9f, 3.6f },
+             { .875f, 6.2f },  //{ .875f, 4.8f },  //{ .875f, 4.2f },  //{ .875f, 4.35f },  //{ .875f, 1.45f }, //{ .875f, 3.1f },
+             { .85f, 5.6f },   //{ .85f, 4.2f },   //{ .85f, 3.8f },   //{ .85f, 3.9f },    //{ .85f, 1.3f },   //{ .85f, 2.6f },
+             { .8f, 4.6f },    //{ .8f, 3.3f },      //{ .8f, 3f },      //{ .8f, 3.45f },    //{ .8f, 1.15f },   //{ .8f, 2.1f },
+             { .7f, 2.5f },   //{ .7f, 1.95f },   //{ .7f, 1.75f },   //{ .7f, 2.25f },    //{ .7f, .75f },    //{ .7f, 1.4f },
+             { .6f, 1.12f },    //{ .6f, .84f },    //{ .6f, .84f },    //{ .6f, 1.23f },    //{ .6f, .41f },    //{ .6f, .8f },
+             { .5f, .22f },    //{ .5f, .22f },    //{ .5f, .22f },    //{ .5f, .33f },     //{ .5f, .11f },    //{ .5f, .4f },
+             { .25f, .03f },   //{ .25f, .03f },   //{ .25f, .03f },   //{ .25f, .06f },    //{ .25f, .02f },   //{ .25f, .05f },
+             { 0, 0 },         //{ 0, 0 },         //{ 0, 0 },         //{ 0, 0 },          //{ 0, 0 },         //{ 0, 0 },
+        };
+        public static float GetMultiplier(float percent, string[] modifiers = null)
+        {
+            var multDict = (modifiers != null && modifiers.Contains("EZ")) ? ezAccToMultDict : accToMultDict;
             int index;
-            for (index = 1; index < accToMultDict.Count && accToMultDict.Keys.ElementAt(index) > percent; index++) ;
-            var percMax = accToMultDict.Keys.ElementAt(index);
-            var percMin = accToMultDict.Keys.ElementAt(index - 1);
+            for (index = 1; index < multDict.Count && multDict.Keys.ElementAt(index) > percent; index++) ;
+            var percMax = multDict.Keys.ElementAt(index);
+            var percMin = multDict.Keys.ElementAt(index - 1);
             var by = (percent - percMin) / (percMax - percMin);
-            return Lerp(accToMultDict[percMin], accToMultDict[percMax], by);
+            var mult = Lerp(multDict[percMin], multDict[percMax], by);
+            return mult;
         }
 
         private void OnDropDownSongNameValueChange(object sender, EventArgs e)

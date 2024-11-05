@@ -125,6 +125,28 @@ namespace TootTallyDifficultyCalculator2._0
             }
         }
 
+        public static void GetAllLeadboardFromId(int id, Action<Leaderboard> callback)
+        {
+            
+
+            try
+            {
+                var lb = JsonConvert.DeserializeObject<Leaderboard>(GetStringRequestOld($"songs/{id}/leaderboard").Result);
+                var next = lb.next;
+                while (next != null)
+                {
+                    var l = JsonConvert.DeserializeObject<Leaderboard>(GetStringRequestOld(next).Result);
+                    next = l.next;
+                    lb.results.AddRange(l.results);
+                }
+                callback(lb);
+            }
+            catch (Exception)
+            {
+                Trace.WriteLine("Couldn't find leaderboard for " + id);
+            }
+
+        }
 
         private static Task<HttpResponseMessage> PostUploadRequest(string query, dynamic data)
         {

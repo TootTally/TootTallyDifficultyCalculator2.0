@@ -83,6 +83,9 @@
             label21 = new Label();
             FLAimWeight = new NumericUpDown();
             FLTapWeight = new NumericUpDown();
+            EZ = new Label();
+            EZAimWeight = new NumericUpDown();
+            EZTapWeight = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
@@ -104,6 +107,8 @@
             ((System.ComponentModel.ISupportInitialize)HDTapWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FLAimWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FLTapWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EZAimWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EZTapWeight).BeginInit();
             SuspendLayout();
             // 
             // ButtonForceRefresh
@@ -677,7 +682,7 @@
             HDAimWeight.DecimalPlaces = 2;
             HDAimWeight.ForeColor = Color.White;
             HDAimWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            HDAimWeight.Location = new Point(673, 180);
+            HDAimWeight.Location = new Point(897, 76);
             HDAimWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
             HDAimWeight.Name = "HDAimWeight";
             HDAimWeight.Size = new Size(96, 23);
@@ -690,7 +695,7 @@
             HDTapWeight.DecimalPlaces = 2;
             HDTapWeight.ForeColor = Color.White;
             HDTapWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            HDTapWeight.Location = new Point(775, 180);
+            HDTapWeight.Location = new Point(999, 76);
             HDTapWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
             HDTapWeight.Name = "HDTapWeight";
             HDTapWeight.Size = new Size(96, 23);
@@ -702,7 +707,7 @@
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label20.ForeColor = Color.White;
-            label20.Location = new Point(632, 181);
+            label20.Location = new Point(856, 76);
             label20.Name = "label20";
             label20.Size = new Size(35, 20);
             label20.TabIndex = 5;
@@ -713,7 +718,7 @@
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label21.ForeColor = Color.White;
-            label21.Location = new Point(632, 210);
+            label21.Location = new Point(862, 105);
             label21.Name = "label21";
             label21.Size = new Size(29, 20);
             label21.TabIndex = 5;
@@ -725,7 +730,7 @@
             FLAimWeight.DecimalPlaces = 2;
             FLAimWeight.ForeColor = Color.White;
             FLAimWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            FLAimWeight.Location = new Point(673, 209);
+            FLAimWeight.Location = new Point(897, 105);
             FLAimWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
             FLAimWeight.Name = "FLAimWeight";
             FLAimWeight.Size = new Size(96, 23);
@@ -738,12 +743,49 @@
             FLTapWeight.DecimalPlaces = 2;
             FLTapWeight.ForeColor = Color.White;
             FLTapWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            FLTapWeight.Location = new Point(775, 209);
+            FLTapWeight.Location = new Point(999, 105);
             FLTapWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
             FLTapWeight.Name = "FLTapWeight";
             FLTapWeight.Size = new Size(96, 23);
             FLTapWeight.TabIndex = 11;
             FLTapWeight.Value = new decimal(new int[] { 2, 0, 0, 131072 });
+            // 
+            // EZ
+            // 
+            EZ.AutoSize = true;
+            EZ.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            EZ.ForeColor = Color.White;
+            EZ.Location = new Point(861, 132);
+            EZ.Name = "EZ";
+            EZ.Size = new Size(30, 20);
+            EZ.TabIndex = 5;
+            EZ.Text = "EZ:";
+            // 
+            // EZAimWeight
+            // 
+            EZAimWeight.BackColor = Color.DarkRed;
+            EZAimWeight.DecimalPlaces = 2;
+            EZAimWeight.ForeColor = Color.White;
+            EZAimWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            EZAimWeight.Location = new Point(897, 134);
+            EZAimWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            EZAimWeight.Name = "EZAimWeight";
+            EZAimWeight.Size = new Size(96, 23);
+            EZAimWeight.TabIndex = 11;
+            EZAimWeight.Value = new decimal(new int[] { 35, 0, 0, 131072 });
+            // 
+            // EZTapWeight
+            // 
+            EZTapWeight.BackColor = Color.DarkRed;
+            EZTapWeight.DecimalPlaces = 2;
+            EZTapWeight.ForeColor = Color.White;
+            EZTapWeight.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            EZTapWeight.Location = new Point(999, 134);
+            EZTapWeight.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            EZTapWeight.Name = "EZTapWeight";
+            EZTapWeight.Size = new Size(96, 23);
+            EZTapWeight.TabIndex = 11;
+            EZTapWeight.Value = new decimal(new int[] { 2, 0, 0, 131072 });
             // 
             // MainForm
             // 
@@ -759,6 +801,8 @@
             Controls.Add(EndDrainExtra);
             Controls.Add(FLTapWeight);
             Controls.Add(HDTapWeight);
+            Controls.Add(EZTapWeight);
+            Controls.Add(EZAimWeight);
             Controls.Add(FLAimWeight);
             Controls.Add(HDAimWeight);
             Controls.Add(MapValue);
@@ -783,6 +827,7 @@
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label12);
+            Controls.Add(EZ);
             Controls.Add(label21);
             Controls.Add(label17);
             Controls.Add(label20);
@@ -831,6 +876,8 @@
             ((System.ComponentModel.ISupportInitialize)HDTapWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)FLAimWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)FLTapWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EZAimWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EZTapWeight).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -891,5 +938,8 @@
         private Label label21;
         private NumericUpDown FLAimWeight;
         private NumericUpDown FLTapWeight;
+        private Label EZ;
+        private NumericUpDown EZAimWeight;
+        private NumericUpDown EZTapWeight;
     }
 }

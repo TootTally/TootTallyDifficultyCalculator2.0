@@ -70,7 +70,7 @@ namespace TootTallyDifficultyCalculator2._0
 
                     var weight = MainForm.WEIGHTS[noteCount];
                     noteCount++;
-                    weightSum += weight;
+                    weightSum += MathF.Sqrt(weight) + 1;
 
                     var lengthSum = prevNote.length;
                     var deltaSlideSum = MathF.Abs(prevNote.pitchDelta);
@@ -161,14 +161,14 @@ namespace TootTallyDifficultyCalculator2._0
         {
             var baseValue = MathF.Min(Lerp(8f, 16f, aimDistance / (CHEESABLE_THRESHOLD * 3f)), 20f);
             //var baseValue = aimDistance <= CHEESABLE_THRESHOLD ? 8f : 16f;
-            return (baseValue / MathF.Pow(tapDelta, 1.35f)) * weight;
+            return (baseValue / MathF.Pow(tapDelta, 1.4f)) * weight;
         }
 
         public float CalcTapEndurance(float tapDelta, float weight, float aimDistance)
         {
-            var baseValue = MathF.Min(Lerp(.15f, .35f, aimDistance / (CHEESABLE_THRESHOLD * 3f)), .5f);
+            var baseValue = MathF.Min(Lerp(.1f, .35f, aimDistance / (CHEESABLE_THRESHOLD * 3f)), .5f);
             //var baseValue = aimDistance <= CHEESABLE_THRESHOLD ? .25f : .65f;
-            return (baseValue / MathF.Pow(tapDelta, 1.3f)) / (TAP_END * MUL_END) * weight;
+            return (baseValue / MathF.Pow(tapDelta, 1.15f)) / (TAP_END * MUL_END) * weight;
         }
         #endregion
 
@@ -248,6 +248,7 @@ namespace TootTallyDifficultyCalculator2._0
         public const float TAP_WEIGHT = 1.12f;
         public float[] HDWeights = MainForm.Instance.GetHDWeights();
         public float[] FLWeights = MainForm.Instance.GetFLWeights();
+        public float[] EZWeights = MainForm.Instance.GetEZWeights();
         public float BIAS = MainForm.Instance.GetBiasMult();
 
         public float GetDynamicDiffRating(int hitCount, float gamespeed, string[] modifiers = null)
@@ -261,17 +262,26 @@ namespace TootTallyDifficultyCalculator2._0
             {
                 var aimPow = 1f;
                 var tapPow = 1f;
-
+                var isEZModeOn = modifiers.Contains("EZ");
+                var mult = isEZModeOn ? .5f : 1f;
                 if (modifiers.Contains("HD"))
                 {
-                    aimPow += HDWeights[0];
-                    tapPow += HDWeights[1];
+                    aimPow += HDWeights[0] * mult;
+                    tapPow += HDWeights[1] * mult;
                 }
                 if (modifiers.Contains("FL"))
                 {
-                    aimPow += FLWeights[0];
-                    tapPow += FLWeights[1];
+                    aimPow += FLWeights[0] * mult;
+                    tapPow += FLWeights[1] * mult;
                 }
+                if (isEZModeOn)
+                {
+                    aimPow -= EZWeights[0];
+                    tapPow -= EZWeights[1];
+                }
+
+                if (aimPow <= 0) aimPow = .01f;
+                if (tapPow <= 0) tapPow = .01f;
 
                 aimRating *= aimPow;
                 tapRating *= tapPow;
