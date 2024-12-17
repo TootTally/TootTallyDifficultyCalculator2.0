@@ -70,7 +70,7 @@ namespace TootTallyDifficultyCalculator2._0
 
                     var weight = MainForm.WEIGHTS[noteCount];
                     noteCount++;
-                    weightSum += MathF.Sqrt(weight) + 1;
+                    weightSum += weight;
 
                     var lengthSum = prevNote.length;
                     var deltaSlideSum = MathF.Abs(prevNote.pitchDelta);
@@ -120,8 +120,8 @@ namespace TootTallyDifficultyCalculator2._0
                 if (i > 0)
                 {
                     var endDivider = 61f - MathF.Min(currentNote.position - noteList[i - 1].position, 5f) * 12f;
-                    var aimThreshold = MathF.Pow(aimStrain, 1.08f) * 1.2f;
-                    var tapThreshold = MathF.Pow(tapStrain, 1.08f) * 1.2f;
+                    var aimThreshold = MathF.Sqrt(aimStrain) * 3f;//MathF.Pow(aimStrain, 1.08f) * 1.2f;
+                    var tapThreshold = MathF.Sqrt(tapStrain) * 3f;//MathF.Pow(tapStrain, 1.08f) * 1.2f;
                     if (aimEndurance >= aimThreshold)
                         ComputeEnduranceDecay(ref aimEndurance, (aimEndurance - aimThreshold) / endDivider);
                     if (tapEndurance >= tapThreshold)
@@ -140,18 +140,18 @@ namespace TootTallyDifficultyCalculator2._0
         }
 
         //https://www.desmos.com/calculator/tkunxszosp
-        public static float ComputeStrain(float strain) => a * MathF.Pow(strain + 1, -.016f * MathF.E) - a - (5f * strain / a);
-        private const float a = -40f;
+        public static float ComputeStrain(float strain) => a * MathF.Pow(strain + 1, -.04f * MathF.E) - a - (5f * strain / a);
+        private const float a = -60f;
         #region AIM
         public float CalcAimStrain(float distance, float weight, float deltaTime)
         {
-            var speed = (distance * .85f) / MathF.Pow(deltaTime, 1.35f);
+            var speed = (distance * .85f) / MathF.Pow(deltaTime, 1.15f);
             return speed * weight;
         }
 
         public float CalcAimEndurance(float distance, float weight, float deltaTime)
         {
-            var speed = ((distance * .25f) / MathF.Pow(deltaTime, 1.15f)) / (AIM_END * MUL_END);
+            var speed = ((distance * .15f) / MathF.Pow(deltaTime, 1.05f)) / (AIM_END * MUL_END);
             return speed * weight;
         }
         #endregion
@@ -159,16 +159,16 @@ namespace TootTallyDifficultyCalculator2._0
         #region TAP
         public static float CalcTapStrain(float tapDelta, float weight, float aimDistance)
         {
-            var baseValue = MathF.Min(Lerp(8f, 16f, aimDistance / (CHEESABLE_THRESHOLD * 3f)), 20f);
+            var baseValue = MathF.Min(Lerp(8f, 14f, aimDistance / CHEESABLE_THRESHOLD), 16f);
             //var baseValue = aimDistance <= CHEESABLE_THRESHOLD ? 8f : 16f;
-            return (baseValue / MathF.Pow(tapDelta, 1.4f)) * weight;
+            return (baseValue / MathF.Pow(tapDelta, 1.35f)) * weight;
         }
 
         public float CalcTapEndurance(float tapDelta, float weight, float aimDistance)
         {
-            var baseValue = MathF.Min(Lerp(.1f, .35f, aimDistance / (CHEESABLE_THRESHOLD * 3f)), .5f);
+            var baseValue = MathF.Min(Lerp(.1f, .32f, aimDistance / CHEESABLE_THRESHOLD), .35f);
             //var baseValue = aimDistance <= CHEESABLE_THRESHOLD ? .25f : .65f;
-            return (baseValue / MathF.Pow(tapDelta, 1.15f)) / (TAP_END * MUL_END) * weight;
+            return (baseValue / MathF.Pow(tapDelta, 1.05f)) / (TAP_END * MUL_END) * weight;
         }
         #endregion
 
@@ -177,13 +177,13 @@ namespace TootTallyDifficultyCalculator2._0
         #region ACC
         public static float CalcAccStrain(float lengthSum, float slideDelta, float weight)
         {
-            var speed = slideDelta / MathF.Pow(lengthSum, 1.18f);
+            var speed = (slideDelta * 1.25f) / MathF.Pow(lengthSum, 1.25f);
             return speed * weight;
         }
 
         public float CalcAccEndurance(float lengthSum, float slideDelta, float weight)
         {
-            var speed = (slideDelta / MathF.Pow(lengthSum, 1.08f)) / (ACC_END * MUL_END);
+            var speed = ((slideDelta * .5f) / MathF.Pow(lengthSum, 1.05f)) / (ACC_END * MUL_END);
             return speed * weight;
         }
         #endregion

@@ -86,6 +86,7 @@
             EZ = new Label();
             EZAimWeight = new NumericUpDown();
             EZTapWeight = new NumericUpDown();
+            FilterEZOnly = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
@@ -315,7 +316,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 375, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 430, 0, 0, 0 });
             // 
             // label5
             // 
@@ -359,7 +360,7 @@
             TapNum.Name = "TapNum";
             TapNum.Size = new Size(96, 23);
             TapNum.TabIndex = 11;
-            TapNum.Value = new decimal(new int[] { 200, 0, 0, 0 });
+            TapNum.Value = new decimal(new int[] { 300, 0, 0, 0 });
             // 
             // AccNum
             // 
@@ -392,7 +393,7 @@
             TapEndMult.Name = "TapEndMult";
             TapEndMult.Size = new Size(96, 23);
             TapEndMult.TabIndex = 11;
-            TapEndMult.Value = new decimal(new int[] { 15, 0, 0, 0 });
+            TapEndMult.Value = new decimal(new int[] { 25, 0, 0, 0 });
             // 
             // AimEndSlider
             // 
@@ -787,6 +788,18 @@
             EZTapWeight.TabIndex = 11;
             EZTapWeight.Value = new decimal(new int[] { 2, 0, 0, 131072 });
             // 
+            // FilterEZOnly
+            // 
+            FilterEZOnly.AutoSize = true;
+            FilterEZOnly.ForeColor = Color.White;
+            FilterEZOnly.Location = new Point(661, 74);
+            FilterEZOnly.Name = "FilterEZOnly";
+            FilterEZOnly.Size = new Size(67, 19);
+            FilterEZOnly.TabIndex = 3;
+            FilterEZOnly.Text = "EZ Only";
+            FilterEZOnly.UseVisualStyleBackColor = true;
+            FilterEZOnly.CheckedChanged += OnValueBoxTextChanged;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -846,6 +859,7 @@
             Controls.Add(label1);
             Controls.Add(FilterPlayerName);
             Controls.Add(FilterMapName);
+            Controls.Add(FilterEZOnly);
             Controls.Add(FilterModifierOnly);
             Controls.Add(checkboxAllSpeed);
             Controls.Add(ButtonSaveTo);
@@ -941,5 +955,6 @@
         private Label EZ;
         private NumericUpDown EZAimWeight;
         private NumericUpDown EZTapWeight;
+        private CheckBox FilterEZOnly;
     }
 }

@@ -69,7 +69,7 @@ namespace TootTallyDifficultyCalculator2._0
             if (DO_LEADERBOARDS)
                 Parallel.ForEach(idList, new ParallelOptions() { MaxDegreeOfParallelism = 12 }, id =>
                 {
-                    TootTallyAPIServices.GetAllLeadboardFromId(id, leaderboard =>
+                    TootTallyAPIServices.GetLeaderboardFromId(id, leaderboard =>
                     leaderboardList.Add(leaderboard));
                     currentCount++;
                     if (!ProgressBarLoading.InvokeRequired)
@@ -267,11 +267,12 @@ namespace TootTallyDifficultyCalculator2._0
                 {
                     //score.tt = (float)CalculateScoreTT(chart, score);
                     if (!FilterModifierOnly.Checked || (FilterModifierOnly.Checked && score.modifiers != null && !score.modifiers.Contains("NONE")))
-                        if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value && score.player.ToLower().Contains(FilterPlayerName.Text.ToLower()) && score.percentage >= (float)AccFilter.Value * 100)
-                        {
-                            entryCountIncrement++;
-                            textLines.Add(GetDisplayScoreLine2(score, chart, count));
-                        }
+                        if (!FilterEZOnly.Checked || (FilterEZOnly.Checked && score.modifiers != null && score.modifiers.Contains("EZ")))
+                            if (score.tt >= (float)FilterMinTT.Value && score.tt <= (float)FilterMaxTT.Value && score.player.ToLower().Contains(FilterPlayerName.Text.ToLower()) && score.percentage >= (float)AccFilter.Value * 100)
+                            {
+                                entryCountIncrement++;
+                                textLines.Add(GetDisplayScoreLine2(score, chart, count));
+                            }
                     count++;
                 });
             entryCount += entryCountIncrement;
