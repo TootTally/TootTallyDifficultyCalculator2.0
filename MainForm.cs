@@ -316,7 +316,13 @@ namespace TootTallyDifficultyCalculator2._0
         }
 
         //https://www.desmos.com/calculator/cemkp1quua
+        //NEW x^3 https://www.desmos.com/calculator/ciazumjpbx
         public static float CalculateBaseTT(float starRating)
+        {
+            return (.03f * FastPow(starRating, 3)) - (.13f * FastPow(starRating, 2)) + (10f * starRating) + .05f;
+            //y = 0.13x^3 -1.4x^2 + 12x + .05
+        }
+        public static float CalculateBaseTTOLD(float starRating)
         {
             return 0.5f * FastPow(starRating, 2) + (7f * starRating) + 0.05f;
             //y = 0.7x^2 + 12x + 0.05
