@@ -25,7 +25,7 @@ namespace TootTallyDifficultyCalculator2._0
             Directory.CreateDirectory(Program.CACHE_DIRECTORY);
             WEIGHTS = new float[64];
             for (int i = 0; i < WEIGHTS.Length; i++)
-                WEIGHTS[i] = FastPow(.92f, i);
+                WEIGHTS[i] = FastPow(.9f, i);
             Instance ??= this;
         }
 

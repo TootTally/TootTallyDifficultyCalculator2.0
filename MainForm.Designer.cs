@@ -316,7 +316,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 95, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 11, 0, 0, 0 });
             // 
             // label5
             // 
@@ -360,7 +360,7 @@
             TapNum.Name = "TapNum";
             TapNum.Size = new Size(96, 23);
             TapNum.TabIndex = 11;
-            TapNum.Value = new decimal(new int[] { 25, 0, 0, 0 });
+            TapNum.Value = new decimal(new int[] { 18, 0, 0, 0 });
             // 
             // AccNum
             // 
@@ -371,7 +371,7 @@
             AccNum.Name = "AccNum";
             AccNum.Size = new Size(96, 23);
             AccNum.TabIndex = 11;
-            AccNum.Value = new decimal(new int[] { 375, 0, 0, 0 });
+            AccNum.Value = new decimal(new int[] { 4, 0, 0, 0 });
             // 
             // AimEndNote
             // 
@@ -382,7 +382,7 @@
             AimEndNote.Name = "AimEndNote";
             AimEndNote.Size = new Size(96, 23);
             AimEndNote.TabIndex = 11;
-            AimEndNote.Value = new decimal(new int[] { 800, 0, 0, 0 });
+            AimEndNote.Value = new decimal(new int[] { 550, 0, 0, 0 });
             // 
             // TapEndMult
             // 
@@ -404,7 +404,7 @@
             AimEndSlider.Name = "AimEndSlider";
             AimEndSlider.Size = new Size(96, 23);
             AimEndSlider.TabIndex = 11;
-            AimEndSlider.Value = new decimal(new int[] { 500, 0, 0, 0 });
+            AimEndSlider.Value = new decimal(new int[] { 300, 0, 0, 0 });
             // 
             // AimEndMult
             // 
@@ -688,7 +688,7 @@
             HDAimWeight.Name = "HDAimWeight";
             HDAimWeight.Size = new Size(96, 23);
             HDAimWeight.TabIndex = 11;
-            HDAimWeight.Value = new decimal(new int[] { 33, 0, 0, 131072 });
+            HDAimWeight.Value = new decimal(new int[] { 12, 0, 0, 131072 });
             // 
             // HDTapWeight
             // 
@@ -701,7 +701,7 @@
             HDTapWeight.Name = "HDTapWeight";
             HDTapWeight.Size = new Size(96, 23);
             HDTapWeight.TabIndex = 11;
-            HDTapWeight.Value = new decimal(new int[] { 2, 0, 0, 131072 });
+            HDTapWeight.Value = new decimal(new int[] { 1, 0, 0, 65536 });
             // 
             // label20
             // 
@@ -736,7 +736,7 @@
             FLAimWeight.Name = "FLAimWeight";
             FLAimWeight.Size = new Size(96, 23);
             FLAimWeight.TabIndex = 11;
-            FLAimWeight.Value = new decimal(new int[] { 55, 0, 0, 131072 });
+            FLAimWeight.Value = new decimal(new int[] { 16, 0, 0, 131072 });
             // 
             // FLTapWeight
             // 
@@ -749,7 +749,7 @@
             FLTapWeight.Name = "FLTapWeight";
             FLTapWeight.Size = new Size(96, 23);
             FLTapWeight.TabIndex = 11;
-            FLTapWeight.Value = new decimal(new int[] { 2, 0, 0, 131072 });
+            FLTapWeight.Value = new decimal(new int[] { 9, 0, 0, 131072 });
             // 
             // EZ
             // 
@@ -773,7 +773,7 @@
             EZAimWeight.Name = "EZAimWeight";
             EZAimWeight.Size = new Size(96, 23);
             EZAimWeight.TabIndex = 11;
-            EZAimWeight.Value = new decimal(new int[] { 55, 0, 0, 131072 });
+            EZAimWeight.Value = new decimal(new int[] { 22, 0, 0, 131072 });
             // 
             // EZTapWeight
             // 
@@ -786,7 +786,7 @@
             EZTapWeight.Name = "EZTapWeight";
             EZTapWeight.Size = new Size(96, 23);
             EZTapWeight.TabIndex = 11;
-            EZTapWeight.Value = new decimal(new int[] { 2, 0, 0, 131072 });
+            EZTapWeight.Value = new decimal(new int[] { 20, 0, 0, 131072 });
             // 
             // FilterEZOnly
             // 
