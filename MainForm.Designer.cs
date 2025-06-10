@@ -316,7 +316,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 11, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 14, 0, 0, 0 });
             // 
             // label5
             // 
@@ -382,7 +382,7 @@
             AimEndNote.Name = "AimEndNote";
             AimEndNote.Size = new Size(96, 23);
             AimEndNote.TabIndex = 11;
-            AimEndNote.Value = new decimal(new int[] { 550, 0, 0, 0 });
+            AimEndNote.Value = new decimal(new int[] { 250, 0, 0, 0 });
             // 
             // TapEndMult
             // 
@@ -404,7 +404,7 @@
             AimEndSlider.Name = "AimEndSlider";
             AimEndSlider.Size = new Size(96, 23);
             AimEndSlider.TabIndex = 11;
-            AimEndSlider.Value = new decimal(new int[] { 300, 0, 0, 0 });
+            AimEndSlider.Value = new decimal(new int[] { 200, 0, 0, 0 });
             // 
             // AimEndMult
             // 

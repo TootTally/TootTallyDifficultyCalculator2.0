@@ -164,14 +164,14 @@ namespace TootTallyDifficultyCalculator2._0
         {
             var baseValue = MathF.Min(Lerp(3.5f, 5.5f, aimDistance / CHEESABLE_THRESHOLD), 6f);
             //var baseValue = aimDistance <= CHEESABLE_THRESHOLD ? 8f : 16f;
-            return (baseValue / MathF.Pow(tapDelta, 1.45f)) * weight;
+            return (baseValue / MathF.Pow(tapDelta, 1.52f)) * weight;
         }
 
         public float CalcTapEndurance(float tapDelta, float weight, float aimDistance)
         {
             var baseValue = MathF.Min(Lerp(.14f, .20f, aimDistance / CHEESABLE_THRESHOLD), .25f);
             //var baseValue = aimDistance <= CHEESABLE_THRESHOLD ? .25f : .65f;
-            return (baseValue / MathF.Pow(tapDelta, 1.08f)) / (TAP_END * MUL_END) * weight;
+            return (baseValue / MathF.Pow(tapDelta, 1.12f)) / (TAP_END * MUL_END) * weight;
         }
         #endregion
 
