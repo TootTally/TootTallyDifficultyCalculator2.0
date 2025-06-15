@@ -87,6 +87,12 @@
             EZAimWeight = new NumericUpDown();
             EZTapWeight = new NumericUpDown();
             FilterEZOnly = new CheckBox();
+            StrainA = new NumericUpDown();
+            label22 = new Label();
+            label23 = new Label();
+            StrainB = new NumericUpDown();
+            label24 = new Label();
+            StrainP = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)FilterMinTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilterMaxTT).BeginInit();
             ((System.ComponentModel.ISupportInitialize)AimNum).BeginInit();
@@ -110,6 +116,9 @@
             ((System.ComponentModel.ISupportInitialize)FLTapWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EZAimWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)EZTapWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)StrainA).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)StrainB).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)StrainP).BeginInit();
             SuspendLayout();
             // 
             // ButtonForceRefresh
@@ -316,7 +325,7 @@
             AimNum.Name = "AimNum";
             AimNum.Size = new Size(96, 23);
             AimNum.TabIndex = 11;
-            AimNum.Value = new decimal(new int[] { 14, 0, 0, 0 });
+            AimNum.Value = new decimal(new int[] { 115, 0, 0, 0 });
             // 
             // label5
             // 
@@ -360,7 +369,7 @@
             TapNum.Name = "TapNum";
             TapNum.Size = new Size(96, 23);
             TapNum.TabIndex = 11;
-            TapNum.Value = new decimal(new int[] { 18, 0, 0, 0 });
+            TapNum.Value = new decimal(new int[] { 150, 0, 0, 0 });
             // 
             // AccNum
             // 
@@ -371,7 +380,7 @@
             AccNum.Name = "AccNum";
             AccNum.Size = new Size(96, 23);
             AccNum.TabIndex = 11;
-            AccNum.Value = new decimal(new int[] { 4, 0, 0, 0 });
+            AccNum.Value = new decimal(new int[] { 35, 0, 0, 0 });
             // 
             // AimEndNote
             // 
@@ -382,7 +391,7 @@
             AimEndNote.Name = "AimEndNote";
             AimEndNote.Size = new Size(96, 23);
             AimEndNote.TabIndex = 11;
-            AimEndNote.Value = new decimal(new int[] { 250, 0, 0, 0 });
+            AimEndNote.Value = new decimal(new int[] { 225, 0, 0, 0 });
             // 
             // TapEndMult
             // 
@@ -393,7 +402,7 @@
             TapEndMult.Name = "TapEndMult";
             TapEndMult.Size = new Size(96, 23);
             TapEndMult.TabIndex = 11;
-            TapEndMult.Value = new decimal(new int[] { 35, 0, 0, 0 });
+            TapEndMult.Value = new decimal(new int[] { 25, 0, 0, 0 });
             // 
             // AimEndSlider
             // 
@@ -404,7 +413,7 @@
             AimEndSlider.Name = "AimEndSlider";
             AimEndSlider.Size = new Size(96, 23);
             AimEndSlider.TabIndex = 11;
-            AimEndSlider.Value = new decimal(new int[] { 200, 0, 0, 0 });
+            AimEndSlider.Value = new decimal(new int[] { 400, 0, 0, 0 });
             // 
             // AimEndMult
             // 
@@ -736,7 +745,7 @@
             FLAimWeight.Name = "FLAimWeight";
             FLAimWeight.Size = new Size(96, 23);
             FLAimWeight.TabIndex = 11;
-            FLAimWeight.Value = new decimal(new int[] { 16, 0, 0, 131072 });
+            FLAimWeight.Value = new decimal(new int[] { 35, 0, 0, 131072 });
             // 
             // FLTapWeight
             // 
@@ -773,7 +782,7 @@
             EZAimWeight.Name = "EZAimWeight";
             EZAimWeight.Size = new Size(96, 23);
             EZAimWeight.TabIndex = 11;
-            EZAimWeight.Value = new decimal(new int[] { 22, 0, 0, 131072 });
+            EZAimWeight.Value = new decimal(new int[] { 30, 0, 0, 131072 });
             // 
             // EZTapWeight
             // 
@@ -786,7 +795,7 @@
             EZTapWeight.Name = "EZTapWeight";
             EZTapWeight.Size = new Size(96, 23);
             EZTapWeight.TabIndex = 11;
-            EZTapWeight.Value = new decimal(new int[] { 20, 0, 0, 131072 });
+            EZTapWeight.Value = new decimal(new int[] { 28, 0, 0, 131072 });
             // 
             // FilterEZOnly
             // 
@@ -799,6 +808,79 @@
             FilterEZOnly.Text = "EZ Only";
             FilterEZOnly.UseVisualStyleBackColor = true;
             FilterEZOnly.CheckedChanged += OnValueBoxTextChanged;
+            // 
+            // StrainA
+            // 
+            StrainA.BackColor = Color.DarkRed;
+            StrainA.ForeColor = Color.White;
+            StrainA.Location = new Point(667, 183);
+            StrainA.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            StrainA.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            StrainA.Name = "StrainA";
+            StrainA.Size = new Size(96, 23);
+            StrainA.TabIndex = 11;
+            StrainA.Value = new decimal(new int[] { 40, 0, 0, 0 });
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label22.ForeColor = Color.White;
+            label22.Location = new Point(629, 184);
+            label22.Name = "label22";
+            label22.Size = new Size(32, 20);
+            label22.TabIndex = 5;
+            label22.Text = "SA:";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label23.ForeColor = Color.White;
+            label23.Location = new Point(629, 212);
+            label23.Name = "label23";
+            label23.Size = new Size(31, 20);
+            label23.TabIndex = 5;
+            label23.Text = "SB:";
+            // 
+            // StrainB
+            // 
+            StrainB.BackColor = Color.DarkRed;
+            StrainB.DecimalPlaces = 3;
+            StrainB.ForeColor = Color.White;
+            StrainB.Increment = new decimal(new int[] { 1, 0, 0, 196608 });
+            StrainB.Location = new Point(667, 211);
+            StrainB.Maximum = new decimal(new int[] { 1, 0, 0, 0 });
+            StrainB.Minimum = new decimal(new int[] { 1, 0, 0, 196608 });
+            StrainB.Name = "StrainB";
+            StrainB.Size = new Size(96, 23);
+            StrainB.TabIndex = 11;
+            StrainB.Value = new decimal(new int[] { 5, 0, 0, 131072 });
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label24.ForeColor = Color.White;
+            label24.Location = new Point(768, 184);
+            label24.Name = "label24";
+            label24.Size = new Size(30, 20);
+            label24.TabIndex = 5;
+            label24.Text = "SP:";
+            // 
+            // StrainP
+            // 
+            StrainP.BackColor = Color.DarkRed;
+            StrainP.DecimalPlaces = 2;
+            StrainP.ForeColor = Color.White;
+            StrainP.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            StrainP.Location = new Point(806, 183);
+            StrainP.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
+            StrainP.Minimum = new decimal(new int[] { 1, 0, 0, 131072 });
+            StrainP.Name = "StrainP";
+            StrainP.Size = new Size(96, 23);
+            StrainP.TabIndex = 11;
+            StrainP.Value = new decimal(new int[] { 14, 0, 0, 65536 });
             // 
             // MainForm
             // 
@@ -818,6 +900,9 @@
             Controls.Add(EZAimWeight);
             Controls.Add(FLAimWeight);
             Controls.Add(HDAimWeight);
+            Controls.Add(StrainB);
+            Controls.Add(StrainP);
+            Controls.Add(StrainA);
             Controls.Add(MapValue);
             Controls.Add(BiasMult);
             Controls.Add(MaxTime);
@@ -843,7 +928,10 @@
             Controls.Add(EZ);
             Controls.Add(label21);
             Controls.Add(label17);
+            Controls.Add(label23);
+            Controls.Add(label24);
             Controls.Add(label20);
+            Controls.Add(label22);
             Controls.Add(label16);
             Controls.Add(label11);
             Controls.Add(label18);
@@ -892,6 +980,9 @@
             ((System.ComponentModel.ISupportInitialize)FLTapWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)EZAimWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)EZTapWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)StrainA).EndInit();
+            ((System.ComponentModel.ISupportInitialize)StrainB).EndInit();
+            ((System.ComponentModel.ISupportInitialize)StrainP).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -956,5 +1047,11 @@
         private NumericUpDown EZAimWeight;
         private NumericUpDown EZTapWeight;
         private CheckBox FilterEZOnly;
+        private NumericUpDown StrainA;
+        private Label label22;
+        private Label label23;
+        private NumericUpDown StrainB;
+        private Label label24;
+        private NumericUpDown StrainP;
     }
 }

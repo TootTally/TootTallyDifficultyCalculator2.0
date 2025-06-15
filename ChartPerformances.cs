@@ -75,7 +75,7 @@ namespace TootTallyDifficultyCalculator2._0
                     var lengthSum = prevNote.length;
                     var deltaSlideSum = MathF.Abs(prevNote.pitchDelta);
                     if (deltaSlideSum <= CHEESABLE_THRESHOLD)
-                        deltaSlideSum *= .35f;
+                        deltaSlideSum *= .15f;
                     while (prevNote.isSlider) //Merge all sliders into one note
                     {
                         if (j-- <= 0)
@@ -90,7 +90,7 @@ namespace TootTallyDifficultyCalculator2._0
                             var deltaSlide = MathF.Abs(prevNote.pitchDelta);
                             lengthSum += prevNote.length;
                             if (deltaSlide <= CHEESABLE_THRESHOLD)
-                                deltaSlide *= .25f;
+                                deltaSlide *= .15f;
                             deltaSlideSum += deltaSlide /* MathF.Sqrt(sliderCount)*/;
                         }
                     }
@@ -122,7 +122,7 @@ namespace TootTallyDifficultyCalculator2._0
                 {
                     var endDivider = 61f - MathF.Min(currentNote.position - noteList[i - 1].position, 5f) * 12f;
                     var aimThreshold = MathF.Sqrt(aimStrain) * 1.5f;//MathF.Pow(aimStrain, 1.08f) * 1.2f;
-                    var tapThreshold = MathF.Sqrt(tapStrain) * 3f;//MathF.Pow(tapStrain, 1.08f) * 1.2f;
+                    var tapThreshold = MathF.Sqrt(tapStrain) * 5f;//MathF.Pow(tapStrain, 1.08f) * 1.2f;
                     if (aimEndurance >= aimThreshold)
                         ComputeEnduranceDecay(ref aimEndurance, (aimEndurance - aimThreshold) / endDivider);
                     if (tapEndurance >= tapThreshold)
@@ -142,19 +142,21 @@ namespace TootTallyDifficultyCalculator2._0
 
         //https://www.desmos.com/calculator/tkunxszosp
         //public static float ComputeStrain(float strain) => a * MathF.Pow(strain + 1, -.04f * MathF.E) - a - (2.5f * strain / a);
-        public static float ComputeStrain(float strain) => a * MathF.Pow(strain + 1, -.05f * MathF.E) - a - (MathF.Pow(strain,1.1f) / a);
-        private const float a = -35f;
+        public float ComputeStrain(float strain) => a * MathF.Pow(strain + 1, b * MathF.E) - a - (MathF.Pow(strain,p) / a);
+        private readonly float a = -MainForm.Instance.GetStrainA();
+        private readonly float b = -MainForm.Instance.GetStrainB();
+        private readonly float p = MainForm.Instance.GetStrainP();
 
         #region AIM
         public float CalcAimStrain(float distance, float weight, float deltaTime)
         {
-            var speed = MathF.Sqrt(distance + 50) * .75f / MathF.Pow(deltaTime, 1.35f);
+            var speed = MathF.Sqrt(distance + 50) * .75f / MathF.Pow(deltaTime, 1.38f);
             return speed * weight;
         }
 
         public float CalcAimEndurance(float distance, float weight, float deltaTime)
         {
-            var speed = (MathF.Sqrt(distance + 50) * .35f / MathF.Pow(deltaTime, 1.09f)) / (AIM_END * MUL_END);
+            var speed = (MathF.Sqrt(distance + 50) * .25f / MathF.Pow(deltaTime, 1.08f)) / (AIM_END * MUL_END);
             return speed * weight;
         }
         #endregion
@@ -162,9 +164,9 @@ namespace TootTallyDifficultyCalculator2._0
         #region TAP
         public static float CalcTapStrain(float tapDelta, float weight, float aimDistance)
         {
-            var baseValue = MathF.Min(Lerp(3.5f, 5.5f, aimDistance / CHEESABLE_THRESHOLD), 6f);
+            var baseValue = MathF.Min(Lerp(3.25f, 5.5f, aimDistance / CHEESABLE_THRESHOLD), 6f);
             //var baseValue = aimDistance <= CHEESABLE_THRESHOLD ? 8f : 16f;
-            return (baseValue / MathF.Pow(tapDelta, 1.52f)) * weight;
+            return (baseValue / MathF.Pow(tapDelta, 1.38f)) * weight;
         }
 
         public float CalcTapEndurance(float tapDelta, float weight, float aimDistance)
@@ -178,13 +180,13 @@ namespace TootTallyDifficultyCalculator2._0
         #region ACC
         public static float CalcAccStrain(float lengthSum, float slideDelta, float weight)
         {
-            var speed = MathF.Sqrt(slideDelta + 50) * .75f / MathF.Pow(lengthSum, 1.25f);
+            var speed = slideDelta * 5f / MathF.Pow(lengthSum, 1.16f);
             return speed * weight;
         }
 
         public float CalcAccEndurance(float lengthSum, float slideDelta, float weight)
         {
-            var speed = MathF.Sqrt(slideDelta + 50) * .25f / MathF.Pow(lengthSum, 1.08f) / (ACC_END * MUL_END);
+            var speed = slideDelta * .75f / MathF.Pow(lengthSum, 1.08f) / (ACC_END * MUL_END);
             return speed * weight;
         }
         #endregion
@@ -264,7 +266,7 @@ namespace TootTallyDifficultyCalculator2._0
                 var aimPow = 1f;
                 var tapPow = 1f;
                 var isEZModeOn = modifiers.Contains("EZ");
-                var mult = isEZModeOn ? .5f : 1f;
+                var mult = isEZModeOn ? .4f : 1f;
                 if (modifiers.Contains("HD"))
                 {
                     aimPow += HDWeights[0] * mult;

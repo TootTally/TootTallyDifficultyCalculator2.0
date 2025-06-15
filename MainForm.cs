@@ -50,6 +50,10 @@ namespace TootTallyDifficultyCalculator2._0
         public float[] GetFLWeights() => new float[] { (float)FLAimWeight.Value, (float)FLTapWeight.Value };
         public float[] GetEZWeights() => new float[] { (float)EZAimWeight.Value, (float)EZTapWeight.Value };
 
+        public float GetStrainA() => (float)StrainA.Value;
+        public float GetStrainB() => (float)StrainB.Value;
+        public float GetStrainP() => (float)StrainP.Value;
+
         public async void DownloadAllTmbs(object sender, EventArgs e)
         {
             List<int> idList = TootTallyAPIServices.GetAllRatedChartIDs();
